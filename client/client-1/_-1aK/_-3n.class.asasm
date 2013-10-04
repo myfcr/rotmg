@@ -1,0 +1,158 @@
+class
+ refid "_-1aK:_-3n"
+ instance QName(PackageNamespace("_-1aK"), "_-3n")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1aR")
+  iinit
+   refid "_-1aK:_-3n/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushnull
+     lshift
+     lessequals
+     convert_s
+     bitxor
+     decrement
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "skin") flag METADATA type QName(PackageNamespace("_-0JG"), "_-1UZ")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-VU") flag METADATA type QName(PackageNamespace("_-12D"), "_-0qc")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "server") flag METADATA type QName(PackageNamespace("_-KX"), "_-1T9")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-1aK:_-3n/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      declocal            2
+      convert_b
+      getlocal1
+      add_i
+      declocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-VU")
+      getlex              QName(PackageNamespace("_-y9"), "_-1lE")
+      getproperty         QName(PackageNamespace("", "#0"), "RESKIN")
+      callproperty        QName(Namespace("_-0FL"), "_-0yd"), 1
+      getlex              QName(PackageNamespace("_-0oz"), "_-nk")
+      jump                L26
+
+      increment_i
+      getlocal2
+      inclocal_i          2
+      checkfilter
+      inclocal_i          2
+      declocal            2
+L26:
+      astypelate
+      coerce              QName(PackageNamespace("_-0oz"), "_-nk")
+      setlocal1
+
+      getlocal3
+      dup
+      iffalse             L35
+
+      pop
+      getlocal0
+      convert_b
+L35:
+      iftrue              L52
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "skin")
+      getproperty         QName(PackageNamespace("", "#0"), "id")
+      setproperty         QName(PackageNamespace("", "#0"), "skinID")
+
+      getlocal2
+      dup
+      iftrue              L47
+
+      pop
+      getlocal0
+      convert_b
+L47:
+      iffalse             L52
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "server")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "sendMessage"), 1
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1aK:_-3n/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

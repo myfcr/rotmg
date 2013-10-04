@@ -1,0 +1,188 @@
+class
+ refid "_-7m:_-1LF"
+ instance QName(PackageNamespace("_-7m"), "_-1LF")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0tB")
+  iinit
+   refid "_-7m:_-1LF/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     popscope
+     typeof
+     subtract_i
+     not
+     bitor
+     pushscope
+
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-7m:_-1LF/class/init"
+  body
+   maxstack 36
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    lshift
+    getlocal2
+    getlocal2
+    lshift
+    getlocal1
+    coerce_a
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iffalse             L20
+
+    pop
+    getlocal1
+    convert_b
+L20:
+    iftrue              L44
+
+    findproperty        QName(PackageNamespace("", "#0"), "FATAL")
+    pushbyte            2
+    initproperty        QName(PackageNamespace("", "#0"), "FATAL")
+
+    findproperty        QName(PackageNamespace("", "#0"), "ERROR")
+    pushbyte            4
+    initproperty        QName(PackageNamespace("", "#0"), "ERROR")
+
+    findproperty        QName(PackageNamespace("", "#0"), "WARN")
+    pushbyte            8
+    initproperty        QName(PackageNamespace("", "#0"), "WARN")
+
+    getlocal2
+    dup
+    iftrue              L43
+
+    pop
+    getlocal0
+    convert_b
+    jump                L43
+
+    lshift
+    not
+    greaterequals
+    pushtrue
+    add_i
+    pushscope
+
+L43:
+    iffalse             L50
+
+L44:
+    findproperty        QName(PackageNamespace("", "#0"), "INFO")
+    pushbyte            16
+    initproperty        QName(PackageNamespace("", "#0"), "INFO")
+
+    findproperty        QName(PackageNamespace("", "#0"), "DEBUG")
+    pushbyte            32
+    initproperty        QName(PackageNamespace("", "#0"), "DEBUG")
+
+L50:
+    findproperty        QName(PackageNamespace("", "#0"), "NAME")
+    pushbyte            0
+    dup
+    pushstring          "FATAL"
+    pushbyte            0
+    pushstring          "ERROR"
+    pushbyte            0
+    dup
+    dup
+    pushstring          "WARN"
+    pushbyte            0
+    dup
+    dup
+    jump                L70
+
+    hasnext
+    strictequals
+    bitxor
+    coerce_s
+    instanceof
+    istypelate
+L70:
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    pushstring          "INFO"
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushstring          "DEBUG"
+    newarray            33
+    initproperty        QName(PackageNamespace("", "#0"), "NAME")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "FATAL") slotid 1 type QName(PackageNamespace("", "#0"), "uint") value Integer(2) end
+ trait const QName(PackageNamespace("", "#0"), "ERROR") slotid 2 type QName(PackageNamespace("", "#0"), "uint") value Integer(4) end
+ trait const QName(PackageNamespace("", "#0"), "WARN") slotid 3 type QName(PackageNamespace("", "#0"), "uint") value Integer(8) end
+ trait const QName(PackageNamespace("", "#0"), "INFO") slotid 4 type QName(PackageNamespace("", "#0"), "uint") value Integer(16) end
+ trait const QName(PackageNamespace("", "#0"), "DEBUG") slotid 5 type QName(PackageNamespace("", "#0"), "uint") value Integer(32) end
+ trait const QName(PackageNamespace("", "#0"), "NAME") slotid 6 type QName(PackageNamespace("", "#0"), "Array") end
+end ; class

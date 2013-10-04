@@ -1,0 +1,174 @@
+class
+ refid "com.company.assembleegameclient.map:_1Y_J_"
+ instance QName(PackageNamespace("com.company.assembleegameclient.map"), "_1Y_J_")
+  extends QName(PackageNamespace("_N__"), "_1X_a")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_84")
+  iinit
+   refid "com.company.assembleegameclient.map:_1Y_J_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1N_2") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.map"), "_4W_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.map:_1Y_J_/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1N_2")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_1Y_J_/instance"), "_X_b")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.map:_1Y_J_/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1N_2")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_1Y_J_/instance"), "_X_b")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_1Y_J_/instance"), "_X_b")
+   method
+    refid "com.company.assembleegameclient.map:_1Y_J_/instance/com.company.assembleegameclient.map:_1Y_J_/instance/_X_b"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "player_")
+      coerce_a
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_1Y_J_/instance"), "_3C_"), 2
+      coerce_a
+L14:
+      pop
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_1Y_J_/instance"), "_3C_")
+   method
+    refid "com.company.assembleegameclient.map:_1Y_J_/instance/com.company.assembleegameclient.map:_1Y_J_/instance/_3C_"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_0dU_"), "_T_V_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "player_")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      getlocal2
+      pushshort           2000
+      pushbyte            0
+      constructprop       QName(PackageNamespace("_0dU_"), "_T_V_"), 5
+      coerce              QName(PackageNamespace("_0dU_"), "_T_V_")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "mapOverlay_")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "addQueuedText"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.map:_1Y_J_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

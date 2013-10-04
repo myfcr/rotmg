@@ -1,0 +1,88 @@
+class
+ refid "_1J_L_:ObjectProcessor/ObjectHandler"
+ instance QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor"), "ObjectHandler")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ObjectProcessor.as$57:ObjectHandler")
+  iinit
+   refid "_1J_L_:ObjectProcessor/ObjectHandler/instance/init"
+   param QName(PackageNamespace("_J_p"), "_0w0")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/ObjectHandler/instance"), "_matcher")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/ObjectHandler/instance"), "_handler")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/ObjectHandler/instance"), "_matcher") type QName(PackageNamespace("_J_p"), "_0w0") end
+  trait slot QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/ObjectHandler/instance"), "_handler") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "handle")
+   method
+    refid "_1J_L_:ObjectProcessor/ObjectHandler/instance/handle"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/ObjectHandler/instance"), "_matcher")
+      getlocal1
+      callproperty        QName(Namespace("_J_S_"), "matches"), 1
+      coerce_a
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/ObjectHandler/instance"), "_handler"), 1
+      coerce_a
+L14:
+      pop
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1J_L_:ObjectProcessor/ObjectHandler/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

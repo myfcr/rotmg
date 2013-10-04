@@ -1,0 +1,260 @@
+class
+ refid "_-0gC:_-1kY"
+ instance QName(PackageNamespace("_-0gC"), "_-1kY")
+  extends QName(PackageNamespace("_-1Kt"), "_-1Rc")
+  implements Multiname("_-0Th", [PackageNamespace("_-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Yt")
+  iinit
+   refid "_-0gC:_-1kY/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     not
+     decrement
+     add_i
+     newactivation
+     multiply
+     pop
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "info") flag METADATA type QName(PackageNamespace("flash.display"), "LoaderInfo")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-JB") flag METADATA type QName(PackageNamespace("_-07o"), "_-0Tz")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "local") flag METADATA type QName(PackageNamespace("_-0gC"), "_-0Rn")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-08e") flag METADATA type QName(PackageNamespace("_-1hJ"), "_-by")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0aR") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-10L")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-EB") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-3s")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_-Yt"), "startTask") flag OVERRIDE
+   method
+    refid "_-0gC:_-1kY/instance/_-Yt:startTask"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      inclocal_i          2
+      newactivation
+      getlocal0
+      instanceof
+      inclocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "info")
+      getproperty         QName(PackageNamespace("", "#0"), "parameters")
+      getproperty         Multiname("kongregate_api_path", [PrivateNamespace("*", "_-0gC:_-1kY/instance/_-Yt:startTask#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-0gC:_-1kY/instance/_-Yt:startTask#1"), PackageNamespace("_-0gC"), PackageInternalNs("_-0gC"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Yt"), StaticProtectedNs("_-Yt"), StaticProtectedNs("_-07N")])
+      coerce_s
+      setlocal1
+
+      getlocal2
+      dup
+      iftrue              L25
+
+      pop
+      getlocal0
+      convert_b
+L25:
+      iffalse             L60
+
+      getlex              QName(PackageNamespace("flash.system"), "Security")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "allowDomain"), 1
+
+      jump                L36
+
+      inclocal            2
+      coerce_a
+      setlocal2
+
+      setlocal2
+
+      inclocal_i          2
+      setlocal2
+
+L36:
+      getlocal3
+      dup
+      iffalse             L42
+
+      pop
+      getlocal2
+      convert_b
+L42:
+      iftrue              L75
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-08e")
+      getproperty         QName(PackageNamespace("", "#0"), "_-JB")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-JB")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      jump                L56
+
+      inclocal_i          2
+      declocal            2
+      convert_i
+      declocal            2
+      inclocal_i          2
+      declocal_i          2
+L56:
+      astypelate
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      getlocal3
+      iftrue              L79
+
+L60:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-JB")
+      getlocal2
+      iffalse             L77
+
+      getproperty         QName(Namespace("_-0IH"), "_-0qi")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0gC:_-1kY/instance/_-Yt:startTask#0"), "_-1Kh")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+      getlocal2
+      dup
+      iftrue              L74
+
+      pop
+      getlocal1
+      convert_b
+L74:
+      iffalse             L79
+
+L75:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-JB")
+L77:
+      getlocal1
+      callpropvoid        QName(Namespace("_-0IH"), "load"), 1
+
+L79:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0gC:_-1kY/instance/_-Yt:startTask#0"), "_-1Kh")
+   method
+    refid "_-0gC:_-1kY/instance/_-0gC:_-1kY/instance/_-Yt:startTask/_-1Kh"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      popscope
+      typeof
+      pushnull
+      nextvalue
+      nextname
+      divide
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L18
+
+      findpropstrict      QName(ProtectedNamespace("_-07N"), "_-06X")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("_-07N"), "_-06X"), 1
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0gC:_-1kY/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

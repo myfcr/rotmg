@@ -1,0 +1,150 @@
+class
+ refid "_0L_X_:_0W_F_"
+ instance QName(PackageNamespace("_0L_X_"), "_0W_F_")
+  extends QName(PackageNamespace("_0L_X_"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_18C_")
+  iinit
+   refid "_0L_X_:_0W_F_/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   body
+    maxstack 6
+    localcount 10
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal2
+     getlocal            4
+     getlocal1
+     constructsuper      3
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "initialSize_")
+
+     getlocal0
+     getlocal0
+     getlocal3
+     dup
+     setlocal            7
+
+     initproperty        QName(PackageNamespace(""), "timeLeft_")
+
+     getlocal            7
+     kill                7
+     initproperty        QName(PackageNamespace(""), "lifetime_")
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "dx_")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "dy_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "lifetime_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "timeLeft_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "initialSize_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "dx_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "dy_") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_0L_X_:_0W_F_/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace(""), "timeLeft_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timeLeft_")
+      pushbyte            0
+      ifnle               L14
+
+      pushfalse
+      returnvalue
+
+L14:
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dx_")
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      add
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlex              QName(PackageNamespace(""), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dy_")
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      add
+      initproperty        QName(PackageNamespace(""), "y_")
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timeLeft_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lifetime_")
+      divide
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "initialSize_")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 1
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0L_X_:_0W_F_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

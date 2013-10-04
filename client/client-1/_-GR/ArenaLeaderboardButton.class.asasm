@@ -1,0 +1,552 @@
+class
+ refid "_-GR:ArenaLeaderboardButton"
+ instance QName(PackageNamespace("_-GR"), "ArenaLeaderboardButton")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-00i")
+  iinit
+   refid "_-GR:ArenaLeaderboardButton/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     getlocal2
+     greaterthan
+     multiply_i
+     pop
+     getlocal0
+     instanceof
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L26
+
+     pop
+     jump                L24
+
+     dxnslate
+     subtract_i
+     istypelate
+     multiply
+     add
+     greaterequals
+L24:
+     getlocal1
+     convert_b
+L26:
+     iftrue              L36
+
+     getlocal0
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-17c"), 0
+     initproperty        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "label")
+
+     getlocal0
+     getlocal0
+     pushtrue
+     callproperty        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1Rz"), 1
+     initproperty        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-0FS")
+
+L36:
+     getlocal0
+     getlocal0
+     pushfalse
+     callproperty        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1Rz"), 1
+     initproperty        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1jq")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-0wE"), 0
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "align"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "WIDTH") type QName(PackageNamespace("", "#0"), "int") value Integer(95) end
+  trait const QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "HEIGHT") type QName(PackageNamespace("", "#0"), "int") value Integer(25) end
+  trait const QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "label") type QName(PackageNamespace("_-1X1"), "_-RD") end
+  trait const QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-0FS") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait const QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1jq") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "align")
+   method
+    refid "_-GR:ArenaLeaderboardButton/instance/_-GR:ArenaLeaderboardButton/instance/align"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      dxnslate
+      nextvalue
+      bitxor
+      getlocal3
+      negate
+      decrement
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L57
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1jq")
+      pushbyte            246
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iffalse             L68
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "label")
+      getlocal2
+      jump                L37
+
+      instanceof
+      decrement
+      pushscope
+
+      hasnext
+      add
+      increment_i
+L37:
+      iffalse             L59
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1jq")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1jq")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      add
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal1
+      iftrue              L68
+
+      jump                L57
+
+      bitnot
+      convert_d
+      negate
+      multiply_i
+      getlocal0
+      convert_s
+L57:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "label")
+L59:
+      pushbyte            3
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal1
+      dup
+      iffalse             L67
+
+      pop
+      getlocal1
+      convert_b
+L67:
+      iftrue              L80
+
+L68:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-0FS")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "label")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "label")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      add
+      pushbyte            10
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L80:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-0wE")
+   method
+    refid "_-GR:ArenaLeaderboardButton/instance/_-GR:ArenaLeaderboardButton/instance/_-0wE"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      lessequals
+      bitxor
+      subtract_i
+      hasnext
+      convert_u
+      coerce_s
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iffalse             L45
+
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      pushbyte            0
+      jump                L29
+
+      getlocal3
+      bitand
+      lshift
+      lessequals
+      coerce_a
+      convert_d
+L29:
+      pushdouble          0.4
+      callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 2
+
+      getlocal2
+      dup
+      iffalse             L44
+
+      jump                L41
+
+      getlocal2
+      convert_i
+      convert_u
+      convert_b
+      decrement_i
+      nextname
+L41:
+      pop
+      getlocal1
+      convert_b
+L44:
+      iftrue              L64
+
+L45:
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      pushbyte            0
+      dup
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "WIDTH")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "HEIGHT")
+      pushbyte            12
+      dup
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRect"), 6
+
+      getlocal1
+      dup
+      iftrue              L61
+
+      pop
+      getlocal2
+      convert_b
+L61:
+      iffalse             L64
+
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-1Rz")
+   method
+    refid "_-GR:ArenaLeaderboardButton/instance/_-GR:ArenaLeaderboardButton/instance/_-1Rz"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("flash.display"), "Bitmap")
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      inclocal            4
+      bitnot
+      typeof
+      declocal_i          4
+      add_i
+      getlocal1
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+      pushstring          "lofiInterface2"
+      pushbyte            8
+      callproperty        QName(PackageNamespace("", "#0"), "_-1aH"), 2
+      pushbyte            42
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callproperty        QName(PackageNamespace("", "#0"), "redraw"), 5
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal            5
+      dup
+      jump                L34
+
+      inclocal_i          2
+      setlocal3
+
+      dup
+      lessequals
+      subtract
+      bitand
+L34:
+      iffalse             L38
+
+      pop
+      getlocal2
+      convert_b
+L38:
+      iftrue              L41
+
+      getlocal1
+      iffalse             L53
+
+L41:
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "mirror"), 1
+      jump                L51
+
+      astypelate
+      kill                4
+      modulo
+      setlocal2
+
+      pushscope
+
+      setlocal3
+
+L51:
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+L53:
+      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+      getlocal2
+      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+      setlocal3
+
+      getlocal            5
+      iftrue              L73
+
+      getlocal3
+      pushbyte            249
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal            4
+      dup
+      iftrue              L69
+
+      pop
+      getlocal3
+      convert_b
+L69:
+      iffalse             L73
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L73:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaLeaderboardButton/instance"), "_-17c")
+   method
+    refid "_-GR:ArenaLeaderboardButton/instance/_-GR:ArenaLeaderboardButton/instance/_-17c"
+    returns QName(PackageNamespace("_-1X1"), "_-RD")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      negate
+      declocal            2
+      convert_d
+      decrement_i
+      inclocal_i          2
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1X1"), "_-RD")
+      constructprop       QName(PackageNamespace("_-1X1"), "_-RD"), 0
+      coerce              QName(PackageNamespace("_-1X1"), "_-RD")
+      setlocal1
+
+      getlocal3
+      dup
+      iffalse             L30
+
+      pop
+      getlocal1
+      jump                L29
+
+      declocal_i          2
+      setlocal2
+
+      kill                2
+      setlocal2
+
+      nextvalue
+      increment
+L29:
+      convert_b
+L30:
+      iftrue              L61
+
+      getlocal1
+      pushbyte            18
+      callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+      pushint             16777215
+      jump                L42
+
+      nextvalue
+      declocal            2
+      inclocal_i          2
+      greaterthan
+      add
+      inclocal_i          2
+L42:
+      callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "setBold"), 1
+
+      getlocal3
+      dup
+      iffalse             L51
+
+      pop
+      getlocal3
+      convert_b
+L51:
+      iftrue              L61
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("_-th"), "_-ox")
+      constructprop       QName(PackageNamespace("_-th"), "_-ox"), 0
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Sy")
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      getlocal2
+      iffalse             L64
+
+L61:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L64:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GR:ArenaLeaderboardButton/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

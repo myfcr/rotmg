@@ -1,0 +1,483 @@
+class
+ refid "_06u:ArenaPortalPanel"
+ instance QName(PackageNamespace("_06u"), "ArenaPortalPanel")
+  extends QName(PackageNamespace("_06u"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_07F_")
+  iinit
+   refid "_06u:ArenaPortalPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "_0S_7")
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "ArenaPortal")
+   body
+    maxstack 8
+    localcount 6
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     getlex              QName(PackageNamespace(""), "int")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 1
+     initproperty        QName(PackageNamespace(""), "_hm")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hM_")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_sl")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hM_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PackageNamespace(""), "gs_")
+     getproperty         QName(PackageNamespace(""), "map")
+     pushnull
+     equals
+     dup
+     iftrue              L41
+
+     pop
+     getlex              QName(PackageNamespace(""), "gs_")
+     getproperty         QName(PackageNamespace(""), "map")
+     getproperty         QName(PackageNamespace(""), "player_")
+     pushnull
+     equals
+L41:
+     iffalse             L43
+
+     returnvoid
+
+L43:
+     getlex              QName(PackageNamespace(""), "gs_")
+     getproperty         QName(PackageNamespace(""), "map")
+     getproperty         QName(PackageNamespace(""), "player_")
+     coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+     setlocal3
+
+     getlocal0
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0xu"), 0
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "nameText_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "nameText_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_17v"), "_03N_")
+     pushstring          ""
+     pushbyte            20
+     pushbyte            50
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+     getproperty         QName(PackageNamespace(""), "_U_s")
+     constructprop       QName(PackageNamespace("_17v"), "_03N_"), 4
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_7D_")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_17v"), "_03N_")
+     pushstring          ""
+     pushbyte            20
+     pushshort           500
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+     getproperty         QName(PackageNamespace(""), "FAME")
+     constructprop       QName(PackageNamespace("_17v"), "_03N_"), 4
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "_0R_8")
+     pushshort           500
+     lessthan
+     iffalse             L97
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setEnabled"), 1
+
+     jump                L104
+
+L97:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1jB_")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L104:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+     getproperty         QName(PackageNamespace(""), "_1P_W_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "alignUI")
+     callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_1j9"), "_1aT_")
+     constructprop       QName(PackageNamespace("_1j9"), "_1aT_"), 0
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x")
+     pushbyte            18
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     pushint             16711680
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     getlex              QName(PackageNamespace(""), "WIDTH")
+     callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "setWordWrap"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "setMultiLine"), 1
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "CENTER")
+     callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "setBold"), 1
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setHTML"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x")
+     findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+     constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_Y_Z_")
+     callproperty        QName(PackageNamespace(""), "setParams"), 1
+     pushstring          "<p align=\"center\">"
+     callproperty        QName(PackageNamespace(""), "setPrefix"), 1
+     pushstring          "</p>"
+     callproperty        QName(PackageNamespace(""), "setPostfix"), 1
+     callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x")
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     pushbyte            45
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hM_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0xu"), 0
+     initproperty        QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hq")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hM_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hq")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageNamespace(""), "_hm") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_sl") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "ArenaPortal") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "nameText_") type QName(PackageNamespace("_1j9"), "_1aT_") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_") type QName(PackageNamespace("_17v"), "_03N_") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8") type QName(PackageNamespace("_17v"), "_03N_") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hM_") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hq") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_F_x") type QName(PackageNamespace("_1j9"), "_1aT_") end
+  trait method QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "alignUI")
+   method
+    refid "_06u:ArenaPortalPanel/instance/_06u:ArenaPortalPanel/instance/alignUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      pushdouble          0.25
+      multiply
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_4Z_")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            4
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      pushdouble          0.75
+      multiply
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0V_8")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            4
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_7D_")
+   method
+    refid "_06u:ArenaPortalPanel/instance/_06u:ArenaPortalPanel/instance/_7D_"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_hm")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "_U_s")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1jB_")
+   method
+    refid "_06u:ArenaPortalPanel/instance/_06u:ArenaPortalPanel/instance/_1jB_"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_hm")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "FAME")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "_06u:ArenaPortalPanel/instance/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_Q_J_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_sl")
+      getproperty         QName(PackageNamespace(""), "_cP_")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_1hM_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_sl")
+      getproperty         QName(PackageNamespace(""), "_cP_")
+      not
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_06u:ArenaPortalPanel/instance"), "_0xu")
+   method
+    refid "_06u:ArenaPortalPanel/instance/_06u:ArenaPortalPanel/instance/_0xu"
+    returns QName(PackageNamespace("_1j9"), "_1aT_")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_1j9"), "_1aT_")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("_1j9"), "_1aT_")
+      constructprop       QName(PackageNamespace("_1j9"), "_1aT_"), 0
+      coerce              QName(PackageNamespace("_1j9"), "_1aT_")
+      setlocal1
+
+      getlocal1
+      pushbyte            18
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setWordWrap"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setMultiLine"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setBold"), 1
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setHTML"), 1
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_0T_D_")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      pushstring          "<p align=\"center\">"
+      callproperty        QName(PackageNamespace(""), "setPrefix"), 1
+      pushstring          "</p>"
+      callproperty        QName(PackageNamespace(""), "setPostfix"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal1
+      pushbyte            6
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_06u:ArenaPortalPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

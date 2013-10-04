@@ -1,0 +1,97 @@
+class
+ refid "_19r:_08I_"
+ instance QName(PackageNamespace("_19r"), "_08I_")
+  extends QName(PackageNamespace("_1I_a"), "Command")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_L_u")
+  iinit
+   refid "_19r:_08I_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_1O_i") flag METADATA type QName(PackageNamespace("_0H_B_"), "_nK_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "server") flag METADATA type QName(PackageNamespace("_1G__"), "_1b8")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_vm") flag METADATA type QName(PackageNamespace(""), "int")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "_19r:_08I_/instance/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1O_i")
+      getlex              QName(PackageNamespace("_4n"), "_qW_")
+      getproperty         QName(PackageNamespace(""), "_px")
+      callproperty        QName(Namespace("_140"), "_0qs"), 1
+      getlex              QName(PackageNamespace("_02S_"), "_mK_")
+      astypelate
+      coerce              QName(PackageNamespace("_02S_"), "_mK_")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_vm")
+      setproperty         QName(PackageNamespace(""), "_0tx")
+
+      getlocal1
+      getlex              QName(PackageNamespace("_1K_C_"), "_4C_")
+      getproperty         QName(PackageNamespace(""), "_1N_D_")
+      setproperty         QName(PackageNamespace(""), "_gO_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "server")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "sendMessage"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_19r:_08I_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

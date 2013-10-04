@@ -1,0 +1,544 @@
+class
+ refid "com.company.assembleegameclient.objects:Sign"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Sign")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1h9")
+  iinit
+   refid "com.company.assembleegameclient.objects:Sign/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     swap
+     declocal_i          2
+     pushwith
+     setlocal2
+
+     urshift
+     getlocal2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L26
+
+     pop
+     getlocal2
+     convert_b
+     jump                L26
+
+     negate
+     swap
+     inclocal            2
+     getlocal2
+     getlocal1
+     popscope
+L26:
+     iftrue              L37
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iftrue              L45
+
+     findproperty        QName(PackageNamespace("", "#0"), "texture_")
+     pushnull
+     initproperty        QName(PackageNamespace("", "#0"), "texture_")
+
+     getlocal3
+     iftrue              L45
+
+L37:
+     getlocal0
+     getlex              QName(PackageNamespace("_-5l"), "_-0pB")
+     callproperty        QName(PackageNamespace("", "#0"), "_-o6"), 0
+     getlex              QName(PackageNamespace("_-0GM"), "_-0MT")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-0A-")
+
+     getlocal3
+     iftrue              L51
+
+L45:
+     getlocal0
+     getlex              QName(PackageNamespace("_-5l"), "_-0pB")
+     callproperty        QName(PackageNamespace("", "#0"), "_-o6"), 0
+     getlex              QName(PackageNamespace("_-ZB"), "_-ZW")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-rR")
+
+L51:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-0A-") type QName(PackageNamespace("_-0GM"), "_-0MT") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-rR") type QName(PackageNamespace("_-ZB"), "_-ZW") end
+  trait method QName(ProtectedNamespace("_-1h9"), "getTexture") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Sign/instance/_-1h9:getTexture"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-1El")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 8
+     localcount 9
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            7
+
+      jump                L10
+
+      coerce_a
+      pushfalse
+      declocal            2
+      inclocal            7
+      bitor
+      declocal_i          4
+L10:
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      getlocal            7
+      dup
+      iftrue              L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iffalse             L32
+
+      getlex              QName(PackageNamespace("", "#0"), "texture_")
+      pushnull
+      ifeq                L32
+
+      getlocal            8
+      dup
+      iffalse             L29
+
+      pop
+      getlocal3
+      convert_b
+L29:
+      iftrue              L32
+
+      getlex              QName(PackageNamespace("", "#0"), "texture_")
+      returnvalue
+
+L32:
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal3
+
+      getlocal            7
+      dup
+      iftrue              L42
+
+      pop
+      getlocal3
+      convert_b
+L42:
+      iffalse             L69
+
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "multiline")
+
+      getlocal            7
+      dup
+      iftrue              L52
+
+      pop
+      getlocal3
+      convert_b
+L52:
+      iffalse             L72
+
+      getlocal3
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "wordWrap")
+
+      getlocal            8
+      iftrue              L72
+
+      getlocal3
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace("", "#0"), "LEFT")
+      setproperty         QName(PackageNamespace("", "#0"), "autoSize")
+
+      getlocal            8
+      iftrue              L72
+
+      getlocal3
+      pushint             16777215
+      setproperty         QName(PackageNamespace("", "#0"), "textColor")
+
+      getlocal            8
+      iftrue              L72
+
+L69:
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "embedFonts")
+
+L72:
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            4
+
+      jump                L84
+
+      getlocal2
+      convert_i
+      inclocal_i          3
+      getlocal            4
+      typeof
+      lessthan
+L84:
+      getlex              QName(PackageNamespace("flash.text"), "TextFormatAlign")
+      getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+      setproperty         QName(PackageNamespace("", "#0"), "align")
+
+      getlocal            8
+      iftrue              L97
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-rR")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Ch"), 0
+      callproperty        QName(PackageNamespace("", "#0"), "getName"), 0
+      setproperty         QName(PackageNamespace("", "#0"), "font")
+
+      getlocal            7
+      iffalse             L112
+
+L97:
+      getlocal            4
+      pushbyte            24
+      setproperty         QName(PackageNamespace("", "#0"), "size")
+
+      getlocal            7
+      iffalse             L117
+
+      getlocal            4
+      pushint             16777215
+      setproperty         QName(PackageNamespace("", "#0"), "color")
+
+      getlocal            7
+      dup
+      iftrue              L111
+
+      pop
+      getlocal3
+      convert_b
+L111:
+      iffalse             L120
+
+L112:
+      getlocal            4
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "bold")
+
+      getlocal            8
+      iftrue              L120
+
+L117:
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace("", "#0"), "defaultTextFormat")
+
+L120:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-0A-")
+      getlocal0
+      getlex              QName(PackageNamespace("", "#0"), "name_")
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-Ro"), 1
+      callproperty        QName(Namespace("_-0n5"), "getValue"), 1
+      getlocal            7
+      iffalse             L129
+
+      coerce_s
+L129:
+      setlocal            5
+
+      getlocal            7
+      dup
+      iftrue              L136
+
+      pop
+      getlocal3
+      convert_b
+L136:
+      iffalse             L144
+
+      getlocal3
+      getlocal            5
+      pushstring          "|"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      setproperty         QName(PackageNamespace("", "#0"), "text")
+
+L144:
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-ta")
+      jump                L152
+
+      inclocal_i          2
+      inclocal            3
+      setlocal2
+
+      getlocal            4
+      pushwith
+      declocal            2
+L152:
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      pushtrue
+      pushbyte            0
+      constructprop       QName(PackageNamespace("", "#0"), "_-ta"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      dup
+      setlocal            6
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 1
+
+      getlocal            7
+      iffalse             L174
+
+      findproperty        QName(PackageNamespace("", "#0"), "texture_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "size_")
+      pushfalse
+      pushbyte            0
+      callproperty        QName(PackageNamespace("", "#0"), "redraw"), 4
+      initproperty        QName(PackageNamespace("", "#0"), "texture_")
+
+L174:
+      getlex              QName(PackageNamespace("", "#0"), "texture_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Sign/instance"), "_-Ro")
+   method
+    refid "com.company.assembleegameclient.objects:Sign/instance/com.company.assembleegameclient.objects:Sign/instance/_-Ro"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      kill                2
+      modulo
+      add_i
+      declocal            2
+      declocal            3
+      setlocal3
+
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iffalse             L40
+
+      getlocal1
+      getlocal3
+      iffalse             L55
+
+      pushnull
+      equals
+      not
+      dup
+      getlocal            4
+      iftrue              L60
+
+      iffalse             L59
+
+      getlocal3
+      dup
+      iftrue              L36
+
+      pop
+      getlocal2
+      convert_b
+L36:
+      iffalse             L59
+
+      pop
+      getlocal            4
+      iftrue              L64
+
+L40:
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L54
+
+      pop
+      jump                L52
+
+      kill                2
+      inclocal_i          3
+      getlocal3
+      kill                2
+      getlocal2
+      declocal_i          2
+L52:
+      getlocal2
+      convert_b
+L54:
+      iffalse             L65
+
+L55:
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "{"
+      equals
+L59:
+      dup
+L60:
+      iffalse             L71
+
+      getlocal            4
+      iftrue              L72
+
+      pop
+L64:
+      getlocal1
+L65:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "}"
+      equals
+L71:
+      convert_b
+L72:
+      setlocal2
+
+      getlocal3
+      iffalse             L77
+
+      getlocal2
+      iffalse             L107
+
+L77:
+      getlocal1
+      getlocal            4
+      dup
+      iffalse             L91
+
+      jump                L88
+
+      add_i
+      declocal            3
+      pushnull
+      multiply_i
+      lessequals
+      convert_s
+L88:
+      pop
+      getlocal3
+      convert_b
+L91:
+      iftrue              L106
+
+      pushbyte            1
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            2
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      coerce_s
+      getlocal            4
+      dup
+      iffalse             L105
+
+      pop
+      getlocal1
+      convert_b
+L105:
+      iftrue              L111
+
+L106:
+      jump                L111
+
+L107:
+      getlocal1
+      getlocal            4
+      iftrue              L111
+
+      coerce_s
+L111:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Sign/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

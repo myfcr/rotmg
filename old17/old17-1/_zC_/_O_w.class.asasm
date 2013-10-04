@@ -1,0 +1,90 @@
+class
+ refid "_zC_:_O_w"
+ instance QName(PackageNamespace("_zC_"), "_O_w")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_V_z")
+  iinit
+   refid "_zC_:_O_w/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_1Z_P_") flag METADATA type QName(PackageNamespace("_D_r"), "_1Z_E_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0jY_") type QName(PackageNamespace("_zC_"), "PurchaseCharacterClassTask") end
+  trait method QName(ProtectedNamespace("_V_z"), "startTask") flag OVERRIDE
+   method
+    refid "_zC_:_O_w/instance/_V_z:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0jY_")
+      getproperty         QName(PackageNamespace(""), "error")
+      pushstring          "Not enough Gold."
+      ifne                L13
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1Z_P_")
+      findpropstrict      QName(PackageNamespace("_03o"), "_12o")
+      constructprop       QName(PackageNamespace("_03o"), "_12o"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      jump                L21
+
+L13:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1Z_P_")
+      findpropstrict      QName(PackageNamespace("_0V_x"), "ErrorDialog")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0jY_")
+      getproperty         QName(PackageNamespace(""), "error")
+      constructprop       QName(PackageNamespace("_0V_x"), "ErrorDialog"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_zC_:_O_w/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

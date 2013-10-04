@@ -1,0 +1,25 @@
+script ; 817
+ sinit
+  refid "_1X_w:_super/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_super", [PackageNamespace("_1X_w")])
+    pushnull
+    newclass            "_1X_w:_super"
+    initproperty        QName(PackageNamespace("_1X_w"), "_super")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_1X_w"), "_super")
+  #include "_super.class.asasm"
+ end ; trait
+end ; script

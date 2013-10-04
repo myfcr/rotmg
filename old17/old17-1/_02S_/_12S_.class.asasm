@@ -1,0 +1,163 @@
+class
+ refid "_02S_:_12S_"
+ instance QName(PackageNamespace("_02S_"), "_12S_")
+  extends QName(PackageNamespace("_02S_"), "_40")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0wr")
+  iinit
+   refid "_02S_:_12S_/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_02S_:_12S_/instance#0"), PrivateNamespace("*", "_02S_:_12S_/instance#1"), PackageNamespace(""), PackageNamespace("_02S_"), PackageInternalNs("_02S_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0wr"), StaticProtectedNs("_0wr"), StaticProtectedNs("_02y"), StaticProtectedNs("_61"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "Boolean")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "myOffer_")
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_02S_:_12S_/instance#0"), PrivateNamespace("*", "_02S_:_12S_/instance#1"), PackageNamespace(""), PackageNamespace("_02S_"), PackageInternalNs("_02S_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0wr"), StaticProtectedNs("_0wr"), StaticProtectedNs("_02y"), StaticProtectedNs("_61"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "Boolean")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "yourOffer_")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "myOffer_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Boolean")>) end
+  trait slot QName(PackageNamespace(""), "yourOffer_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Boolean")>) end
+  trait method QName(PackageNamespace(""), "writeToOutput") flag OVERRIDE
+   method
+    refid "_02S_:_12S_/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "myOffer_")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeShort"), 1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L20
+
+L12:
+      label
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "myOffer_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_02S_:_12S_/instance#0"), PrivateNamespace("*", "_02S_:_12S_/instance#1"), PackageNamespace(""), PackageNamespace("_02S_"), PackageInternalNs("_02S_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0wr"), StaticProtectedNs("_0wr"), StaticProtectedNs("_02y"), StaticProtectedNs("_61")])
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeBoolean"), 1
+
+      inclocal_i          2
+L20:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "myOffer_")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L12
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "yourOffer_")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeShort"), 1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L41
+
+L33:
+      label
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "yourOffer_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_02S_:_12S_/instance#0"), PrivateNamespace("*", "_02S_:_12S_/instance#1"), PackageNamespace(""), PackageNamespace("_02S_"), PackageInternalNs("_02S_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0wr"), StaticProtectedNs("_0wr"), StaticProtectedNs("_02y"), StaticProtectedNs("_61")])
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeBoolean"), 1
+
+      inclocal_i          2
+L41:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "yourOffer_")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L33
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_02S_:_12S_/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_61"), "formatToString")
+      pushstring          "ACCEPTTRADE"
+      pushstring          "myOffer_"
+      pushstring          "yourOffer_"
+      callproperty        QName(ProtectedNamespace("_61"), "formatToString"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_02S_:_12S_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

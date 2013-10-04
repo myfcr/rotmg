@@ -1,0 +1,105 @@
+class
+ refid "_-0Mm:_-0MR"
+ instance QName(PackageNamespace("_-0Mm"), "_-0MR")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0cj")
+  iinit
+   refid "_-0Mm:_-0MR/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     negate
+     divide
+     pushscope
+
+     bitand
+     negate_i
+     subtract_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1Fi") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0rV") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-hS") type QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offers") end
+ end ; instance
+ cinit
+  refid "_-0Mm:_-0MR/class/init"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    istypelate
+    add_i
+    lshift
+    coerce_a
+    add_i
+    setlocal3
+
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iffalse             L29
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-04J")
+    pushbyte            5
+    pushbyte            60
+    multiply
+    getlocal2
+    dup
+    iffalse             L25
+
+    pop
+    getlocal0
+    convert_b
+L25:
+    iftrue              L28
+
+    pushshort           1000
+    multiply
+L28:
+    initproperty        QName(PackageNamespace("", "#0"), "_-04J")
+
+L29:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-04J") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Double(300000) end
+end ; class

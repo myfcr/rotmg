@@ -1,0 +1,121 @@
+class
+ refid "_1V_T_:_0J_H_"
+ instance QName(PackageNamespace("_1V_T_"), "_0J_H_")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  implements Multiname("_iF_", [PackageNamespace("_0lk")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0gF_")
+  iinit
+   refid "_1V_T_:_0J_H_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "offer") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0cq") flag METADATA type QName(PackageNamespace("_1A_j"), "_103")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "paymentMethod") flag METADATA type QName(PackageNamespace(""), "String")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_0gF_"), "startTask") flag OVERRIDE
+   method
+    refid "_1V_T_:_0J_H_/instance/_0gF_:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "paymentMethod")
+      setproperty         Multiname("paymentMethod", [PrivateNamespace("*", "_1V_T_:_0J_H_/instance/_0gF_:startTask#0"), PackageNamespace(""), PrivateNamespace("*", "_1V_T_:_0J_H_/instance/_0gF_:startTask#1"), PackageNamespace("_1V_T_"), PackageInternalNs("_1V_T_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0gF_"), StaticProtectedNs("_0gF_"), StaticProtectedNs("_4w")])
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0cq")
+      getproperty         QName(PackageNamespace(""), "_0ls")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offers")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_yE_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "paymentMethod")
+      callproperty        QName(PackageNamespace(""), "_1bD_"), 1
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_yE_")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tok")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "exp")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "offer")
+      callproperty        QName(PackageNamespace(""), "_0Y_X_"), 3
+      coerce_s
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlocal3
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
+
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1V_T_:_0J_H_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

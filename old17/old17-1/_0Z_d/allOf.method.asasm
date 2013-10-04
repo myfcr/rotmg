@@ -1,0 +1,47 @@
+method
+ refid "_0Z_d:allOf"
+ returns QName(PackageNamespace("_J_p"), "_0w0")
+ flag NEED_REST
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   getlocal1
+   coerce              QName(PackageNamespace(""), "Array")
+   setlocal2
+
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "length")
+   pushbyte            1
+   equals
+   dup
+   iffalse             L17
+
+   pop
+   getlocal1
+   pushbyte            0
+   getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_0Z_d:allOf"), PackageNamespace("_0Z_d"), PackageInternalNs("_0Z_d"), Namespace("http://adobe.com/AS3/2006/builtin")])
+   getlex              QName(PackageNamespace(""), "Array")
+   istypelate
+L17:
+   iffalse             L23
+
+   getlocal1
+   pushbyte            0
+   getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_0Z_d:allOf"), PackageNamespace("_0Z_d"), PackageInternalNs("_0Z_d"), Namespace("http://adobe.com/AS3/2006/builtin")])
+   coerce              QName(PackageNamespace(""), "Array")
+   setlocal2
+
+L23:
+   findpropstrict      QName(PackageNamespace("_0Z_d"), "_sw")
+   getlocal2
+   constructprop       QName(PackageNamespace("_0Z_d"), "_sw"), 1
+   returnvalue
+  end ; code
+ end ; body
+end ; method

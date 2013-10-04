@@ -1,0 +1,90 @@
+class
+ refid "_06u:GuildBoardPanel"
+ instance QName(PackageNamespace("_06u"), "GuildBoardPanel")
+  extends QName(PackageNamespace("_06u"), "_0ef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1L_8")
+  iinit
+   refid "_06u:GuildBoardPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_0J_1")
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_15K_")
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_1L_8"), "onButtonClick") flag OVERRIDE
+   method
+    refid "_06u:GuildBoardPanel/instance/_1L_8:onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "player_")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L11
+
+      returnvoid
+
+L11:
+      getlex              QName(PackageNamespace(""), "gs_")
+      findpropstrict      QName(PackageNamespace("_08t"), "_J_0")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "guildRank_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GuildUtil")
+      getproperty         QName(PackageNamespace(""), "_0T_n")
+      greaterequals
+      constructprop       QName(PackageNamespace("_08t"), "_J_0"), 1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_06u:GuildBoardPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

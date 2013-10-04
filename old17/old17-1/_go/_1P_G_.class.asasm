@@ -1,0 +1,149 @@
+class
+ refid "_go:_1P_G_"
+ instance QName(PackageNamespace("_go"), "_1P_G_")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_19M_")
+  iinit
+   refid "_go:_1P_G_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "model") flag METADATA type QName(PackageNamespace("_0L_d"), "_T_k")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "client") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_19M_"), "startTask") flag OVERRIDE
+   method
+    refid "_go:_1P_G_/instance/_19M_:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_go:_1P_G_/instance"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushstring          "/account/getBeginnerPackageTimeLeft"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_1E_p"), 0
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_go:_1P_G_/instance"), "onComplete")
+   method
+    refid "_go:_1P_G_/instance/_go:_1P_G_/instance/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_go:_1P_G_/instance"), "_Z_G_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_go:_1P_G_/instance"), "_Z_G_")
+   method
+    refid "_go:_1P_G_/instance/_go:_1P_G_/instance/_Z_G_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "XML"), 1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_go:_1P_G_/instance"), PackageNamespace(""), PrivateNamespace("*", "_go:_1P_G_/instance/_go:_1P_G_/instance/_Z_G_"), PackageNamespace("_go"), PackageInternalNs("_go"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_19M_"), StaticProtectedNs("_19M_"), StaticProtectedNs("_4w")])
+      convert_i
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "_0F_E_"), 1
+
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      getlocal2
+      pushbyte            0
+      greaterthan
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_go:_1P_G_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

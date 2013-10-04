@@ -1,0 +1,299 @@
+class
+ refid "_0og:_0tS_"
+ instance QName(PackageNamespace("_0og"), "_0tS_")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  implements Multiname("_U_0", [PackageNamespace("_J_w")])
+  implements Multiname("_0K_n", [PackageNamespace("_X_8")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1X_L_")
+  iinit
+   refid "_0og:_0tS_/instance/init"
+   param QName(PackageNamespace("_0qh"), "_0U_t")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_J_w"), "_0ku")
+     constructprop       QName(PackageNamespace("_J_w"), "_0ku"), 0
+     initproperty        QName(PackageNamespace(""), "_X_Q_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "petVO")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_X_Q_")
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "_17m"), 1
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_X_Q_")
+     findpropstrict      QName(PackageNamespace("_0og"), "_0B_i")
+     getlocal1
+     constructprop       QName(PackageNamespace("_0og"), "_0B_i"), 1
+     setproperty         QName(PackageNamespace(""), "tooltip")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_X_Q_") type QName(PackageNamespace("_J_w"), "_0ku") end
+  trait slot QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "_13A_") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "enabled") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "petVO") type QName(PackageNamespace("_0qh"), "_0U_t") end
+  trait method QName(PackageNamespace(""), "disable")
+   method
+    refid "_0og:_0tS_/instance/disable"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "_a2")
+      setproperty         QName(PackageNamespace(""), "color")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "_13A_")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "enabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "isEnabled")
+   method
+    refid "_0og:_0tS_/instance/isEnabled"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dispatchEvent") flag OVERRIDE
+   method
+    refid "_0og:_0tS_/instance/dispatchEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "enabled")
+      iffalse             L9
+
+      getlocal0
+      getlocal1
+      callsuper           QName(PackageNamespace(""), "dispatchEvent"), 1
+      returnvalue
+
+L9:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_cp")
+   method
+    refid "_0og:_0tS_/instance/_cp"
+    param QName(PackageNamespace("flash.display"), "Bitmap")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "_13A_")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_06o")
+   method
+    refid "_0og:_0tS_/instance/_06o"
+    param QName(PackageNamespace("_0H_D_"), "_sK_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_X_Q_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "_06o"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_q2")
+   method
+    refid "_0og:_0tS_/instance/_q2"
+    returns QName(PackageNamespace("_0H_D_"), "_sK_")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_X_Q_")
+      callproperty        QName(PackageNamespace(""), "_q2"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0hM_")
+   method
+    refid "_0og:_0tS_/instance/_0hM_"
+    param QName(PackageNamespace("_0H_D_"), "_G_J_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_X_Q_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "_0hM_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_6h")
+   method
+    refid "_0og:_0tS_/instance/_6h"
+    returns QName(PackageNamespace("_0H_D_"), "_G_J_")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_X_Q_")
+      callproperty        QName(PackageNamespace(""), "_6h"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPetVO")
+   method
+    refid "_0og:_0tS_/instance/getPetVO"
+    returns QName(PackageNamespace("_0qh"), "_0U_t")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0og:_0tS_/instance"), "petVO")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0og:_0tS_/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_a2")
+    pushint             2697513
+    initproperty        QName(PackageNamespace(""), "_a2")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_a2") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(2697513) end
+end ; class

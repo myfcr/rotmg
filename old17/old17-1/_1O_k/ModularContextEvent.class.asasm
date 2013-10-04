@@ -1,0 +1,127 @@
+class
+ refid "_1O_k:ModularContextEvent"
+ instance QName(PackageNamespace("_1O_k"), "ModularContextEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0C_N_")
+  iinit
+   refid "_1O_k:ModularContextEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("_1G_e"), "_1C_p")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     pushtrue
+     pushtrue
+     constructsuper      3
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_1O_k:ModularContextEvent/instance"), "_0M_k")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_1O_k:ModularContextEvent/instance"), "_0M_k") type QName(PackageNamespace("_1G_e"), "_1C_p") end
+  trait getter QName(PackageNamespace(""), "context")
+   method
+    refid "_1O_k:ModularContextEvent/instance/context/getter"
+    returns QName(PackageNamespace("_1G_e"), "_1C_p")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1O_k:ModularContextEvent/instance"), "_0M_k")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_1O_k:ModularContextEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_1O_k"), "ModularContextEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "context")
+      constructprop       QName(PackageNamespace("_1O_k"), "ModularContextEvent"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_1O_k:ModularContextEvent/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      pushstring          "ModularContextEvent"
+      pushstring          "context"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1O_k:ModularContextEvent/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_1bw")
+    pushstring          "contextAdd"
+    initproperty        QName(PackageNamespace(""), "_1bw")
+
+    findproperty        QName(PackageNamespace(""), "_0Q_L_")
+    pushstring          "contextRemove"
+    initproperty        QName(PackageNamespace(""), "_0Q_L_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_1bw") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("contextAdd") end
+ trait const QName(PackageNamespace(""), "_0Q_L_") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("contextRemove") end
+end ; class

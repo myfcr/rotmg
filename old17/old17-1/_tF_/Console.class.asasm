@@ -1,0 +1,199 @@
+class
+ refid "_tF_:Console"
+ instance QName(PackageNamespace("_tF_"), "Console")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1E_t")
+  iinit
+   refid "_tF_:Console/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageInternalNs("_tF_"), "_0wG_")
+     constructprop       QName(PackageInternalNs("_tF_"), "_0wG_"), 0
+     initproperty        QName(PrivateNamespace("*", "_tF_:Console/instance"), "hash")
+
+     getlocal0
+     findpropstrict      QName(PackageInternalNs("_tF_"), "_1X_9")
+     constructprop       QName(PackageInternalNs("_tF_"), "_1X_9"), 0
+     initproperty        QName(PrivateNamespace("*", "_tF_:Console/instance"), "history")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_tF_:Console/instance"), "hash") type QName(PackageInternalNs("_tF_"), "_0wG_") end
+  trait slot QName(PrivateNamespace("*", "_tF_:Console/instance"), "history") type QName(PackageInternalNs("_tF_"), "_1X_9") end
+  trait method QName(PackageNamespace(""), "register")
+   method
+    refid "_tF_:Console/instance/register"
+    param QName(PackageNamespace("_1V_G_"), "_0O_i")
+    param QName(PackageNamespace("_V_C_"), "_f4")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "hash")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "name")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "description")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "register"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_ci")
+   method
+    refid "_tF_:Console/instance/_ci"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "hash")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "_D_"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_tF_:Console/instance/execute"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "history")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "hash")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "execute"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1K_c")
+   method
+    refid "_tF_:Console/instance/_1K_c"
+    returns TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "hash")
+      callproperty        QName(PackageNamespace(""), "_1K_c"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_159")
+   method
+    refid "_tF_:Console/instance/_159"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "history")
+      callproperty        QName(PackageNamespace(""), "_P_2"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0nU_")
+   method
+    refid "_tF_:Console/instance/_0nU_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_tF_:Console/instance"), "history")
+      callproperty        QName(PackageNamespace(""), "_0O_g"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_tF_:Console/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

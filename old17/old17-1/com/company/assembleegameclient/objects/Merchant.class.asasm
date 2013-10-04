@@ -1,0 +1,1111 @@
+class
+ refid "com.company.assembleegameclient.objects:Merchant"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Merchant")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+  implements Multiname("_145", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1V_e")
+  iinit
+   refid "com.company.assembleegameclient.objects:Merchant/instance/init"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 8
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+     pushbyte            1
+     dup
+     dup
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 4
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_rd")
+
+     getlocal0
+     getlex              QName(PackageNamespace("_1W_I_"), "_05")
+     callproperty        QName(PackageNamespace(""), "_07D_"), 0
+     getlex              QName(PackageNamespace("_L_8"), "_1V_D_")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "addSpeechBalloon")
+
+     getlocal0
+     getlex              QName(PackageNamespace("_1W_I_"), "_05")
+     callproperty        QName(PackageNamespace(""), "_07D_"), 0
+     getlex              QName(PackageNamespace("_hn"), "_0G_Z_")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0eP_")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     findproperty        QName(PackageNamespace(""), "_V_r")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "_V_r")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_0K_L_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "_0cH_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "_C_c") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "_02a") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "merchandiseTexture_") type QName(PackageNamespace("flash.display"), "BitmapData") value Null() end
+  trait slot QName(PackageNamespace(""), "_0ao") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "alpha_") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "addSpeechBalloon") type QName(PackageNamespace("_L_8"), "_1V_D_") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0eP_") type QName(PackageNamespace("_hn"), "_0G_Z_") end
+  trait method QName(PackageNamespace(""), "setPrice") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/setPrice"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "setPrice"), 1
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "_0ao")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRankReq") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/setRankReq"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "setRankReq"), 1
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "_0ao")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addTo") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/addTo"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsuper           QName(PackageNamespace(""), "addTo"), 3
+      iftrue              L10
+
+      pushfalse
+      returnvalue
+
+L10:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "merchLookup_")
+      findpropstrict      QName(PackageNamespace("com.company.util"), "IntPoint")
+      getlex              QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "y_")
+      constructprop       QName(PackageNamespace("com.company.util"), "IntPoint"), 2
+      getlocal0
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeFromMap") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/removeFromMap"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.company.util"), "IntPoint")
+      getlex              QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "y_")
+      constructprop       QName(PackageNamespace("com.company.util"), "IntPoint"), 2
+      coerce              QName(PackageNamespace("com.company.util"), "IntPoint")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "map_")
+      getproperty         QName(PackageNamespace(""), "merchLookup_")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      getlocal0
+      ifne                L19
+
+      getlex              QName(PackageNamespace(""), "map_")
+      getproperty         QName(PackageNamespace(""), "merchLookup_")
+      getlocal1
+      pushnull
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+
+L19:
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "removeFromMap"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_066")
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/_066"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("_1gJ_"), "_1Q_M_")
+    body
+     maxstack 13
+     localcount 9
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L121
+
+L15:
+      label
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      pushstring          "Merchant.new"
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+      pushint             15132390
+      convert_u
+      setlocal3
+
+      pushint             16777215
+      convert_u
+      setlocal            4
+
+      pushint             5931045
+      convert_u
+      setlocal            5
+
+      jump                L149
+
+L32:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      pushbyte            0
+      ifne                L44
+
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      pushstring          "Merchant.goingSoon"
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+      jump                L65
+
+L44:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      pushbyte            1
+      ifne                L55
+
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      pushstring          "Merchant.goingInOneMinute"
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+      jump                L65
+
+L55:
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      pushstring          "Merchant.goingInNMinutes"
+      pushstring          "minutes"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      newobject           1
+      callproperty        QName(PackageNamespace(""), "setParams"), 2
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+L65:
+      pushint             5973542
+      convert_u
+      setlocal3
+
+      pushint             16549442
+      convert_u
+      setlocal            4
+
+      pushint             16549442
+      convert_u
+      setlocal            5
+
+      jump                L149
+
+L75:
+      label
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      pushstring          "Merchant.limitedStock"
+      pushstring          "count"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0cH_")
+      newobject           1
+      callproperty        QName(PackageNamespace(""), "setParams"), 2
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+      pushint             5973542
+      convert_u
+      setlocal3
+
+      pushint             16549442
+      convert_u
+      setlocal            4
+
+      pushint             16549442
+      convert_u
+      setlocal            5
+
+      jump                L149
+
+L96:
+      label
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      pushstring          "Merchant.discount"
+      pushstring          "discount"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_02a")
+      newobject           1
+      callproperty        QName(PackageNamespace(""), "setParams"), 2
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal2
+
+      pushint             6324275
+      convert_u
+      setlocal3
+
+      pushint             16777103
+      convert_u
+      setlocal            4
+
+      pushint             16777103
+      convert_u
+      setlocal            5
+
+      jump                L149
+
+L117:
+      label
+      pushnull
+      returnvalue
+
+      jump                L149
+
+L121:
+      getlocal1
+      setlocal            6
+
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1Y_e")
+      getlocal            6
+      ifstrictne          L128
+
+      pushbyte            0
+      jump                L147
+
+L128:
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0Z_r")
+      getlocal            6
+      ifstrictne          L133
+
+      pushbyte            1
+      jump                L147
+
+L133:
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_T__")
+      getlocal            6
+      ifstrictne          L138
+
+      pushbyte            2
+      jump                L147
+
+L138:
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1V_t")
+      getlocal            6
+      ifstrictne          L143
+
+      pushbyte            3
+      jump                L147
+
+L143:
+      jump                L146
+
+      pushbyte            4
+      jump                L147
+
+L146:
+      pushbyte            4
+L147:
+      kill                6
+      lookupswitch        L117, [L15, L32, L75, L96, L117]
+
+L149:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0eP_")
+      callpropvoid        QName(PackageNamespace(""), "_B_f"), 1
+
+      findpropstrict      QName(PackageNamespace("_1gJ_"), "_1Q_M_")
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getString"), 0
+      getlocal3
+      pushbyte            1
+      getlocal            4
+      pushbyte            1
+      getlocal            5
+      pushbyte            6
+      pushtrue
+      pushfalse
+      constructprop       QName(PackageNamespace("_1gJ_"), "_1Q_M_"), 10
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1at") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1iQ_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 9
+     localcount 11
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_9i"), "GTween")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("_9i"), "GTween")
+      setlocal            6
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "update"), 2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1at")
+      iffalse             L70
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      pushint             2147483647
+      ifne                L67
+
+      getlocal0
+      pushdouble          0
+      initproperty        QName(PackageNamespace(""), "alpha_")
+
+      findpropstrict      QName(PackageNamespace("_9i"), "GTween")
+      getlocal0
+      pushdouble          0.5
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T")
+      multiply
+      pushstring          "alpha_"
+      pushbyte            1
+      newobject           1
+      constructprop       QName(PackageNamespace("_9i"), "GTween"), 3
+      coerce              QName(PackageNamespace("_9i"), "GTween")
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("_9i"), "GTween")
+      getlocal0
+      pushdouble          0.5
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T")
+      multiply
+      pushstring          "size_"
+      pushshort           150
+      newobject           1
+      pushstring          "ease"
+      getlex              QName(PackageNamespace("_02e"), "_0C_j")
+      getproperty         QName(PackageNamespace(""), "_G_U_")
+      newobject           1
+      constructprop       QName(PackageNamespace("_9i"), "GTween"), 4
+      coerce              QName(PackageNamespace("_9i"), "GTween")
+      dup
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("_9i"), "GTween")
+      getlocal0
+      pushdouble          0.5
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T")
+      multiply
+      pushstring          "size_"
+      pushbyte            100
+      newobject           1
+      pushstring          "ease"
+      getlex              QName(PackageNamespace("_02e"), "_0C_j")
+      getproperty         QName(PackageNamespace(""), "_1bn")
+      newobject           1
+      constructprop       QName(PackageNamespace("_9i"), "GTween"), 4
+      setproperty         QName(PackageNamespace(""), "_eW_")
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "_eW_")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "paused")
+
+L67:
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1at")
+
+L70:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ao")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace(""), "_0ao")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ao")
+      pushbyte            0
+      ifngt               L82
+
+      pushtrue
+      returnvalue
+
+L82:
+      getlocal0
+      pushshort           5000
+      initproperty        QName(PackageNamespace(""), "_0ao")
+
+      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace(""), "int")
+      applytype           1
+      construct           0
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      pushint             2147483647
+      ifne                L99
+
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1Y_e")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L114
+
+L99:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      pushbyte            0
+      greaterequals
+      dup
+      iffalse             L110
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_C_c")
+      pushbyte            5
+      lessequals
+L110:
+      iffalse             L114
+
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0Z_r")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L114:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0cH_")
+      pushbyte            1
+      greaterequals
+      dup
+      iffalse             L125
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0cH_")
+      pushbyte            2
+      lessequals
+L125:
+      iffalse             L129
+
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_T__")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L129:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_02a")
+      pushbyte            0
+      ifngt               L136
+
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1V_t")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L136:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L142
+
+      pushtrue
+      returnvalue
+
+L142:
+      getlocal0
+      getlocal0
+      dup
+      setlocal            7
+
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1iQ_")
+      increment_i
+      dup
+      setlocal            8
+
+      getlocal            7
+      getlocal            8
+      setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1iQ_")
+
+      kill                8
+      kill                7
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      modulo
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1iQ_")
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1iQ_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      convert_i
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "addSpeechBalloon")
+      getlocal0
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "_066"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "soldObjectName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/soldObjectName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "_0F_F_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "soldObjectInternalName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/soldObjectInternalName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "_7u")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal1
+
+      getlocal1
+      getproperty         MultinameA("id", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")]), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTooltip") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getTooltip"
+    returns QName(PackageNamespace("_pO_"), "_1hr")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_pO_"), "EquipmentToolTip")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getlex              QName(PackageNamespace(""), "map_")
+      getproperty         QName(PackageNamespace(""), "player_")
+      pushbyte            255
+      getlex              QName(PackageNamespace("_T_w"), "_K_D_")
+      getproperty         QName(PackageNamespace(""), "NPC")
+      constructprop       QName(PackageNamespace("_pO_"), "EquipmentToolTip"), 4
+      coerce              QName(PackageNamespace("_pO_"), "_1hr")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIcon") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getIcon"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.ui"), "_r5")
+      setlocal3
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      pushbyte            80
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 3
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "_7u")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal2
+
+      getlocal2
+      pushstring          "Doses"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")]), 1
+      iffalse             L49
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "clone"), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("com.company.ui"), "_r5")
+      pushbyte            12
+      pushint             16777215
+      pushfalse
+      pushbyte            0
+      dup
+      constructprop       QName(PackageNamespace("com.company.ui"), "_r5"), 5
+      coerce              QName(PackageNamespace("com.company.ui"), "_r5")
+      setlocal3
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal2
+      getproperty         Multiname("Doses", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "_1E_X_"), 0
+
+      getlocal1
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19U_")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+L49:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTex1Id")
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getTex1Id"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "_7u")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L14
+
+      getlocal1
+      returnvalue
+
+L14:
+      getlocal2
+      getproperty         Multiname("Activate", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      pushstring          "Dye"
+      equals
+      dup
+      iffalse             L25
+
+      pop
+      getlocal2
+      pushstring          "Tex1"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")]), 1
+      convert_b
+L25:
+      iffalse             L31
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal2
+      getproperty         Multiname("Tex1", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      returnvalue
+
+L31:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTex2Id")
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getTex2Id"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "_7u")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L14
+
+      getlocal1
+      returnvalue
+
+L14:
+      getlocal2
+      getproperty         Multiname("Activate", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      pushstring          "Dye"
+      equals
+      dup
+      iffalse             L25
+
+      pop
+      getlocal2
+      pushstring          "Tex2"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")]), 1
+      convert_b
+L25:
+      iffalse             L31
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal2
+      getproperty         Multiname("Tex2", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1V_e"), StaticProtectedNs("_1V_e"), StaticProtectedNs("_0U_S_"), StaticProtectedNs("_E_j"), StaticProtectedNs("_1N_p")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      returnvalue
+
+L31:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_rd") type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+  trait method QName(ProtectedNamespace("_1V_e"), "getTexture") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/_1V_e:getTexture"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 7
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "alpha_")
+      pushbyte            1
+      equals
+      dup
+      iffalse             L12
+
+      pop
+      getlex              QName(PackageNamespace(""), "size_")
+      pushbyte            100
+      equals
+L12:
+      iffalse             L16
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "merchandiseTexture_")
+      returnvalue
+
+L16:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      getlex              QName(PackageNamespace(""), "size_")
+      pushfalse
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "alpha_")
+      pushbyte            1
+      ifeq                L40
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_rd")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "alpha_")
+      setproperty         QName(PackageNamespace(""), "alphaMultiplier")
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "rect")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_rd")
+      callpropvoid        QName(PackageNamespace(""), "colorTransform"), 2
+
+L40:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setMerchandiseType")
+   method
+    refid "com.company.assembleegameclient.objects:Merchant/instance/setMerchandiseType"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_0K_L_")
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0K_L_")
+      pushbyte            100
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 3
+      initproperty        QName(PackageNamespace(""), "merchandiseTexture_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Merchant/class/init"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19S_")
+    pushbyte            0
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19S_")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1Y_e")
+    pushbyte            1
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1Y_e")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0Z_r")
+    pushbyte            2
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0Z_r")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_T__")
+    pushbyte            3
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_T__")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1V_t")
+    pushbyte            4
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1V_t")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T")
+    pushbyte            1
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19U_")
+    newfunction         "com.company.assembleegameclient.objects:Merchant/class/init/inline_method"
+    getglobalscope
+    call                0
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19U_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19S_") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1Y_e") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_0Z_r") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_T__") slotid 4 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_1V_t") slotid 5 type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T") slotid 6 type QName(PackageNamespace(""), "Number") value Double(1) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_19U_") slotid 7 type QName(PackageNamespace("flash.geom"), "Matrix") end
+end ; class

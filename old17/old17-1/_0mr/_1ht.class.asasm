@@ -1,0 +1,360 @@
+class
+ refid "_0mr:_1ht"
+ instance QName(PackageNamespace("_0mr"), "_1ht")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  implements Multiname("_iF_", [PackageNamespace("_0lk")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0kA_")
+  iinit
+   refid "_0mr:_1ht/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "steam") flag METADATA type QName(PackageNamespace("_fk"), "_0L_y")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "offer") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "paymentMethod") flag METADATA type QName(PackageNamespace(""), "String")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1Z_P_") flag METADATA type QName(PackageNamespace("_D_r"), "_1Z_E_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0x6") flag METADATA type QName(PackageNamespace("_1G_e"), "_1A_Z_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "first") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_J_c") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1X_i") flag METADATA type QName(PackageNamespace("_0I_E_"), "_1hg")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_0kA_"), "startTask") flag OVERRIDE
+   method
+    refid "_0mr:_1ht/instance/_0kA_:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "SteamPurchaseGoldTask startTask"
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "steam")
+      getproperty         QName(Namespace("_1M_F_"), "_07C_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_0nc")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "first")
+      pushbyte            2
+      callpropvoid        QName(Namespace("_0T_S_"), "_1P_F_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "first")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "first")
+      pushstring          "/steamworks/purchaseOffer"
+      pushstring          "steamid"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "steam")
+      callproperty        QName(Namespace("_1M_F_"), "_V_A_"), 0
+      pushstring          "data"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "offer")
+      getproperty         QName(PackageNamespace(""), "data_")
+      newobject           2
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "onComplete")
+   method
+    refid "_0mr:_1ht/instance/_0mr:_1ht/instance/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L7
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_cm"), 0
+
+      jump                L10
+
+L7:
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "reportError"), 1
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_cm")
+   method
+    refid "_0mr:_1ht/instance/_0mr:_1ht/instance/_cm"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "SteamPurchaseGoldTask purchaseOffer confirmed by AppEngine"
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_0nc")
+   method
+    refid "_0mr:_1ht/instance/_0mr:_1ht/instance/_0nc"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "SteamPurchaseGoldTask payment authorized by Steam"
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_J_c")
+      pushbyte            2
+      callpropvoid        QName(Namespace("_0T_S_"), "_1P_F_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_J_c")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_0T_m")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_J_c")
+      pushstring          "/steamworks/finalizePurchase"
+      pushstring          "appid"
+      getlocal1
+      pushstring          "orderid"
+      getlocal2
+      pushstring          "authorized"
+      getlocal3
+      iffalse             L29
+
+      pushbyte            1
+      coerce_a
+      jump                L31
+
+L29:
+      pushbyte            0
+      coerce_a
+L31:
+      newobject           3
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_0T_m")
+   method
+    refid "_0mr:_1ht/instance/_0mr:_1ht/instance/_0T_m"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L7
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_I_P_"), 0
+
+      jump                L10
+
+L7:
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "reportError"), 1
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "_I_P_")
+   method
+    refid "_0mr:_1ht/instance/_0mr:_1ht/instance/_I_P_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "SteamPurchaseGoldTask purchase finalized"
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1X_i")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0mr:_1ht/instance"), "reportError")
+   method
+    refid "_0mr:_1ht/instance/_0mr:_1ht/instance/reportError"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "Error: "
+      getlocal1
+      add
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "finalize error {0}"
+      getlocal2
+      newarray            1
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1Z_P_")
+      findpropstrict      QName(PackageNamespace("_0V_x"), "_0wx")
+      getlocal2
+      constructprop       QName(PackageNamespace("_0V_x"), "_0wx"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0mr:_1ht/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

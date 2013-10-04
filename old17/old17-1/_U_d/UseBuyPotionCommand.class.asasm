@@ -1,0 +1,364 @@
+class
+ refid "_U_d:UseBuyPotionCommand"
+ instance QName(PackageNamespace("_U_d"), "UseBuyPotionCommand")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_05f")
+  iinit
+   refid "_U_d:UseBuyPotionCommand/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("_4n"), "_qW_")
+     getproperty         QName(PackageNamespace(""), "_1V_i")
+     initproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_14u")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_0kp") flag METADATA type QName(PackageNamespace("_1gJ_"), "_7j")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1he") flag METADATA type QName(PackageNamespace("_1gJ_"), "_1H_s")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_Q_T_") flag METADATA type QName(PackageNamespace("_jX_"), "_13b")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0x6") flag METADATA type QName(PackageNamespace("_1G_e"), "_1A_Z_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_14u") type QName(PackageNamespace("_4n"), "_qW_") end
+  trait slot QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player") end
+  trait slot QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "count") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_S_k") type QName(PackageNamespace("_jX_"), "_1bV_") end
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_U_d:UseBuyPotionCommand/instance/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_Q_T_")
+      getproperty         QName(PackageNamespace(""), "_0jJ_")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "player_")
+      initproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0kp")
+      getproperty         QName(PackageNamespace(""), "objectId")
+      initproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+      callproperty        QName(PackageNamespace(""), "getPotionCount"), 1
+      initproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "count")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1he")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+      callproperty        QName(PackageNamespace(""), "_fZ_"), 1
+      initproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_S_k")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "count")
+      pushbyte            0
+      greaterthan
+      dup
+      iftrue              L38
+
+      pop
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_vk"), 0
+      convert_b
+L38:
+      iffalse             L42
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0u3"), 0
+
+      jump                L46
+
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "Not safe to purchase potion"
+      callpropvoid        QName(Namespace("_1U_g"), "info"), 1
+
+L46:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_vk")
+   method
+    refid "_U_d:UseBuyPotionCommand/instance/_U_d:UseBuyPotionCommand/instance/_vk"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "credits_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_S_k")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+      callproperty        QName(PackageNamespace(""), "getPotionCount"), 1
+      callproperty        QName(PackageNamespace(""), "_wZ_"), 1
+      greaterequals
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getproperty         Multiname("contextualPotionBuy", [PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), PackageNamespace(""), PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance/_U_d:UseBuyPotionCommand/instance/_vk"), PackageNamespace("_U_d"), PackageInternalNs("_U_d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_05f"), StaticProtectedNs("_05f")])
+      convert_b
+      dup
+      iftrue              L28
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0kp")
+      getproperty         QName(PackageNamespace(""), "source")
+      getlex              QName(PackageNamespace("_1gJ_"), "_7j")
+      getproperty         QName(PackageNamespace(""), "_0mv")
+      equals
+L28:
+      convert_b
+      setlocal2
+
+      getlocal1
+      convert_b
+      dup
+      iftrue              L40
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      pushbyte            10
+      callproperty        QName(PackageNamespace(""), "_0T_p"), 1
+      convert_b
+L40:
+      dup
+      iffalse             L45
+
+      pop
+      getlocal2
+      convert_b
+L45:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0u3")
+   method
+    refid "_U_d:UseBuyPotionCommand/instance/_U_d:UseBuyPotionCommand/instance/_0u3"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_ur"), 0
+      iffalse             L10
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "UseBuyPotionCommand.execute: User has MAX of that attribute, not requesting a use/buy from server."
+      callpropvoid        QName(Namespace("_1U_g"), "info"), 1
+
+      jump                L15
+
+L10:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_16F_"), 0
+
+      getlex              QName(PackageNamespace("_0X_j"), "_A_R_")
+      pushstring          "use_potion"
+      callpropvoid        QName(PackageNamespace(""), "play"), 1
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_ur")
+   method
+    refid "_U_d:UseBuyPotionCommand/instance/_U_d:UseBuyPotionCommand/instance/_ur"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+      getlex              QName(PackageNamespace("_1gJ_"), "_1H_s")
+      getproperty         QName(PackageNamespace(""), "_u9")
+      ifne                L15
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "_0sH_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "_C_v")
+      greaterequals
+      returnvalue
+
+L15:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+      getlex              QName(PackageNamespace("_1gJ_"), "_1H_s")
+      getproperty         QName(PackageNamespace(""), "_1N_F_")
+      ifne                L28
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "_wW_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "_X_u")
+      greaterequals
+      returnvalue
+
+L28:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_16F_")
+   method
+    refid "_U_d:UseBuyPotionCommand/instance/_U_d:UseBuyPotionCommand/instance/_16F_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_1gJ_"), "_1H_s")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0kp")
+      getproperty         QName(PackageNamespace(""), "objectId")
+      callproperty        QName(PackageNamespace(""), "_0wj"), 1
+      convert_i
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_14u")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "objectId_")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "_0t8")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getproperty         QName(PackageNamespace(""), "y_")
+      getlex              QName(PackageNamespace("_00z"), "_1L_3")
+      getproperty         QName(PackageNamespace(""), "_1N_5")
+      callpropvoid        QName(PackageNamespace(""), "useItem"), 7
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_d:UseBuyPotionCommand/instance"), "player")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0kp")
+      getproperty         QName(PackageNamespace(""), "objectId")
+      callproperty        QName(PackageNamespace(""), "getPotionCount"), 1
+      pushbyte            0
+      ifne                L43
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1he")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0kp")
+      getproperty         QName(PackageNamespace(""), "objectId")
+      callproperty        QName(PackageNamespace(""), "_fZ_"), 1
+      callpropvoid        QName(PackageNamespace(""), "_dT_"), 0
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_U_d:UseBuyPotionCommand/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,145 @@
+class
+ refid "_-05e:_-kt"
+ instance QName(PackageNamespace("_-05e"), "_-kt")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Cy")
+  iinit
+   refid "_-05e:_-kt/instance/init"
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Object")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     instanceof
+     setlocal            4
+
+     getlocal3
+     decrement
+     kill                4
+     declocal_i          2
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iftrue              L26
+
+     pop
+     getlocal2
+     jump                L25
+
+     kill                4
+     pushnull
+     kill                4
+     newactivation
+     dup
+     strictequals
+L25:
+     convert_b
+L26:
+     iffalse             L47
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "_-0i5")
+     constructsuper      1
+
+     getlocal            4
+     iffalse             L50
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "success_")
+
+     getlocal            5
+     iftrue              L47
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-a2")
+
+     getlocal            5
+     dup
+     iffalse             L46
+
+     pop
+     getlocal3
+     convert_b
+L46:
+     iftrue              L50
+
+L47:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-0jp")
+
+L50:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "success_") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "_-a2") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0jp") type QName(PackageNamespace("", "#0"), "Object") end
+ end ; instance
+ cinit
+  refid "_-05e:_-kt/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    bitxor
+    equals
+    getlocal3
+    pop
+    divide
+    astypelate
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal1
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0i5")
+    pushstring          "GUILDRESULTEVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0i5")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-0i5") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("GUILDRESULTEVENT") end
+end ; class

@@ -1,0 +1,299 @@
+class
+ refid "_-0ms:_-0u0"
+ instance QName(PackageNamespace("_-0ms"), "_-0u0")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0aL")
+  iinit
+   refid "_-0ms:_-0u0/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     nextname
+     add_i
+     nextvalue
+     pushundefined
+     setlocal3
+
+     nextname
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "item_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-2j") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0HD") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "included_") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput")
+   method
+    refid "_-0ms:_-0u0/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      getlocal2
+      negate
+      inclocal            2
+      convert_o
+      kill                2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L57
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "item_")
+
+      getlocal3
+      jump                L33
+
+      increment_i
+      setlocal2
+
+      declocal_i          2
+      declocal            2
+      setlocal2
+
+      subtract_i
+L33:
+      dup
+      iftrue              L38
+
+      pop
+      getlocal2
+      convert_b
+L38:
+      iffalse             L72
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      jump                L49
+
+      setlocal2
+
+      getlocal2
+      lessequals
+      declocal_i          2
+      bitnot
+      greaterequals
+L49:
+      initproperty        QName(PackageNamespace("", "#0"), "_-2j")
+
+      getlocal3
+      dup
+      iftrue              L56
+
+      pop
+      getlocal2
+      convert_b
+L56:
+      iffalse             L72
+
+L57:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "_-0HD")
+
+      getlocal2
+      dup
+      iffalse             L67
+
+      pop
+      getlocal3
+      convert_b
+L67:
+      iftrue              L72
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "included_")
+
+L72:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-0ms:_-0u0/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      rshift
+      pushundefined
+      newactivation
+      convert_u
+      astypelate
+      getglobalscope
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "item: "
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "item_")
+      getlocal2
+      iffalse             L33
+
+      add
+      pushstring          " slotType: "
+      getlocal1
+      iftrue              L65
+
+      add
+      jump                L31
+
+      decrement
+      pushnull
+      convert_o
+      lshift
+      getlocal1
+      astypelate
+L31:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-2j")
+L33:
+      add
+      getlocal2
+      iffalse             L69
+
+      pushstring          " tradeable: "
+      getlocal1
+      iftrue              L65
+
+      jump                L46
+
+      getlocal1
+      greaterequals
+      equals
+      lessthan
+      lessequals
+      dxnslate
+L46:
+      add
+      getlocal2
+      dup
+      iftrue              L53
+
+      pop
+      getlocal2
+      convert_b
+L53:
+      iffalse             L69
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0HD")
+      getlocal1
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      convert_b
+L62:
+      iftrue              L68
+
+      add
+      pushstring          " included:"
+L65:
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "included_")
+L68:
+      add
+L69:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0ms:_-0u0/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

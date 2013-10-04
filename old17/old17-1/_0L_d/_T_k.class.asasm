@@ -1,0 +1,243 @@
+class
+ refid "_0L_d:_T_k"
+ instance QName(PackageNamespace("_0L_d"), "_T_k")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0C_b")
+  iinit
+   refid "_0L_d:_T_k/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 0
+     initproperty        QName(PackageNamespace(""), "_085")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "model") flag METADATA type QName(PackageNamespace("_1A_j"), "_103")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_085") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait slot QName(PrivateNamespace("*", "_0L_d:_T_k"), "_1_Y_") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "_0I_d")
+   method
+    refid "_0L_d:_T_k/instance/_0I_d"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0L_d:_T_k"), "_1_Y_")
+      pushbyte            0
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0F_E_")
+   method
+    refid "_0L_d:_T_k/instance/_0F_E_"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_0L_d:_T_k"), "_1_Y_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0bo")
+   method
+    refid "_0L_d:_T_k/instance/_0bo"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0L_d:_T_k"), "_1_Y_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_14t")
+   method
+    refid "_0L_d:_T_k/instance/_14t"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_1D_0")
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_0bo"), 0
+      callproperty        QName(PackageNamespace(""), "_11m"), 1
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1D_F_")
+   method
+    refid "_0L_d:_T_k/instance/_1D_F_"
+    returns QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getproperty         QName(PackageNamespace(""), "_0ls")
+      iftrue              L11
+
+      pushnull
+      returnvalue
+
+L11:
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getproperty         QName(PackageNamespace(""), "_0ls")
+      getproperty         QName(PackageNamespace(""), "offerList")
+      coerce_a
+      setlocal3
+
+      jump                L32
+
+L20:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "realmGold_")
+      getlex              QName(PrivateNamespace("*", "_0L_d:_T_k"), "_D_n")
+      ifne                L32
+
+      getlocal1
+      returnvalue
+
+L32:
+      hasnext2            3, 2
+      iftrue              L20
+
+      kill                3
+      kill                2
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1I_9")
+   method
+    refid "_0L_d:_T_k/instance/_1I_9"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "_0F_E_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_085")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0L_d:_T_k/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_0L_d:_T_k"), "_D_n")
+    pushshort           2600
+    initproperty        QName(PrivateNamespace("*", "_0L_d:_T_k"), "_D_n")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_0L_d:_T_k"), "_D_n") slotid 1 type QName(PackageNamespace(""), "int") value Integer(2600) end
+end ; class

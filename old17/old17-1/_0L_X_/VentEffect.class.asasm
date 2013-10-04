@@ -1,0 +1,222 @@
+class
+ refid "_0L_X_:VentEffect"
+ instance QName(PackageNamespace("_0L_X_"), "VentEffect")
+  extends QName(PackageNamespace("_0L_X_"), "_0S_Y_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1c6")
+  iinit
+   refid "_0L_X_:VentEffect/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "go_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace(""), "lastUpdate_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_0L_X_:VentEffect/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 7
+     localcount 12
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_0L_X_:VentEffect#0"), "VentParticle")
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "map_")
+      pushnull
+      ifne                L22
+
+      pushfalse
+      returnvalue
+
+L22:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastUpdate_")
+      pushbyte            0
+      ifnlt               L34
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlocal1
+      pushshort           400
+      subtract
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      initproperty        QName(PackageNamespace(""), "lastUpdate_")
+
+L34:
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      initproperty        QName(PackageNamespace(""), "y_")
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastUpdate_")
+      getlex              QName(PrivateNamespace("*", "_0L_X_:VentEffect#1"), "_05j")
+      divide
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      convert_i
+      setlocal3
+
+      jump                L111
+
+L53:
+      label
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "_0L_X_:VentEffect#1"), "_05j")
+      multiply
+      convert_i
+      setlocal            4
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_0i8")
+      getlex              QName(PrivateNamespace("*", "_0L_X_:VentEffect#0"), "VentParticle")
+      callproperty        QName(PackageNamespace(""), "_1i5"), 1
+      getlex              QName(PrivateNamespace("*", "_0L_X_:VentEffect#0"), "VentParticle")
+      astypelate
+      coerce              QName(PrivateNamespace("*", "_0L_X_:VentEffect#0"), "VentParticle")
+      dup
+      setlocal            5
+
+      getlocal            4
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "restart"), 2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      convert_d
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      pushdouble          0.4
+      multiply
+      convert_d
+      setlocal            7
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlocal            7
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      multiply
+      add
+      convert_d
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      getlocal            7
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      multiply
+      add
+      convert_d
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "map_")
+      getlocal            5
+      getlocal            8
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "addObj"), 3
+
+      inclocal_i          3
+L111:
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "_0L_X_:VentEffect#1"), "_05j")
+      divide
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      iflt                L53
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "lastUpdate_")
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0L_X_:VentEffect/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_0L_X_:VentEffect#1"), "_05j")
+    pushbyte            50
+    initproperty        QName(PrivateNamespace("*", "_0L_X_:VentEffect#1"), "_05j")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_0L_X_:VentEffect#1"), "_05j") slotid 1 type QName(PackageNamespace(""), "int") value Integer(50) end
+end ; class

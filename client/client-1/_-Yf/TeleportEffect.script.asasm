@@ -1,0 +1,61 @@
+script ; 1570
+ sinit
+  refid "_-Yf:TeleportEffect/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("TeleportEffect", [PackageNamespace("_-Yf")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "_-00p")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "_-00p")
+    newclass            "_-Yf:TeleportEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-Yf"), "TeleportEffect")
+
+    findpropstrict      Multiname("TeleportParticle", [PrivateNamespace("*", "_-Yf:TeleportEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "Particle")
+    newclass            "_-Yf:TeleportEffect/TeleportParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-Yf:TeleportEffect"), "TeleportParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Yf"), "TeleportEffect")
+  #include "TeleportEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-Yf:TeleportEffect"), "TeleportParticle")
+  #include "TeleportEffect/TeleportParticle.class.asasm"
+ end ; trait
+end ; script

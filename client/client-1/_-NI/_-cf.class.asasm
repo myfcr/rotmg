@@ -1,0 +1,133 @@
+class
+ refid "_-NI:_-cf"
+ instance QName(PackageNamespace("_-NI"), "_-cf")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-CN")
+  iinit
+   refid "_-NI:_-cf/instance/init"
+   body
+    maxstack 9
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_i
+     istypelate
+     pop
+     negate
+     multiply_i
+     bitxor
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L71
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     jump                L32
+
+     dup
+     getlocal0
+     nextvalue
+     convert_b
+     lshift
+     negate_i
+L32:
+     iftrue              L36
+
+     pop
+     getlocal2
+     convert_b
+L36:
+     iffalse             L55
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     getlex              QName(PackageNamespace("_-NI"), "_-0oT")
+     getproperty         QName(PackageNamespace("", "#0"), "_-js")
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 1
+
+     jump                L48
+
+     rshift
+     convert_u
+     greaterthan
+     typeof
+     pushfalse
+     setlocal3
+
+L48:
+     getlocal1
+     dup
+     iffalse             L54
+
+     pop
+     getlocal0
+     convert_b
+L54:
+     iftrue              L71
+
+L55:
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     getlex              QName(PackageNamespace("_-NI"), "_-0oT")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0k9")
+     getlex              QName(PackageNamespace("_-NI"), "_-0oT")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0im")
+     getlex              QName(PackageNamespace("_-NI"), "_-0oT")
+     getproperty         QName(PackageNamespace("", "#0"), "_-dL")
+     getlex              QName(PackageNamespace("_-NI"), "_-0oT")
+     getproperty         QName(PackageNamespace("", "#0"), "_-dL")
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRoundRect"), 6
+
+     getlocal2
+     iffalse             L71
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+L71:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-NI:_-cf/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

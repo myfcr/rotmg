@@ -1,0 +1,183 @@
+class
+ refid "_1C_U_:_1iF_"
+ instance QName(PackageNamespace("_1C_U_"), "_1iF_")
+  extends QName(PackageNamespace("_N__"), "_1X_a")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0ct")
+  iinit
+   refid "_1C_U_:_1iF_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("_1C_U_"), "_14V_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_1C_U_:_1iF_/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "close")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_1U_F_")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_1U_F_")
+   method
+    refid "_1C_U_:_1iF_/instance/_1C_U_:_1iF_/_1U_F_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_1J_a"), 0
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      getlex              QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "TOP")
+      callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_1J_a")
+   method
+    refid "_1C_U_:_1iF_/instance/_1C_U_:_1iF_/_1J_a"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_iB_")
+      coerce_s
+      setlocal1
+
+L8:
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      getlex              QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_ec")
+      callproperty        QName(PackageNamespace(""), "call"), 1
+      coerce_s
+      setlocal2
+
+      getlocal2
+      convert_b
+      dup
+      iffalse             L21
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_b
+L21:
+      iffalse             L25
+
+      getlocal2
+      coerce_s
+      setlocal1
+
+L25:
+      jump                L37
+
+L26:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L37:
+      getlocal1
+      returnvalue
+     end ; code
+     try from L8 to L25 target L26 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1C_U_:_1iF_/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_ec")
+    pushstring          "rotmg.KabamDotComLib.getKabamGamePage"
+    initproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_ec")
+
+    findproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_iB_")
+    pushstring          "https://www.kabam.com"
+    initproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_iB_")
+
+    findproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "TOP")
+    pushstring          "_top"
+    initproperty        QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "TOP")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_ec") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("rotmg.KabamDotComLib.getKabamGamePage") end
+ trait const QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "_iB_") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("https://www.kabam.com") end
+ trait const QName(PrivateNamespace("*", "_1C_U_:_1iF_"), "TOP") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("_top") end
+end ; class

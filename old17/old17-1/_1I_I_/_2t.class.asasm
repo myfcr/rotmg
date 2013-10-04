@@ -1,0 +1,122 @@
+class
+ refid "_1I_I_:_2t"
+ instance QName(PackageNamespace("_1I_I_"), "_2t")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_wo")
+  iinit
+   refid "_1I_I_:_2t/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "item_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "_1c0") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "_01T_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "included_") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "parseFromInput")
+   method
+    refid "_1I_I_:_2t/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "item_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "_1c0")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace(""), "_01T_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace(""), "included_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_1I_I_:_2t/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "item: "
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "item_")
+      add
+      pushstring          " slotType: "
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1c0")
+      add
+      pushstring          " tradeable: "
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_01T_")
+      add
+      pushstring          " included:"
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "included_")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1I_I_:_2t/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

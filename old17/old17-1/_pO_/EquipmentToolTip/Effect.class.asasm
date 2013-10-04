@@ -1,0 +1,252 @@
+class
+ refid "_pO_:EquipmentToolTip/Effect"
+ instance QName(PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), "Effect")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("EquipmentToolTip.as$861:Effect")
+  iinit
+   refid "_pO_:EquipmentToolTip/Effect/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "name_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "valueReplacements_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "name_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "valueReplacements_") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "replacementColor_") type QName(PackageNamespace(""), "uint") value Integer(16777103) end
+  trait slot QName(PackageNamespace(""), "color_") type QName(PackageNamespace(""), "uint") value Integer(11776947) end
+  trait method QName(PackageNamespace(""), "setColor")
+   method
+    refid "_pO_:EquipmentToolTip/Effect/instance/setColor"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), "Effect")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "color_")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setReplacementsColor")
+   method
+    refid "_pO_:EquipmentToolTip/Effect/instance/setReplacementsColor"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), "Effect")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "replacementColor_")
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getValueReplacementsWithColor")
+   method
+    refid "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      setlocal            5
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushstring          ""
+      setlocal2
+
+      pushstring          ""
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "replacementColor_")
+      iffalse             L36
+
+      pushstring          "</font><font color=\"#"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "replacementColor_")
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      add
+      pushstring          "\">"
+      add
+      setlocal2
+
+      pushstring          "</font><font color=\"#"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "color_")
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      add
+      pushstring          "\">"
+      add
+      setlocal3
+
+L36:
+      pushbyte            0
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valueReplacements_")
+      coerce_a
+      setlocal            7
+
+      jump                L100
+
+L43:
+      label
+      getlocal            7
+      getlocal            6
+      nextname
+      coerce_s
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valueReplacements_")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+      getlex              QName(PackageNamespace("_1X_w"), "AppendingLineBuilder")
+      istypelate
+      iffalse             L64
+
+      getlocal1
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valueReplacements_")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+      setproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+
+      jump                L100
+
+L64:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valueReplacements_")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+      getlex              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      istypelate
+      iffalse             L89
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valueReplacements_")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+      getlex              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      astypelate
+      coerce              QName(PackageNamespace("_1X_w"), "_1O_V_")
+      dup
+      setlocal            5
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "setPrefix"), 1
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setPostfix"), 1
+
+      getlocal1
+      getlocal            4
+      getlocal            5
+      setproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+
+      jump                L100
+
+L89:
+      getlocal1
+      getlocal            4
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valueReplacements_")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+      add
+      getlocal3
+      add
+      setproperty         MultinameL([PrivateNamespace("*", "_pO_:EquipmentToolTip#1"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_pO_:EquipmentToolTip/Effect/instance/getValueReplacementsWithColor"), ProtectedNamespace("EquipmentToolTip.as$861:Effect"), StaticProtectedNs("EquipmentToolTip.as$861:Effect")])
+
+L100:
+      hasnext2            7, 6
+      iftrue              L43
+
+      kill                7
+      kill                6
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_pO_:EquipmentToolTip/Effect/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

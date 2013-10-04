@@ -1,0 +1,220 @@
+class
+ refid "_0og:_dM_"
+ instance QName(PackageNamespace("_0og"), "_dM_")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_B_v")
+  iinit
+   refid "_0og:_dM_/instance/init"
+   body
+    maxstack 7
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_")
+     pushbyte            14
+     pushstring          "buttonOne"
+     pushbyte            70
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_"), 3
+     initproperty        QName(PackageNamespace(""), "buttonOne")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_")
+     pushbyte            14
+     pushstring          "buttonTwo"
+     pushbyte            70
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_"), 3
+     initproperty        QName(PackageNamespace(""), "buttonTwo")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_0A_1"), "_03y")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "buttonOne")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     constructprop       QName(PackageNamespace("_0A_1"), "_03y"), 2
+     initproperty        QName(PackageNamespace(""), "_1D_G_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_0A_1"), "_03y")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "buttonTwo")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     constructprop       QName(PackageNamespace("_0A_1"), "_03y"), 2
+     initproperty        QName(PackageNamespace(""), "_1R_u")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_0og:_dM_/instance"), "_yi"), 0
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_0og:_dM_/instance"), "_1D_q"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "buttonOne") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_") end
+  trait slot QName(PackageNamespace(""), "buttonTwo") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_") end
+  trait slot QName(PackageNamespace(""), "_1D_G_") type QName(PackageNamespace("_0A_1"), "_03y") end
+  trait slot QName(PackageNamespace(""), "_1R_u") type QName(PackageNamespace("_0A_1"), "_03y") end
+  trait method QName(PrivateNamespace("*", "_0og:_dM_/instance"), "_1D_q")
+   method
+    refid "_0og:_dM_/instance/_0og:_dM_/instance/_1D_q"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonOne")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonTwo")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0og:_dM_/instance"), "_yi")
+   method
+    refid "_0og:_dM_/instance/_0og:_dM_/instance/_yi"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonOne")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonTwo")
+      newarray            2
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("_03o"), "_1U_U_")
+      constructprop       QName(PackageNamespace("_03o"), "_1U_U_"), 0
+      coerce              QName(PackageNamespace("_03o"), "_1U_U_")
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      coerce_a
+      setlocal            5
+
+      jump                L32
+
+L22:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_")
+      setlocal3
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "textChanged")
+      callpropvoid        QName(PackageNamespace(""), "push"), 1
+
+L32:
+      hasnext2            5, 4
+      iftrue              L22
+
+      kill                5
+      kill                4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0og:_dM_/instance"), "_0B_P_")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0og:_dM_/instance"), "_0B_P_")
+   method
+    refid "_0og:_dM_/instance/_0og:_dM_/instance/_0B_P_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonOne")
+      getlex              QName(PackageNamespace("_1K_C_"), "_4C_")
+      getproperty         QName(PackageNamespace(""), "_0cT_")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonTwo")
+      getlex              QName(PackageNamespace("_1K_C_"), "_4C_")
+      getproperty         QName(PackageNamespace(""), "_au")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonTwo")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      getlex              QName(PackageNamespace("_1K_C_"), "_4C_")
+      getproperty         QName(PackageNamespace(""), "_0cT_")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0og:_dM_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

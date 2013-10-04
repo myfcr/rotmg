@@ -1,0 +1,145 @@
+class
+ refid "_-08q:_-TX"
+ instance QName(PackageNamespace("_-08q"), "_-TX")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0lg")
+  iinit
+   refid "_-08q:_-TX/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lshift
+     istypelate
+     decrement_i
+     add
+     greaterthan
+     pushnull
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0aR") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-10L")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-IL") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-0u8")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0RD") flag METADATA type QName(PackageNamespace("_-7m"), "_-Tj")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-08q:_-TX/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_d
+      strictequals
+      setlocal2
+
+      getlocal2
+      pushnan
+      equals
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      jump                L20
+
+      subtract_i
+      strictequals
+      convert_u
+      convert_i
+      dxnslate
+      getlocal0
+L20:
+      pushscope
+
+      getlocal1
+      iftrue              L36
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0RD")
+      pushstring          "Zombify Player"
+      callpropvoid        QName(Namespace("_-yR"), "info"), 1
+
+      getlocal1
+      iftrue              L36
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0aR")
+      findpropstrict      QName(PackageNamespace("_-1f"), "ZombifyDialog")
+      constructprop       QName(PackageNamespace("_-1f"), "ZombifyDialog"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlocal2
+      iffalse             L40
+
+L36:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-IL")
+      pushshort           13056
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L40:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-08q:_-TX/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

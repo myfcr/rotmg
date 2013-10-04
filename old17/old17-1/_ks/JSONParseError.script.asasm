@@ -1,0 +1,33 @@
+script ; 1918
+ sinit
+  refid "_ks:JSONParseError/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("JSONParseError", [PackageNamespace("_ks")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Error")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Error")
+    newclass            "_ks:JSONParseError"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_ks"), "JSONParseError")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_ks"), "JSONParseError")
+  #include "JSONParseError.class.asasm"
+ end ; trait
+end ; script

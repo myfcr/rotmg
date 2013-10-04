@@ -1,0 +1,253 @@
+class
+ refid "_-h7:_-0z"
+ instance QName(PackageNamespace("_-h7"), "_-0z")
+  extends QName(PackageNamespace("_-0qS"), "Command")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-03M")
+  iinit
+   refid "_-h7:_-0z/instance/init"
+   param QName(PackageInternalNs("_-h7"), "_-0M8")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     hasnext
+     strictequals
+     divide
+     getlocal            7
+     declocal            5
+     bitand
+L10:
+     setlocal            7
+
+     setlocal            8
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            8
+     dup
+     iftrue              L29
+
+     pop
+     getlocal1
+     convert_b
+     jump                L29
+
+     pushtrue
+     checkfilter
+     declocal_i          5
+     kill                5
+     inclocal            3
+     getlocal2
+L29:
+     iffalse             L33
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "map_")
+
+L33:
+     getlocal0
+     jump                L41
+
+     setlocal2
+
+     kill                2
+     pushtrue
+     nextvalue
+     declocal            5
+     multiply_i
+L41:
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "x_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "y_")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-n0")
+
+     getlocal            8
+     dup
+     iftrue              L55
+
+     pop
+     getlocal2
+     convert_b
+L55:
+     iffalse             L61
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-7A")
+
+     getlocal            7
+     iftrue              L64
+
+L61:
+     getlocal0
+     getlocal            6
+     initproperty        QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-062")
+
+L64:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "map_") type QName(PackageInternalNs("_-h7"), "_-0M8") end
+  trait slot QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "x_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "y_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-n0") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-7A") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-062") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "execute") flag OVERRIDE
+   method
+    refid "_-h7:_-0z/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      bitor
+      coerce_s
+      pushtrue
+      getglobalscope
+      getlocal3
+      bitnot
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "map_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "x_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "y_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-n0")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-062")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0BH"), 4
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "unexecute") flag OVERRIDE
+   method
+    refid "_-h7:_-0z/instance/unexecute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      multiply
+      pop
+      convert_u
+      strictequals
+      instanceof
+      decrement
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      jump                L20
+
+      convert_s
+      swap
+      increment
+      equals
+      bitnot
+      pushnull
+L20:
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      convert_b
+L27:
+      iffalse             L39
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "map_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "x_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "y_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-n0")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-h7:_-0z/instance"), "_-7A")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0BH"), 4
+
+L39:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-h7:_-0z/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

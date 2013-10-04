@@ -1,0 +1,164 @@
+class
+ refid "_-np:_-FC"
+ instance QName(PackageNamespace("_-np"), "_-FC")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-1U", [PackageNamespace("_-7m")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-5v")
+  iinit
+   refid "_-np:_-FC/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitand
+     not
+     pushnan
+     urshift
+     dxnslate
+     convert_s
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     getlocal2
+     divide
+     equals
+     pushundefined
+     negate_i
+     negate
+L21:
+     getlocal1
+     dup
+     iffalse             L27
+
+     pop
+     getlocal1
+     convert_b
+L27:
+     iftrue              L40
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-0Xf"), "_-0wr")
+     getlex              QName(PackageNamespace("_-np"), "_-FC")
+     callproperty        QName(PackageNamespace("", "#0"), "create"), 1
+     initproperty        QName(PrivateNamespace("*", "_-np:_-FC/instance"), "_-1o8")
+
+     getlocal2
+     dup
+     iftrue              L39
+
+     pop
+     getlocal0
+     convert_b
+L39:
+     iffalse             L42
+
+L40:
+     getlocal0
+     constructsuper      0
+
+L42:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-np:_-FC/instance"), "_-1o8") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "extend")
+   method
+    refid "_-np:_-FC/instance/extend"
+    param QName(PackageNamespace("_-7m"), "_-Oj")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      bitand
+      checkfilter
+      add
+      lessthan
+      convert_u
+      popscope
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L23
+
+      getlocal1
+      getproperty         QName(Namespace("_-0ag"), "_-0S7")
+      getlex              QName(PackageNamespace("_-7m"), "_-Tj")
+      callproperty        QName(PackageNamespace("", "#0"), "map"), 1
+      findpropstrict      QName(PackageNamespace("_-0fM"), "_-0Qw")
+      getlocal1
+      constructprop       QName(PackageNamespace("_-0fM"), "_-0Qw"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-18B"), 1
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-np:_-FC/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-np:_-FC/instance"), "_-1o8")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-np:_-FC/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

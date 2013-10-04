@@ -1,0 +1,49 @@
+script ; 984
+ sinit
+  refid "_9i:GTween/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("GTween", [PackageNamespace("_9i")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "_9i:GTween"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_9i"), "GTween")
+
+    findpropstrict      Multiname("TargetProxy", [PrivateNamespace("*", "_9i:GTween#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.utils"), "Proxy")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.utils"), "Proxy")
+    newclass            "_9i:GTween/TargetProxy"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_9i:GTween#0"), "TargetProxy")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_9i"), "GTween")
+  #include "GTween.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_9i:GTween#0"), "TargetProxy")
+  #include "GTween/TargetProxy.class.asasm"
+ end ; trait
+end ; script

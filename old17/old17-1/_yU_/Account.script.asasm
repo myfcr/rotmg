@@ -1,0 +1,25 @@
+script ; 681
+ sinit
+  refid "_yU_:Account/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Account", [PackageNamespace("_yU_")])
+    pushnull
+    newclass            "_yU_:Account"
+    initproperty        QName(PackageNamespace("_yU_"), "Account")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_yU_"), "Account")
+  #include "Account.class.asasm"
+ end ; trait
+end ; script

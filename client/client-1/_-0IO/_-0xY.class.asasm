@@ -1,0 +1,232 @@
+class
+ refid "_-0IO:_-0xY"
+ instance QName(PackageNamespace("_-0IO"), "_-0xY")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1iJ")
+  iinit
+   refid "_-0IO:_-0xY/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal3
+
+     checkfilter
+     dup
+     swap
+     pushfalse
+     decrement_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0aR") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-10L")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-0IO:_-0xY/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      greaterequals
+      lshift
+      add_i
+      lshift
+      instanceof
+      popscope
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0aR")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-j6"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-j6")
+   method
+    refid "_-0IO:_-0xY/instance/_-0IO:_-0xY/_-j6"
+    returns QName(PackageNamespace("_-qf"), "_-Uh")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-qf"), "_-Uh")
+      jump                L10
+
+      increment
+      equals
+      decrement
+      getglobalscope
+      setlocal2
+
+      pushscope
+
+L10:
+      constructprop       QName(PackageNamespace("_-qf"), "_-Uh"), 0
+      getlex              QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-0J9")
+      callproperty        QName(PackageNamespace("", "#0"), "setTitle"), 1
+      getlex              QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-F9")
+      getlex              QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-1CE")
+      callproperty        QName(PackageNamespace("", "#0"), "setBody"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0IO:_-0xY/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    modulo
+    coerce_a
+    subtract_i
+    add
+    getglobalscope
+    urshift
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iftrue              L26
+
+    pop
+    getlocal1
+    jump                L25
+
+    modulo
+    bitnot
+    greaterequals
+    equals
+    increment_i
+    modulo
+L25:
+    convert_b
+L26:
+    iffalse             L37
+
+    findproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-0J9")
+    pushstring          "Package Purchased"
+    initproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-0J9")
+
+    getlocal1
+    dup
+    iftrue              L36
+
+    pop
+    getlocal0
+    convert_b
+L36:
+    iffalse             L50
+
+L37:
+    findproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-F9")
+    pushstring          "You've already purchased this package!"
+    initproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-F9")
+
+    getlocal2
+    dup
+    iffalse             L46
+
+    pop
+    getlocal2
+    convert_b
+L46:
+    iftrue              L50
+
+    findproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-1CE")
+    pushstring          "Please check your vault for any items purchased"
+    initproperty        QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-1CE")
+
+L50:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-0J9") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("Package Purchased") end
+ trait const QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-F9") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("You've already purchased this package!") end
+ trait const QName(PrivateNamespace("*", "_-0IO:_-0xY"), "_-1CE") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("Please check your vault for any items purchased") end
+end ; class

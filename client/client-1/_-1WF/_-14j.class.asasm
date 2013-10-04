@@ -1,0 +1,308 @@
+class
+ refid "_-1WF:_-14j"
+ instance QName(PackageNamespace("_-1WF"), "_-14j")
+  extends QName(PackageNamespace("_-1WF"), "_-bs")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Mq")
+  iinit
+   refid "_-1WF:_-14j/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     istypelate
+     nextvalue
+     swap
+     lessthan
+     convert_i
+     coerce_a
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     jump                L23
+
+     bitor
+     nextvalue
+     typeof
+     nextname
+     convert_d
+     bitnot
+L23:
+     iftrue              L27
+
+     pop
+     getlocal0
+     convert_b
+L27:
+     iffalse             L43
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
+     constructprop       QName(PackageNamespace("flash.display"), "Loader"), 0
+     callproperty        QName(PackageNamespace("", "#0"), "addChild"), 1
+     getlex              QName(PackageNamespace("flash.display"), "Loader")
+     astypelate
+     initproperty        QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "loader")
+
+     getlocal1
+     dup
+     iffalse             L42
+
+     pop
+     getlocal1
+     convert_b
+L42:
+     iftrue              L45
+
+L43:
+     getlocal0
+     constructsuper      0
+
+L45:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "loader") type QName(PackageNamespace("flash.display"), "Loader") end
+  trait slot QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "_-0tc") type QName(PackageNamespace("_-0cv"), "_-00D") end
+  trait getter QName(PackageNamespace("", "#0"), "content") flag OVERRIDE
+   method
+    refid "_-1WF:_-14j/instance/content/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      getglobalscope
+      increment_i
+      coerce_s
+      swap
+      rshift
+      subtract_i
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "loader")
+      getproperty         QName(PackageNamespace("", "#0"), "content")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "contentLoaderInfo") flag OVERRIDE
+   method
+    refid "_-1WF:_-14j/instance/contentLoaderInfo/getter"
+    returns QName(PackageNamespace("_-0cv"), "_-00D")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      equals
+      decrement
+      equals
+      bitand
+      checkfilter
+      convert_u
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L42
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "_-0tc")
+      getlocal1
+      jump                L26
+
+      add
+      dxnslate
+      urshift
+      pushscope
+
+      strictequals
+      getlocal0
+L26:
+      iftrue              L46
+
+      pushnull
+      ifne                L50
+
+      getlocal1
+      dup
+      iffalse             L35
+
+      pop
+      getlocal0
+      convert_b
+L35:
+      iftrue              L50
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-0cv"), "_-0EJ")
+      constructprop       QName(PackageNamespace("_-0cv"), "_-0EJ"), 0
+      initproperty        QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "_-0tc")
+
+      getlocal2
+      iffalse             L50
+
+L42:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "_-0tc")
+      getlocal2
+      iffalse             L52
+
+L46:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "loader")
+      getproperty         QName(PackageNamespace("", "#0"), "contentLoaderInfo")
+      setproperty         QName(Namespace("_-0L9"), "loaderInfo")
+
+L50:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "_-0tc")
+L52:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "load") flag OVERRIDE
+   method
+    refid "_-1WF:_-14j/instance/load"
+    param QName(PackageNamespace("flash.net"), "URLRequest")
+    param QName(PackageNamespace("flash.system"), "LoaderContext")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      getlocal2
+      declocal            3
+      declocal            2
+      dxnslate
+      declocal_i          2
+      kill                3
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iftrue              L20
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "loader")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "load"), 2
+
+L20:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "unload") flag OVERRIDE
+   method
+    refid "_-1WF:_-14j/instance/unload"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      newactivation
+      add
+      newactivation
+      lessthan
+      decrement_i
+      greaterequals
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L19
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1WF:_-14j/instance"), "loader")
+      callpropvoid        QName(PackageNamespace("", "#0"), "unload"), 0
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1WF:_-14j/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

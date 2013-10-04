@@ -1,0 +1,185 @@
+class
+ refid "_kz:Chat"
+ instance QName(PackageNamespace("_kz"), "Chat")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0K_8")
+  iinit
+   refid "_kz:Chat/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "mouseEnabled")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_kz"), "_1X_6")
+     constructprop       QName(PackageNamespace("_kz"), "_1X_6"), 0
+     initproperty        QName(PrivateNamespace("*", "_kz:Chat/instance"), "list")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "list")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_kz:Chat/instance"), "list") type QName(PackageNamespace("_kz"), "_1X_6") end
+  trait slot QName(PrivateNamespace("*", "_kz:Chat/instance"), "input") type QName(PackageNamespace("_kz"), "_012") end
+  trait slot QName(PrivateNamespace("*", "_kz:Chat/instance"), "model") type QName(PackageNamespace("_E_4"), "_1L_f") end
+  trait method QName(PackageNamespace(""), "setup")
+   method
+    refid "_kz:Chat/instance/setup"
+    param QName(PackageNamespace("_E_4"), "_1L_f")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "model")
+
+      getlocal0
+      pushshort           600
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_0Q_6")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "list")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_0Q_6")
+      getproperty         QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      iffalse             L23
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_kz:Chat/instance"), "_0rn"), 0
+
+      jump                L25
+
+L23:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_kz:Chat/instance"), "_1bE_"), 0
+
+L25:
+      getlex              QName(PackageNamespace(""), "stage")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RESIZE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_kz:Chat/instance"), "_0rn")
+   method
+    refid "_kz:Chat/instance/_kz:Chat/instance/_0rn"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_kz"), "_012")
+      constructprop       QName(PackageNamespace("_kz"), "_012"), 0
+      initproperty        QName(PrivateNamespace("*", "_kz:Chat/instance"), "input")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "input")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_kz:Chat/instance"), "_1bE_")
+   method
+    refid "_kz:Chat/instance/_kz:Chat/instance/_1bE_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_kz"), "_wh")
+      constructprop       QName(PackageNamespace("_kz"), "_wh"), 0
+      coerce              QName(PackageNamespace("_kz"), "_wh")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "list")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "model")
+      getproperty         QName(PackageNamespace(""), "_0Q_6")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_kz:Chat/instance"), "model")
+      getproperty         QName(PackageNamespace(""), "_1G_K_")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_kz:Chat/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

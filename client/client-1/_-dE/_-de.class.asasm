@@ -1,0 +1,121 @@
+class
+ refid "_-dE:_-de"
+ instance QName(PackageNamespace("_-dE"), "_-de")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0eN")
+  iinit
+   refid "_-dE:_-de/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     bitor
+     bitand
+     add_i
+     setlocal3
+
+     add
+     not
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "create")
+   method
+    refid "_-dE:_-de/instance/create"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "_-bw")
+    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+    returns QName(PackageNamespace("_-0Si"), "PlayerMenu")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                3
+      getglobalscope
+      kill                3
+      setlocal            4
+
+      astypelate
+      declocal            3
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0Si"), "PlayerMenu")
+      constructprop       QName(PackageNamespace("_-0Si"), "PlayerMenu"), 0
+      coerce              QName(PackageNamespace("_-0Si"), "PlayerMenu")
+      setlocal3
+
+      getlocal            5
+      iffalse             L24
+
+      getlocal3
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "init"), 2
+
+L24:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-dE:_-de/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

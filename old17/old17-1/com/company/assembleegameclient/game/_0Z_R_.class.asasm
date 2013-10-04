@@ -1,0 +1,272 @@
+class
+ refid "com.company.assembleegameclient.game:_0Z_R_"
+ instance QName(PackageNamespace("com.company.assembleegameclient.game"), "_0Z_R_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_mf")
+  iinit
+   refid "com.company.assembleegameclient.game:_0Z_R_/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.game"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_mf"), StaticProtectedNs("_mf"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_1I_I_"), "_1X_G_")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "records_")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "lastClearTime_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "records_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_1I_I_"), "_1X_G_")>) end
+  trait method QName(PackageNamespace(""), "addRecord")
+   method
+    refid "com.company.assembleegameclient.game:_0Z_R_/instance/addRecord"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 11
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastClearTime_")
+      pushbyte            0
+      ifnlt               L7
+
+      returnvoid
+
+L7:
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), "_wi"), 1
+      convert_i
+      dup
+      setlocal            4
+
+      pushbyte            1
+      lessthan
+      dup
+      iftrue              L21
+
+      pop
+      getlocal            4
+      pushbyte            10
+      greaterthan
+L21:
+      iffalse             L23
+
+      returnvoid
+
+L23:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L37
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      findpropstrict      QName(PackageNamespace("_1I_I_"), "_1X_G_")
+      getlocal1
+      getlocal2
+      getlocal3
+      constructprop       QName(PackageNamespace("_1I_I_"), "_1X_G_"), 3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+
+L37:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.game"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_mf"), StaticProtectedNs("_mf")])
+      coerce              QName(PackageNamespace("_1I_I_"), "_1X_G_")
+      setlocal            5
+
+      getlocal0
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "time_")
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), "_wi"), 1
+      convert_i
+      setlocal            6
+
+      getlocal            4
+      getlocal            6
+      ifeq                L64
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      findpropstrict      QName(PackageNamespace("_1I_I_"), "_1X_G_")
+      getlocal1
+      getlocal2
+      getlocal3
+      constructprop       QName(PackageNamespace("_1I_I_"), "_1X_G_"), 3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+
+L64:
+      getlocal0
+      getlocal            4
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), "_5_"), 2
+      convert_i
+      setlocal            7
+
+      getlocal0
+      getlocal            4
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "time_")
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), "_5_"), 2
+      convert_i
+      setlocal            8
+
+      getlocal            7
+      getlocal            8
+      ifnlt               L90
+
+      getlocal            5
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "time_")
+
+      getlocal            5
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "x_")
+
+      getlocal            5
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "y_")
+
+      returnvoid
+
+L90:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), "_wi")
+   method
+    refid "com.company.assembleegameclient.game:_0Z_R_/instance/com.company.assembleegameclient.game:_0Z_R_/instance/_wi"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastClearTime_")
+      subtract
+      pushbyte            50
+      add
+      pushbyte            100
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0Z_R_/instance#0"), "_5_")
+   method
+    refid "com.company.assembleegameclient.game:_0Z_R_/instance/com.company.assembleegameclient.game:_0Z_R_/instance/_5_"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastClearTime_")
+      subtract
+      getlocal1
+      pushbyte            100
+      multiply
+      subtract
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear")
+   method
+    refid "com.company.assembleegameclient.game:_0Z_R_/instance/clear"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "length")
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "lastClearTime_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.game:_0Z_R_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

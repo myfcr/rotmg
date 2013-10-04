@@ -1,0 +1,284 @@
+class
+ refid "com.company.assembleegameclient.objects:Character"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Character")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Pf")
+  iinit
+   refid "com.company.assembleegameclient.objects:Character/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_u
+     kill                2
+     convert_d
+     declocal            2
+     coerce_s
+     setlocal2
+
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L90
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     iftrue              L90
+
+     getlocal0
+     getlocal3
+     dup
+     iftrue              L28
+
+     pop
+     getlocal2
+     convert_b
+L28:
+     iffalse             L33
+
+     getlocal1
+     pushstring          "HitSound"
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Pf"), StaticProtectedNs("_-Pf"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")]), 1
+     iffalse             L46
+
+L33:
+     findpropstrict      QName(PackageNamespace("", "#0"), "String")
+     getlocal1
+     getproperty         Multiname("HitSound", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Pf"), StaticProtectedNs("_-Pf"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+     callproperty        QName(PackageNamespace("", "#0"), "String"), 1
+     jump                L44
+
+     declocal_i          2
+     getglobalscope
+     inclocal_i          2
+     declocal            2
+     lessequals
+     declocal            2
+L44:
+     coerce_s
+     jump                L47
+
+L46:
+     pushstring          "monster/default_hit"
+L47:
+     initproperty        QName(PackageNamespace("", "#0"), "_-0Of")
+
+     getlocal3
+     iffalse             L56
+
+     getlex              QName(PackageNamespace("_-1gp"), "_-18l")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-0Of")
+     callpropvoid        QName(PackageNamespace("", "#0"), "load"), 1
+
+     getlocal2
+     iftrue              L90
+
+L56:
+     getlocal0
+     getlocal2
+     dup
+     iffalse             L63
+
+     pop
+     getlocal1
+     convert_b
+L63:
+     iftrue              L75
+
+     jump                L71
+
+     declocal_i          2
+     declocal            2
+     getlocal2
+     declocal_i          2
+     declocal_i          2
+     declocal_i          2
+L71:
+     getlocal1
+     pushstring          "DeathSound"
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Pf"), StaticProtectedNs("_-Pf"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")]), 1
+     iffalse             L81
+
+L75:
+     findpropstrict      QName(PackageNamespace("", "#0"), "String")
+     getlocal1
+     getproperty         Multiname("DeathSound", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Pf"), StaticProtectedNs("_-Pf"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+     callproperty        QName(PackageNamespace("", "#0"), "String"), 1
+     coerce_s
+     jump                L82
+
+L81:
+     pushstring          "monster/default_death"
+L82:
+     initproperty        QName(PackageNamespace("", "#0"), "_-fB")
+
+     getlocal3
+     dup
+     iftrue              L89
+
+     pop
+     getlocal2
+     convert_b
+L89:
+     iffalse             L94
+
+L90:
+     getlex              QName(PackageNamespace("_-1gp"), "_-18l")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-fB")
+     callpropvoid        QName(PackageNamespace("", "#0"), "load"), 1
+
+L94:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0Of") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-fB") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "damage") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Character/instance/damage"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Projectile")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 8
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      nextname
+      negate
+      pushfalse
+      declocal            3
+      equals
+      declocal_i          5
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal            7
+      iffalse             L59
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      jump                L29
+
+      getlocal            4
+      kill                5
+      pushscope
+
+      lessthan
+      swap
+      getlocal2
+L29:
+      callsupervoid       QName(PackageNamespace("", "#0"), "damage"), 5
+      getlocal            7
+      iffalse             L48
+
+      getlex              QName(PackageNamespace("", "#0"), "_-0-p")
+      iffalse             L60
+
+      jump                L41
+
+      dup
+      not
+      kill                4
+      astypelate
+      inclocal            4
+      declocal_i          4
+L41:
+      getlocal            7
+      dup
+      iftrue              L47
+
+      pop
+      getlocal3
+      convert_b
+L47:
+      iffalse             L64
+
+L48:
+      getlex              QName(PackageNamespace("_-1gp"), "_-18l")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-fB")
+      callpropvoid        QName(PackageNamespace("", "#0"), "play"), 1
+
+      getlocal            7
+      dup
+      iftrue              L58
+
+      pop
+      getlocal3
+      convert_b
+L58:
+      iffalse             L64
+
+L59:
+      jump                L64
+
+L60:
+      getlex              QName(PackageNamespace("_-1gp"), "_-18l")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Of")
+      callpropvoid        QName(PackageNamespace("", "#0"), "play"), 1
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Character/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

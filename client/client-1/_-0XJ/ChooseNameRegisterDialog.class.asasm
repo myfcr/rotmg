@@ -1,0 +1,155 @@
+class
+ refid "_-0XJ:ChooseNameRegisterDialog"
+ instance QName(PackageNamespace("_-0XJ"), "ChooseNameRegisterDialog")
+  extends QName(PackageNamespace("_-1Jt"), "Dialog")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-q8")
+  iinit
+   refid "_-0XJ:ChooseNameRegisterDialog/instance/init"
+   body
+    maxstack 8
+    localcount 3
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     multiply
+     subtract
+     getlocal0
+     bitnot
+     bitand
+     convert_b
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L66
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-1TH")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-1jM")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-14h")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     jump                L30
+
+     convert_d
+     newactivation
+     strictequals
+     subtract_i
+     bitand
+     negate_i
+L30:
+     getproperty         QName(PackageNamespace("", "#0"), "_-0ZC")
+     getlex              QName(PrivateNamespace("*", "_-0XJ:ChooseNameRegisterDialog"), "_-vL")
+     constructsuper      5
+
+     getlocal2
+     dup
+     iffalse             L46
+
+     jump                L43
+
+     pushtrue
+     decrement
+     convert_b
+     convert_b
+     pushnan
+     negate_i
+L43:
+     pop
+     getlocal1
+     convert_b
+L46:
+     iftrue              L66
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-w2"), "_-xJ")
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "LEFT_BUTTON")
+     constructprop       QName(PackageNamespace("_-w2"), "_-xJ"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "cancel")
+
+     getlocal1
+     dup
+     iftrue              L59
+
+     pop
+     getlocal1
+     convert_b
+L59:
+     iffalse             L66
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-w2"), "_-xJ")
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "RIGHT_BUTTON")
+     constructprop       QName(PackageNamespace("_-w2"), "_-xJ"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "register")
+
+L66:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "cancel") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait slot QName(PackageNamespace("", "#0"), "register") type QName(PackageNamespace("_-a"), "_-uD") end
+ end ; instance
+ cinit
+  refid "_-0XJ:ChooseNameRegisterDialog/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    negate
+    convert_d
+    greaterthan
+    popscope
+    convert_i
+    nextvalue
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal2
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PrivateNamespace("*", "_-0XJ:ChooseNameRegisterDialog"), "_-vL")
+    pushstring          "/chooseNameNeedRegister"
+    initproperty        QName(PrivateNamespace("*", "_-0XJ:ChooseNameRegisterDialog"), "_-vL")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0XJ:ChooseNameRegisterDialog"), "_-vL") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("/chooseNameNeedRegister") end
+end ; class

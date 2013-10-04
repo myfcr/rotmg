@@ -1,0 +1,127 @@
+class
+ refid "_-qD:_-1ao"
+ instance QName(PackageNamespace("_-qD"), "_-1ao")
+  extends QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-0Bv")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-x5")
+  iinit
+   refid "_-qD:_-1ao/instance/init"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "int")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     istypelate
+     declocal            4
+     getlocal0
+     convert_s
+     bitnot
+     declocal            4
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     iftrue              L47
+
+     getlocal0
+     getlocal3
+     jump                L24
+
+     setlocal3
+
+     modulo
+     bitnot
+     getlocal3
+     inclocal_i          3
+     greaterthan
+L24:
+     constructsuper      1
+
+     getlocal            5
+     iftrue              L47
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-d")
+     getlocal1
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-d"), 1
+
+     getlocal            5
+     dup
+     iffalse             L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iftrue              L47
+
+     getlex              QName(ProtectedNamespace("_-0a4"), "text_")
+     findpropstrict      QName(PackageNamespace("_-th"), "_-ox")
+     constructprop       QName(PackageNamespace("_-th"), "_-ox"), 0
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal            4
+     iffalse             L47
+
+     findpropstrict      QName(ProtectedNamespace("_-6X"), "initText")
+     callpropvoid        QName(ProtectedNamespace("_-6X"), "initText"), 0
+
+L47:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_-x5"), "makeText") flag OVERRIDE
+   method
+    refid "_-qD:_-1ao/instance/_-x5:makeText"
+    returns QName(PackageNamespace("_-1X1"), "_-Fw")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1X1"), "_-RD")
+      constructprop       QName(PackageNamespace("_-1X1"), "_-RD"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-qD:_-1ao/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

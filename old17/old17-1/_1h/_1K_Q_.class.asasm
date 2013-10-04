@@ -1,0 +1,175 @@
+class
+ refid "_1h:_1K_Q_"
+ instance QName(PackageNamespace("_1h"), "_1K_Q_")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_A_x")
+  iinit
+   refid "_1h:_1K_Q_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_A_x"), "positionText")
+   method
+    refid "_1h:_1K_Q_/instance/_A_x:positionText"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace("_1j9"), "_try")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      getlocal1
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getBounds"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "top")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      add
+      convert_d
+      setlocal            4
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "right")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1h:_1K_Q_/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_080")
+    pushstring          "redLootBag"
+    initproperty        QName(PackageNamespace(""), "_080")
+
+    findproperty        QName(PackageNamespace(""), "_0s9")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "_0s9")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_080") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("redLootBag") end
+ trait const QName(PackageNamespace(""), "_0s9") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait method QName(StaticProtectedNs("_A_x"), "makeIcon") flag FINAL dispid 3
+  method
+   refid "_1h:_1K_Q_/class/_A_x:makeIcon"
+   returns QName(PackageNamespace("flash.display"), "DisplayObject")
+   body
+    maxstack 9
+    localcount 5
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     setlocal2
+
+     getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+     getlex              QName(PackageNamespace(""), "_080")
+     getlex              QName(PackageNamespace(""), "_0s9")
+     callproperty        QName(PackageNamespace(""), "_0rL_"), 2
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal1
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+     getlocal1
+     pushbyte            40
+     pushtrue
+     pushbyte            0
+     dup
+     callproperty        QName(PackageNamespace(""), "redraw"), 5
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal1
+
+     getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+     getlocal1
+     pushbyte            10
+     dup
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            20
+     subtract
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            20
+     subtract
+     callproperty        QName(PackageNamespace(""), "_1fP_"), 5
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal1
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     getlocal1
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     setlocal2
+
+     getlocal2
+     pushbyte            3
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal2
+     pushbyte            3
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

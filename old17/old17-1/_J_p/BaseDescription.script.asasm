@@ -1,0 +1,41 @@
+script ; 1733
+ sinit
+  refid "_J_p:BaseDescription/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("BaseDescription", [PackageNamespace("_J_p")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_J_p:BaseDescription"
+    popscope
+    initproperty        QName(PackageNamespace("_J_p"), "BaseDescription")
+
+    findpropstrict      Multiname("SelfDescribingValue", [PrivateNamespace("*", "_J_p:BaseDescription#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_J_p:BaseDescription/SelfDescribingValue"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_J_p:BaseDescription#1"), "SelfDescribingValue")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_J_p"), "BaseDescription")
+  #include "BaseDescription.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_J_p:BaseDescription#1"), "SelfDescribingValue")
+  #include "BaseDescription/SelfDescribingValue.class.asasm"
+ end ; trait
+end ; script

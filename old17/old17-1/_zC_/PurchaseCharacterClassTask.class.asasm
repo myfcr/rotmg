@@ -1,0 +1,228 @@
+class
+ refid "_zC_:PurchaseCharacterClassTask"
+ instance QName(PackageNamespace("_zC_"), "PurchaseCharacterClassTask")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0pX_")
+  iinit
+   refid "_zC_:PurchaseCharacterClassTask/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "classType") flag METADATA type QName(PackageNamespace(""), "int")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "client") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_aT_") flag METADATA type QName(PackageNamespace("_0_1"), "_0V_5")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0x6") flag METADATA type QName(PackageNamespace("_1G_e"), "_1A_Z_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_0pX_"), "startTask") flag OVERRIDE
+   method
+    refid "_zC_:PurchaseCharacterClassTask/instance/_0pX_:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "PurchaseCharacterClassTask.startTask: Started "
+      callpropvoid        QName(Namespace("_1U_g"), "info"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushstring          "/char/purchaseClassUnlock"
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_0C_c"), 0
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0C_c")
+   method
+    refid "_zC_:PurchaseCharacterClassTask/instance/_0C_c"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_0O_d"), 0
+      setproperty         Multiname("game_net_user_id", [PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), PackageNamespace(""), PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance/_0C_c"), PackageNamespace("_zC_"), PackageInternalNs("_zC_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0pX_"), StaticProtectedNs("_0pX_"), StaticProtectedNs("_4w")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_0gm"), 0
+      setproperty         Multiname("game_net", [PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), PackageNamespace(""), PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance/_0C_c"), PackageNamespace("_zC_"), PackageInternalNs("_zC_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0pX_"), StaticProtectedNs("_0pX_"), StaticProtectedNs("_4w")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_G_h"), 0
+      setproperty         Multiname("play_platform", [PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), PackageNamespace(""), PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance/_0C_c"), PackageNamespace("_zC_"), PackageInternalNs("_zC_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0pX_"), StaticProtectedNs("_0pX_"), StaticProtectedNs("_4w")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "_1F_L_")
+      setproperty         Multiname("do_login", [PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), PackageNamespace(""), PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance/_0C_c"), PackageNamespace("_zC_"), PackageInternalNs("_zC_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0pX_"), StaticProtectedNs("_0pX_"), StaticProtectedNs("_4w")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "classType")
+      setproperty         Multiname("classType", [PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), PackageNamespace(""), PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance/_0C_c"), PackageNamespace("_zC_"), PackageInternalNs("_zC_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0pX_"), StaticProtectedNs("_0pX_"), StaticProtectedNs("_4w")])
+
+      getlex              QName(PackageNamespace("com.company.util"), "_zk")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_1E_p"), 0
+      callpropvoid        QName(PackageNamespace(""), "_0ym"), 2
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), "onComplete")
+   method
+    refid "_zC_:PurchaseCharacterClassTask/instance/_zC_:PurchaseCharacterClassTask/instance/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0x6")
+      pushstring          "PurchaseCharacterClassTask.onComplete: Ended "
+      callpropvoid        QName(Namespace("_1U_g"), "info"), 1
+
+      getlocal1
+      coerce_a
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), "_1o"), 0
+      coerce_a
+L14:
+      pop
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_zC_:PurchaseCharacterClassTask/instance"), "_1o")
+   method
+    refid "_zC_:PurchaseCharacterClassTask/instance/_zC_:PurchaseCharacterClassTask/instance/_1o"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_aT_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "classType")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_0N_x")
+      getproperty         QName(PackageNamespace(""), "_B_9")
+      callpropvoid        QName(PackageNamespace(""), "_tC_"), 2
+
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_zC_:PurchaseCharacterClassTask/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

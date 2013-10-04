@@ -1,0 +1,41 @@
+script ; 1625
+ sinit
+  refid "_-th:AppendingLineBuilder/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("AppendingLineBuilder", [PackageNamespace("_-th")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-th:AppendingLineBuilder"
+    popscope
+    initproperty        QName(PackageNamespace("_-th"), "AppendingLineBuilder")
+
+    findpropstrict      Multiname("LineData", [PrivateNamespace("*", "_-th:AppendingLineBuilder")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-th:AppendingLineBuilder/LineData"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-th:AppendingLineBuilder"), "LineData")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-th"), "AppendingLineBuilder")
+  #include "AppendingLineBuilder.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-th:AppendingLineBuilder"), "LineData")
+  #include "AppendingLineBuilder/LineData.class.asasm"
+ end ; trait
+end ; script

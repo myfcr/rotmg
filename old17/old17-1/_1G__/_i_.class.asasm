@@ -1,0 +1,305 @@
+class
+ refid "_1G__:_i_"
+ instance QName(PackageNamespace("_1G__"), "_i_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_J_k")
+  iinit
+   refid "_1G__:_i_/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Class")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "type")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "callback")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "type") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(PackageNamespace(""), "callback") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_") type QName(PackageNamespace("_1G__"), "_xQ_") end
+  trait slot QName(PrivateNamespace("*", "_1G__:_i_/instance"), "count") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait method QName(PackageNamespace(""), "_0V_4")
+   method
+    refid "_1G__:_i_/instance/_0V_4"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("_1G__"), "_i_")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_1G__"), "_xQ_")
+      setlocal2
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "count")
+      getlocal1
+      add
+      setproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "count")
+
+      jump                L45
+
+L12:
+      label
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "callback")
+      constructprop       QName(PackageNamespace(""), "type"), 2
+      coerce              QName(PackageNamespace("_1G__"), "_xQ_")
+      setlocal2
+
+      getlocal2
+      getlocal0
+      setproperty         QName(PackageNamespace(""), "pool")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      dup
+      iffalse             L37
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      getlocal2
+      dup
+      setlocal3
+
+      setproperty         QName(PackageNamespace(""), "next")
+
+      getlocal3
+      kill                3
+L37:
+      pop
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      setproperty         QName(PackageNamespace(""), "_0co")
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+
+L45:
+      getlocal1
+      dup
+      decrement_i
+      setlocal1
+
+      iftrue              L12
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0qs")
+   method
+    refid "_1G__:_i_/instance/_0qs"
+    returns QName(PackageNamespace("_1G__"), "_xQ_")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      coerce              QName(PackageNamespace("_1G__"), "_xQ_")
+      setlocal1
+
+      getlocal1
+      iffalse             L20
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      getproperty         QName(PackageNamespace(""), "_0co")
+      initproperty        QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+
+      getlocal1
+      pushnull
+      setproperty         QName(PackageNamespace(""), "_0co")
+
+      getlocal1
+      pushnull
+      setproperty         QName(PackageNamespace(""), "next")
+
+      jump                L42
+
+L20:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "id")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "callback")
+      constructprop       QName(PackageNamespace(""), "type"), 2
+      coerce              QName(PackageNamespace("_1G__"), "_xQ_")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      setproperty         QName(PackageNamespace(""), "pool")
+
+      getlocal0
+      dup
+      setlocal2
+
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "count")
+      increment_i
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "count")
+
+      kill                3
+      kill                2
+L42:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1W_d")
+   method
+    refid "_1G__:_i_/instance/_1W_d"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "count")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("_1G__"), "append")
+   method
+    refid "_1G__:_i_/instance/_1G__:append"
+    param QName(PackageNamespace("_1G__"), "_xQ_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      dup
+      iffalse             L15
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      getlocal1
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "next")
+
+      getlocal2
+      kill                2
+L15:
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+      setproperty         QName(PackageNamespace(""), "_0co")
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dispose")
+   method
+    refid "_1G__:_i_/instance/dispose"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_1G__:_i_/instance"), "_1dW_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1G__:_i_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

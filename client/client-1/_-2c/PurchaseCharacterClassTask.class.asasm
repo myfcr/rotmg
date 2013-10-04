@@ -1,0 +1,441 @@
+class
+ refid "_-2c:PurchaseCharacterClassTask"
+ instance QName(PackageNamespace("_-2c"), "PurchaseCharacterClassTask")
+  extends QName(PackageNamespace("_-1Kt"), "_-1Rc")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1LO")
+  iinit
+   refid "_-2c:PurchaseCharacterClassTask/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     convert_u
+     convert_d
+     swap
+     getlocal3
+     strictequals
+     checkfilter
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "classType") flag METADATA type QName(PackageNamespace("", "#0"), "int")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-0QA"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "client") flag METADATA type QName(PackageNamespace("_-zS"), "_-1S0")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0iq") flag METADATA type QName(PackageNamespace("_-mS"), "_-vl")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0RD") flag METADATA type QName(PackageNamespace("_-7m"), "_-Tj")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1LO"), "startTask") flag OVERRIDE
+   method
+    refid "_-2c:PurchaseCharacterClassTask/instance/_-1LO:startTask"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      add_i
+      dup
+      instanceof
+      modulo
+      modulo
+      urshift
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iffalse             L40
+
+      jump                L27
+
+      pushundefined
+      hasnext
+      coerce_s
+      modulo
+      astypelate
+      urshift
+L27:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0RD")
+      pushstring          "PurchaseCharacterClassTask.startTask: Started "
+      callpropvoid        QName(Namespace("_-yR"), "info"), 1
+
+      jump                L38
+
+      lessthan
+      increment
+      getlocal3
+      equals
+      negate_i
+      increment_i
+L38:
+      getlocal1
+      iffalse             L55
+
+L40:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "client")
+      getlocal1
+      dup
+      iftrue              L48
+
+      pop
+      getlocal0
+      convert_b
+L48:
+      iffalse             L57
+
+      getproperty         QName(Namespace("_-zI"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), "onComplete")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+      getlocal2
+      iftrue              L61
+
+L55:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "client")
+L57:
+      pushstring          "/char/purchaseClassUnlock"
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "_-0zQ"), 0
+      callpropvoid        QName(Namespace("_-zI"), "sendRequest"), 2
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0zQ")
+   method
+    refid "_-2c:PurchaseCharacterClassTask/instance/_-0zQ"
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_o
+      checkfilter
+      declocal_i          2
+      add_i
+      bitnot
+      getlocal2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      newobject           0
+      coerce              QName(PackageNamespace("", "#0"), "Object")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-06"), "_-14A"), 0
+      jump                L28
+
+      bitxor
+      inclocal_i          2
+      getlocal2
+      strictequals
+      bitand
+      declocal            2
+L28:
+      setproperty         Multiname("game_net_user_id", [PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance/_-0zQ"), PackageNamespace("_-2c"), PackageInternalNs("_-2c"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1LO"), StaticProtectedNs("_-1LO"), StaticProtectedNs("_-07N")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-06"), "_-0oo"), 0
+      jump                L40
+
+      increment
+      convert_i
+      greaterequals
+      inclocal_i          2
+      convert_i
+      getlocal2
+L40:
+      setproperty         Multiname("game_net", [PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance/_-0zQ"), PackageNamespace("_-2c"), PackageInternalNs("_-2c"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1LO"), StaticProtectedNs("_-1LO"), StaticProtectedNs("_-07N")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-06"), "_-0MJ"), 0
+      setproperty         Multiname("play_platform", [PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance/_-0zQ"), PackageNamespace("_-2c"), PackageInternalNs("_-2c"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1LO"), StaticProtectedNs("_-1LO"), StaticProtectedNs("_-07N")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-dr")
+      setproperty         Multiname("do_login", [PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance/_-0zQ"), PackageNamespace("_-2c"), PackageInternalNs("_-2c"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1LO"), StaticProtectedNs("_-1LO"), StaticProtectedNs("_-07N")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "classType")
+      setproperty         Multiname("classType", [PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance/_-0zQ"), PackageNamespace("_-2c"), PackageInternalNs("_-2c"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1LO"), StaticProtectedNs("_-1LO"), StaticProtectedNs("_-07N")])
+
+      getlocal3
+      iffalse             L62
+
+      getlex              QName(PackageNamespace("com.company.util"), "_-0o8")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-06"), "_-5y"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-Ub"), 2
+
+L62:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), "onComplete")
+   method
+    refid "_-2c:PurchaseCharacterClassTask/instance/_-2c:PurchaseCharacterClassTask/instance/onComplete"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param null
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      lessthan
+      declocal            2
+      typeof
+      setlocal3
+
+      inclocal_i          3
+      getlocal2
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iftrue              L52
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0RD")
+      pushstring          "PurchaseCharacterClassTask.onComplete: Ended "
+      callpropvoid        QName(Namespace("_-yR"), "info"), 1
+
+      getlocal3
+      dup
+      iftrue              L32
+
+      pop
+      jump                L30
+
+      convert_o
+      declocal            3
+      declocal            2
+      convert_o
+      lessthan
+      hasnext
+L30:
+      getlocal0
+      convert_b
+L32:
+      iffalse             L52
+
+      getlocal1
+      coerce_a
+      dup
+      iffalse             L55
+
+      jump                L44
+
+      inclocal_i          2
+      declocal_i          2
+      getlocal3
+      declocal_i          2
+      getlocal1
+      decrement
+L44:
+      pop
+      getlocal            4
+      dup
+      iffalse             L51
+
+      pop
+      getlocal2
+      convert_b
+L51:
+      iftrue              L67
+
+L52:
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), "_-0dY"), 0
+      coerce_a
+L55:
+      pop
+      getlocal3
+      dup
+      iftrue              L62
+
+      pop
+      getlocal3
+      convert_b
+L62:
+      iffalse             L67
+
+      findpropstrict      QName(ProtectedNamespace("_-07N"), "_-06X")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-07N"), "_-06X"), 2
+
+L67:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-2c:PurchaseCharacterClassTask/instance"), "_-0dY")
+   method
+    refid "_-2c:PurchaseCharacterClassTask/instance/_-2c:PurchaseCharacterClassTask/instance/_-0dY"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      setlocal2
+
+      nextvalue
+      bitxor
+      pushundefined
+      newactivation
+      coerce_a
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L24
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0iq")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "classType")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-1TO")
+      getproperty         QName(PackageNamespace("", "#0"), "_-cU")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0PM"), 2
+
+      getlocal2
+      iftrue              L27
+
+L24:
+      findpropstrict      QName(ProtectedNamespace("_-07N"), "_-06X")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("_-07N"), "_-06X"), 1
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-2c:PurchaseCharacterClassTask/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

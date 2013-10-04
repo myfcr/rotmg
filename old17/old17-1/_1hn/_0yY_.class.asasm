@@ -1,0 +1,105 @@
+class
+ refid "_1hn:_0yY_"
+ instance QName(PackageNamespace("_1hn"), "_0yY_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_16W_")
+  iinit
+   refid "_1hn:_0yY_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "_0V_1")
+   method
+    refid "_1hn:_0yY_/instance/_0V_1"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal2
+      iffalse             L33
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L30
+
+L15:
+      label
+      getlocal1
+      pushstring          "{"
+      getlocal            4
+      add
+      pushstring          "}"
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_1hn:_0yY_/instance/_0V_1#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_1hn:_0yY_/instance/_0V_1#1"), PackageNamespace("_1hn"), PackageInternalNs("_1hn"), ProtectedNamespace("_16W_"), StaticProtectedNs("_16W_")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      setlocal1
+
+      inclocal_i          4
+L30:
+      getlocal            4
+      getlocal3
+      iflt                L15
+
+L33:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1hn:_0yY_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

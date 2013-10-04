@@ -1,0 +1,145 @@
+class
+ refid "_-9O:_-86"
+ instance QName(PackageNamespace("_-9O"), "_-86")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-1L", [PackageNamespace("_-9O")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Jz")
+  iinit
+   refid "_-9O:_-86/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     astypelate
+     convert_o
+     convert_o
+     getlocal2
+     divide
+     add_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "_-j6")
+   method
+    refid "_-9O:_-86/instance/_-j6"
+    returns QName(PackageNamespace("_-1Jt"), "Dialog")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1Jt"), "Dialog")
+      jump                L10
+
+      convert_o
+      subtract_i
+      rshift
+      subtract
+      lessequals
+      convert_u
+L10:
+      getlex              QName(PrivateNamespace("*", "_-9O:_-86"), "TITLE")
+      getlex              QName(PrivateNamespace("*", "_-9O:_-86"), "_-0UG")
+      pushnull
+      pushnull
+      getlex              QName(PrivateNamespace("*", "_-9O:_-86"), "_-ym")
+      constructprop       QName(PackageNamespace("_-1Jt"), "Dialog"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-9O:_-86/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    instanceof
+    multiply_i
+    decrement_i
+    bitor
+    getlocal2
+    increment_i
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L20
+
+    findproperty        QName(PrivateNamespace("*", "_-9O:_-86"), "_-0UG")
+    pushstring          "There are currently no testing servers available. Please play on <font color=\"#7777EE\"><a href=\"http://www.realmofthemadgod.com/\">www.realmofthemadgod.com</a></font>."
+    initproperty        QName(PrivateNamespace("*", "_-9O:_-86"), "_-0UG")
+
+    getlocal1
+    iffalse             L25
+
+L20:
+    findproperty        QName(PrivateNamespace("*", "_-9O:_-86"), "TITLE")
+    pushstring          "No Testing Servers"
+    initproperty        QName(PrivateNamespace("*", "_-9O:_-86"), "TITLE")
+
+    getlocal2
+    iftrue              L28
+
+L25:
+    findproperty        QName(PrivateNamespace("*", "_-9O:_-86"), "_-ym")
+    pushstring          "/noTestingServers"
+    initproperty        QName(PrivateNamespace("*", "_-9O:_-86"), "_-ym")
+
+L28:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-9O:_-86"), "_-0UG") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("There are currently no testing servers available. Please play on <font color=\"#7777EE\"><a href=\"http://www.realmofthemadgod.com/\">www.realmofthemadgod.com</a></font>.") end
+ trait const QName(PrivateNamespace("*", "_-9O:_-86"), "TITLE") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("No Testing Servers") end
+ trait const QName(PrivateNamespace("*", "_-9O:_-86"), "_-ym") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("/noTestingServers") end
+end ; class

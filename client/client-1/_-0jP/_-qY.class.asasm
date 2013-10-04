@@ -1,0 +1,166 @@
+class
+ refid "_-0jP:_-qY"
+ instance QName(PackageNamespace("_-0jP"), "_-qY")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0BV")
+  iinit
+   refid "_-0jP:_-qY/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_o
+     istypelate
+     strictequals
+     negate_i
+     divide
+     setlocal2
+
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0XL") type QName(PackageNamespace("", "#0"), "String") end
+ end ; instance
+ cinit
+  refid "_-0jP:_-qY/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    convert_b
+    subtract
+    dup
+    getlocal2
+    subtract
+    typeof
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal2
+    convert_b
+L19:
+    iftrue              L64
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0vT")
+    pushstring          "Main Inventory"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0vT")
+
+    jump                L30
+
+    nextvalue
+    greaterthan
+    dup
+    strictequals
+    nextvalue
+    convert_b
+L30:
+    getlocal1
+    dup
+    iftrue              L36
+
+    pop
+    getlocal2
+    convert_b
+L36:
+    iffalse             L64
+
+    jump                L44
+
+    convert_d
+    decrement_i
+    dxnslate
+    pushnull
+    getlocal1
+    decrement_i
+L44:
+    findproperty        QName(PackageNamespace("", "#0"), "_-1o7")
+    pushstring          "Stats"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1o7")
+
+    getlocal2
+    dup
+    iffalse             L53
+
+    pop
+    getlocal2
+    convert_b
+L53:
+    iftrue              L64
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-DO")
+    pushstring          "Backpack"
+    initproperty        QName(PackageNamespace("", "#0"), "_-DO")
+
+    getlocal2
+    dup
+    iffalse             L63
+
+    pop
+    getlocal0
+    convert_b
+L63:
+    iftrue              L67
+
+L64:
+    findproperty        QName(PackageNamespace("", "#0"), "_-0uB")
+    pushstring          "Pets"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0uB")
+
+L67:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-0vT") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("Main Inventory") end
+ trait const QName(PackageNamespace("", "#0"), "_-1o7") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("Stats") end
+ trait const QName(PackageNamespace("", "#0"), "_-DO") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("Backpack") end
+ trait const QName(PackageNamespace("", "#0"), "_-0uB") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("Pets") end
+end ; class

@@ -1,0 +1,239 @@
+class
+ refid "_-2c:_-1-o"
+ instance QName(PackageNamespace("_-2c"), "_-1-o")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0lX")
+  iinit
+   refid "_-2c:_-1-o/instance/init#0"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pop
+     lessequals
+     swap
+     urshift
+     add
+     bitand
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-2c:_-1-o/instance"), "tracker") type QName(PackageNamespace("com.google.analytics"), "GATracker") end
+  trait method QName(PackageNamespace("", "#0"), "init")
+   method
+    refid "_-2c:_-1-o/instance/init#1"
+    param QName(PackageNamespace("flash.display"), "Stage")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      setlocal3
+
+      inclocal            2
+      add
+      setlocal3
+
+      setlocal3
+
+      inclocal            2
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      jump                L22
+
+      getlocal2
+      inclocal            3
+      greaterthan
+      getlocal3
+      getlocal3
+      declocal_i          3
+L22:
+      iftrue              L26
+
+      pop
+      getlocal0
+      convert_b
+L26:
+      iffalse             L40
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.google.analytics"), "GATracker")
+      getlocal1
+      getlocal2
+      constructprop       QName(PackageNamespace("com.google.analytics"), "GATracker"), 2
+      initproperty        QName(PrivateNamespace("*", "_-2c:_-1-o/instance"), "tracker")
+
+      getlocal3
+      dup
+      iftrue              L39
+
+      pop
+      getlocal1
+      convert_b
+L39:
+      iffalse             L44
+
+L40:
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-2c:_-1-o/instance"), "tracker")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setTracker"), 1
+
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackEvent")
+   method
+    refid "_-2c:_-1-o/instance/trackEvent"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      declocal            2
+      inclocal_i          2
+      inclocal            2
+      multiply_i
+      not
+      greaterequals
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-2c:_-1-o/instance"), "tracker")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace("", "#0"), "trackEvent"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0qr")
+   method
+    refid "_-2c:_-1-o/instance/_-0qr"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      increment
+      typeof
+      declocal            2
+      lessthan
+      subtract_i
+      convert_b
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L24
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-2c:_-1-o/instance"), "tracker")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "trackPageview"), 1
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-2c:_-1-o/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

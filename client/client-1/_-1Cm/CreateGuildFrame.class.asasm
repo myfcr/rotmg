@@ -1,0 +1,501 @@
+class
+ refid "_-1Cm:CreateGuildFrame"
+ instance QName(PackageNamespace("_-1Cm"), "CreateGuildFrame")
+  extends QName(PackageNamespace("_-1Cm"), "Frame")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1fr")
+  iinit
+   refid "_-1Cm:CreateGuildFrame/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 7
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     declocal_i          3
+     declocal_i          3
+     declocal            2
+     kill                2
+     getlocal1
+     pushwith
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iftrue              L58
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-a"), "_-uD")
+     constructprop       QName(PackageNamespace("_-a"), "_-uD"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "close")
+
+     getlocal            4
+     iftrue              L63
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0XZ")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0lK")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0VY")
+     pushstring          "/createGuild"
+     constructsuper      4
+
+     getlocal            4
+     iftrue              L37
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "gs_")
+
+     getlocal3
+     iffalse             L58
+
+L37:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1Cm"), "_-l2")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-10X")
+     pushfalse
+     constructprop       QName(PackageNamespace("_-1Cm"), "_-l2"), 2
+     initproperty        QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_")
+
+     getlocal            4
+     dup
+     iffalse             L50
+
+     pop
+     getlocal3
+     convert_b
+L50:
+     iftrue              L63
+
+     jump                L58
+
+     newactivation
+     inclocal            2
+     popscope
+     declocal            3
+     convert_b
+     not
+L58:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_")
+     getproperty         QName(PackageNamespace("", "#0"), "inputText_")
+     pushstring          "A-Za-z "
+     setproperty         QName(PackageNamespace("", "#0"), "restrict")
+
+L63:
+     pushbyte            20
+     setlocal2
+
+     getlocal3
+     iffalse             L83
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_")
+     getproperty         QName(PackageNamespace("", "#0"), "inputText_")
+     getlocal2
+     setproperty         QName(PackageNamespace("", "#0"), "maxChars")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-fp")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_")
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-fp"), 1
+
+     getlocal3
+     dup
+     iftrue              L82
+
+     pop
+     getlocal1
+     convert_b
+L82:
+     iffalse             L103
+
+L83:
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-sS")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-1Q9")
+     pushstring          "maxChars"
+     getlocal2
+     newobject           1
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-sS"), 2
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-sS")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-R2")
+     jump                L100
+
+     declocal            3
+     setlocal2
+
+     declocal_i          3
+     setlocal3
+
+     convert_i
+     declocal_i          2
+L100:
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-sS"), 1
+
+     getlocal3
+     iffalse             L117
+
+L103:
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-sS")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-v5")
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-sS"), 1
+
+     getlocal            4
+     iftrue              L117
+
+     getlex              QName(PackageNamespace("", "#0"), "_-0em")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "onCancel")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            4
+     iftrue              L123
+
+L117:
+     getlex              QName(PackageNamespace("", "#0"), "_-X5")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "_-07G")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L123:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageNamespace("", "#0"), "close") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait slot QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_") type QName(PackageNamespace("_-1Cm"), "_-l2") end
+  trait slot QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "gs_") type QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite") end
+  trait method QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "onCancel")
+   method
+    refid "_-1Cm:CreateGuildFrame/instance/_-1Cm:CreateGuildFrame/instance/onCancel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      kill                2
+      kill                2
+      inclocal            2
+      newactivation
+      declocal            2
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L18
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "close")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "_-07G")
+   method
+    refid "_-1Cm:CreateGuildFrame/instance/_-1Cm:CreateGuildFrame/instance/_-07G"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      multiply_i
+      getlocal2
+      dup
+      hasnext
+      bitand
+      modulo
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L46
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "gs_")
+      getlocal2
+      dup
+      iffalse             L31
+
+      jump                L28
+
+      not
+      kill                2
+      getlocal2
+      pop
+      kill                2
+      subtract
+L28:
+      pop
+      getlocal0
+      convert_b
+L31:
+      iftrue              L48
+
+      jump                L39
+
+      greaterthan
+      getlocal2
+      setlocal2
+
+      setlocal2
+
+      declocal_i          2
+      getlocal2
+L39:
+      getlex              QName(PackageNamespace("_-05e"), "_-kt")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0i5")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "_-1Kx")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal2
+      iftrue              L60
+
+L46:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "gs_")
+L48:
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_")
+      callproperty        QName(PackageNamespace("", "#0"), "text"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "createGuild"), 1
+
+      getlocal2
+      dup
+      iffalse             L59
+
+      pop
+      getlocal3
+      convert_b
+L59:
+      iftrue              L62
+
+L60:
+      findpropstrict      QName(PackageNamespace("", "#0"), "disable")
+      callpropvoid        QName(PackageNamespace("", "#0"), "disable"), 0
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "_-1Kx")
+   method
+    refid "_-1Cm:CreateGuildFrame/instance/_-1Cm:CreateGuildFrame/instance/_-1Kx"
+    param QName(PackageNamespace("_-05e"), "_-kt")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      inclocal            2
+      bitnot
+      dxnslate
+      rshift
+      pushnull
+      bitnot
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal2
+
+      getlocal3
+      iffalse             L94
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "gs_")
+      getlex              QName(PackageNamespace("_-05e"), "_-kt")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0i5")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "_-1Kx")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      getlocal            4
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      convert_b
+L31:
+      iftrue              L92
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "success_")
+      iffalse             L83
+
+      getlocal3
+      iffalse             L92
+
+      jump                L44
+
+      getlocal2
+      negate
+      astypelate
+      inclocal_i          2
+      setlocal3
+
+      pop
+L44:
+      getlex              QName(PackageNamespace("_-5l"), "_-0pB")
+      callproperty        QName(PackageNamespace("", "#0"), "_-o6"), 0
+      getlex              QName(PackageNamespace("_-0yh"), "_-Eo")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+      getproperty         Multiname("player", [PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), PackageNamespace("", "#0"), PackageNamespace("_-1Cm"), PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance/_-1Cm:CreateGuildFrame/instance/_-1Kx"), PackageInternalNs("_-1Cm"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1fr"), StaticProtectedNs("_-1fr"), StaticProtectedNs("_-z"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal2
+
+      getlocal3
+      dup
+      iftrue              L57
+
+      pop
+      getlocal3
+      convert_b
+L57:
+      iffalse             L82
+
+      getlocal2
+      pushnull
+      ifeq                L79
+
+      getlocal3
+      iffalse             L79
+
+      getlocal2
+      jump                L71
+
+      declocal_i          2
+      setlocal3
+
+      setlocal2
+
+      kill                3
+      declocal_i          3
+      getlocal2
+L71:
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "_-12Z")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0DP")
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "_-12Z")
+
+      getlocal            4
+      iftrue              L82
+
+L79:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "close")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L82:
+      jump                L94
+
+L83:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cm:CreateGuildFrame/instance"), "name_")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "_-a2")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "_-0jp")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-bq"), 2
+
+      getlocal            4
+      iftrue              L94
+
+L92:
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-12I")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-12I"), 0
+
+L94:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1Cm:CreateGuildFrame/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

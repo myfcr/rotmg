@@ -1,0 +1,138 @@
+class
+ refid "_zC_:_1Q_A_"
+ instance QName(PackageNamespace("_zC_"), "_1Q_A_")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0_s")
+  iinit
+   refid "_zC_:_1Q_A_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_0x6") flag METADATA type QName(PackageNamespace("_1G_e"), "_1A_Z_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "client") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0sF_") flag METADATA type QName(PackageNamespace("_0H_D_"), "_1dr")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_0_s"), "startTask") flag OVERRIDE
+   method
+    refid "_zC_:_1Q_A_/instance/_0_s:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushbyte            2
+      callpropvoid        QName(Namespace("_0T_S_"), "_1P_F_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_zC_:_1Q_A_/instance/_0_s:startTask"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushstring          "/app/init"
+      pushstring          "game_net"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_0gm"), 0
+      newobject           1
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_zC_:_1Q_A_/instance/_0_s:startTask"), "onComplete")
+   method
+    refid "_zC_:_1Q_A_/instance/_zC_:_1Q_A_/instance/_0_s:startTask/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      coerce_a
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0sF_")
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "XML"), 1
+      callproperty        QName(PackageNamespace(""), "dispatch"), 1
+      coerce_a
+L14:
+      pop
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_zC_:_1Q_A_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

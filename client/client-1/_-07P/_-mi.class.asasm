@@ -1,0 +1,158 @@
+class
+ refid "_-07P:_-mi"
+ instance QName(PackageNamespace("_-07P"), "_-mi")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-GA")
+  iinit
+   refid "_-07P:_-mi/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitand
+     bitor
+     multiply_i
+     subtract
+     equals
+     getlocal3
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1Bm") flag METADATA type QName(PackageNamespace("_-1EE"), "_-BJ")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "create")
+   method
+    refid "_-07P:_-mi/instance/create"
+    param QName(PackageNamespace("_-Su"), "_-1Px")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("_-07P"), "_-0oG")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      convert_o
+      inclocal            4
+      setlocal            4
+
+      setlocal2
+
+      inclocal_i          2
+      bitnot
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-07P"), "_-0oG")
+      constructprop       QName(PackageNamespace("_-07P"), "_-0oG"), 0
+      coerce              QName(PackageNamespace("_-07P"), "_-0oG")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Bm")
+      getlocal1
+      jump                L27
+
+      declocal_i          2
+      nextname
+      increment_i
+      setlocal            5
+
+      getlocal3
+      declocal_i          5
+L27:
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "create"), 2
+      coerce              QName(PackageNamespace("_-1EE"), "_-90")
+      setlocal            4
+
+      getlocal            6
+      iftrue              L43
+
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-1Wv"), 1
+
+      getlocal            6
+      dup
+      iffalse             L42
+
+      pop
+      getlocal0
+      convert_b
+L42:
+      iftrue              L52
+
+L43:
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setSize"), 1
+
+      getlocal            5
+      iffalse             L52
+
+      getlocal3
+      getlex              QName(PackageNamespace("_-07P"), "_-0oG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1a0")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-gY"), 1
+
+L52:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-07P:_-mi/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,352 @@
+class
+ refid "_1K_i:_0G_U_"
+ instance QName(PackageNamespace("_1K_i"), "_0G_U_")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_11a")
+  iinit
+   refid "_1K_i:_0G_U_/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1V_O_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "time") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onAddedToStage")
+   method
+    refid "_1K_i:_0G_U_/instance/_1K_i:_0G_U_/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_jb")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_jb")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+      dup
+      iftrue              L12
+
+      pop
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_11i"), 0
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+L12:
+      dup
+      setlocal2
+
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_jb")
+
+      getlocal2
+      kill                2
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1V_O_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onRemovedFromStage")
+   method
+    refid "_1K_i:_0G_U_/instance/_1K_i:_0G_U_/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "onEnterFrame")
+   method
+    refid "_1K_i:_0G_U_/instance/_1K_i:_0G_U_/onEnterFrame"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "time")
+
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "time")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1V_O_")
+      subtract
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_N_R_")
+      multiply
+      add
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+      add
+      ifngt               L29
+
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      subtract
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+
+L29:
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "camera")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1S_5")
+      pushbyte            12
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_2O_")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_09a")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "configure"), 6
+
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_jb")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "camera")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "time")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "time")
+      initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1V_O_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_11i")
+   method
+    refid "_1K_i:_0G_U_/instance/_1K_i:_0G_U_/_11i"
+    returns QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+    body
+     maxstack 9
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1U_6")
+      constructprop       QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1U_6"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      coerce_s
+      setlocal2
+
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getlex              QName(PackageNamespace("_1C_i"), "_uK_")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "_0eX_"), 1
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0")
+
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1S_5")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      pushbyte            2
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+      multiply
+      subtract
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      multiply
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      add
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1S_5")
+
+      findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "camera")
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_")
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_"), 0
+      setproperty         QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "camera")
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+      pushnull
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.map"), "Map"), 1
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      pushbyte            2
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+      multiply
+      add
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      pushstring          "Background Map"
+      getlex              QName(PackageNamespace("_0fZ_"), "Background")
+      getproperty         QName(PackageNamespace(""), "_0x9")
+      pushfalse
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "setProps"), 6
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "initialize"), 0
+
+      getlex              QName(PackageNamespace("_1C_i"), "_uK_")
+      getlocal2
+      getlocal3
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "_0k7"), 4
+
+      getlex              QName(PackageNamespace("_1C_i"), "_uK_")
+      getlocal2
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "_0k7"), 4
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1K_i:_0G_U_/class/init"
+  body
+   maxstack 8
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+    pushbyte            10
+    initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER")
+
+    findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_09a")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+    pushshort           -400
+    pushshort           -300
+    pushshort           800
+    pushshort           600
+    constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+    initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_09a")
+
+    findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_2O_")
+    pushbyte            7
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    multiply
+    pushbyte            4
+    divide
+    initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_2O_")
+
+    findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_N_R_")
+    pushbyte            1
+    pushshort           1000
+    divide
+    initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_N_R_")
+
+    findproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1U_6")
+    getlex              QName(PackageNamespace("_1K_i"), "_0yv")
+    initproperty        QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1U_6")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "BORDER") slotid 1 type QName(PackageNamespace(""), "int") value Integer(10) end
+ trait const QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_09a") slotid 2 type QName(PackageNamespace("flash.geom"), "Rectangle") end
+ trait const QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_2O_") slotid 3 type QName(PackageNamespace(""), "Number") value Double(5.497787143782138) end
+ trait const QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_N_R_") slotid 4 type QName(PackageNamespace(""), "Number") value Double(0.001) end
+ trait const QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1U_6") slotid 5 type QName(PackageNamespace(""), "Class") end
+ trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_jb") slotid 6 type QName(PackageNamespace("com.company.assembleegameclient.map"), "Map") end
+ trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_wV_") slotid 7 type QName(PackageNamespace("com.company.util"), "IntPoint") end
+ trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_0D_0") slotid 8 type QName(PackageNamespace(""), "Number") end
+ trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "_1S_5") slotid 9 type QName(PackageNamespace(""), "Number") end
+ trait slot QName(PrivateNamespace("*", "_1K_i:_0G_U_"), "camera") slotid 10 type QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_") end
+end ; class

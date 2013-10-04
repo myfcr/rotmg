@@ -1,0 +1,245 @@
+class
+ refid "_-04m:_-167"
+ instance QName(PackageNamespace("_-04m"), "_-167")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-vd")
+  iinit
+   refid "_-04m:_-167/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     popscope
+     greaterequals
+     decrement
+     greaterequals
+     lessthan
+     lshift
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-04m:_-167/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "_-11u") flag FINAL dispid 3
+  method
+   refid "_-04m:_-167/class/_-11u"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   returns QName(PackageNamespace("_-1X1"), "_-Fw")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 7
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            2
+     equals
+     getlocal3
+     convert_i
+     setlocal3
+
+     inclocal_i          6
+L10:
+     setlocal            6
+
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-1X1"), "_-Fw")
+     constructprop       QName(PackageNamespace("_-1X1"), "_-Fw"), 0
+     coerce              QName(PackageNamespace("_-1X1"), "_-Fw")
+     dup
+     setlocal            5
+
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     getlocal3
+     callpropvoid        QName(PackageNamespace("", "#0"), "setBold"), 1
+
+     getlocal            7
+     dup
+     iftrue              L31
+
+     pop
+     getlocal3
+     convert_b
+L31:
+     iffalse             L50
+
+     getlocal            5
+     jump                L40
+
+     getlocal            4
+     swap
+     declocal_i          4
+     pushtrue
+     getglobalscope
+     add_i
+L40:
+     getlex              QName(PackageNamespace("_-1X1"), "_-Fw")
+     getproperty         QName(PackageNamespace("", "#0"), "BOTTOM")
+     callpropvoid        QName(PackageNamespace("", "#0"), "setVerticalAlign"), 1
+
+     getlocal            7
+     dup
+     iftrue              L49
+
+     pop
+     getlocal2
+     convert_b
+L49:
+     iffalse             L85
+
+L50:
+     getlocal            5
+     getlocal            7
+     dup
+     iftrue              L64
+
+     pop
+     getlocal2
+     jump                L63
+
+     subtract_i
+     inclocal            4
+     declocal            3
+     kill                6
+     kill                6
+     bitor
+L63:
+     convert_b
+L64:
+     iffalse             L67
+
+     getlocal            4
+     iffalse             L82
+
+L67:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     getlocal            6
+     dup
+     iffalse             L79
+
+     pop
+     getlocal2
+     convert_b
+L79:
+     iftrue              L83
+
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     jump                L84
+
+L82:
+     newarray            0
+L83:
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+L84:
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+L85:
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-13u") flag FINAL dispid 4
+  method
+   refid "_-04m:_-167/class/_-13u"
+   param QName(PackageNamespace("", "#0"), "uint")
+   returns QName(PackageNamespace("flash.display"), "Bitmap")
+   body
+    maxstack 7
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     jump                L10
+
+     dxnslate
+     pushnull
+     modulo
+     greaterequals
+     convert_o
+     pushscope
+
+L10:
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getlocal1
+     pushbyte            80
+     pushtrue
+     callproperty        QName(PackageNamespace("", "#0"), "getRedrawnTextureFromType"), 3
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,1236 @@
+class
+ refid "_-4k:Graphic3D"
+ instance QName(PackageNamespace("_-4k"), "Graphic3D")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Ai")
+  iinit
+   refid "_-4k:Graphic3D/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     urshift
+     lessthan
+     pushscope
+
+     setlocal2
+
+     popscope
+     pushnull
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L29
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix3D")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix3D"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "matrix3D")
+
+     getlocal2
+     iffalse             L29
+
+     getlocal0
+     constructsuper      0
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "texture") type QName(PackageNamespace("_-z8"), "_-1Gw") end
+  trait slot QName(PackageNamespace("", "#0"), "matrix3D") type QName(PackageNamespace("flash.geom"), "Matrix3D") end
+  trait slot QName(PackageNamespace("", "#0"), "context3D") type QName(PackageNamespace("_-z8"), "_-1YM") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1bE") flag METADATA type QName(PackageNamespace("_-4k"), "_-0Gz")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0GC") flag METADATA type QName(PackageNamespace("_-z8"), "_-0On")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-91") flag METADATA type QName(PackageNamespace("_-z8"), "_-Iy")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "bitmapData") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-J9") type QName(PackageNamespace("", "#0"), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Aa") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>) end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1hc") type QName(PackageNamespace("flash.display3D"), "VertexBuffer3D") end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy") type QName(PackageNamespace("flash.display3D"), "VertexBuffer3D") end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1in") type QName(PackageNamespace("flash.display3D"), "IndexBuffer3D") end
+  trait slot QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "repeat") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "_-1jV")
+   method
+    refid "_-4k:Graphic3D/instance/_-1jV"
+    param QName(PackageNamespace("flash.display"), "GraphicsBitmapFill")
+    param QName(PackageNamespace("_-z8"), "_-1YM")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 12
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      getlocal            4
+      getlocal3
+      setlocal2
+
+      setlocal            4
+
+      getlocal            4
+      negate_i
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iffalse             L48
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "bitmapData")
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "repeat")
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "repeat")
+
+      getlocal            5
+      iftrue              L89
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "matrix")
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1bE")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+      callproperty        QName(PackageNamespace("", "#0"), "make"), 1
+      initproperty        QName(PackageNamespace("", "#0"), "texture")
+
+      getlocal0
+      getlex              QName(PackageNamespace("_-07c"), "_-0ll")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-09g"), 1
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Aa")
+
+      getlocal            5
+      dup
+      iffalse             L47
+
+      pop
+      getlocal0
+      convert_b
+L47:
+      iftrue              L53
+
+L48:
+      getlocal0
+      getlex              QName(PackageNamespace("_-07c"), "_-0ll")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-3t"), 1
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1hc")
+
+L53:
+      getlocal0
+      getlex              QName(PackageNamespace("_-07c"), "_-0ll")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Ln"), 1
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-J9")
+
+      getlocal            4
+      iffalse             L87
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-J9")
+      pushbyte            0
+      ifeq                L87
+
+      getlocal            4
+      iffalse             L87
+
+      getlocal0
+      getlex              Multiname("Vector", [PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      jump                L76
+
+      declocal            4
+      kill                3
+      inclocal            2
+      declocal_i          4
+      lessequals
+      kill                2
+L76:
+      applytype           1
+      getglobalscope
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-J9")
+      negate
+      pushbyte            0
+      dup
+      newarray            4
+      call                1
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Aa")
+
+L87:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "transform"), 0
+
+L89:
+      getlex              QName(PackageNamespace("_-07c"), "_-0ll")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "bitmapData")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0LZ"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal3
+
+      getlocal            5
+      dup
+      iffalse             L101
+
+      pop
+      getlocal0
+      convert_b
+L101:
+      iftrue              L124
+
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DProgramType")
+      getproperty         QName(PackageNamespace("", "#0"), "FRAGMENT")
+      pushbyte            2
+      getlex              Multiname("Vector", [PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      applytype           1
+      getglobalscope
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "redMultiplier")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "greenMultiplier")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "blueMultiplier")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "alphaMultiplier")
+      newarray            4
+      call                1
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgramConstantsFromVector"), 3
+
+      getlocal            5
+      iftrue              L159
+
+L124:
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DProgramType")
+      getproperty         QName(PackageNamespace("", "#0"), "FRAGMENT")
+      pushbyte            3
+      jump                L136
+
+      inclocal            2
+      declocal_i          4
+      declocal            2
+      setlocal2
+
+      declocal            3
+      getlocal1
+L136:
+      getlex              Multiname("Vector", [PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      applytype           1
+      getglobalscope
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "redOffset")
+      pushshort           255
+      divide
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "greenOffset")
+      pushshort           255
+      divide
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "blueOffset")
+      pushshort           255
+      divide
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "alphaOffset")
+      pushshort           255
+      divide
+      newarray            4
+      call                1
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgramConstantsFromVector"), 3
+
+L159:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-08")
+   method
+    refid "_-4k:Graphic3D/instance/_-08"
+    param QName(PackageNamespace("flash.display"), "GraphicsGradientFill")
+    param QName(PackageNamespace("_-z8"), "_-1YM")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      kill                5
+      declocal            2
+      setlocal            4
+
+      inclocal_i          4
+      inclocal_i          3
+      pushscope
+
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "matrix")
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy")
+      pushnull
+      equals
+      getlocal            5
+      dup
+      iftrue              L27
+
+      pop
+      getlocal2
+      convert_b
+L27:
+      iffalse             L49
+
+      dup
+      iftrue              L49
+
+      getlocal            5
+      dup
+      iftrue              L36
+
+      pop
+      getlocal0
+      convert_b
+L36:
+      iffalse             L49
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1in")
+      jump                L47
+
+      pushscope
+
+      kill                4
+      inclocal            5
+      convert_o
+      kill                3
+      lessthan
+L47:
+      pushnull
+      equals
+L49:
+      iffalse             L96
+
+      getlocal            5
+      dup
+      iftrue              L56
+
+      pop
+      getlocal1
+      convert_b
+L56:
+      iffalse             L78
+
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            4
+      pushbyte            9
+      callproperty        QName(PackageNamespace("", "#0"), "createVertexBuffer"), 2
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy")
+
+      getlocal            5
+      dup
+      iftrue              L77
+
+      pop
+      getlocal2
+      convert_b
+      jump                L77
+
+      convert_b
+      convert_d
+      kill                5
+      nextname
+      dup
+      inclocal            5
+L77:
+      iffalse             L84
+
+L78:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy")
+      getlex              QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1X6")
+      pushbyte            0
+      pushbyte            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "uploadFromVector"), 3
+
+L84:
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            6
+      callproperty        QName(PackageNamespace("", "#0"), "createIndexBuffer"), 1
+      initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1in")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1in")
+      getlex              QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1Oc")
+      pushbyte            0
+      pushbyte            6
+      callpropvoid        QName(PackageNamespace("", "#0"), "uploadFromVector"), 3
+
+L96:
+      getlocal0
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1Kg"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1Kg")
+   method
+    refid "_-4k:Graphic3D/instance/_-4k:Graphic3D/_-1Kg"
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                3
+      kill                4
+      pushwith
+      getlocal1
+      getlocal2
+      divide
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L24
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      callpropvoid        QName(PackageNamespace("", "#0"), "identity"), 0
+
+L24:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      getproperty         QName(PackageNamespace("", "#0"), "rawData")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      setlocal3
+
+      getlocal3
+      pushbyte            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+      getproperty         QName(PackageNamespace("", "#0"), "c")
+      negate
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal3
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+      getproperty         QName(PackageNamespace("", "#0"), "b")
+      jump                L48
+
+      setlocal2
+
+      declocal_i          2
+      nextname
+      getlocal1
+      pushnan
+      declocal_i          4
+L48:
+      negate
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal            4
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      convert_b
+L56:
+      iftrue              L67
+
+      getlocal3
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+      getproperty         QName(PackageNamespace("", "#0"), "a")
+      pushbyte            4
+      multiply
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal            5
+      iffalse             L82
+
+L67:
+      getlocal3
+      pushbyte            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+      getproperty         QName(PackageNamespace("", "#0"), "d")
+      pushbyte            4
+      jump                L80
+
+      bitor
+      subtract_i
+      inclocal            2
+      inclocal            2
+      dup
+      equals
+L80:
+      multiply
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+L82:
+      getlocal3
+      pushbyte            12
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+      getproperty         QName(PackageNamespace("", "#0"), "tx")
+      getlocal1
+      divide
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal3
+      pushbyte            13
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1En")
+      getproperty         QName(PackageNamespace("", "#0"), "ty")
+      negate
+      getlocal2
+      divide
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      getlocal3
+      setproperty         QName(PackageNamespace("", "#0"), "rawData")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "transform")
+   method
+    refid "_-4k:Graphic3D/instance/_-4k:Graphic3D/transform"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal_i          2
+      pushnan
+      declocal            2
+      dup
+      convert_b
+      increment_i
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L18
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      callpropvoid        QName(PackageNamespace("", "#0"), "identity"), 0
+
+L18:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      getproperty         QName(PackageNamespace("", "#0"), "rawData")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      setlocal1
+
+      getlocal1
+      pushbyte            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+      getproperty         QName(PackageNamespace("", "#0"), "c")
+      negate
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal1
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+      getproperty         QName(PackageNamespace("", "#0"), "b")
+      negate
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal2
+      iffalse             L62
+
+      getlocal1
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+      getproperty         QName(PackageNamespace("", "#0"), "a")
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      jump                L52
+
+      getlocal1
+      pushnan
+      getlocal2
+      convert_i
+      astypelate
+      convert_b
+L52:
+      getlocal2
+      iffalse             L68
+
+      getlocal1
+      pushbyte            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+      getproperty         QName(PackageNamespace("", "#0"), "d")
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal3
+      iftrue              L110
+
+L62:
+      getlocal1
+      pushbyte            12
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+      getproperty         QName(PackageNamespace("", "#0"), "tx")
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+L68:
+      getlocal1
+      pushbyte            13
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "matrix2D")
+      getproperty         QName(PackageNamespace("", "#0"), "ty")
+      negate
+      setproperty         MultinameL([PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai")])
+
+      getlocal3
+      iftrue              L88
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      getlocal1
+      jump                L87
+
+      declocal            2
+      negate_i
+      declocal_i          2
+      declocal_i          2
+      declocal_i          2
+      getlocal2
+L87:
+      setproperty         QName(PackageNamespace("", "#0"), "rawData")
+
+L88:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "texture")
+      callproperty        QName(PackageNamespace("", "#0"), "_-10v"), 0
+      callproperty        QName(PackageNamespace("", "#0"), "ceil"), 1
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "texture")
+      callproperty        QName(PackageNamespace("", "#0"), "getHeight"), 0
+      callproperty        QName(PackageNamespace("", "#0"), "ceil"), 1
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace("", "#0"), "prependScale"), 3
+
+      getlocal3
+      iftrue              L110
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      pushdouble          0.5
+      pushdouble          -0.5
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace("", "#0"), "prependTranslation"), 3
+
+L110:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0Ne")
+   method
+    refid "_-4k:Graphic3D/instance/_-0Ne"
+    param QName(PackageNamespace("_-z8"), "_-1YM")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      getlocal2
+      inclocal_i          3
+      strictequals
+      pushundefined
+      pushfalse
+      convert_s
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-4k"), "_-1kl")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 0
+      coerce              QName(PackageNamespace("_-4k"), "_-1kl")
+      setlocal2
+
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "repeat")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Pk"), 2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgram"), 1
+
+      getlocal1
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "texture")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setTextureAt"), 2
+
+      getlocal3
+      iffalse             L60
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1hc")
+      pushnull
+      ifeq                L95
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1hc")
+      pushbyte            0
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_3")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1hc")
+      pushbyte            3
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_2")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal            4
+      dup
+      iffalse             L59
+
+      pop
+      getlocal0
+      convert_b
+L59:
+      iftrue              L90
+
+L60:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      jump                L69
+
+      decrement
+      coerce_a
+      multiply_i
+      declocal_i          2
+      kill                2
+      inclocal            2
+L69:
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DProgramType")
+      getproperty         QName(PackageNamespace("", "#0"), "VERTEX")
+      pushbyte            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Aa")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgramConstantsFromVector"), 3
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            2
+      pushnull
+      pushbyte            6
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_2")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal            4
+      dup
+      iffalse             L89
+
+      pop
+      getlocal0
+      convert_b
+L89:
+      iftrue              L133
+
+L90:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-91")
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawTriangles"), 1
+
+      jump                L145
+
+L95:
+      getlocal1
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0GC")
+      pushbyte            0
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_3")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal1
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0GC")
+      pushbyte            3
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_2")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal3
+      dup
+      iftrue              L124
+
+      pop
+      jump                L122
+
+      inclocal            3
+      add
+      pushscope
+
+      declocal_i          3
+      getlocal3
+      setlocal2
+
+L122:
+      getlocal2
+      convert_b
+L124:
+      iffalse             L141
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DProgramType")
+      getproperty         QName(PackageNamespace("", "#0"), "VERTEX")
+      pushbyte            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Aa")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgramConstantsFromVector"), 3
+
+L133:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            2
+      pushnull
+      pushbyte            6
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_2")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+L141:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-91")
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawTriangles"), 1
+
+L145:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0YT")
+   method
+    refid "_-4k:Graphic3D/instance/_-0YT"
+    param QName(PackageNamespace("_-z8"), "_-1YM")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal2
+      inclocal_i          2
+      getlocal2
+      kill                2
+      pushnan
+      bitand
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L68
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy")
+      pushbyte            0
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_3")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      jump                L37
+
+      convert_d
+      kill                2
+      inclocal_i          2
+      inclocal            2
+      declocal_i          2
+      greaterequals
+L37:
+      getlocal2
+      iftrue              L80
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy")
+      pushbyte            3
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_4")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal2
+      iftrue              L75
+
+      jump                L57
+
+      swap
+      setlocal2
+
+      getlocal2
+      getglobalscope
+      bitnot
+      inclocal_i          2
+L57:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-Qy")
+      pushbyte            7
+      getlex              QName(PackageNamespace("flash.display3D"), "Context3DVertexBufferFormat")
+      getproperty         QName(PackageNamespace("", "#0"), "FLOAT_2")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+      getlocal3
+      iffalse             L75
+
+L68:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      pushbyte            0
+      pushnull
+      callpropvoid        QName(PackageNamespace("", "#0"), "setTextureAt"), 2
+
+      getlocal3
+      iffalse             L80
+
+L75:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0P"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1in")
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawTriangles"), 1
+
+L80:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0sA")
+   method
+    refid "_-4k:Graphic3D/instance/_-0sA"
+    returns QName(PackageNamespace("flash.geom"), "Matrix3D")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "matrix3D")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-4k:Graphic3D/class/init"
+  body
+   maxstack 41
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    multiply
+    decrement
+    dxnslate
+    add_i
+    swap
+    setlocal2
+
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L81
+
+    findproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1X6")
+    getlex              Multiname("Vector", [PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai"), PackageNamespace("__AS3__.vec")])
+    getlex              QName(PackageNamespace("", "#0"), "Number")
+    applytype           1
+    getglobalscope
+    pushdouble          -0.5
+    pushdouble          0.5
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    pushdouble          0.01
+    pushbyte            0
+    pushbyte            1
+    pushdouble          0.5
+    pushdouble          0.5
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    pushdouble          0.3
+    jump                L44
+
+    getlocal2
+    rshift
+    nextvalue
+    lessthan
+    pushtrue
+    pushtrue
+L44:
+    pushbyte            1
+    dup
+    pushdouble          -0.5
+    pushdouble          -0.5
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    pushdouble          0.1
+    pushbyte            0
+    dup
+    pushdouble          0.5
+    pushdouble          -0.5
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    pushdouble          0.2
+    pushbyte            1
+    pushbyte            0
+    newarray            36
+    jump                L72
+
+    checkfilter
+    add_i
+    negate_i
+    negate_i
+    bitnot
+    pushundefined
+L72:
+    call                1
+    initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1X6")
+
+    getlocal1
+    dup
+    iffalse             L80
+
+    pop
+    getlocal1
+    convert_b
+L80:
+    iftrue              L95
+
+L81:
+    findproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1Oc")
+    getlex              Multiname("Vector", [PrivateNamespace("*", "_-4k:Graphic3D#0"), PrivateNamespace("*", "_-4k:Graphic3D#1"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Ai"), StaticProtectedNs("_-1Ai"), PackageNamespace("__AS3__.vec")])
+    getlex              QName(PackageNamespace("", "#0"), "uint")
+    applytype           1
+    getglobalscope
+    pushbyte            0
+    pushbyte            1
+    pushbyte            2
+    dup
+    pushbyte            1
+    pushbyte            3
+    newarray            6
+    call                1
+    initproperty        QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1Oc")
+
+L95:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1X6") slotid 1 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>) end
+ trait const QName(PrivateNamespace("*", "_-4k:Graphic3D#0"), "_-1Oc") slotid 2 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>) end
+end ; class

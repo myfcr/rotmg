@@ -1,0 +1,29 @@
+script ; 765
+ sinit
+  refid "_-039:_-rx/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-rx", [PackageNamespace("_-039")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-039:_-rx"
+    popscope
+    initproperty        QName(PackageNamespace("_-039"), "_-rx")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-039"), "_-rx")
+  #include "_-rx.class.asasm"
+ end ; trait
+end ; script

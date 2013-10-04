@@ -1,0 +1,167 @@
+class
+ refid "com.company.assembleegameclient.objects:PetUpgrader"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "PetUpgrader")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-1jt", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0pa")
+  iinit
+   refid "com.company.assembleegameclient.objects:PetUpgrader/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     bitnot
+     declocal            2
+     popscope
+     urshift
+     strictequals
+     kill                2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     modulo
+     getlocal0
+     nextvalue
+     declocal_i          2
+     bitand
+     kill                2
+L20:
+     getlocal3
+     dup
+     iffalse             L26
+
+     pop
+     getlocal3
+     convert_b
+L26:
+     iftrue              L40
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     dup
+     iffalse             L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iftrue              L40
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-1Yv")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-1Yv")
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getTooltip")
+   method
+    refid "com.company.assembleegameclient.objects:PetUpgrader/instance/getTooltip"
+    returns QName(PackageNamespace("_-1Qt"), "_-1Sf")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1Qt"), "_-gB")
+      jump                L10
+
+      modulo
+      typeof
+      getglobalscope
+      convert_s
+      convert_b
+      pushscope
+
+L10:
+      pushint             3552822
+      pushint             10197915
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-14D")
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-149")
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-1Qt"), "_-gB"), 5
+      coerce              QName(PackageNamespace("_-1Qt"), "_-1Sf")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:PetUpgrader/instance/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-dE"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1EE"), "_-1J7")
+      jump                L10
+
+      convert_u
+      add_i
+      modulo
+      bitor
+      dup
+      pushnull
+L10:
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "objectType_")
+      constructprop       QName(PackageNamespace("_-1EE"), "_-1J7"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:PetUpgrader/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

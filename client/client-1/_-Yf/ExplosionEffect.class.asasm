@@ -1,0 +1,420 @@
+class
+ refid "_-Yf:ExplosionEffect"
+ instance QName(PackageNamespace("_-Yf"), "ExplosionEffect")
+  extends QName(PackageNamespace("_-Yf"), "_-00p")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Ol")
+  iinit
+   refid "_-Yf:ExplosionEffect/instance/init"
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushwith
+     kill                4
+     inclocal_i          2
+     hasnext
+     typeof
+     instanceof
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-Fr")
+
+     findproperty        QName(PackageNamespace("", "#0"), "size_")
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "size_")
+
+     getlex              QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+     getproperty         QName(PackageNamespace("", "#0"), "total_")
+     getlocal            4
+     dup
+     iffalse             L30
+
+     pop
+     getlocal3
+     convert_b
+L30:
+     iftrue              L64
+
+     pushshort           250
+     getlocal            4
+     iftrue              L72
+
+     ifnge               L60
+
+     getlocal            5
+     dup
+     iftrue              L41
+
+     pop
+     getlocal0
+     convert_b
+L41:
+     iffalse             L59
+
+     getlocal0
+     pushbyte            2
+     initproperty        QName(PackageNamespace("", "#0"), "_-1g0")
+
+     jump                L52
+
+     dup
+     inclocal_i          3
+     swap
+     declocal_i          3
+     lessequals
+     lshift
+L52:
+     getlocal            5
+     dup
+     iftrue              L58
+
+     pop
+     getlocal0
+     convert_b
+L58:
+     iffalse             L107
+
+L59:
+     jump                L111
+
+L60:
+     getlex              QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+     getproperty         QName(PackageNamespace("", "#0"), "total_")
+     getlocal            4
+     iftrue              L95
+
+L64:
+     pushshort           150
+     getlocal            5
+     dup
+     iftrue              L71
+
+     pop
+     getlocal1
+     convert_b
+L71:
+     iffalse             L96
+
+L72:
+     ifnge               L93
+
+     getlocal            5
+     dup
+     iftrue              L79
+
+     pop
+     getlocal3
+     convert_b
+L79:
+     iffalse             L97
+
+     getlocal0
+     jump                L88
+
+     lessthan
+     declocal_i          4
+     convert_o
+     increment
+     declocal_i          4
+     pushtrue
+L88:
+     pushbyte            4
+     initproperty        QName(PackageNamespace("", "#0"), "_-1g0")
+
+     getlocal            4
+     iftrue              L107
+
+     jump                L111
+
+L93:
+     getlex              QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+     getproperty         QName(PackageNamespace("", "#0"), "total_")
+L95:
+     pushbyte            90
+L96:
+     ifnge               L108
+
+L97:
+     getlocal0
+     pushbyte            12
+     initproperty        QName(PackageNamespace("", "#0"), "_-1g0")
+
+     getlocal            4
+     dup
+     iffalse             L106
+
+     pop
+     getlocal2
+     convert_b
+L106:
+     iftrue              L111
+
+L107:
+     jump                L111
+
+L108:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-1g0")
+
+L111:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-Fr") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>) end
+  trait slot QName(PackageNamespace("", "#0"), "_-1g0") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-Yf:ExplosionEffect/instance/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 10
+     localcount 8
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      equals
+      convert_d
+      increment
+      getlocal            6
+      inclocal            3
+      pushnan
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("_-Yf"), "Particle")
+      setlocal            5
+
+      getlocal            7
+      dup
+      iftrue              L26
+
+      pop
+      getlocal1
+      convert_b
+L26:
+      iffalse             L39
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Fr")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifne                L50
+
+      getlocal            7
+      dup
+      iftrue              L38
+
+      pop
+      getlocal0
+      convert_b
+L38:
+      iffalse             L50
+
+L39:
+      pushfalse
+      getlocal            6
+      iftrue              L76
+
+      returnvalue
+
+      getlocal            7
+      dup
+      iftrue              L49
+
+      pop
+      getlocal2
+      convert_b
+L49:
+      iffalse             L75
+
+L50:
+      getlex              QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+      getproperty         QName(PackageNamespace("", "#0"), "total_")
+      getlocal            7
+      dup
+      iftrue              L58
+
+      pop
+      getlocal2
+      convert_b
+L58:
+      iffalse             L78
+
+      pushshort           400
+      ifngt               L77
+
+      getlocal            7
+      jump                L69
+
+      declocal            2
+      add
+      hasnext
+      modulo
+      convert_i
+      declocal_i          4
+L69:
+      dup
+      iftrue              L74
+
+      pop
+      getlocal2
+      convert_b
+L74:
+      iffalse             L77
+
+L75:
+      pushfalse
+L76:
+      returnvalue
+
+L77:
+      pushbyte            0
+L78:
+      setlocal3
+
+      jump                L140
+
+L80:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Fr")
+      findpropstrict      QName(PackageNamespace("", "#0"), "int")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Fr")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "int"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "_-Yf:ExplosionEffect/instance/update"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-Yf:ExplosionEffect"), PackageNamespace("_-Yf"), PackageInternalNs("_-Yf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Ol"), StaticProtectedNs("_-Ol"), StaticProtectedNs("_-1eu"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      convert_u
+      setlocal            4
+
+      getlocal            7
+      dup
+      iftrue              L100
+
+      pop
+      getlocal1
+      convert_b
+L100:
+      iffalse             L144
+
+      findpropstrict      QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+      getlocal            4
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("", "#0"), "size_")
+      pushshort           200
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushbyte            100
+      multiply
+      add
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushdouble          0.5
+      subtract
+      jump                L122
+
+      negate_i
+      kill                3
+      declocal_i          4
+      declocal            4
+      convert_u
+      setlocal2
+
+L122:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushdouble          0.5
+      subtract
+      pushbyte            0
+      constructprop       QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle"), 7
+      coerce              QName(PackageNamespace("_-Yf"), "Particle")
+      setlocal            5
+
+      getlocal            6
+      iftrue              L140
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            6
+      iftrue              L140
+
+      inclocal_i          3
+L140:
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1g0")
+      iflt                L80
+
+L144:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Yf:ExplosionEffect/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,29 @@
+script ; 75
+ sinit
+  refid "_-ut:_-11L/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-11L", [PackageNamespace("_-ut")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-ut:_-11L"
+    popscope
+    initproperty        QName(PackageNamespace("_-ut"), "_-11L")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-ut"), "_-11L")
+  #include "_-11L.class.asasm"
+ end ; trait
+end ; script

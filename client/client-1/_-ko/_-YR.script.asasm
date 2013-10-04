@@ -1,0 +1,29 @@
+script ; 1972
+ sinit
+  refid "_-ko:_-YR/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-YR", [PackageNamespace("_-ko")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-ko:_-YR"
+    popscope
+    initproperty        QName(PackageNamespace("_-ko"), "_-YR")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-ko"), "_-YR")
+  #include "_-YR.class.asasm"
+ end ; trait
+end ; script

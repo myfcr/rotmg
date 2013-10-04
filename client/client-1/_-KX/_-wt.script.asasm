@@ -1,0 +1,29 @@
+script ; 1061
+ sinit
+  refid "_-KX:_-wt/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-wt", [PackageNamespace("_-KX")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-KX:_-wt"
+    popscope
+    initproperty        QName(PackageNamespace("_-KX"), "_-wt")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-KX"), "_-wt")
+  #include "_-wt.class.asasm"
+ end ; trait
+end ; script

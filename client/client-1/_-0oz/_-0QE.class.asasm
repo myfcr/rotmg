@@ -1,0 +1,109 @@
+class
+ refid "_-0oz:_-0QE"
+ instance QName(PackageNamespace("_-0oz"), "_-0QE")
+  extends QName(PackageNamespace("_-KX"), "_-0W5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-ws")
+  iinit
+   refid "_-0oz:_-0QE/instance/init"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                3
+     declocal            2
+     declocal            2
+     dxnslate
+     kill                3
+     pop
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iftrue              L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iffalse             L25
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L25:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag FINAL flag OVERRIDE
+   method
+    refid "_-0oz:_-0QE/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      jump                L10
+
+      pushundefined
+      rshift
+      rshift
+      greaterthan
+      pushscope
+
+      decrement_i
+L10:
+      pushstring          "Client should not receive "
+      getlex              QName(PackageNamespace("", "#0"), "id")
+      add
+      pushstring          " messages"
+      add
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oz:_-0QE/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

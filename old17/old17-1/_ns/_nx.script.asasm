@@ -1,0 +1,33 @@
+script ; 376
+ sinit
+  refid "_ns:_nx/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_nx", [PackageNamespace("_ns")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_N__"), "_1X_a")
+    pushscope
+
+    getlex              QName(PackageNamespace("_N__"), "_1X_a")
+    newclass            "_ns:_nx"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_ns"), "_nx")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_ns"), "_nx")
+  #include "_nx.class.asasm"
+ end ; trait
+end ; script

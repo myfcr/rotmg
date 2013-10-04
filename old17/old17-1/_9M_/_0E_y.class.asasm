@@ -1,0 +1,304 @@
+class
+ refid "_9M_:_0E_y"
+ instance QName(PackageNamespace("_9M_"), "_0E_y")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_rx")
+  iinit
+   refid "_9M_:_0E_y/instance/init"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PackageNamespace(""), "interests")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "name")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "type") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_11U_") type QName(PackageNamespace(""), "int") value Integer(1) end
+  trait slot QName(PackageNamespace(""), "low") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "_0d3") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "fixed") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "_0G_p") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "_0zB_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "interests") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "rect") type QName(PackageNamespace("flash.geom"), "Rectangle") end
+  trait slot QName(PackageNamespace(""), "_0pD_") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "_0kh")
+   method
+    refid "_9M_:_0E_y/instance/_0kh"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+      dup
+      iffalse             L12
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "fixed")
+      not
+L12:
+      iffalse             L38
+
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "low")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iffalse             L24
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "low")
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_0d3")
+
+L24:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0d3")
+      ifngt               L31
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_0d3")
+
+L31:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "low")
+      ifnlt               L38
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "low")
+
+L38:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_02k")
+   method
+    refid "_9M_:_0E_y/instance/_02k"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_9M_"), "_0L_l")
+      setlocal2
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "name")
+      callpropvoid        QName(PackageNamespace(""), "writeUTF"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "type")
+      callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0pD_")
+      callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "low")
+      callpropvoid        QName(PackageNamespace(""), "writeDouble"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0d3")
+      callpropvoid        QName(PackageNamespace(""), "writeDouble"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0zB_")
+      callpropvoid        QName(PackageNamespace(""), "writeBoolean"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "interests")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "interests")
+      coerce_a
+      setlocal            4
+
+      jump                L50
+
+L41:
+      label
+      getlocal            4
+      getlocal3
+      nextvalue
+      coerce              QName(PackageNamespace("_9M_"), "_0L_l")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "_02k"), 1
+
+L50:
+      hasnext2            4, 3
+      iftrue              L41
+
+      kill                4
+      kill                3
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_9M_:_0E_y/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_0i9")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "_0i9")
+
+    findproperty        QName(PackageNamespace(""), "_11l")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_11l")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_0i9") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_11l") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait method QName(PackageNamespace(""), "_iV_") flag FINAL dispid 3
+  method
+   refid "_9M_:_0E_y/class/_iV_"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   returns QName(PackageNamespace("_9M_"), "_0E_y")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUTF"), 0
+     construct           1
+     coerce              QName(PackageNamespace("_9M_"), "_0E_y")
+     setlocal2
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedInt"), 0
+     setproperty         QName(PackageNamespace(""), "type")
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedInt"), 0
+     setproperty         QName(PackageNamespace(""), "_0pD_")
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readDouble"), 0
+     setproperty         QName(PackageNamespace(""), "low")
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readDouble"), 0
+     setproperty         QName(PackageNamespace(""), "_0d3")
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readBoolean"), 0
+     setproperty         QName(PackageNamespace(""), "_0zB_")
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "readUnsignedInt"), 0
+     convert_u
+     setlocal3
+
+     jump                L44
+
+L33:
+     label
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "interests")
+     getlex              QName(PackageNamespace("_9M_"), "_0L_l")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "_iV_"), 1
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal3
+     decrement
+     convert_u
+     setlocal3
+
+L44:
+     getlocal3
+     iftrue              L33
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

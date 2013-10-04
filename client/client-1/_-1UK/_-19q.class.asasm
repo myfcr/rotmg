@@ -1,0 +1,278 @@
+class
+ refid "_-1UK:_-19q"
+ instance QName(PackageNamespace("_-1UK"), "_-19q")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1K3")
+  iinit
+   refid "_-1UK:_-19q/instance/init"
+   param QName(PackageNamespace("_-mS"), "_-vl")
+   body
+    maxstack 7
+    localcount 6
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     negate
+     typeof
+     instanceof
+     declocal            4
+     kill                2
+     inclocal            2
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     setlocal2
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "Graphics")
+     setlocal3
+
+     getlocal            5
+     dup
+     iftrue              L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iffalse             L65
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iffalse             L35
+
+     pop
+     getlocal3
+     convert_b
+L35:
+     iftrue              L54
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectList")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectList"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-1Rv")
+
+     getlocal            5
+     dup
+     iftrue              L46
+
+     pop
+     getlocal0
+     convert_b
+L46:
+     iffalse             L68
+
+     jump                L54
+
+     add_i
+     setlocal2
+
+     bitor
+     pushwith
+     convert_b
+     setlocal            4
+
+L54:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-1Rv")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal            4
+     dup
+     iffalse             L64
+
+     pop
+     getlocal0
+     convert_b
+L64:
+     iftrue              L68
+
+L65:
+     getlex              QName(PackageNamespace("", "#0"), "height")
+     pushshort           400
+     ifngt               L115
+
+L68:
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     setlocal2
+
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "graphics")
+     coerce              QName(PackageNamespace("flash.display"), "Graphics")
+     setlocal3
+
+     getlocal            4
+     iftrue              L83
+
+     getlocal3
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 1
+
+     getlocal            4
+     iftrue              L115
+
+L83:
+     getlocal3
+     pushbyte            0
+     jump                L92
+
+     convert_d
+     convert_u
+     bitxor
+     getlocal            4
+     getlocal            4
+     setlocal3
+
+L92:
+     dup
+     getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+     getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlocal            5
+     iffalse             L115
+
+     getlocal3
+     callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+     getlocal            4
+     dup
+     iffalse             L106
+
+     pop
+     getlocal3
+     convert_b
+L106:
+     iftrue              L115
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal2
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal            5
+     iffalse             L115
+
+     findproperty        QName(PackageNamespace("", "#0"), "mask")
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "mask")
+
+L115:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1Rv") type QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectList") end
+  trait method QName(PackageNamespace("", "#0"), "_-SG")
+   method
+    refid "_-1UK:_-19q/instance/_-SG"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      setlocal2
+
+      add_i
+      lshift
+      checkfilter
+      hasnext
+      inclocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L19
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Rv")
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1UK:_-19q/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    hasnext
+    getglobalscope
+    instanceof
+    add
+    pop
+    bitxor
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iffalse             L20
+
+    findproperty        QName(PackageNamespace("", "#0"), "WIDTH")
+    pushshort           760
+    initproperty        QName(PackageNamespace("", "#0"), "WIDTH")
+
+    getlocal2
+    iftrue              L23
+
+L20:
+    findproperty        QName(PackageNamespace("", "#0"), "HEIGHT")
+    pushshort           430
+    initproperty        QName(PackageNamespace("", "#0"), "HEIGHT")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "WIDTH") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(760) end
+ trait const QName(PackageNamespace("", "#0"), "HEIGHT") slotid 2 type QName(PackageNamespace("", "#0"), "int") value Integer(430) end
+end ; class

@@ -1,0 +1,29 @@
+script ; 739
+ sinit
+  refid "_04t:_5o/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_5o", [PackageNamespace("_04t")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_04t:_5o"
+    popscope
+    initproperty        QName(PackageNamespace("_04t"), "_5o")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_04t"), "_5o")
+  #include "_5o.class.asasm"
+ end ; trait
+end ; script

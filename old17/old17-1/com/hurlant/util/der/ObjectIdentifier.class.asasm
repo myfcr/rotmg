@@ -1,0 +1,562 @@
+class
+ refid "com.hurlant.util.der:ObjectIdentifier"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "ObjectIdentifier")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IAsn1Type", [PackageNamespace("com.hurlant.util.der")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_fN_")
+  iinit
+   refid "com.hurlant.util.der:ObjectIdentifier/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   param null
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "len")
+
+     getlocal3
+     getlex              QName(PackageNamespace("flash.utils"), "ByteArray")
+     istypelate
+     iffalse             L20
+
+     getlocal0
+     getlocal3
+     getlex              QName(PackageNamespace("flash.utils"), "ByteArray")
+     astypelate
+     callpropvoid        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "parse"), 1
+
+     jump                L34
+
+L20:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "String")
+     istypelate
+     iffalse             L30
+
+     getlocal0
+     getlocal3
+     getlex              QName(PackageNamespace(""), "String")
+     astypelate
+     callpropvoid        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "generate"), 1
+
+     jump                L34
+
+L30:
+     findpropstrict      QName(PackageNamespace(""), "Error")
+     pushstring          "Invalid call to new ObjectIdentifier"
+     constructprop       QName(PackageNamespace(""), "Error"), 1
+     throw
+L34:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "len") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "generate")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/com.hurlant.util.der:ObjectIdentifier/instance/generate"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      pushstring          "."
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "parse")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/com.hurlant.util.der:ObjectIdentifier/instance/parse"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal            5
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
+      convert_u
+      setlocal2
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal2
+      pushbyte            40
+      divide
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal2
+      pushbyte            40
+      modulo
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L60
+
+L29:
+      label
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
+      convert_u
+      setlocal2
+
+      getlocal2
+      pushshort           128
+      bitand
+      pushbyte            0
+      equals
+      setlocal            5
+
+      getlocal2
+      pushbyte            127
+      bitand
+      convert_u
+      setlocal2
+
+      getlocal            4
+      pushshort           128
+      multiply
+      getlocal2
+      add
+      convert_u
+      setlocal            4
+
+      getlocal            5
+      iffalse             L60
+
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+L60:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      pushbyte            0
+      ifgt                L29
+
+      getlocal0
+      getlocal3
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLength")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/getLength"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "len")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getType")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/getType"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toDER")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/toDER"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal1
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance/toDER"), PackageNamespace("com.hurlant.util.der"), PackageInternalNs("com.hurlant.util.der"), ProtectedNamespace("_fN_"), StaticProtectedNs("_fN_")])
+      pushbyte            40
+      multiply
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance/toDER"), PackageNamespace("com.hurlant.util.der"), PackageInternalNs("com.hurlant.util.der"), ProtectedNamespace("_fN_"), StaticProtectedNs("_fN_")])
+      add
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance/toDER"), PackageNamespace("com.hurlant.util.der"), PackageInternalNs("com.hurlant.util.der"), ProtectedNamespace("_fN_"), StaticProtectedNs("_fN_")])
+
+      pushbyte            2
+      setlocal2
+
+      jump                L132
+
+L24:
+      label
+      findpropstrict      QName(PackageNamespace(""), "parseInt")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance/toDER"), PackageNamespace("com.hurlant.util.der"), PackageInternalNs("com.hurlant.util.der"), ProtectedNamespace("_fN_"), StaticProtectedNs("_fN_")])
+      callproperty        QName(PackageNamespace(""), "parseInt"), 1
+      convert_i
+      dup
+      setlocal            4
+
+      pushshort           128
+      ifnlt               L40
+
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L131
+
+L40:
+      getlocal            4
+      pushshort           128
+      pushshort           128
+      multiply
+      ifnlt               L58
+
+      getlocal1
+      getlocal            4
+      pushbyte            7
+      rshift
+      pushshort           128
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal            4
+      pushbyte            127
+      bitand
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L131
+
+L58:
+      getlocal            4
+      pushshort           128
+      pushshort           128
+      multiply
+      pushshort           128
+      multiply
+      ifnlt               L87
+
+      getlocal1
+      getlocal            4
+      pushbyte            14
+      rshift
+      pushshort           128
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal            4
+      pushbyte            7
+      rshift
+      pushbyte            127
+      bitand
+      pushshort           128
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal            4
+      pushbyte            127
+      bitand
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L131
+
+L87:
+      getlocal            4
+      pushshort           128
+      pushshort           128
+      multiply
+      pushshort           128
+      multiply
+      pushshort           128
+      multiply
+      ifnlt               L127
+
+      getlocal1
+      getlocal            4
+      pushbyte            21
+      rshift
+      pushshort           128
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal            4
+      pushbyte            14
+      rshift
+      pushbyte            127
+      bitand
+      pushshort           128
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal            4
+      pushbyte            7
+      rshift
+      pushbyte            127
+      bitand
+      pushshort           128
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal            4
+      pushbyte            127
+      bitand
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L131
+
+L127:
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "OID element bigger than we thought. :("
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L131:
+      inclocal_i          2
+L132:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L24
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "len")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type")
+      pushbyte            0
+      ifne                L148
+
+      getlocal0
+      pushbyte            6
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type")
+
+L148:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "len")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "unshift"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "unshift"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      pushbyte            0
+      setlocal2
+
+      jump                L171
+
+L163:
+      label
+      getlocal3
+      getlocal2
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance/toDER"), PackageNamespace("com.hurlant.util.der"), PackageInternalNs("com.hurlant.util.der"), ProtectedNamespace("_fN_"), StaticProtectedNs("_fN_")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance/toDER"), PackageNamespace("com.hurlant.util.der"), PackageInternalNs("com.hurlant.util.der"), ProtectedNamespace("_fN_"), StaticProtectedNs("_fN_")])
+
+      inclocal_i          2
+L171:
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L163
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace(""), "indent")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "oid")
+      pushstring          "."
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dump")
+   method
+    refid "com.hurlant.util.der:ObjectIdentifier/instance/dump"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "OID["
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "type")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ObjectIdentifier/instance"), "len")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:ObjectIdentifier/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      QName(PackageNamespace("flash.net"), "registerClassAlias")
+    pushstring          "com.hurlant.util.der.ObjectIdentifier"
+    getlocal0
+    callpropvoid        QName(PackageNamespace("flash.net"), "registerClassAlias"), 2
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

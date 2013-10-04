@@ -1,0 +1,204 @@
+class
+ refid "_1h:_0Y_3"
+ instance QName(PackageNamespace("_1h"), "_0Y_3")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0G_F_")
+  iinit
+   refid "_1h:_0Y_3/instance/init#1"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+     constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+     pushbyte            18
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     initproperty        QName(PackageInternalNs("_1h"), "text")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageInternalNs("_1h"), "_0E_G_") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(PackageInternalNs("_1h"), "text") type QName(PackageNamespace("_1j9"), "_try") end
+  trait method QName(PackageNamespace(""), "init")
+   method
+    refid "_1h:_0Y_3/instance/init#0"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+      pushstring          "lofiObj3"
+      pushshort           225
+      callproperty        QName(PackageNamespace(""), "_0rL_"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlocal1
+      pushbyte            40
+      pushtrue
+      pushbyte            0
+      dup
+      callproperty        QName(PackageNamespace(""), "redraw"), 5
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+      getlocal1
+      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+      initproperty        QName(PackageInternalNs("_1h"), "_0E_G_")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "_0E_G_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "_0E_G_")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "_0E_G_")
+      getproperty         QName(PackageNamespace(""), "width")
+      negate
+      pushbyte            8
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "_0E_G_")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "_0E_G_")
+      getproperty         QName(PackageNamespace(""), "height")
+      negate
+      pushbyte            2
+      divide
+      pushbyte            6
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      getproperty         QName(PackageNamespace(""), "textChanged")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1h:_0Y_3/instance/init"), "onTextChanged")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1h:_0Y_3/instance/init"), "onTextChanged")
+   method
+    refid "_1h:_0Y_3/instance/_1h:_0Y_3/instance/init/onTextChanged"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "_0E_G_")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            4
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      getproperty         QName(PackageNamespace(""), "height")
+      negate
+      pushbyte            2
+      divide
+      pushbyte            6
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0nT_")
+   method
+    refid "_1h:_0Y_3/instance/_0nT_"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_1h"), "text")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_0N_k")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      constructprop       QName(PackageNamespace("_1X_w"), "_0N_k"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1h:_0Y_3/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

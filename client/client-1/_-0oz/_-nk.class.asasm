@@ -1,0 +1,206 @@
+class
+ refid "_-0oz:_-nk"
+ instance QName(PackageNamespace("_-0oz"), "_-nk")
+  extends QName(PackageNamespace("_-0oz"), "_-0QE")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-pQ")
+  iinit
+   refid "_-0oz:_-nk/instance/init"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal3
+     getlocal3
+     getglobalscope
+     getlocal3
+     inclocal_i          2
+     lessthan
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L20
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L20:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "skinID") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "player") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player") end
+  trait method QName(PackageNamespace("", "#0"), "writeToOutput") flag OVERRIDE
+   method
+    refid "_-0oz:_-nk/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      setlocal2
+
+      inclocal            2
+      inclocal_i          2
+      getlocal2
+      bitnot
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L25
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "skinID")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "consume") flag OVERRIDE
+   method
+    refid "_-0oz:_-nk/instance/consume"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      pushfalse
+      multiply_i
+      negate
+      getlocal1
+      setlocal3
+
+      equals
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L24
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace("", "#0"), "consume"), 0
+      getlocal1
+      dup
+      iftrue              L23
+
+      pop
+      getlocal0
+      convert_b
+L23:
+      iffalse             L27
+
+L24:
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace("", "#0"), "player")
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-0oz:_-nk/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0vK"), "formatToString")
+      jump                L10
+
+      convert_o
+      greaterthan
+      modulo
+      pushundefined
+      instanceof
+      coerce_s
+L10:
+      pushstring          "RESKIN"
+      pushstring          "skinID"
+      callproperty        QName(ProtectedNamespace("_-0vK"), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oz:_-nk/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

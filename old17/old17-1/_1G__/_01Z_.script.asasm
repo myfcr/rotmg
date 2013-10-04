@@ -1,0 +1,29 @@
+script ; 353
+ sinit
+  refid "_1G__:_01Z_/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_01Z_", [PackageNamespace("_1G__")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_1G__:_01Z_"
+    popscope
+    initproperty        QName(PackageNamespace("_1G__"), "_01Z_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_1G__"), "_01Z_")
+  #include "_01Z_.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,97 @@
+class
+ refid "_U_D_:_0J_I_"
+ instance QName(PackageNamespace("_U_D_"), "_0J_I_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_2U_")
+  iinit
+   refid "_U_D_:_0J_I_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_U_D_:_0J_I_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "toArray") flag FINAL dispid 3
+  method
+   refid "_U_D_:_0J_I_/class/toArray"
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "Array")
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal2
+
+     pushbyte            0
+     setlocal            4
+
+     getlocal1
+     coerce_a
+     setlocal            5
+
+     jump                L23
+
+L14:
+     label
+     getlocal            5
+     getlocal            4
+     nextvalue
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     getlocal2
+     getlocal3
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L23:
+     hasnext2            5, 4
+     iftrue              L14
+
+     kill                5
+     kill                4
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

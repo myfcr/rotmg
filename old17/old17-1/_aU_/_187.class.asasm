@@ -1,0 +1,220 @@
+class
+ refid "_aU_:_187"
+ instance QName(PackageNamespace("_aU_"), "_187")
+  extends QName(PackageNamespace("_V_C_"), "_f4")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_B_m")
+  iinit
+   refid "_aU_:_187/instance/init"
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_aU_:_187/instance"), "data") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_aU_:_187/instance"), "log") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(PackageNamespace(""), "dispatch") flag OVERRIDE
+   method
+    refid "_aU_:_187/instance/dispatch"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "log")
+      iffalse             L9
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L9:
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "dispatch")
+      getlocal0
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "add") flag OVERRIDE
+   method
+    refid "_aU_:_187/instance/add"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("_V_C_"), "_06z")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsuper           QName(PackageNamespace(""), "add"), 1
+      coerce              QName(PackageNamespace("_V_C_"), "_06z")
+      setlocal2
+
+      jump                L15
+
+L8:
+      label
+      getlocal1
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+L15:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifgt                L8
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_aU_:_187/instance"), "log")
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addOnce") flag OVERRIDE
+   method
+    refid "_aU_:_187/instance/addOnce"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("_V_C_"), "_06z")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_V_C_"), "_06z")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L17
+
+      getlocal1
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      jump                L25
+
+L17:
+      getlocal0
+      getlocal1
+      callsuper           QName(PackageNamespace(""), "addOnce"), 1
+      coerce              QName(PackageNamespace("_V_C_"), "_06z")
+      setlocal2
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_aU_:_187/instance"), "log")
+
+L25:
+      jump                L30
+
+L26:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+
+L30:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifgt                L26
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1L_7")
+   method
+    refid "_aU_:_187/instance/_1L_7"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_aU_:_187/instance"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_aU_:_187/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

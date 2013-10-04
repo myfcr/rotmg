@@ -1,0 +1,1279 @@
+class
+ refid "com.company.assembleegameclient.objects:DoubleWall"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "DoubleWall")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-3F")
+  iinit
+   refid "com.company.assembleegameclient.objects:DoubleWall/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     declocal            3
+     urshift
+     declocal            3
+     decrement_i
+     setlocal3
+
+     inclocal_i          2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L47
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")
+     applytype           1
+     jump                L31
+
+     inclocal_i          3
+     declocal_i          2
+     inclocal_i          2
+     pushnan
+     setlocal3
+
+     kill                3
+L31:
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "faces_")
+
+     getlocal            4
+     iftrue              L47
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     jump                L45
+
+     declocal            3
+     dup
+     inclocal            2
+     pop
+     kill                3
+     kill                2
+L45:
+     getlocal3
+     iffalse             L50
+
+L47:
+     findproperty        QName(PackageNamespace("", "#0"), "_-0XO")
+     pushfalse
+     initproperty        QName(PackageNamespace("", "#0"), "_-0XO")
+
+L50:
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getproperty         QName(PackageNamespace("", "#0"), "_-1GQ")
+     getlex              QName(PackageNamespace("", "#0"), "objectType_")
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+     coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-1Zi")
+     setlocal2
+
+     getlocal            4
+     dup
+     iffalse             L62
+
+     pop
+     getlocal2
+     convert_b
+L62:
+     iftrue              L68
+
+     getlocal0
+     getlocal2
+     pushbyte            0
+     callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0CF")
+
+L68:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "faces_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")>) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-2s") type QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D") value Null() end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0CF") type QName(PackageNamespace("flash.display"), "BitmapData") value Null() end
+  trait method QName(PackageNamespace("", "#0"), "setObjectId") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:DoubleWall/instance/setObjectId"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      subtract_i
+      declocal_i          2
+      declocal            3
+      inclocal_i          2
+      declocal            3
+      instanceof
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      jump                L22
+
+      divide
+      modulo
+      kill                2
+      kill                3
+      convert_b
+      inclocal            3
+L22:
+      iffalse             L26
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace("", "#0"), "setObjectId"), 1
+L26:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1GQ")
+      getlex              QName(PackageNamespace("", "#0"), "objectType_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-1Zi")
+      setlocal2
+
+      getlocal3
+      dup
+      iffalse             L38
+
+      pop
+      getlocal0
+      convert_b
+L38:
+      iftrue              L44
+
+      getlocal0
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 1
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0CF")
+
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getColor") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:DoubleWall/instance/getColor"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      jump                L10
+
+      getlocal0
+      subtract_i
+      urshift
+      astypelate
+      pushnan
+      increment_i
+L10:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0CF")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0zx"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:DoubleWall/instance/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-1El")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 11
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushscope
+
+      inclocal            9
+      declocal_i          9
+      convert_o
+      convert_d
+      declocal_i          6
+L10:
+      setlocal            9
+
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Square")
+      setlocal            8
+
+      getlocal            10
+      iffalse             L52
+
+      getlex              QName(PackageNamespace("", "#0"), "texture_")
+      pushnull
+      ifne                L38
+
+      getlocal            10
+      dup
+      iftrue              L34
+
+      pop
+      getlocal2
+      convert_b
+L34:
+      iffalse             L50
+
+      returnvoid
+
+      getlocal            9
+      iftrue              L52
+
+L38:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "faces_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifne                L52
+
+      getlocal            9
+      dup
+      iffalse             L49
+
+      pop
+      getlocal3
+      convert_b
+L49:
+      iftrue              L52
+
+L50:
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0h3"), 0
+
+L52:
+      getlex              QName(PackageNamespace("", "#0"), "texture_")
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+      getlocal            9
+      iftrue              L60
+
+      getlex              QName(PackageNamespace("", "#0"), "_-04y")
+      pushnull
+      ifeq                L71
+
+L60:
+      getlex              QName(PackageNamespace("", "#0"), "_-04y")
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 1
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      dup
+      setlocal            6
+
+      pushnull
+      ifeq                L71
+
+      getlocal            6
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+L71:
+      pushbyte            0
+      setlocal            5
+
+      jump                L236
+
+L74:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "faces_")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")
+      setlocal            7
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0HQ")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      add
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0t3")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "lookupSquare"), 2
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Square")
+      dup
+      setlocal            8
+
+      pushnull
+      equals
+      getlocal            10
+      iffalse             L178
+
+      dup
+      getlocal            9
+      iftrue              L156
+
+      iftrue              L111
+
+      pop
+      getlocal            9
+      iftrue              L205
+
+      getlocal            8
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      pushnull
+      equals
+L111:
+      dup
+      getlocal            9
+      iftrue              L156
+
+      jump                L121
+
+      declocal            8
+      getlocal3
+      getlocal0
+      nextname
+      setlocal2
+
+      inclocal            9
+L121:
+      iftrue              L194
+
+      pop
+      getlocal            10
+      dup
+      iftrue              L129
+
+      pop
+      getlocal0
+      convert_b
+L129:
+      iffalse             L205
+
+      getlocal            8
+      pushnull
+      equals
+      getlocal            9
+      dup
+      iffalse             L139
+
+      pop
+      getlocal2
+      convert_b
+L139:
+      iftrue              L159
+
+      not
+      getlocal            9
+      dup
+      iffalse             L147
+
+      pop
+      getlocal2
+      convert_b
+L147:
+      iftrue              L194
+
+      dup
+      getlocal            9
+      dup
+      iffalse             L155
+
+      pop
+      getlocal3
+      convert_b
+L155:
+      iftrue              L179
+
+L156:
+      iffalse             L178
+
+      getlocal            9
+      iftrue              L187
+
+L159:
+      pop
+      getlocal            9
+      dup
+      iffalse             L166
+
+      pop
+      getlocal2
+      convert_b
+L166:
+      iftrue              L235
+
+      getlocal            8
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getlocal            10
+      dup
+      iftrue              L175
+
+      pop
+      getlocal0
+      convert_b
+L175:
+      iffalse             L192
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "DoubleWall")
+      istypelate
+L178:
+      dup
+L179:
+      iffalse             L194
+
+      getlocal            9
+      dup
+      iffalse             L186
+
+      pop
+      getlocal0
+      convert_b
+L186:
+      iftrue              L194
+
+L187:
+      pop
+      getlocal            9
+      iftrue              L226
+
+      getlocal            8
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+L192:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0-p")
+      not
+L194:
+      iffalse             L206
+
+      getlocal            7
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "_-0QM")
+
+      getlocal            10
+      dup
+      iftrue              L204
+
+      pop
+      getlocal0
+      convert_b
+L204:
+      iffalse             L226
+
+L205:
+      jump                L229
+
+L206:
+      getlocal            7
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "_-0QM")
+
+      getlocal            9
+      dup
+      iffalse             L215
+
+      pop
+      getlocal3
+      convert_b
+L215:
+      iftrue              L229
+
+      getlex              QName(PackageNamespace("", "#0"), "_-04y")
+      pushnull
+      jump                L225
+
+      setlocal3
+
+      declocal            4
+      inclocal            5
+      convert_b
+      getlocal            5
+      convert_i
+L225:
+      ifeq                L229
+
+L226:
+      getlocal            7
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), " case"), 1
+
+L229:
+      getlocal            7
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 2
+
+      getlocal            9
+      iftrue              L236
+
+L235:
+      inclocal_i          5
+L236:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "faces_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L74
+
+      getlocal            9
+      iftrue              L248
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-2s")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 2
+
+L248:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0h3")
+   method
+    refid "com.company.assembleegameclient.objects:DoubleWall/instance/_-0h3"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 9
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      istypelate
+      setlocal            4
+
+      multiply
+      inclocal            4
+      getglobalscope
+      inclocal_i          2
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iffalse             L19
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "faces_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+L19:
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      convert_i
+      setlocal1
+
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      convert_i
+      setlocal2
+
+      findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+      getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      applytype           1
+      pushbyte            12
+      construct           1
+      dup
+      pushbyte            0
+      getlocal1
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            1
+      getlocal2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            2
+      dup
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            3
+      getlocal1
+      pushbyte            1
+      add
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            4
+      getlocal2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            5
+      pushbyte            2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            6
+      getlocal1
+      pushbyte            1
+      add
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            7
+      getlocal2
+      pushbyte            1
+      add
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            8
+      pushbyte            2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            9
+      getlocal1
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            10
+      getlocal2
+      pushbyte            1
+      jump                L88
+
+      modulo
+      negate_i
+      nextname
+      inclocal_i          3
+      rshift
+      urshift
+L88:
+      add
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            11
+      pushbyte            2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      setlocal3
+
+      getlocal            4
+      dup
+      iftrue              L102
+
+      pop
+      getlocal0
+      convert_b
+L102:
+      iffalse             L172
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0CF")
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0tA")
+      pushfalse
+      pushtrue
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D"), 5
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-2s")
+
+      getlocal            4
+      dup
+      iftrue              L119
+
+      pop
+      getlocal2
+      convert_b
+L119:
+      iffalse             L125
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-2s")
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "repeat")
+
+L125:
+      getlocal0
+      getlocal1
+      getlocal2
+      pushbyte            2
+      getlocal1
+      pushbyte            1
+      add
+      getlocal2
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-zj"), 6
+
+      getlocal            4
+      iffalse             L182
+
+      getlocal0
+      getlocal1
+      pushbyte            1
+      add
+      getlocal2
+      pushbyte            2
+      getlocal1
+      pushbyte            1
+      add
+      getlocal2
+      pushbyte            1
+      add
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-zj"), 6
+
+      getlocal0
+      jump                L159
+
+      kill                3
+      lessequals
+      checkfilter
+      lshift
+      getlocal            4
+      declocal_i          2
+L159:
+      getlocal1
+      pushbyte            1
+      add
+      getlocal2
+      pushbyte            1
+      add
+      pushbyte            2
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-zj"), 6
+
+L172:
+      getlocal0
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      pushbyte            2
+      getlocal1
+      getlocal2
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-zj"), 6
+
+L182:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-zj")
+   method
+    refid "com.company.assembleegameclient.objects:DoubleWall/instance/com.company.assembleegameclient.objects:DoubleWall/_-zj"
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 11
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            9
+
+      jump                L10
+
+      declocal            7
+      modulo
+      declocal_i          8
+      newactivation
+      pushwith
+      strictequals
+L10:
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+      getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      applytype           1
+      pushbyte            12
+      construct           1
+      dup
+      pushbyte            0
+      getlocal1
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            1
+      getlocal2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            2
+      getlocal3
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            3
+      getlocal            4
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            4
+      getlocal            5
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            5
+      getlocal            6
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      jump                L50
+
+      inclocal_i          2
+      setlocal2
+
+      declocal_i          9
+      rshift
+      greaterequals
+      setlocal            8
+
+L50:
+      dup
+      pushbyte            6
+      getlocal            4
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            7
+      getlocal            5
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            8
+      getlocal            6
+      pushbyte            2
+      subtract
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            9
+      getlocal1
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            10
+      getlocal2
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      dup
+      pushbyte            11
+      getlocal3
+      pushbyte            2
+      jump                L83
+
+      declocal_i          6
+      convert_d
+      kill                4
+      inclocal_i          7
+      declocal_i          5
+      subtract_i
+L83:
+      subtract
+      setproperty         MultinameL([PackageNamespace("", "#0")])
+
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")
+      getlex              QName(PackageNamespace("", "#0"), "texture_")
+      getlocal            7
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-8C")
+      pushtrue
+      pushtrue
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D"), 5
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Face3D")
+      dup
+      setlocal            8
+
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "repeat")
+
+      getlocal            9
+      iffalse             L106
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "faces_")
+      getlocal            8
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L106:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:DoubleWall/class/init"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    pushundefined
+    equals
+    pushtrue
+    popscope
+    equals
+    istypelate
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iffalse             L20
+
+    pop
+    getlocal2
+    convert_b
+L20:
+    iftrue              L149
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0tA")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+    getlex              QName(PackageNamespace("", "#0"), "Number")
+    applytype           1
+    pushbyte            12
+    construct           1
+    dup
+    pushbyte            0
+    dup
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            1
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            2
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            3
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            4
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            5
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            6
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            7
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            8
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            9
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            10
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            11
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0tA")
+
+    getlocal2
+    iffalse             L211
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-8C")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+    getlex              QName(PackageNamespace("", "#0"), "Number")
+    applytype           1
+    pushbyte            12
+    construct           1
+    dup
+    pushbyte            0
+    dup
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            1
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    jump                L102
+
+    bitand
+    convert_i
+    convert_b
+    multiply_i
+    hasnext
+    add_i
+L102:
+    pushbyte            2
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            3
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            4
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            5
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            6
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            7
+    pushbyte            2
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            8
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            9
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            10
+    pushbyte            2
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            11
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-8C")
+
+    getlocal2
+    dup
+    iftrue              L148
+
+    pop
+    getlocal0
+    convert_b
+L148:
+    iffalse             L211
+
+L149:
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0HQ")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+    getlex              QName(PackageNamespace("", "#0"), "int")
+    applytype           1
+    pushbyte            4
+    construct           1
+    dup
+    pushbyte            0
+    dup
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            1
+    dup
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            2
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            3
+    pushbyte            255
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0HQ")
+
+    getlocal2
+    dup
+    iftrue              L179
+
+    pop
+    getlocal1
+    convert_b
+L179:
+    iffalse             L211
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0t3")
+    jump                L188
+
+    divide
+    swap
+    pushundefined
+    add_i
+    lessequals
+    pushwith
+L188:
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3F"), StaticProtectedNs("_-3F"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+    getlex              QName(PackageNamespace("", "#0"), "int")
+    applytype           1
+    pushbyte            4
+    construct           1
+    dup
+    pushbyte            0
+    pushbyte            255
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            1
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            2
+    pushbyte            1
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            3
+    pushbyte            0
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0t3")
+
+L211:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0tA") slotid 1 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-8C") slotid 2 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0HQ") slotid 3 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:DoubleWall#0"), "_-0t3") slotid 4 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) end
+end ; class

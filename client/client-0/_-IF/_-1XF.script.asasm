@@ -1,0 +1,29 @@
+script ; 0
+ sinit
+  refid "_-IF:_-1XF/init"
+  body
+   maxstack 7
+   localcount 2
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-1XF", [PackageNamespace("_-IF")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-IF:_-1XF"
+    popscope
+    initproperty        QName(PackageNamespace("_-IF"), "_-1XF")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-IF"), "_-1XF")
+  #include "_-1XF.class.asasm"
+ end ; trait
+end ; script

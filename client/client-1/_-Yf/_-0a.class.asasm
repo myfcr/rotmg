@@ -1,0 +1,784 @@
+class
+ refid "_-Yf:_-0a"
+ instance QName(PackageNamespace("_-Yf"), "_-0a")
+  extends QName(PackageNamespace("_-Yf"), "_-00p")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0ch")
+  iinit
+   refid "_-Yf:_-0a/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     pushfalse
+     increment_i
+     istypelate
+     lessthan
+     inclocal            2
+     modulo
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iftrue              L27
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "go")
+
+     getlocal3
+     iffalse             L75
+
+L27:
+     getlocal0
+     jump                L35
+
+     setlocal2
+
+     not
+     bitxor
+     inclocal_i          2
+     pop
+     declocal            3
+L35:
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "x_")
+     pushbyte            10
+     multiply
+     callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+     pushbyte            10
+     divide
+     initproperty        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0sR")
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal1
+     jump                L54
+
+     declocal_i          2
+     nextvalue
+     istypelate
+     getlocal3
+     astypelate
+     declocal            3
+L54:
+     getproperty         QName(PackageNamespace("", "#0"), "y_")
+     pushbyte            10
+     multiply
+     callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+     pushbyte            10
+     divide
+     initproperty        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-1ln")
+
+     getlocal3
+     iffalse             L77
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "time")
+
+     getlocal            4
+     dup
+     iffalse             L72
+
+     pop
+     getlocal2
+     convert_b
+L72:
+     iftrue              L75
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-AP"), 0
+
+L75:
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-08i"), 0
+
+L77:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "go") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0sR") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-1ln") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0mX") type QName(PackageNamespace("_-Yf"), "ParticleField") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "time") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "timer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-wz") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-AP")
+   method
+    refid "_-Yf:_-0a/instance/_-Yf:_-0a/instance/_-AP"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      subtract_i
+      inclocal            2
+      istypelate
+      inclocal            2
+      nextname
+      pushnull
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L27
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      pushbyte            8
+      equals
+      iffalse             L39
+
+L27:
+      pushbyte            50
+      getlocal3
+      dup
+      iffalse             L34
+
+      pop
+      getlocal1
+      convert_b
+L34:
+      iftrue              L40
+
+      convert_u
+      getlocal2
+      iffalse             L43
+
+      jump                L43
+
+L39:
+      pushbyte            30
+L40:
+      convert_u
+      getlocal3
+      iftrue              L44
+
+L43:
+      convert_u
+L44:
+      setlocal1
+
+      jump                L52
+
+      kill                2
+      getlocal2
+      getlocal2
+      lshift
+      decrement_i
+      setlocal2
+
+L52:
+      getlocal2
+      dup
+      iftrue              L58
+
+      pop
+      getlocal2
+      convert_b
+L58:
+      iffalse             L98
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "time")
+      getlocal1
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "round"), 1
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+      initproperty        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "timer")
+
+      getlocal2
+      dup
+      iftrue              L76
+
+      pop
+      getlocal2
+      convert_b
+L76:
+      iffalse             L110
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      jump                L87
+
+      inclocal            2
+      inclocal            2
+      convert_i
+      setlocal2
+
+      not
+      istypelate
+L87:
+      getproperty         QName(PackageNamespace("", "#0"), "TIMER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0Pm")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal2
+      dup
+      iftrue              L97
+
+      pop
+      getlocal0
+      convert_b
+L97:
+      iffalse             L107
+
+L98:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "TIMER_COMPLETE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-06I")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal2
+      iffalse             L110
+
+L107:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "timer")
+      callpropvoid        QName(PackageNamespace("", "#0"), "start"), 0
+
+L110:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0Pm")
+   method
+    refid "_-Yf:_-0a/instance/_-Yf:_-0a/instance/_-0Pm"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal0
+      declocal            2
+      kill                2
+      inclocal_i          2
+      kill                3
+      subtract
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      pushbyte            10
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      pushbyte            10
+      divide
+      getlocal            4
+      iftrue              L26
+
+      convert_d
+L26:
+      setlocal2
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      pushbyte            10
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      pushbyte            10
+      divide
+      getlocal            4
+      iftrue              L39
+
+      convert_d
+L39:
+      setlocal3
+
+      getlocal            5
+      iffalse             L109
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0sR")
+      jump                L51
+
+      setlocal3
+
+      negate
+      declocal            2
+      declocal            4
+      kill                2
+      inclocal_i          4
+L51:
+      getlocal            4
+      iftrue              L88
+
+      getlocal2
+      getlocal            4
+      dup
+      iffalse             L60
+
+      pop
+      getlocal2
+      convert_b
+L60:
+      iftrue              L89
+
+      equals
+      getlocal            5
+      iffalse             L67
+
+      not
+      getlocal            4
+      iftrue              L71
+
+L67:
+      dup
+      iftrue              L93
+
+      getlocal            4
+      iftrue              L92
+
+L71:
+      pop
+      getlocal            4
+      dup
+      iffalse             L78
+
+      pop
+      getlocal2
+      convert_b
+L78:
+      iftrue              L96
+
+      jump                L86
+
+      getlocal            4
+      convert_s
+      convert_u
+      inclocal_i          3
+      getlocal            4
+      pushnull
+L86:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-1ln")
+L88:
+      getlocal3
+L89:
+      equals
+      getlocal            4
+      iftrue              L93
+
+L92:
+      not
+L93:
+      iffalse             L109
+
+      getlocal            4
+      iftrue              L109
+
+L96:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "timer")
+      callpropvoid        QName(PackageNamespace("", "#0"), "stop"), 0
+
+      getlocal            5
+      dup
+      iftrue              L105
+
+      pop
+      getlocal1
+      convert_b
+L105:
+      iffalse             L109
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0mX")
+      callpropvoid        QName(PackageNamespace("", "#0"), "destroy"), 0
+
+L109:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-06I")
+   method
+    refid "_-Yf:_-0a/instance/_-Yf:_-0a/instance/_-06I"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      coerce_s
+      declocal_i          2
+      convert_d
+      setlocal3
+
+      subtract_i
+      getlocal1
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      jump                L22
+
+      inclocal            2
+      negate
+      getlocal3
+      add
+      pushtrue
+      kill                3
+L22:
+      iffalse             L26
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0mX")
+      callpropvoid        QName(PackageNamespace("", "#0"), "destroy"), 0
+
+L26:
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushbyte            33
+      pushbyte            12
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+      coerce              QName(PackageNamespace("flash.utils"), "Timer")
+      setlocal2
+
+      getlocal3
+      iftrue              L42
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "TIMER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-io")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal            4
+      iffalse             L44
+
+L42:
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "start"), 0
+
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-io")
+   method
+    refid "_-Yf:_-0a/instance/_-Yf:_-0a/instance/_-io"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      newactivation
+      inclocal            2
+      getlocal2
+      modulo
+      setlocal2
+
+      inclocal_i          2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L27
+
+      pop
+      getlocal0
+      jump                L26
+
+      getlocal3
+      astypelate
+      declocal_i          2
+      setlocal2
+
+      setlocal2
+
+      getglobalscope
+L26:
+      convert_b
+L27:
+      iffalse             L47
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-wz")
+      getlocal3
+      dup
+      iftrue              L37
+
+      pop
+      getlocal2
+      convert_b
+L37:
+      iffalse             L39
+
+      not
+L39:
+      initproperty        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-wz")
+
+      getlocal3
+      dup
+      iftrue              L46
+
+      pop
+      getlocal2
+      convert_b
+L46:
+      iffalse             L52
+
+L47:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-wz")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-8m"), 1
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-08i")
+   method
+    refid "_-Yf:_-0a/instance/_-Yf:_-0a/instance/_-08i"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      subtract
+      not
+      increment
+      rshift
+      add
+      nextvalue
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      jump                L20
+
+      newactivation
+      convert_s
+      swap
+      bitxor
+      typeof
+      convert_u
+L20:
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L27
+
+      pop
+      getlocal0
+      convert_b
+L27:
+      iffalse             L40
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-Yf"), "ParticleField")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      constructprop       QName(PackageNamespace("_-Yf"), "ParticleField"), 2
+      initproperty        QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0mX")
+
+L40:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-Yf:_-0a/instance/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      kill                3
+      negate_i
+      inclocal_i          2
+      getlocal2
+      inclocal_i          2
+      popscope
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L30
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:_-0a/instance"), "_-0mX")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+L30:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Yf:_-0a/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,62 @@
+method
+ refid "_1J_L_:MessageDispatcher/MessageRunner/instance/_1J_L_:MessageDispatcher/MessageRunner/instance/next/inline_method"
+ param QName(PackageNamespace(""), "Object")
+ param QName(PackageNamespace(""), "Object")
+ returns QName(PackageNamespace(""), "void")
+ flag HAS_OPTIONAL
+ optional Null()
+ optional Null()
+ body
+  maxstack 4
+  localcount 3
+  initscopedepth 5
+  maxscopedepth 5
+  code
+   getlex              QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher"), "handled")
+   iffalse             L3
+
+   returnvoid
+
+L3:
+   findproperty        QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher"), "handled")
+   pushtrue
+   setproperty         QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher"), "handled")
+
+   getlocal1
+   convert_b
+   dup
+   iftrue              L15
+
+   pop
+   getlex              QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher/MessageRunner/instance"), "_handlers")
+   getproperty         QName(PackageNamespace(""), "length")
+   pushbyte            0
+   equals
+L15:
+   iffalse             L29
+
+   getlex              QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher/MessageRunner/instance"), "_callback")
+   coerce_a
+   dup
+   iffalse             L27
+
+   pop
+   findpropstrict      QName(PackageNamespace("_1J_L_"), "safelyCallBack")
+   getlex              QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher/MessageRunner/instance"), "_callback")
+   getlocal1
+   getlex              QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher/MessageRunner/instance"), "_message")
+   callproperty        QName(PackageNamespace("_1J_L_"), "safelyCallBack"), 3
+   coerce_a
+L27:
+   pop
+   jump                L31
+
+L29:
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher/MessageRunner/instance"), "next")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:MessageDispatcher/MessageRunner/instance"), "next"), 0
+
+L31:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

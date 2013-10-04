@@ -1,0 +1,72 @@
+class
+ refid "_0J_n:_1jS_"
+ instance QName(PackageNamespace("_0J_n"), "_1jS_")
+  extends QName(PackageNamespace("_1G__"), "_xQ_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0uQ_")
+  iinit
+   refid "_0J_n:_1jS_/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "writeToOutput") flag FINAL flag OVERRIDE
+   method
+    refid "_0J_n:_1jS_/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Client should not send "
+      getlex              QName(PackageNamespace(""), "id")
+      add
+      pushstring          " messages"
+      add
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0J_n:_1jS_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

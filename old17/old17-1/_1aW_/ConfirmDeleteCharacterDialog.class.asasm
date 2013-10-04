@@ -1,0 +1,173 @@
+class
+ refid "_1aW_:ConfirmDeleteCharacterDialog"
+ instance QName(PackageNamespace("_1aW_"), "ConfirmDeleteCharacterDialog")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_V_t")
+  iinit
+   refid "_1aW_:ConfirmDeleteCharacterDialog/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("_0V_x"), "Dialog")
+     getproperty         QName(PackageNamespace(""), "LEFT_BUTTON")
+     initproperty        QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "_3Y_")
+
+     getlocal0
+     getlex              QName(PackageNamespace("_0V_x"), "Dialog")
+     getproperty         QName(PackageNamespace(""), "RIGHT_BUTTON")
+     initproperty        QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "_0I_D_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 0
+     initproperty        QName(PackageNamespace(""), "deleteCharacter")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 0
+     initproperty        QName(PackageNamespace(""), "cancel")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "_3Y_") type QName(PackageNamespace(""), "String") end
+  trait const QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "_0I_D_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "deleteCharacter") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait slot QName(PackageNamespace(""), "cancel") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait method QName(PackageNamespace(""), "_dd")
+   method
+    refid "_1aW_:ConfirmDeleteCharacterDialog/instance/_dd"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_0V_x"), "Dialog")
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_in")
+      pushstring          ""
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_0oh")
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_gS_")
+      pushstring          "/deleteDialog"
+      constructprop       QName(PackageNamespace("_0V_x"), "Dialog"), 5
+      coerce              QName(PackageNamespace("_0V_x"), "Dialog")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_Q_I_")
+      pushstring          "name"
+      getlocal1
+      pushstring          "displayID"
+      getlocal2
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "_W_A_"), 2
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "_3Y_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "onCancel")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "_0I_D_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "onDelete")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "onCancel")
+   method
+    refid "_1aW_:ConfirmDeleteCharacterDialog/instance/_1aW_:ConfirmDeleteCharacterDialog/instance/onCancel"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "cancel")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1aW_:ConfirmDeleteCharacterDialog/instance"), "onDelete")
+   method
+    refid "_1aW_:ConfirmDeleteCharacterDialog/instance/_1aW_:ConfirmDeleteCharacterDialog/instance/onDelete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "deleteCharacter")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1aW_:ConfirmDeleteCharacterDialog/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

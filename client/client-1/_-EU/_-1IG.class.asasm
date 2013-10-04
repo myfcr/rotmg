@@ -1,0 +1,151 @@
+class
+ refid "_-EU:_-1IG"
+ instance QName(PackageNamespace("_-EU"), "_-1IG")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0SS")
+  iinit
+   refid "_-EU:_-1IG/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     not
+     greaterthan
+     setlocal2
+
+     pushnan
+     inclocal_i          5
+     getlocal3
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("", "#0"), "XML")
+     setlocal2
+
+     getlocal            5
+     dup
+     iffalse             L23
+
+     pop
+     getlocal3
+     convert_b
+L23:
+     iftrue              L46
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-EU:_-1IG/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-EU:_-1IG/instance/init#0"), PackageNamespace("_-EU"), PackageInternalNs("_-EU"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0SS"), StaticProtectedNs("_-0SS"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_-EU"), "_-0xp")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "_-1YU")
+
+     getlocal            6
+     jump                L38
+
+     getglobalscope
+     increment
+     convert_i
+     nextname
+     pushnan
+     declocal_i          2
+L38:
+     dup
+     iftrue              L43
+
+     pop
+     getlocal1
+     convert_b
+L43:
+     iffalse             L46
+
+     getlocal0
+     constructsuper      0
+
+L46:
+     pushbyte            0
+     setlocal3
+
+     getlocal1
+     getproperty         Multiname("Animation", [PrivateNamespace("*", "_-EU:_-1IG/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-EU:_-1IG/instance/init#0"), PackageNamespace("_-EU"), PackageInternalNs("_-EU"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0SS"), StaticProtectedNs("_-0SS")])
+     coerce_a
+     setlocal            4
+
+     jump                L79
+
+     jump                L60
+
+     getlocal            4
+     declocal_i          3
+     newactivation
+     kill                5
+     lessequals
+     getlocal0
+L60:
+     label
+     getlocal            4
+     getlocal3
+     nextvalue
+     coerce              QName(PackageNamespace("", "#0"), "XML")
+     setlocal2
+
+     getlocal            6
+     dup
+     iftrue              L72
+
+     pop
+     getlocal2
+     convert_b
+L72:
+     iffalse             L79
+
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-1YU")
+     findpropstrict      QName(PackageNamespace("_-EU"), "_-0xp")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-EU"), "_-0xp"), 1
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L79:
+     hasnext2            4, 3
+     iftrue              L60
+
+     kill                4
+     kill                3
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1YU") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-EU"), "_-0xp")>) end
+ end ; instance
+ cinit
+  refid "_-EU:_-1IG/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

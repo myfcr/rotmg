@@ -1,0 +1,29 @@
+script ; 929
+ sinit
+  refid "_wX_:Timespan/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Timespan", [PackageNamespace("_wX_")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_wX_:Timespan"
+    popscope
+    initproperty        QName(PackageNamespace("_wX_"), "Timespan")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_wX_"), "Timespan")
+  #include "Timespan.class.asasm"
+ end ; trait
+end ; script

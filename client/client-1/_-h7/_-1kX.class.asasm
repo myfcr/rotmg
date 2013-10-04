@@ -1,0 +1,257 @@
+class
+ refid "_-h7:_-1kX"
+ instance QName(PackageNamespace("_-h7"), "_-1kX")
+  extends QName(PackageNamespace("_-1Cm"), "Frame")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0I0")
+  iinit
+   refid "_-h7:_-1kX/instance/init"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     kill                2
+     convert_d
+     hasnext
+     pushtrue
+     decrement_i
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L81
+
+     getlocal0
+     pushstring          "Tile properties"
+     pushstring          "Cancel"
+     pushstring          "Save"
+     pushnull
+     constructsuper      4
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1Cm"), "_-l2")
+     pushstring          "Object Name"
+     pushfalse
+     constructprop       QName(PackageNamespace("_-1Cm"), "_-l2"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "_-0ew")
+
+     jump                L40
+
+     convert_u
+     hasnext
+     declocal_i          2
+     getlocal1
+     strictequals
+     lshift
+L40:
+     getlocal2
+     dup
+     iffalse             L46
+
+     pop
+     getlocal1
+     convert_b
+L46:
+     iftrue              L68
+
+     getlocal1
+     pushnull
+     ifeq                L64
+
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-0ew")
+     getproperty         QName(PackageNamespace("", "#0"), "inputText_")
+     getlocal1
+     setproperty         QName(PackageNamespace("", "#0"), "text")
+
+     getlocal3
+     iffalse             L68
+
+     jump                L64
+
+     multiply_i
+     getlocal2
+     setlocal2
+
+     astypelate
+     inclocal_i          2
+     setlocal2
+
+L64:
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-fp")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-0ew")
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-fp"), 1
+
+L68:
+     getlex              QName(PackageNamespace("", "#0"), "_-0em")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-h7:_-1kX/instance/init"), "onCancel")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal3
+     dup
+     iftrue              L80
+
+     pop
+     getlocal1
+     convert_b
+L80:
+     iffalse             L87
+
+L81:
+     getlex              QName(PackageNamespace("", "#0"), "_-X5")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-h7:_-1kX/instance/init"), "_-s7")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L87:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0ew") type QName(PackageNamespace("_-1Cm"), "_-l2") end
+  trait method QName(PrivateNamespace("*", "_-h7:_-1kX/instance/init"), "onCancel")
+   method
+    refid "_-h7:_-1kX/instance/_-h7:_-1kX/instance/init/onCancel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      increment_i
+      convert_d
+      getlocal2
+      instanceof
+      getlocal1
+      declocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L22
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "CANCEL")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatchEvent"), 1
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-h7:_-1kX/instance/init"), "_-s7")
+   method
+    refid "_-h7:_-1kX/instance/_-h7:_-1kX/instance/init/_-s7"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      pushfalse
+      bitnot
+      setlocal2
+
+      inclocal_i          2
+      setlocal3
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L26
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatchEvent"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-h7:_-1kX/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,259 @@
+class
+ refid "_U_D_:_0iq"
+ instance QName(PackageNamespace("_U_D_"), "_0iq")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_Y_F_")
+  iinit
+   refid "_U_D_:_0iq/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_1gD_") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "seconds") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "minutes") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_46") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "days") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0M_p") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "_0q4")
+   method
+    refid "_U_D_:_0iq/instance/_0q4"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      pushshort           1000
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "seconds")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "seconds")
+      pushbyte            60
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "minutes")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "minutes")
+      pushbyte            60
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_46")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_46")
+      pushbyte            24
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "days")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "seconds")
+      pushbyte            60
+      modulo
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "seconds")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "minutes")
+      pushbyte            60
+      modulo
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "minutes")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_46")
+      pushbyte            24
+      modulo
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_46")
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_1gD_")
+
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0M_p")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "days")
+      pushstring          "d"
+      callpropvoid        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0hc"), 2
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_46")
+      pushstring          "h"
+      callpropvoid        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0hc"), 2
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "minutes")
+      pushstring          "m"
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0hc"), 3
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "seconds")
+      pushstring          "s"
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0hc"), 3
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_1gD_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0M_p")
+      pushstring          " "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0hc")
+   method
+    refid "_U_D_:_0iq/instance/_U_D_:_0iq/instance/_0hc"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Integer(-1)
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      equals
+      dup
+      iffalse             L11
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_1gD_")
+      not
+L11:
+      iffalse             L13
+
+      returnvoid
+
+L13:
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_1gD_")
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal            4
+
+      getlocal3
+      pushbyte            255
+      ifne                L27
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+L27:
+      pushstring          ""
+      setlocal            5
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            6
+
+      jump                L40
+
+L34:
+      label
+      getlocal            5
+      pushstring          "0"
+      add
+      setlocal            5
+
+      inclocal_i          6
+L40:
+      getlocal            6
+      getlocal3
+      iflt                L34
+
+      getlocal            5
+      getlocal            4
+      add
+      getlocal2
+      add
+      coerce_s
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_U_D_:_0iq/instance"), "_0M_p")
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_U_D_:_0iq/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,29 @@
+script ; 436
+ sinit
+  refid "_-1km:_-Un/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-Un", [PackageNamespace("_-1km")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-1km:_-Un"
+    popscope
+    initproperty        QName(PackageNamespace("_-1km"), "_-Un")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1km"), "_-Un")
+  #include "_-Un.class.asasm"
+ end ; trait
+end ; script

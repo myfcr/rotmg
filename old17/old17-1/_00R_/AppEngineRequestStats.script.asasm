@@ -1,0 +1,45 @@
+script ; 122
+ sinit
+  refid "_00R_:AppEngineRequestStats/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("AppEngineRequestStats", [PackageNamespace("_00R_")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_00R_:AppEngineRequestStats"
+    popscope
+    initproperty        QName(PackageNamespace("_00R_"), "AppEngineRequestStats")
+
+    findpropstrict      Multiname("StatsWatch", [PrivateNamespace("*", "_00R_:AppEngineRequestStats")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_tF_"), "_0gq")
+    pushscope
+
+    getlex              QName(PackageNamespace("_tF_"), "_0gq")
+    newclass            "_00R_:AppEngineRequestStats/StatsWatch"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_00R_:AppEngineRequestStats"), "StatsWatch")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_00R_"), "AppEngineRequestStats")
+  #include "AppEngineRequestStats.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_00R_:AppEngineRequestStats"), "StatsWatch")
+  #include "AppEngineRequestStats/StatsWatch.class.asasm"
+ end ; trait
+end ; script

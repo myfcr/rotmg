@@ -1,0 +1,29 @@
+script ; 1677
+ sinit
+  refid "_-DS:_-sN/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-sN", [PackageNamespace("_-DS")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-DS:_-sN"
+    popscope
+    initproperty        QName(PackageNamespace("_-DS"), "_-sN")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-DS"), "_-sN")
+  #include "_-sN.class.asasm"
+ end ; trait
+end ; script

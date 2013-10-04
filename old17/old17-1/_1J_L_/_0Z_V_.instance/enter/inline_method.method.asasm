@@ -1,0 +1,87 @@
+method
+ refid "_1J_L_:_0Z_V_/instance/enter/inline_method"
+ param QName(PackageNamespace(""), "Object")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 4
+  localcount 6
+  initscopedepth 5
+  maxscopedepth 5
+  code
+   pushnull
+   coerce              QName(PackageNamespace(""), "Function")
+   setlocal3
+
+   getlocal1
+   iffalse             L13
+
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "setState")
+   getlex              QName(PackageInternalNs("_1J_L_"), "initialState")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "setState"), 1
+
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "reportError")
+   getlocal1
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_callbacks")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "reportError"), 2
+
+   returnvoid
+
+L13:
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "dispatch")
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_preTransitionEvent")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "dispatch"), 1
+
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "dispatch")
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_transitionEvent")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "dispatch"), 1
+
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "setState")
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_finalState")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "setState"), 1
+
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_callbacks")
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+   coerce              QName(PackageNamespace(""), "Array")
+   setlocal2
+
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_callbacks")
+   pushbyte            0
+   setproperty         QName(PackageNamespace(""), "length")
+
+   pushbyte            0
+   setlocal            4
+
+   getlocal2
+   coerce_a
+   setlocal            5
+
+   jump                L46
+
+L35:
+   label
+   getlocal            5
+   getlocal            4
+   nextvalue
+   coerce              QName(PackageNamespace(""), "Function")
+   setlocal3
+
+   findpropstrict      QName(PackageNamespace("_1J_L_"), "safelyCallBack")
+   getlocal3
+   pushnull
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_name")
+   callpropvoid        QName(PackageNamespace("_1J_L_"), "safelyCallBack"), 3
+
+L46:
+   hasnext2            5, 4
+   iftrue              L35
+
+   kill                5
+   kill                4
+   findpropstrict      QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "dispatch")
+   getlex              QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "_postTransitionEvent")
+   callpropvoid        QName(PrivateNamespace("*", "_1J_L_:_0Z_V_/instance"), "dispatch"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

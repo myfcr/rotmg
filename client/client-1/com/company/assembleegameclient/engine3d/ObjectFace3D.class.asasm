@@ -1,0 +1,1448 @@
+class
+ refid "com.company.assembleegameclient.engine3d:ObjectFace3D"
+ instance QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-MP")
+  iinit
+   refid "com.company.assembleegameclient.engine3d:ObjectFace3D/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-6m")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>)
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   flag HAS_OPTIONAL
+   optional True()
+   body
+    maxstack 6
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal            5
+
+     dxnslate
+     pushundefined
+     bitand
+     kill                5
+     declocal            6
+L10:
+     setlocal            7
+
+     setlocal            8
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             16777215
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "_-1-X")
+
+     getlocal            7
+     iftrue              L43
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsBitmapFill")
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsBitmapFill"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "bitmapFill_")
+
+     getlocal            8
+     iffalse             L32
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+
+L32:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "obj_")
+
+     getlocal            7
+     iftrue              L49
+
+L43:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-17W")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-F1")
+
+L49:
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "int")
+     jump                L58
+
+     setlocal3
+
+     setlocal            5
+
+     divide
+     inclocal_i          4
+     inclocal_i          5
+     inclocal            7
+L58:
+     applytype           1
+     construct           0
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>)
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L89
+
+L65:
+     label
+     getlocal            4
+     getlocal            5
+     pushbyte            0
+     equals
+     iffalse             L75
+
+     getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
+     getproperty         QName(PackageNamespace("", "#0"), "MOVE_TO")
+     coerce_a
+     jump                L78
+
+L75:
+     getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
+     getproperty         QName(PackageNamespace("", "#0"), "LINE_TO")
+     coerce_a
+L78:
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal            8
+     dup
+     iftrue              L85
+
+     pop
+     getlocal3
+     convert_b
+L85:
+     iffalse             L89
+
+     inclocal_i          5
+     getlocal            7
+     iftrue              L101
+
+L89:
+     getlocal            5
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+     jump                L99
+
+     inclocal_i          2
+     add_i
+     setlocal2
+
+     getlocal2
+     istypelate
+     setlocal3
+
+L99:
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     iflt                L65
+
+L101:
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     applytype           1
+     construct           0
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+     dup
+     setlocal            6
+
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     pushbyte            2
+     multiply
+     setproperty         QName(PackageNamespace("", "#0"), "length")
+
+     getlocal            7
+     iftrue              L122
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
+     getlocal            4
+     getlocal            6
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+
+L122:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "obj_") type QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-6m") end
+  trait slot QName(PackageNamespace("", "#0"), "_-17W") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) end
+  trait slot QName(PackageNamespace("", "#0"), "_-F1") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1X8") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "texture_") type QName(PackageNamespace("flash.display"), "BitmapData") value Null() end
+  trait slot QName(PackageNamespace("", "#0"), "normalL_") type QName(PackageNamespace("flash.geom"), "Vector3D") value Null() end
+  trait slot QName(PackageNamespace("", "#0"), "_-1CU") type QName(PackageNamespace("flash.geom"), "Vector3D") end
+  trait slot QName(PackageNamespace("", "#0"), "_-i7") type QName(PackageNamespace("", "#0"), "Number") value Double(1) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.company.assembleegameclient.engine3d:ObjectFace3D/instance/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_o
+      setlocal3
+
+      hasnext
+      bitor
+      getlocal2
+      equals
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L27
+
+      jump                L24
+
+      subtract_i
+      pushundefined
+      rshift
+      strictequals
+      negate_i
+      popscope
+L24:
+      pop
+      getlocal1
+      convert_b
+L27:
+      iffalse             L45
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace("", "#0"), "_-17W")
+
+      getlocal2
+      iffalse             L39
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+      pushnull
+      setproperty         QName(PackageNamespace("", "#0"), "commands")
+
+      getlocal2
+      iffalse             L45
+
+L39:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+      pushnull
+      setproperty         QName(PackageNamespace("", "#0"), "data")
+
+      getlocal2
+      iffalse             L48
+
+L45:
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-01R")
+   method
+    refid "com.company.assembleegameclient.engine3d:ObjectFace3D/instance/_-01R"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      lshift
+      dup
+      pushwith
+      strictequals
+      getlocal3
+      increment_i
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L26
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+      constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "_-1CU")
+
+      getlocal1
+      iffalse             L103
+
+L26:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-IB")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      callproperty        QName(PackageNamespace("", "#0"), "_-1O2"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      callproperty        QName(PackageNamespace("", "#0"), "_-1O2"), 1
+      jump                L48
+
+      convert_o
+      getlocal2
+      nextname
+      decrement
+      negate_i
+      convert_b
+L48:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      callproperty        QName(PackageNamespace("", "#0"), "_-1O2"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1CU")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-1e3"), 4
+
+      getlocal1
+      dup
+      iftrue              L67
+
+      pop
+      getlocal1
+      convert_b
+L67:
+      iffalse             L89
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-1RU")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1CU")
+      pushdouble          0.75
+      jump                L80
+
+      bitnot
+      dxnslate
+      convert_i
+      setlocal3
+
+      bitand
+      getglobalscope
+L80:
+      callproperty        QName(PackageNamespace("", "#0"), "_-1F6"), 2
+      initproperty        QName(PackageNamespace("", "#0"), "_-i7")
+
+      getlocal2
+      dup
+      iffalse             L88
+
+      pop
+      getlocal1
+      convert_b
+L88:
+      iftrue              L103
+
+L89:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "normalL_")
+      pushnull
+      ifeq                L103
+
+      getlocal1
+      iffalse             L103
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-14M")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "normalL_")
+      callproperty        QName(PackageNamespace("", "#0"), "deltaTransformVector"), 1
+      initproperty        QName(PackageNamespace("", "#0"), "_-1CU")
+
+L103:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "_-1-X") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait const QName(PackageNamespace("", "#0"), "bitmapFill_") type QName(PackageNamespace("flash.display"), "GraphicsBitmapFill") end
+  trait method QName(PackageNamespace("", "#0"), "draw")
+   method
+    refid "com.company.assembleegameclient.engine3d:ObjectFace3D/instance/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("flash.display"), "BitmapData")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 16
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            14
+
+      jump                L10
+
+      pushscope
+
+      kill                9
+      bitxor
+      popscope
+      declocal_i          9
+      instanceof
+L10:
+      setlocal            15
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            13
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            2
+      multiply
+      convert_i
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            2
+      multiply
+      convert_i
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            2
+      multiply
+      convert_i
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "vS_")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      dup
+      setlocal            7
+
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            7
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      getlocal            14
+      dup
+      iftrue              L60
+
+      pop
+      getlocal2
+      convert_b
+L60:
+      iffalse             L62
+
+      convert_d
+L62:
+      setlocal            8
+
+      getlocal            7
+      getlocal            5
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            7
+      getlocal            4
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      getlocal            15
+      dup
+      iffalse             L80
+
+      pop
+      getlocal3
+      convert_b
+L80:
+      iftrue              L82
+
+      convert_d
+L82:
+      setlocal            9
+
+      getlocal            7
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            7
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      getlocal            14
+      dup
+      iftrue              L96
+
+      pop
+      getlocal0
+      convert_b
+L96:
+      iffalse             L98
+
+      convert_d
+L98:
+      setlocal            10
+
+      getlocal            7
+      getlocal            6
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            7
+      getlocal            4
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      getlocal            15
+      iftrue              L113
+
+      convert_d
+L113:
+      setlocal            11
+
+      getlocal            8
+      getlocal            15
+      dup
+      iffalse             L121
+
+      pop
+      getlocal3
+      convert_b
+L121:
+      iftrue              L133
+
+      getlocal            11
+      getlocal            15
+      iftrue              L138
+
+      multiply
+      getlocal            14
+      dup
+      iftrue              L132
+
+      pop
+      getlocal1
+      convert_b
+L132:
+      iffalse             L139
+
+L133:
+      getlocal            9
+      getlocal            15
+      iftrue              L138
+
+      getlocal            10
+      multiply
+L138:
+      subtract
+L139:
+      pushbyte            0
+      ifnlt               L149
+
+      returnvoid
+
+      getlocal            15
+      dup
+      iffalse             L148
+
+      pop
+      getlocal0
+      convert_b
+L148:
+      iftrue              L165
+
+L149:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      getproperty         Multiname("GPURender", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      not
+      getlocal            14
+      dup
+      iftrue              L159
+
+      pop
+      getlocal2
+      convert_b
+L159:
+      iffalse             L227
+
+      dup
+      getlocal            15
+      iftrue              L219
+
+      iffalse             L181
+
+      pop
+L165:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-F1")
+      not
+      dup
+      getlocal            15
+      dup
+      iffalse             L175
+
+      pop
+      getlocal1
+      convert_b
+L175:
+      iftrue              L219
+
+      iftrue              L181
+
+      pop
+      getlocal3
+      pushnull
+      equals
+L181:
+      iffalse             L215
+
+      getlocal            14
+      dup
+      iftrue              L195
+
+      jump                L192
+
+      hasnext
+      instanceof
+      declocal            3
+      add_i
+      increment_i
+      kill                9
+L192:
+      pop
+      getlocal0
+      convert_b
+L195:
+      iffalse             L235
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "_-1-X")
+      getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-i7")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-i7")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-i7")
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-ii"), 2
+      setproperty         QName(PackageNamespace("", "#0"), "color")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "_-1-X")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L281
+
+L215:
+      getlocal3
+      pushnull
+      equals
+      dup
+L219:
+      iffalse             L239
+
+      getlocal            14
+      dup
+      iftrue              L226
+
+      pop
+      getlocal0
+      convert_b
+L226:
+      iffalse             L239
+
+L227:
+      pop
+      getlocal            15
+      dup
+      iffalse             L234
+
+      pop
+      getlocal1
+      convert_b
+L234:
+      iftrue              L240
+
+L235:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      getproperty         Multiname("GPURender", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      convert_b
+L239:
+      iffalse             L251
+
+L240:
+      getlex              QName(PackageNamespace("", "#0"), "_-1Rq")
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal3
+
+      getlocal            15
+      dup
+      iffalse             L249
+
+      pop
+      getlocal3
+      convert_b
+L249:
+      iftrue              L277
+
+      jump                L258
+
+L251:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-i7")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1gc"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal3
+
+L258:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      getlocal3
+      setproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+
+      getlocal            15
+      iftrue              L277
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      getlocal0
+      getlocal3
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "_-0FT"), 1
+      setproperty         QName(PackageNamespace("", "#0"), "matrix")
+
+      getlocal            14
+      dup
+      iftrue              L276
+
+      pop
+      getlocal0
+      convert_b
+L276:
+      iffalse             L281
+
+L277:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L281:
+      pushbyte            0
+      setlocal            12
+
+      jump                L333
+
+L284:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getlocal            12
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      convert_i
+      getlocal            15
+      iftrue              L334
+
+      setlocal            13
+
+      getlocal            14
+      iffalse             L333
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      getlocal            12
+      pushbyte            2
+      multiply
+      getlocal            7
+      getlocal            13
+      pushbyte            2
+      multiply
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+
+      getlocal            14
+      iffalse             L377
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      getlocal            12
+      pushbyte            2
+      multiply
+      pushbyte            1
+      add
+      getlocal            7
+      getlocal            13
+      pushbyte            2
+      multiply
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+
+      getlocal            14
+      dup
+      iftrue              L331
+
+      pop
+      getlocal2
+      convert_b
+L331:
+      iffalse             L348
+
+      inclocal_i          12
+L333:
+      getlocal            12
+L334:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L284
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "path_")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            14
+      iffalse             L385
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.util"), "_-VO")
+      getproperty         QName(PackageNamespace("", "#0"), "END_FILL")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L348:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1X8")
+      convert_b
+      dup
+      getlocal            14
+      iffalse             L373
+
+      iffalse             L372
+
+      getlocal            15
+      iftrue              L369
+
+      pop
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Cs"), 0
+      jump                L367
+
+      negate
+      multiply_i
+      setlocal3
+
+      getlocal            5
+      inclocal            4
+      getlocal            6
+L367:
+      getlocal            15
+      iftrue              L374
+
+L369:
+      convert_b
+      getlocal            14
+      iffalse             L384
+
+L372:
+      dup
+L373:
+      iffalse             L384
+
+L374:
+      pop
+      getlocal            15
+      iftrue              L390
+
+L377:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      pushnull
+      equals
+      getlocal            15
+      iftrue              L384
+
+      not
+L384:
+      iffalse             L390
+
+L385:
+      getlex              QName(PackageNamespace("_-07c"), "_-0ll")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmapFill_")
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0U6"), 2
+
+L390:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "_-0FT")
+   method
+    refid "com.company.assembleegameclient.engine3d:ObjectFace3D/instance/com.company.assembleegameclient.engine3d:ObjectFace3D/instance/_-0FT"
+    param QName(PackageNamespace("flash.display"), "BitmapData")
+    returns QName(PackageNamespace("flash.geom"), "Matrix")
+    body
+     maxstack 7
+     localcount 11
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushwith
+      declocal_i          5
+      getlocal            5
+      setlocal            8
+
+      pushundefined
+      bitor
+L10:
+      setlocal            9
+
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "uvts_")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            3
+      multiply
+      convert_i
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            3
+      multiply
+      convert_i
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            3
+      multiply
+      convert_i
+      setlocal            5
+
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      multiply
+      getlocal            10
+      dup
+      iftrue              L58
+
+      pop
+      getlocal3
+      convert_b
+L58:
+      iffalse             L60
+
+      convert_d
+L60:
+      setlocal            6
+
+      getlocal2
+      getlocal3
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      multiply
+      getlocal            10
+      dup
+      iftrue              L75
+
+      pop
+      getlocal0
+      convert_b
+L75:
+      iffalse             L77
+
+      convert_d
+L77:
+      setlocal            7
+
+      getlocal            10
+      iffalse             L157
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      multiply
+      getlocal            6
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "a")
+
+      getlocal            10
+      iffalse             L124
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal2
+      getlocal            4
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      multiply
+      getlocal            7
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "b")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal2
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      multiply
+      getlocal            6
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "c")
+
+      getlocal            10
+      dup
+      iftrue              L123
+
+      pop
+      getlocal0
+      convert_b
+L123:
+      iffalse             L198
+
+L124:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal2
+      getlocal            5
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      multiply
+      getlocal            7
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "d")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal            6
+      setproperty         QName(PackageNamespace("", "#0"), "tx")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal            7
+      setproperty         QName(PackageNamespace("", "#0"), "ty")
+
+      getlocal            10
+      iffalse             L157
+
+      jump                L154
+
+      setlocal2
+
+      getlocal2
+      nextname
+      dxnslate
+      lessequals
+      coerce_a
+L154:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "invert"), 0
+
+L157:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            2
+      multiply
+      getlocal            9
+      dup
+      iffalse             L169
+
+      pop
+      getlocal2
+      convert_b
+L169:
+      iftrue              L207
+
+      convert_i
+      getlocal            9
+      iftrue              L208
+
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            2
+      multiply
+      getlocal            9
+      dup
+      iffalse             L186
+
+      pop
+      getlocal1
+      convert_b
+L186:
+      iftrue              L207
+
+      convert_i
+      getlocal            10
+      iffalse             L208
+
+      setlocal            4
+
+      getlocal            9
+      dup
+      iffalse             L197
+
+      pop
+      getlocal0
+      convert_b
+L197:
+      iftrue              L209
+
+L198:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-17W")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      pushbyte            2
+      multiply
+L207:
+      convert_i
+L208:
+      setlocal            5
+
+L209:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "vS_")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+      setlocal            8
+
+      getlocal            9
+      dup
+      iffalse             L220
+
+      pop
+      getlocal1
+      convert_b
+L220:
+      iftrue              L252
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      getlocal            8
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            8
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "a")
+
+      getlocal            10
+      dup
+      iftrue              L237
+
+      pop
+      getlocal3
+      convert_b
+L237:
+      iffalse             L292
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      getlocal            8
+      getlocal            4
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            8
+      getlocal3
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "b")
+
+L252:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      getlocal            8
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            8
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "c")
+
+      getlocal            10
+      dup
+      iftrue              L268
+
+      pop
+      getlocal2
+      convert_b
+L268:
+      iffalse             L313
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      getlocal            8
+      getlocal            5
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      getlocal            8
+      getlocal3
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "d")
+
+      getlocal            9
+      iftrue              L298
+
+      jump                L292
+
+      getlocal2
+      coerce_s
+      convert_s
+      nextname
+      declocal_i          8
+      greaterequals
+L292:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      getlocal            8
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      setproperty         QName(PackageNamespace("", "#0"), "tx")
+
+L298:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      getlocal            8
+      getlocal3
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-MP"), StaticProtectedNs("_-MP")])
+      setproperty         QName(PackageNamespace("", "#0"), "ty")
+
+      getlocal            10
+      iffalse             L313
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tempMatrix_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "concat"), 1
+
+L313:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:ObjectFace3D/instance#0"), "tToS_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.engine3d:ObjectFace3D/class/init"
+  body
+   maxstack 8
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    negate_i
+    negate
+    rshift
+    pushundefined
+    nextname
+    convert_u
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal0
+    convert_b
+L19:
+    iftrue              L28
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-1Rq")
+    findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+    pushbyte            1
+    dup
+    pushtrue
+    pushdouble          4278190080
+    constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+    initproperty        QName(PackageNamespace("", "#0"), "_-1Rq")
+
+L28:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-1Rq") slotid 1 type QName(PackageNamespace("flash.display"), "BitmapData") end
+end ; class

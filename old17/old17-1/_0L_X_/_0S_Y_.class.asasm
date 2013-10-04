@@ -1,0 +1,247 @@
+class
+ refid "_0L_X_:_0S_Y_"
+ instance QName(PackageNamespace("_0L_X_"), "_0S_Y_")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1_z")
+  iinit
+   refid "_0L_X_:_0S_Y_/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushnull
+     constructsuper      1
+
+     findproperty        QName(PackageNamespace(""), "objectId_")
+     findpropstrict      QName(PackageNamespace(""), "_0mk")
+     callproperty        QName(PackageNamespace(""), "_0mk"), 0
+     initproperty        QName(PackageNamespace(""), "objectId_")
+
+     findproperty        QName(PackageNamespace(""), "_0lN_")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "_0lN_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_0L_X_:_0S_Y_/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "_0L_X_:_0S_Y_/instance/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0L_X_:_0S_Y_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "_1fI_") flag FINAL dispid 3
+  method
+   refid "_0L_X_:_0S_Y_/class/_1fI_"
+   param QName(PackageNamespace("_0L_X_"), "_0X_8")
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   returns QName(PackageNamespace("_0L_X_"), "_0S_Y_")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     jump                L44
+
+L3:
+     label
+     findpropstrict      QName(PackageNamespace("_0L_X_"), "_1dF_")
+     getlocal2
+     constructprop       QName(PackageNamespace("_0L_X_"), "_1dF_"), 1
+     returnvalue
+
+L8:
+     label
+     findpropstrict      QName(PackageNamespace("_0L_X_"), "FountainEffect")
+     getlocal2
+     constructprop       QName(PackageNamespace("_0L_X_"), "FountainEffect"), 1
+     returnvalue
+
+L13:
+     label
+     findpropstrict      QName(PackageNamespace("_0L_X_"), "_0Y_8")
+     getlocal2
+     getlocal1
+     constructprop       QName(PackageNamespace("_0L_X_"), "_0Y_8"), 2
+     returnvalue
+
+L19:
+     label
+     findpropstrict      QName(PackageNamespace("_0L_X_"), "VentEffect")
+     getlocal2
+     constructprop       QName(PackageNamespace("_0L_X_"), "VentEffect"), 1
+     returnvalue
+
+L24:
+     label
+     findpropstrict      QName(PackageNamespace("_0L_X_"), "_ig")
+     getlocal2
+     getlocal1
+     constructprop       QName(PackageNamespace("_0L_X_"), "_ig"), 2
+     returnvalue
+
+L30:
+     label
+     findpropstrict      QName(PackageNamespace("_0L_X_"), "XMLEffect")
+     getlocal2
+     getlocal1
+     constructprop       QName(PackageNamespace("_0L_X_"), "XMLEffect"), 2
+     returnvalue
+
+L36:
+     label
+     getlex              QName(PackageNamespace("_0L_X_"), "_Q_K_")
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "_J_X_"), 2
+     returnvalue
+
+L42:
+     label
+     jump                L88
+
+L44:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "id")
+     setlocal3
+
+     pushstring          "Healing"
+     getlocal3
+     ifstrictne          L52
+
+     pushbyte            0
+     jump                L86
+
+L52:
+     pushstring          "Fountain"
+     getlocal3
+     ifstrictne          L57
+
+     pushbyte            1
+     jump                L86
+
+L57:
+     pushstring          "Gas"
+     getlocal3
+     ifstrictne          L62
+
+     pushbyte            2
+     jump                L86
+
+L62:
+     pushstring          "Vent"
+     getlocal3
+     ifstrictne          L67
+
+     pushbyte            3
+     jump                L86
+
+L67:
+     pushstring          "Bubbles"
+     getlocal3
+     ifstrictne          L72
+
+     pushbyte            4
+     jump                L86
+
+L72:
+     pushstring          "XMLEffect"
+     getlocal3
+     ifstrictne          L77
+
+     pushbyte            5
+     jump                L86
+
+L77:
+     pushstring          "CustomParticles"
+     getlocal3
+     ifstrictne          L82
+
+     pushbyte            6
+     jump                L86
+
+L82:
+     jump                L85
+
+     pushbyte            7
+     jump                L86
+
+L85:
+     pushbyte            7
+L86:
+     kill                3
+     lookupswitch        L42, [L3, L8, L13, L19, L24, L30, L36, L42]
+
+L88:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

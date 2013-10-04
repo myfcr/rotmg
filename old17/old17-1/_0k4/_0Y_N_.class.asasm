@@ -1,0 +1,200 @@
+class
+ refid "_0k4:_0Y_N_"
+ instance QName(PackageNamespace("_0k4"), "_0Y_N_")
+  extends QName(PackageNamespace("_0k4"), "_02r")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_Z_x")
+  iinit
+   refid "_0k4:_0Y_N_/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_1X_w"), "_super")>)
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 8
+    localcount 9
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal            4
+     getlocal            5
+     getlocal            7
+     constructsuper      4
+
+     jump                L10
+
+     constructsuper      3
+
+L10:
+     getlocal0
+     getlocal            6
+     initproperty        QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "callback_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_0k4"), "_0Y_v")
+     getlocal2
+     getlocal3
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+     getproperty         QName(PackageNamespace(""), "data_")
+     getlex              QName(PackageNamespace(""), "_1O_y")
+     getproperty         MultinameL([PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), PackageNamespace("_0k4"), PackageNamespace(""), PrivateNamespace("*", "_0k4:_0Y_N_/instance#1"), PackageInternalNs("_0k4"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_Z_x"), StaticProtectedNs("_Z_x"), StaticProtectedNs("_0G_7"), StaticProtectedNs("_0wL_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     constructprop       QName(PackageNamespace("_0k4"), "_0Y_v"), 3
+     initproperty        QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_each")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_each")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "CHANGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_pF_")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_each")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "callback_") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_each") type QName(PackageNamespace("_0k4"), "_0Y_v") end
+  trait method QName(PackageNamespace(""), "enable")
+   method
+    refid "_0k4:_0Y_N_/instance/enable"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "transform")
+      getlocal1
+      iffalse             L9
+
+      getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+      getproperty         QName(PackageNamespace(""), "_0jV_")
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      jump                L12
+
+L9:
+      getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+      getproperty         QName(PackageNamespace(""), "identity")
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+L12:
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      getlocal1
+      not
+      initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+      findproperty        QName(PackageNamespace(""), "mouseChildren")
+      getlocal1
+      not
+      initproperty        QName(PackageNamespace(""), "mouseChildren")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "refresh") flag OVERRIDE
+   method
+    refid "_0k4:_0Y_N_/instance/refresh"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_each")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlex              QName(PackageNamespace(""), "_1O_y")
+      getproperty         MultinameL([PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), PackageNamespace("_0k4"), PackageNamespace(""), PrivateNamespace("*", "_0k4:_0Y_N_/instance#1"), PackageInternalNs("_0k4"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_Z_x"), StaticProtectedNs("_Z_x"), StaticProtectedNs("_0G_7"), StaticProtectedNs("_0wL_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "setValue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_pF_")
+   method
+    refid "_0k4:_0Y_N_/instance/_0k4:_0Y_N_/instance/_pF_"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlex              QName(PackageNamespace(""), "_1O_y")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "_each")
+      callproperty        QName(PackageNamespace(""), "value"), 0
+      setproperty         MultinameL([PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), PackageNamespace("_0k4"), PackageNamespace(""), PrivateNamespace("*", "_0k4:_0Y_N_/instance#1"), PackageInternalNs("_0k4"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_Z_x"), StaticProtectedNs("_Z_x"), StaticProtectedNs("_0G_7"), StaticProtectedNs("_0wL_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "callback_")
+      pushnull
+      ifeq                L17
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_0k4:_0Y_N_/instance#0"), "callback_"), 0
+
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0k4:_0Y_N_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

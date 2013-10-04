@@ -1,0 +1,29 @@
+script ; 1638
+ sinit
+  refid "_-ZB:_-SA/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-SA", [PackageNamespace("_-ZB")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-ZB:_-SA"
+    popscope
+    initproperty        QName(PackageNamespace("_-ZB"), "_-SA")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-ZB"), "_-SA")
+  #include "_-SA.class.asasm"
+ end ; trait
+end ; script

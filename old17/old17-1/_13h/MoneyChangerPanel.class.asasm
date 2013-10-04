@@ -1,0 +1,184 @@
+class
+ refid "_13h:MoneyChangerPanel"
+ instance QName(PackageNamespace("_13h"), "MoneyChangerPanel")
+  extends QName(PackageNamespace("_06u"), "_0ef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_eM_")
+  iinit
+   refid "_13h:MoneyChangerPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_Y_5")
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_kG_")
+     constructsuper      3
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 0
+     initproperty        QName(PackageNamespace(""), "_0P_j")
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_0P_j") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait method QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "onAddedToStage")
+   method
+    refid "_13h:MoneyChangerPanel/instance/_13h:MoneyChangerPanel/instance/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "_15U_")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "onRemovedFromStage")
+   method
+    refid "_13h:MoneyChangerPanel/instance/_13h:MoneyChangerPanel/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "_15U_")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_eM_"), "onButtonClick") flag OVERRIDE
+   method
+    refid "_13h:MoneyChangerPanel/instance/_eM_:onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0P_j")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), "_15U_")
+   method
+    refid "_13h:MoneyChangerPanel/instance/_13h:MoneyChangerPanel/instance/_15U_"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_13h:MoneyChangerPanel/instance"), PackageNamespace(""), PrivateNamespace("*", "_13h:MoneyChangerPanel/instance/_13h:MoneyChangerPanel/instance/_15U_"), PackageNamespace("_13h"), PackageInternalNs("_13h"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("_06u"), ProtectedNamespace("_eM_"), StaticProtectedNs("_eM_"), StaticProtectedNs("_0uM_"), StaticProtectedNs("_rb"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      equals
+      dup
+      iffalse             L15
+
+      pop
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      pushnull
+      equals
+L15:
+      iffalse             L19
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0P_j")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_13h:MoneyChangerPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

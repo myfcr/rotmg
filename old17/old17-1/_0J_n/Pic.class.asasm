@@ -1,0 +1,128 @@
+class
+ refid "_0J_n:Pic"
+ instance QName(PackageNamespace("_0J_n"), "Pic")
+  extends QName(PackageNamespace("_0J_n"), "_1jS_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_05M_")
+  iinit
+   refid "_0J_n:Pic/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "bitmapData_") type QName(PackageNamespace("flash.display"), "BitmapData") value Null() end
+  trait method QName(PackageNamespace(""), "parseFromInput") flag OVERRIDE
+   method
+    refid "_0J_n:Pic/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      convert_i
+      setlocal2
+
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      convert_i
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            4
+
+      getlocal1
+      getlocal            4
+      pushbyte            0
+      getlocal2
+      getlocal3
+      multiply
+      pushbyte            4
+      multiply
+      callpropvoid        QName(Namespace("flash.utils:IDataInput"), "readBytes"), 3
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+      getlocal2
+      getlocal3
+      constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 2
+      initproperty        QName(PackageNamespace(""), "bitmapData_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "bitmapData_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "bitmapData_")
+      getproperty         QName(PackageNamespace(""), "rect")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "setPixels"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_0J_n:Pic/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_61"), "formatToString")
+      pushstring          "PIC"
+      pushstring          "bitmapData_"
+      callproperty        QName(ProtectedNamespace("_61"), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0J_n:Pic/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

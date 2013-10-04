@@ -1,0 +1,114 @@
+class
+ refid "_1bF_:_0G_0"
+ instance QName(PackageNamespace("_1bF_"), "_0G_0")
+  extends QName(PackageNamespace("_0L_X_"), "_0S_Y_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1A_")
+  iinit
+   refid "_1bF_:_0G_0/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "start_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "end_")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "id_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace(""), "end_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace(""), "id_") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_1bF_:_0G_0/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "start_")
+      getproperty         QName(PackageNamespace(""), "x")
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "start_")
+      getproperty         QName(PackageNamespace(""), "y")
+      initproperty        QName(PackageNamespace(""), "y_")
+
+      pushshort           10000
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("_1bF_"), "_0wN_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "id_")
+      pushshort           1500
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "start_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "end_")
+      constructprop       QName(PackageNamespace("_1bF_"), "_0wN_"), 4
+      coerce              QName(PackageNamespace("_1bF_"), "_0wN_")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "map_")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "y_")
+      callpropvoid        QName(PackageNamespace(""), "addObj"), 3
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1bF_:_0G_0/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

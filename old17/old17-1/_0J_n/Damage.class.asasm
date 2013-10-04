@@ -1,0 +1,164 @@
+class
+ refid "_0J_n:Damage"
+ instance QName(PackageNamespace("_0J_n"), "Damage")
+  extends QName(PackageNamespace("_0J_n"), "_1jS_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0tu")
+  iinit
+   refid "_0J_n:Damage/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_0J_n:Damage/instance/init#0"), PrivateNamespace("*", "_0J_n:Damage/instance/init#1"), PackageNamespace(""), PackageNamespace("_0J_n"), PackageInternalNs("_0J_n"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0tu"), StaticProtectedNs("_0tu"), StaticProtectedNs("_0uQ_"), StaticProtectedNs("_61"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "uint")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "effects_")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "targetId_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "effects_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "uint")>) end
+  trait slot QName(PackageNamespace(""), "damageAmount_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "kill_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "bulletId_") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "objectId_") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "parseFromInput") flag OVERRIDE
+   method
+    refid "_0J_n:Damage/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "targetId_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "effects_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "length")
+
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      convert_i
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L28
+
+L18:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "effects_")
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L28:
+      getlocal3
+      getlocal2
+      iflt                L18
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedShort"), 0
+      initproperty        QName(PackageNamespace(""), "damageAmount_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace(""), "kill_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      initproperty        QName(PackageNamespace(""), "bulletId_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "objectId_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_0J_n:Damage/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 10
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_61"), "formatToString")
+      pushstring          "DAMAGE"
+      pushstring          "targetId_"
+      pushstring          "effects_"
+      pushstring          "damageAmount_"
+      pushstring          "kill_"
+      pushstring          "bulletId_"
+      pushstring          "objectId_"
+      callproperty        QName(ProtectedNamespace("_61"), "formatToString"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0J_n:Damage/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,796 @@
+class
+ refid "_13h:NameChangerPanel"
+ instance QName(PackageNamespace("_13h"), "NameChangerPanel")
+  extends QName(PackageNamespace("_06u"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0X_a")
+  iinit
+   refid "_13h:NameChangerPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+     setlocal3
+
+     pushnull
+     coerce_s
+     setlocal            4
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 0
+     initproperty        QName(PackageNamespace(""), "chooseName")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_uD_"), 0
+     iffalse             L48
+
+     getlex              QName(PackageNamespace(""), "gs_")
+     getproperty         QName(PackageNamespace(""), "map")
+     getproperty         QName(PackageNamespace(""), "player_")
+     coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+     setlocal3
+
+     getlocal0
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "_R_l")
+     initproperty        QName(PackageNamespace(""), "_vD_")
+
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_I_v"), 0
+     coerce_s
+     setlocal            4
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_vD_")
+     iffalse             L38
+
+     getlocal0
+     getlocal            4
+     callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0E_2"), 1
+
+     jump                L48
+
+L38:
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "numStars_")
+     getlocal2
+     ifnlt               L46
+
+     getlocal0
+     getlocal2
+     callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0_7"), 1
+
+     jump                L48
+
+L46:
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0vh"), 0
+
+L48:
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "chooseName") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait slot QName(PackageNamespace(""), "_vD_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "onAddedToStage")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      iffalse             L11
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_15U_")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L11:
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_uD_")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_uD_"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "map")
+      convert_b
+      dup
+      iffalse             L12
+
+      pop
+      getlex              QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "player_")
+      convert_b
+L12:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_I_v")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_I_v"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "model")
+      callproperty        QName(PackageNamespace(""), "getName"), 0
+      coerce_s
+      setlocal1
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            18
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+      initproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setBold"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setWordWrap"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setMultiLine"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFormatAlign")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      callpropvoid        QName(PackageNamespace(""), "setHorizontalAlign"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0E_2")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_0E_2"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_14Z_"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("_17v"), "_03N_")
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_8U_")
+      pushbyte            16
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "_6l")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "_U_s")
+      constructprop       QName(PackageNamespace("_17v"), "_03N_"), 4
+      coerce              QName(PackageNamespace("_17v"), "_03N_")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_1P_W_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0C_H_")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_eG_"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0C_H_")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_0C_H_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      subtract
+      pushbyte            17
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0vh")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_0vh"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_0lG_")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      pushbyte            6
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_")
+      pushbyte            16
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_1cP_")
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_"), 2
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.ui"), "_oR_")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "textChanged")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_cF_")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_eG_"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_cF_")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_cF_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            4
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_eG_")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_eG_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1I_r")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "onButtonClick")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_0_7")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_0_7"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("_1j9"), "_try")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_0lG_")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            16
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      coerce              QName(PackageNamespace("_1j9"), "_try")
+      setlocal3
+
+      getlocal3
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setBold"), 1
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_0E_3")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "RankText")
+      getlocal1
+      pushfalse
+      pushfalse
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "RankText"), 3
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      dup
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            4
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            2
+      divide
+      subtract
+      pushbyte            20
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "onRemovedFromStage")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_15U_")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_14Z_")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_14Z_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("_1X_w"), "_super")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_C_6")
+      pushstring          "name"
+      getlocal1
+      newobject           1
+      callproperty        QName(PackageNamespace(""), "setParams"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_15U_")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_15U_"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_13h:NameChangerPanel/instance"), PackageNamespace(""), PrivateNamespace("*", "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_15U_"), PackageNamespace("_13h"), PackageInternalNs("_13h"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0X_a"), StaticProtectedNs("_0X_a"), StaticProtectedNs("_rb"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      equals
+      dup
+      iffalse             L15
+
+      pop
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      pushnull
+      equals
+L15:
+      iffalse             L18
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1V_v"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "onButtonClick")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1V_v"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1V_v")
+   method
+    refid "_13h:NameChangerPanel/instance/_13h:NameChangerPanel/instance/_1V_v"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chooseName")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_qp")
+   method
+    refid "_13h:NameChangerPanel/instance/_qp"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_14Z_"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:NameChangerPanel/instance"), "_1O_K_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_13h:NameChangerPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,61 @@
+script ; 1490
+ sinit
+  refid "_-Yf:LevelUpEffect/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("LevelUpEffect", [PackageNamespace("_-Yf")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "_-00p")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "_-00p")
+    newclass            "_-Yf:LevelUpEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-Yf"), "LevelUpEffect")
+
+    findpropstrict      Multiname("LevelUpParticle", [PrivateNamespace("*", "_-Yf:LevelUpEffect#0")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "Particle")
+    newclass            "_-Yf:LevelUpEffect/LevelUpParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Yf"), "LevelUpEffect")
+  #include "LevelUpEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+  #include "LevelUpEffect/LevelUpParticle.class.asasm"
+ end ; trait
+end ; script

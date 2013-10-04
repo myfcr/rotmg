@@ -1,0 +1,362 @@
+class
+ refid "_-0cv:_-0EJ"
+ instance QName(PackageNamespace("_-0cv"), "_-0EJ")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  implements Multiname("_-00D", [PackageNamespace("_-0cv")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Mg")
+  iinit
+   refid "_-0cv:_-0EJ/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     decrement_i
+     checkfilter
+     setlocal2
+
+     convert_b
+     popscope
+     convert_d
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG") type QName(PackageNamespace("flash.display"), "LoaderInfo") end
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-0cv:_-0EJ/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      coerce_a
+      lshift
+      getlocal2
+      negate
+      coerce_a
+      modulo
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addEventListener") flag OVERRIDE
+   method
+    refid "_-0cv:_-0EJ/instance/addEventListener"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    optional Integer(0)
+    optional False()
+    body
+     maxstack 8
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal            6
+
+      jump                L10
+
+      getglobalscope
+      pushnull
+      pop
+      inclocal            3
+      inclocal            6
+      setlocal2
+
+L10:
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal            7
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L28
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 5
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "removeEventListener") flag OVERRIDE
+   method
+    refid "_-0cv:_-0EJ/instance/removeEventListener"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      nextvalue
+      not
+      multiply_i
+      declocal            3
+      pushwith
+      negate
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iftrue              L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iffalse             L26
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 3
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispatchEvent") flag OVERRIDE
+   method
+    refid "_-0cv:_-0EJ/instance/dispatchEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      setlocal2
+
+      convert_d
+      divide
+      convert_u
+      istypelate
+      pushundefined
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "dispatchEvent"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "hasEventListener") flag OVERRIDE
+   method
+    refid "_-0cv:_-0EJ/instance/hasEventListener"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      getglobalscope
+      getglobalscope
+      equals
+      pushfalse
+      bitxor
+      nextvalue
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "hasEventListener"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "willTrigger") flag OVERRIDE
+   method
+    refid "_-0cv:_-0EJ/instance/willTrigger"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      hasnext
+      greaterequals
+      convert_o
+      increment_i
+      setlocal2
+
+      equals
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "willTrigger"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "loaderInfo")
+   method
+    refid "_-0cv:_-0EJ/instance/loaderInfo/setter"
+    param QName(PackageNamespace("flash.display"), "LoaderInfo")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      newactivation
+      inclocal_i          2
+      convert_i
+      inclocal            2
+      negate_i
+      coerce_s
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iffalse             L24
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-0cv:_-0EJ/instance"), "_-0VG")
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0cv:_-0EJ/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

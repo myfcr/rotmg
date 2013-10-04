@@ -1,0 +1,312 @@
+class
+ refid "_-0oz:_-0Ww"
+ instance QName(PackageNamespace("_-0oz"), "_-0Ww")
+  extends QName(PackageNamespace("_-0oz"), "_-0QE")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0kA")
+  iinit
+   refid "_-0oz:_-0Ww/instance/init"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     lessthan
+     pushtrue
+     decrement
+     kill                2
+     kill                3
+     declocal            3
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iftrue              L48
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-0oz:_-0Ww/instance#1"), PrivateNamespace("*", "_-0oz:_-0Ww/instance#0"), PackageNamespace("", "#0"), PackageNamespace("_-0oz"), PackageInternalNs("_-0oz"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0kA"), StaticProtectedNs("_-0kA"), StaticProtectedNs("_-ws"), StaticProtectedNs("_-0vK"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "Boolean")
+     applytype           1
+     jump                L26
+
+     inclocal            3
+     multiply_i
+     inclocal_i          2
+     inclocal_i          3
+     declocal            2
+     getlocal3
+L26:
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "myOffer_")
+
+     getlocal3
+     dup
+     iftrue              L34
+
+     pop
+     getlocal2
+     convert_b
+L34:
+     iffalse             L48
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-0oz:_-0Ww/instance#1"), PrivateNamespace("*", "_-0oz:_-0Ww/instance#0"), PackageNamespace("", "#0"), PackageNamespace("_-0oz"), PackageInternalNs("_-0oz"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0kA"), StaticProtectedNs("_-0kA"), StaticProtectedNs("_-ws"), StaticProtectedNs("_-0vK"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "Boolean")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "yourOffer_")
+
+     getlocal3
+     dup
+     iftrue              L47
+
+     pop
+     getlocal2
+     convert_b
+L47:
+     iffalse             L52
+
+L48:
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L52:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "myOffer_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Boolean")>) end
+  trait slot QName(PackageNamespace("", "#0"), "yourOffer_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Boolean")>) end
+  trait method QName(PackageNamespace("", "#0"), "writeToOutput") flag OVERRIDE
+   method
+    refid "_-0oz:_-0Ww/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      newactivation
+      pushnan
+      declocal            3
+      setlocal2
+
+      declocal_i          2
+      setlocal2
+
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal3
+      iftrue              L30
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "myOffer_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeShort"), 1
+
+      getlocal3
+      dup
+      iffalse             L29
+
+      pop
+      getlocal2
+      convert_b
+L29:
+      iftrue              L32
+
+L30:
+      pushbyte            0
+      setlocal2
+
+L32:
+      jump                L50
+
+L33:
+      label
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "myOffer_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-0oz:_-0Ww/instance#1"), PrivateNamespace("*", "_-0oz:_-0Ww/instance#0"), PackageNamespace("", "#0"), PackageNamespace("_-0oz"), PackageInternalNs("_-0oz"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0kA"), StaticProtectedNs("_-0kA"), StaticProtectedNs("_-ws"), StaticProtectedNs("_-0vK")])
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeBoolean"), 1
+
+      inclocal_i          2
+      getlocal3
+      iftrue              L85
+
+      jump                L50
+
+      multiply
+      inclocal_i          2
+      declocal            3
+      getlocal2
+      declocal            3
+      coerce_s
+L50:
+      getlocal2
+      getlocal3
+      dup
+      iffalse             L57
+
+      pop
+      getlocal3
+      convert_b
+L57:
+      iftrue              L102
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "myOffer_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L33
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "yourOffer_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeShort"), 1
+
+      pushbyte            0
+      getlocal            4
+      dup
+      iftrue              L74
+
+      pop
+      getlocal0
+      convert_b
+L74:
+      iffalse             L102
+
+      setlocal2
+
+      jump                L83
+
+      declocal_i          2
+      getlocal3
+      inclocal            3
+      lessthan
+      setlocal3
+
+      declocal_i          2
+L83:
+      getlocal            4
+      iffalse             L106
+
+L85:
+      jump                L101
+
+L86:
+      label
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "yourOffer_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-0oz:_-0Ww/instance#1"), PrivateNamespace("*", "_-0oz:_-0Ww/instance#0"), PackageNamespace("", "#0"), PackageNamespace("_-0oz"), PackageInternalNs("_-0oz"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0kA"), StaticProtectedNs("_-0kA"), StaticProtectedNs("_-ws"), StaticProtectedNs("_-0vK")])
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeBoolean"), 1
+
+      getlocal            4
+      dup
+      iftrue              L99
+
+      pop
+      getlocal2
+      convert_b
+L99:
+      iffalse             L106
+
+      inclocal_i          2
+L101:
+      getlocal2
+L102:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "yourOffer_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L86
+
+L106:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-0oz:_-0Ww/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0vK"), "formatToString")
+      jump                L10
+
+      coerce_s
+      istypelate
+      not
+      popscope
+      decrement
+      setlocal2
+
+L10:
+      pushstring          "ACCEPTTRADE"
+      pushstring          "myOffer_"
+      pushstring          "yourOffer_"
+      callproperty        QName(ProtectedNamespace("_-0vK"), "formatToString"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oz:_-0Ww/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

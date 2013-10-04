@@ -1,0 +1,91 @@
+class
+ refid "_1X_V_:_1T_b"
+ instance QName(PackageNamespace("_1X_V_"), "_1T_b")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_07X_")
+  iinit
+   refid "_1X_V_:_1T_b/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_12F_") flag METADATA type QName(PackageNamespace("_0O_c"), "_0O_a")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1Z_P_") flag METADATA type QName(PackageNamespace("_D_r"), "_1Z_E_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_1X_V_:_1T_b/instance/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_J_v"), 0
+      iffalse             L12
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1Z_P_")
+      findpropstrict      QName(PackageNamespace("_0O_c"), "KongregateAccountDetailDialog")
+      constructprop       QName(PackageNamespace("_0O_c"), "KongregateAccountDetailDialog"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      jump                L15
+
+L12:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      callpropvoid        QName(Namespace("_Z_B_"), "_0fq"), 0
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1X_V_:_1T_b/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,613 @@
+class
+ refid "_0nF_:_1aJ_"
+ instance QName(PackageNamespace("_0nF_"), "_1aJ_")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("Account", [PackageNamespace("_yU_")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_Y_i")
+  iinit
+   refid "_0nF_:_1aJ_/instance/init"
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+L4:
+     getlocal0
+     getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+     pushstring          "rotmg.UrlLib.getParam"
+     pushstring          "entrypt"
+     callproperty        QName(PackageNamespace(""), "call"), 2
+     initproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0ad")
+
+L10:
+     jump                L22
+
+L11:
+     getlocal0
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal1
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     popscope
+     kill                1
+L22:
+     returnvoid
+    end ; code
+    try from L4 to L10 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "userId") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "password") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0ad") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_V_H_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0M_z") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "signedRequest") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_hO_") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "_X_F_")
+   method
+    refid "_0nF_:_1aJ_/instance/_X_F_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "userId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUserId")
+   method
+    refid "_0nF_:_1aJ_/instance/getUserId"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "userId")
+      coerce_s
+      dup
+      iftrue              L12
+
+      pop
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GUID")
+      callproperty        QName(PackageNamespace(""), "create"), 0
+      coerce_s
+L12:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "userId")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0tQ_")
+   method
+    refid "_0nF_:_1aJ_/instance/_0tQ_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "password")
+      coerce_s
+      dup
+      iftrue              L9
+
+      pop
+      pushstring          ""
+L9:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1E_p")
+   method
+    refid "_0nF_:_1aJ_/instance/_1E_p"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "guid"
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getUserId"), 0
+      pushstring          "password"
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_0tQ_"), 0
+      newobject           2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_J_v")
+   method
+    refid "_0nF_:_1aJ_/instance/_J_v"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_0tQ_"), 0
+      pushstring          ""
+      equals
+      not
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0oZ_")
+   method
+    refid "_0nF_:_1aJ_/instance/_0oZ_"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "SharedObject")
+      setlocal3
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "userId")
+
+      getlocal0
+      getlocal2
+      setproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "password")
+
+L11:
+      getlex              QName(PackageNamespace("flash.net"), "SharedObject")
+      pushstring          "RotMG"
+      pushstring          "/"
+      callproperty        QName(PackageNamespace(""), "getLocal"), 2
+      coerce              QName(PackageNamespace("flash.net"), "SharedObject")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "GUID"
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("*", "_0nF_:_1aJ_"), PackageNamespace(""), PrivateNamespace("*", "_0nF_:_1aJ_/instance"), PackageNamespace("_0nF_"), PackageInternalNs("_0nF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_Y_i"), StaticProtectedNs("_Y_i")])
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "Password"
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace("*", "_0nF_:_1aJ_"), PackageNamespace(""), PrivateNamespace("*", "_0nF_:_1aJ_/instance"), PackageNamespace("_0nF_"), PackageInternalNs("_0nF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_Y_i"), StaticProtectedNs("_Y_i")])
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+L29:
+      jump                L41
+
+L30:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                4
+L41:
+      returnvoid
+     end ; code
+     try from L11 to L29 target L30 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear")
+   method
+    refid "_0nF_:_1aJ_/instance/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GUID")
+      callproperty        QName(PackageNamespace(""), "create"), 0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "_0oZ_"), 2
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "_1F_L_")
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      newobject           0
+      setproperty         Multiname("charIdUseMap", [PrivateNamespace("*", "_0nF_:_1aJ_"), PackageNamespace(""), PrivateNamespace("*", "_0nF_:_1aJ_/instance"), PackageNamespace("_0nF_"), PackageInternalNs("_0nF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_Y_i"), StaticProtectedNs("_Y_i")])
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_75")
+   method
+    refid "_0nF_:_1aJ_/instance/_75"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1X_A_")
+   method
+    refid "_0nF_:_1aJ_/instance/_1X_A_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "/credits"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0O_d")
+   method
+    refid "_0nF_:_1aJ_/instance/_0O_d"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0z0")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0gm")
+   method
+    refid "_0nF_:_1aJ_/instance/_0gm"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_I_W_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_G_h")
+   method
+    refid "_0nF_:_1aJ_/instance/_G_h"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_129")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1I_L_")
+   method
+    refid "_0nF_:_1aJ_/instance/_1I_L_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0ad")
+      coerce_s
+      dup
+      iftrue              L9
+
+      pop
+      pushstring          ""
+L9:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0xa")
+   method
+    refid "_0nF_:_1aJ_/instance/_0xa"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "verify")
+   method
+    refid "_0nF_:_1aJ_/instance/verify"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_V_H_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0J_g")
+   method
+    refid "_0nF_:_1aJ_/instance/_0J_g"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_V_H_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_05v")
+   method
+    refid "_0nF_:_1aJ_/instance/_05v"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0M_z")
+      coerce_s
+      dup
+      iftrue              L9
+
+      pop
+      pushstring          ""
+L9:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_03n")
+   method
+    refid "_0nF_:_1aJ_/instance/_03n"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0M_z")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_P_m")
+   method
+    refid "_0nF_:_1aJ_/instance/_P_m"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "signedRequest")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_ey")
+   method
+    refid "_0nF_:_1aJ_/instance/_ey"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_hO_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0nF_:_1aJ_/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_I_W_")
+    pushstring          "rotmg"
+    initproperty        QName(PackageNamespace(""), "_I_W_")
+
+    findproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0z0")
+    pushstring          ""
+    initproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0z0")
+
+    findproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_129")
+    pushstring          "rotmg"
+    initproperty        QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_129")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_I_W_") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
+ trait const QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_0z0") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("") end
+ trait const QName(PrivateNamespace("*", "_0nF_:_1aJ_"), "_129") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
+end ; class

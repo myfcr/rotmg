@@ -1,0 +1,331 @@
+class
+ refid "_-1Nk:_-2U"
+ instance QName(PackageNamespace("_-1Nk"), "_-2U")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Cw")
+  iinit
+   refid "_-1Nk:_-2U/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     greaterthan
+     greaterequals
+     not
+     typeof
+     getglobalscope
+     pushnull
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-1Nk:_-2U/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "_-1VO") flag FINAL dispid 3
+  method
+   refid "_-1Nk:_-2U/class/_-1VO"
+   param QName(PackageNamespace("_-gw"), "DateField")
+   returns QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal            4
+     setlocal3
+
+     subtract_i
+     inclocal_i          3
+     pushnull
+     declocal            5
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Date")
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-19h")
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "_-19h"), 1
+     constructprop       QName(PackageNamespace("", "#0"), "Date"), 1
+     coerce              QName(PackageNamespace("", "#0"), "Date")
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Date")
+     constructprop       QName(PackageNamespace("", "#0"), "Date"), 0
+     coerce              QName(PackageNamespace("", "#0"), "Date")
+     setlocal3
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Number")
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "fullYear")
+     callproperty        QName(PackageNamespace("", "#0"), "Number"), 1
+     findpropstrict      QName(PackageNamespace("", "#0"), "Number")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "fullYear")
+     callproperty        QName(PackageNamespace("", "#0"), "Number"), 1
+     subtract
+     convert_u
+     setlocal            4
+
+     getlocal            5
+     iftrue              L71
+
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "month")
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "month")
+     greaterthan
+     getlocal            5
+     dup
+     iffalse             L49
+
+     pop
+     getlocal3
+     convert_b
+L49:
+     iftrue              L83
+
+     dup
+     getlocal            6
+     jump                L59
+
+     modulo
+     kill                5
+     inclocal            3
+     setlocal3
+
+     lessthan
+     inclocal_i          5
+L59:
+     iffalse             L84
+
+     iftrue              L112
+
+     getlocal            5
+     iftrue              L83
+
+     pop
+     getlocal            6
+     dup
+     iftrue              L70
+
+     pop
+     getlocal2
+     convert_b
+L70:
+     iffalse             L123
+
+L71:
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "month")
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "month")
+     equals
+     getlocal            5
+     dup
+     iffalse             L82
+
+     pop
+     getlocal1
+     convert_b
+L82:
+     iftrue              L92
+
+L83:
+     dup
+L84:
+     iffalse             L112
+
+     getlocal            6
+     dup
+     iftrue              L91
+
+     pop
+     getlocal2
+     convert_b
+L91:
+     iffalse             L112
+
+L92:
+     pop
+     getlocal            5
+     jump                L101
+
+     not
+     getlocal            4
+     pushundefined
+     instanceof
+     pop
+     getlocal3
+L101:
+     dup
+     iffalse             L106
+
+     pop
+     getlocal2
+     convert_b
+L106:
+     iftrue              L123
+
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "date")
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "date")
+     greaterthan
+L112:
+     iffalse             L123
+
+     getlocal            6
+     iffalse             L123
+
+     getlocal            4
+     getlocal            6
+     iffalse             L124
+
+     decrement
+     convert_u
+     getlocal            6
+     iffalse             L124
+
+     setlocal            4
+
+L123:
+     getlocal            4
+L124:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-19h") flag FINAL dispid 4
+  method
+   refid "_-1Nk:_-2U/class/_-19h"
+   param QName(PackageNamespace("_-gw"), "DateField")
+   returns QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     coerce_s
+     pushfalse
+     inclocal            3
+     setlocal3
+
+     kill                2
+     inclocal            2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "_-e8")
+     getproperty         QName(PackageNamespace("", "#0"), "text")
+     pushstring          "/"
+     add
+     getlocal            4
+     jump                L26
+
+     declocal            3
+     negate_i
+     getlocal3
+     increment
+     setlocal3
+
+     getlocal2
+L26:
+     iftrue              L46
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "days")
+     getproperty         QName(PackageNamespace("", "#0"), "text")
+     add
+     getlocal3
+     iffalse             L46
+
+     pushstring          "/"
+     add
+     getlocal3
+     dup
+     iftrue              L41
+
+     pop
+     getlocal1
+     convert_b
+L41:
+     iffalse             L46
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "_-0B1")
+     getproperty         QName(PackageNamespace("", "#0"), "text")
+     add
+L46:
+     coerce_s
+     setlocal2
+
+     getlex              QName(PackageNamespace("", "#0"), "Date")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "parse"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

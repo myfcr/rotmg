@@ -1,0 +1,395 @@
+class
+ refid "com.company.assembleegameclient.tutorial:UIDrawArrow"
+ instance QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "UIDrawArrow")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0ui")
+  iinit
+   refid "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     negate_i
+     getlocal2
+     getlocal3
+     instanceof
+     setlocal3
+
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     getlex              QName(PackageNamespace("com.company.util"), "ConversionUtil")
+     jump                L31
+
+     inclocal            2
+     declocal            2
+     inclocal            3
+     pushfalse
+     bitor
+     inclocal_i          2
+L31:
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "_-NL"), 1
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal2
+
+     getlocal3
+     iftrue              L63
+
+     getlocal0
+     getlocal2
+     jump                L46
+
+     instanceof
+     pop
+     pushtrue
+     kill                3
+     lessequals
+     inclocal_i          3
+L46:
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init#0"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0ui"), StaticProtectedNs("_-0ui")])
+     initproperty        QName(PackageNamespace("", "#0"), "p0_")
+
+     getlocal3
+     dup
+     iffalse             L55
+
+     pop
+     getlocal1
+     convert_b
+L55:
+     iftrue              L63
+
+     getlocal0
+     getlocal2
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init#0"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0ui"), StaticProtectedNs("_-0ui")])
+     initproperty        QName(PackageNamespace("", "#0"), "p1_")
+
+     getlocal3
+     iftrue              L69
+
+L63:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("", "#0"), "uint")
+     getlocal1
+     getproperty         MultinameA("color", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/init#0"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0ui"), StaticProtectedNs("_-0ui")])
+     callproperty        QName(PackageNamespace("", "#0"), "uint"), 1
+     initproperty        QName(PackageNamespace("", "#0"), "color_")
+
+L69:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "p0_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "p1_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "color_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait const QName(PackageNamespace("", "#0"), "_-Vf") type QName(PackageNamespace("", "#0"), "int") value Integer(500) end
+  trait method QName(PackageNamespace("", "#0"), "draw")
+   method
+    refid "com.company.assembleegameclient.tutorial:UIDrawArrow/instance/draw"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("flash.display"), "Graphics")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            7
+
+      jump                L10
+
+      kill                5
+      coerce_s
+      declocal_i          6
+      inclocal_i          2
+      setlocal            6
+
+      inclocal_i          7
+L10:
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            4
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Vf")
+      ifnlt               L63
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p1_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      subtract
+      getlocal3
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Vf")
+      divide
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            8
+      iftrue              L104
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p1_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      subtract
+      getlocal3
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Vf")
+      divide
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      jump                L75
+
+L63:
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p1_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            8
+      iftrue              L75
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p1_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L75:
+      getlocal2
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "color_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "lineStyle"), 2
+
+      getlocal            8
+      iftrue              L110
+
+      getlocal2
+      getlocal0
+      jump                L91
+
+      pushscope
+
+      nextname
+      declocal            5
+      istypelate
+      istypelate
+      instanceof
+L91:
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveTo"), 2
+
+      getlocal            7
+      dup
+      iftrue              L103
+
+      pop
+      getlocal2
+      convert_b
+L103:
+      iffalse             L110
+
+L104:
+      getlocal2
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "lineTo"), 2
+
+L110:
+      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p0_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0T0"), 2
+      getlocal            7
+      iffalse             L118
+
+      convert_d
+L118:
+      setlocal            5
+
+      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
+      getlocal            4
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      pushbyte            8
+      divide
+      add
+      pushbyte            30
+      callproperty        QName(PackageNamespace("", "#0"), "_-OZ"), 3
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            6
+
+      getlocal            7
+      dup
+      iftrue              L137
+
+      pop
+      getlocal0
+      convert_b
+L137:
+      iffalse             L144
+
+      getlocal2
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "lineTo"), 2
+
+L144:
+      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
+      getlocal            4
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      pushbyte            8
+      divide
+      subtract
+      pushbyte            30
+      callproperty        QName(PackageNamespace("", "#0"), "_-OZ"), 3
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            6
+
+      getlocal            8
+      dup
+      iffalse             L169
+
+      jump                L166
+
+      pushundefined
+      add
+      kill                2
+      getlocal            4
+      istypelate
+      multiply_i
+L166:
+      pop
+      getlocal1
+      convert_b
+L169:
+      iftrue              L183
+
+      getlocal2
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveTo"), 2
+
+      getlocal            7
+      dup
+      iftrue              L182
+
+      pop
+      getlocal2
+      convert_b
+L182:
+      iffalse             L189
+
+L183:
+      getlocal2
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "lineTo"), 2
+
+L189:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.tutorial:UIDrawArrow/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

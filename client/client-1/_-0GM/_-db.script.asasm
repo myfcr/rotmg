@@ -1,0 +1,29 @@
+script ; 1065
+ sinit
+  refid "_-0GM:_-db/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-db", [PackageNamespace("_-0GM")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-0GM:_-db"
+    popscope
+    initproperty        QName(PackageNamespace("_-0GM"), "_-db")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0GM"), "_-db")
+  #include "_-db.class.asasm"
+ end ; trait
+end ; script

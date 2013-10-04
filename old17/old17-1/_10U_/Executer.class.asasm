@@ -1,0 +1,3272 @@
+class
+ refid "_10U_:Executer"
+ instance QName(PackageNamespace("_10U_"), "Executer")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0O_z")
+  iinit
+   refid "_10U_:Executer/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0vr") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0jE_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz") end
+  trait slot QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_") end
+  trait slot QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "_10U_:Executer#0"), "_gb") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "_0T_Z_") type QName(PackageNamespace(""), "Boolean") end
+  trait getter QName(PackageNamespace(""), "returned")
+   method
+    refid "_10U_:Executer/instance/returned/getter"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scope")
+   method
+    refid "_10U_:Executer/instance/scope/getter"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1D_1")
+   method
+    refid "_10U_:Executer/instance/_1D_1"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_W_F_")
+   method
+    refid "_10U_:Executer/instance/_W_F_"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_gb")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "exec")
+   method
+    refid "_10U_:Executer/instance/exec"
+    param null
+    param QName(PackageNamespace(""), "String")
+    flag NEED_ACTIVATION
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0jE_")
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "CommandExec.exec() is already runnnig. Does not support loop backs."
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L19:
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0jE_")
+
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0vr")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+      iftrue              L36
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+
+L36:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_gb")
+      iftrue              L43
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_gb")
+
+L43:
+      getlocal0
+      getscopeobject      1
+      getslot             2
+      callpropvoid        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0E_N_"), 1
+
+L47:
+      jump                L66
+
+L48:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#0"), "reset")
+      callpropvoid        QName(PrivateNamespace("*", "_10U_:Executer#0"), "reset"), 0
+
+      getscopeobject      2
+      getslot             1
+      throw
+      popscope
+      kill                4
+L66:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_10U_:Executer#0"), "reset"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+      returnvalue
+     end ; code
+     try from L43 to L47 target L48 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("_10U_"), "s") slotid 1 end
+     trait slot QName(PackageInternalNs("_10U_"), "str") slotid 2 type QName(PackageNamespace(""), "String") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "reset")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/reset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_gb")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0vr")
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0jE_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0E_N_")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_0E_N_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 16
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      pushnull
+      coerce_s
+      setlocal            10
+
+      pushundefined
+      coerce_a
+      setlocal            11
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "''|\"\"|('(.*?)[^\\\\]')|(\"(.*?)[^\\\\]\")"
+      construct           1
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      jump                L90
+
+L32:
+      label
+      getlocal3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      dup
+      setlocal            6
+
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      coerce_s
+      setlocal            7
+
+      getlocal            6
+      getlocal            7
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal            8
+
+      getlocal            6
+      getlocal            7
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "lastIndexOf"), 1
+      convert_i
+      setlocal            9
+
+      getlocal            6
+      getlocal            8
+      pushbyte            1
+      add
+      getlocal            9
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\\\(.)"
+      pushstring          "g"
+      construct           2
+      pushstring          "$1"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal            10
+
+      getlocal0
+      getlocal1
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getlocal            10
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      getlocal3
+      getproperty         Multiname("index", [PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            8
+      add
+      getlocal3
+      getproperty         Multiname("index", [PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            9
+      add
+      pushbyte            1
+      add
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0U_8"), 4
+      coerce_s
+      setlocal1
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+L90:
+      getlocal3
+      pushnull
+      ifne                L32
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace(""), "RegExp")
+      pushstring          "'|\""
+      constructprop       QName(PackageNamespace(""), "RegExp"), 1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "search"), 1
+      pushbyte            0
+      ifnge               L104
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Bad syntax extra quotation marks"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L104:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\s*;\\s*"
+      construct           1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            12
+
+      getlocal            4
+      coerce_a
+      setlocal            13
+
+      jump                L154
+
+L117:
+      label
+      getlocal            13
+      getlocal            12
+      nextvalue
+      coerce_s
+      dup
+      setlocal            5
+
+      getproperty         QName(PackageNamespace(""), "length")
+      iffalse             L154
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+      getlex              QName(PackageNamespace(""), "_042")
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      dup
+      setlocal            11
+
+      convert_b
+      dup
+      iffalse             L140
+
+      pop
+      getlocal            5
+      pushstring          "/"
+      equals
+L140:
+      iffalse             L151
+
+      getlocal0
+      getlocal            11
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      jump                L154
+
+L151:
+      getlocal0
+      getlocal            5
+      callpropvoid        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0X_6"), 1
+
+L154:
+      hasnext2            13, 12
+      iftrue              L117
+
+      kill                13
+      kill                12
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0X_6")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_0X_6"
+    param QName(PackageNamespace(""), "String")
+    body
+     maxstack 8
+     localcount 18
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushfalse
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushnull
+      coerce_s
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            10
+
+      pushnull
+      coerce_s
+      setlocal            11
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            12
+
+      pushnull
+      coerce_s
+      setlocal            13
+
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "("
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "lastIndexOf"), 1
+      convert_i
+      setlocal2
+
+      jump                L219
+
+L41:
+      label
+      getlocal1
+      pushstring          ")"
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      convert_i
+      setlocal3
+
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\w"
+      construct           1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "search"), 1
+      pushbyte            0
+      ifnge               L212
+
+      getlocal2
+      convert_i
+      setlocal            4
+
+      getlocal2
+      pushbyte            1
+      add
+      convert_i
+      setlocal            5
+
+      jump                L85
+
+L69:
+      label
+      inclocal_i          4
+      getlocal1
+      pushstring          "("
+      getlocal            4
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      convert_i
+      setlocal            4
+
+      getlocal1
+      pushstring          ")"
+      getlocal            5
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      convert_i
+      setlocal            5
+
+L85:
+      getlocal            4
+      pushbyte            0
+      greaterequals
+      dup
+      iffalse             L94
+
+      pop
+      getlocal            4
+      getlocal            5
+      lessthan
+L94:
+      iftrue              L69
+
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      getlocal            5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setlocal            6
+
+      pushfalse
+      setlocal            7
+
+      getlocal2
+      decrement
+      convert_i
+      setlocal            8
+
+      jump                L141
+
+L110:
+      label
+      getlocal1
+      getlocal            8
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      coerce_s
+      dup
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "[^\\s]"
+      construct           1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "match"), 1
+      convert_b
+      dup
+      iftrue              L128
+
+      pop
+      getlocal            8
+      pushbyte            0
+      lessequals
+L128:
+      iffalse             L138
+
+      getlocal            9
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\w"
+      construct           1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "match"), 1
+      iffalse             L137
+
+      pushtrue
+      setlocal            7
+
+L137:
+      jump                L142
+
+L138:
+      getlocal            8
+      decrement_i
+      setlocal            8
+
+L141:
+      jump                L110
+
+L142:
+      getlocal            7
+      iffalse             L189
+
+      getlocal            6
+      pushstring          ","
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            10
+
+      getlocal0
+      getlocal1
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getlocal            10
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      getlocal2
+      pushbyte            1
+      add
+      getlocal            5
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0U_8"), 4
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      setlocal            14
+
+      getlocal            10
+      coerce_a
+      setlocal            15
+
+      jump                L184
+
+L167:
+      label
+      getlocal            15
+      getlocal            14
+      nextname
+      coerce_s
+      setlocal            11
+
+      getlocal            10
+      getlocal            11
+      getlocal0
+      getlocal0
+      getlocal            10
+      getlocal            11
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_18A_"), 1
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L184:
+      hasnext2            15, 14
+      iftrue              L167
+
+      kill                15
+      kill                14
+      jump                L212
+
+L189:
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getlocal            12
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            12
+
+      getlocal0
+      getlocal1
+      getlocal            12
+      getlocal2
+      getlocal            5
+      pushbyte            1
+      add
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0U_8"), 4
+      coerce_s
+      setlocal1
+
+      getlocal            12
+      getlocal0
+      getlocal0
+      getlocal            6
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_18A_"), 1
+      getproperty         QName(PackageNamespace(""), "value")
+      callpropvoid        QName(PackageNamespace(""), "setValue"), 1
+
+L212:
+      getlocal1
+      pushstring          "("
+      getlocal2
+      decrement
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "lastIndexOf"), 2
+      convert_i
+      setlocal2
+
+L219:
+      getlocal2
+      pushbyte            0
+      ifge                L41
+
+      getlocal0
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_18A_"), 1
+      getproperty         QName(PackageNamespace(""), "value")
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+      convert_b
+      dup
+      iffalse             L237
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0T_Z_")
+      convert_b
+L237:
+      iffalse             L256
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+      typeof
+      dup
+      setlocal            13
+
+      pushstring          "object"
+      equals
+      dup
+      iftrue              L251
+
+      pop
+      getlocal            13
+      pushstring          "xml"
+      equals
+L251:
+      iffalse             L256
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+      initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+
+L256:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_V_O_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0U_8")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_0U_8"
+    param QName(PackageNamespace(""), "String")
+    param null
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlex              QName(PrivateNamespace("*", "_10U_:Executer#0"), "_iG_")
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0vr")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      getlocal1
+      getlocal            4
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      add
+      coerce_s
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0vr")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_18A_")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_18A_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+    body
+     maxstack 8
+     localcount 18
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushundefined
+      coerce_a
+      setlocal            8
+
+      pushbyte            0
+      setlocal            11
+
+      pushbyte            0
+      setlocal            12
+
+      pushnull
+      coerce_s
+      setlocal            13
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            14
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            15
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\s*(((\\|\\||\\&\\&|[+|\\-|*|\\/|\\%|\\||\\&|\\^]|\\=\\=?|\\!\\=|\\>\\>?\\>?|\\<\\<?)\\=?)|=|\\~|\\sis\\s|typeof|delete\\s)\\s*"
+      pushstring          "g"
+      construct           2
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      getlocal3
+      pushnull
+      ifne                L42
+
+      getlocal            4
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L103
+
+L42:
+      pushbyte            0
+      setlocal            11
+
+      jump                L100
+
+L45:
+      label
+      getlocal3
+      getproperty         Multiname("index", [PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_i
+      setlocal            12
+
+      getlocal3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      setlocal            13
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifne                L83
+
+      getlocal            4
+      getlocal1
+      getlocal            11
+      getlocal            12
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      getlocal0
+      getlocal            13
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      getlocal1
+      getlocal            12
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L100
+
+L83:
+      getlocal            4
+      getlocal1
+      getlocal            11
+      getlocal            12
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      getlocal0
+      getlocal            13
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            12
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      convert_i
+      setlocal            11
+
+L100:
+      getlocal3
+      pushnull
+      ifne                L45
+
+L103:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L124
+
+L110:
+      label
+      getlocal            4
+      getlocal            6
+      getlocal0
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jj"), 1
+      setproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal            6
+      pushbyte            2
+      add
+      convert_i
+      setlocal            6
+
+L124:
+      getlocal            6
+      getlocal            5
+      iflt                L110
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "((\\|\\||\\&\\&|[+|\\-|*|\\/|\\%|\\||\\&|\\^]|\\>\\>\\>?|\\<\\<)\\=)|="
+      construct           1
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal            9
+
+      pushbyte            1
+      setlocal            6
+
+      jump                L191
+
+L135:
+      label
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      dup
+      setlocal            7
+
+      getlocal            9
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      pushstring          ""
+      ifeq                L186
+
+      getlocal0
+      getlocal            4
+      getlocal            6
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      getlocal            4
+      getlocal            6
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_1M_l"), 3
+      coerce_a
+      setlocal            8
+
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getlocal            4
+      getlocal            6
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      dup
+      setlocal            14
+
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "setValue"), 1
+
+      getlocal            4
+      getlocal            6
+      pushbyte            2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      getlocal            6
+      pushbyte            2
+      subtract
+      convert_i
+      setlocal            6
+
+      getlocal            5
+      pushbyte            2
+      subtract
+      convert_i
+      setlocal            5
+
+L186:
+      getlocal            6
+      pushbyte            2
+      add
+      convert_i
+      setlocal            6
+
+L191:
+      getlocal            6
+      getlocal            5
+      iflt                L135
+
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "reverse"), 0
+
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            10
+
+      pushbyte            1
+      setlocal            6
+
+      jump                L256
+
+L204:
+      label
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      dup
+      setlocal            7
+
+      getlocal            9
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      pushstring          ""
+      ifne                L251
+
+      getlocal            4
+      getlocal            6
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            10
+
+      getlocal            4
+      getlocal            6
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setlocal            15
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifngt               L241
+
+      getlocal            7
+      pushbyte            0
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setlocal            7
+
+L241:
+      getlocal0
+      getlocal            15
+      getlocal            7
+      getlocal            10
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_1M_l"), 3
+      coerce_a
+      setlocal            8
+
+      getlocal            15
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "setValue"), 1
+
+L251:
+      getlocal            6
+      pushbyte            2
+      add
+      convert_i
+      setlocal            6
+
+L256:
+      getlocal            6
+      getlocal            5
+      iflt                L204
+
+      getlocal            10
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jj")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_jj"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+    flag NEED_ACTIVATION
+    body
+     maxstack 8
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             7
+
+      getscopeobject      1
+      pushbyte            0
+      setslot             8
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             9
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             10
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             11
+
+      getscopeobject      1
+      pushfalse
+      setslot             12
+
+      getscopeobject      1
+      pushbyte            0
+      setslot             13
+
+      getscopeobject      1
+      pushfalse
+      setslot             14
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             15
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             16
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             17
+
+      getscopeobject      1
+      pushbyte            0
+      setslot             18
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             19
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             20
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             21
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Namespace")
+      setslot             22
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             23
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             2
+
+      getscopeobject      1
+      getslot             1
+      pushstring          "new "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            0
+      ifne                L140
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      coerce_s
+      setslot             7
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      pushstring          ")"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setslot             8
+
+      getscopeobject      1
+      getslot             8
+      pushbyte            0
+      ifnge               L116
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      pushbyte            0
+      getscopeobject      1
+      getslot             8
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setslot             7
+
+L116:
+      getscopeobject      1
+      getlocal0
+      getscopeobject      1
+      getslot             7
+      pushbyte            4
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_S_p"), 1
+      coerce_a
+      setslot             9
+
+      getscopeobject      1
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getscopeobject      1
+      getslot             9
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      pushbyte            0
+      getscopeobject      1
+      getslot             7
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0U_8"), 4
+      coerce_s
+      setslot             1
+
+L140:
+      getscopeobject      1
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\.|\\("
+      pushstring          "g"
+      construct           2
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setslot             3
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             4
+
+      getscopeobject      1
+      getslot             4
+      pushnull
+      equals
+      dup
+      iftrue              L169
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+L169:
+      iffalse             L177
+
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_"), 2
+      returnvalue
+
+L177:
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getscopeobject      1
+      getslot             1
+      pushstring          "("
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      pushstring          "."
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             5
+
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L280
+
+      jump                L276
+
+L196:
+      label
+      getscopeobject      1
+      getscopeobject      1
+      getslot             5
+      pushstring          "."
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      setslot             10
+
+L204:
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+      getlocal0
+      getscopeobject      1
+      getslot             10
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+      coerce_a
+      setslot             11
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "length")
+      getscopeobject      1
+      getslot             10
+      getproperty         QName(PackageNamespace(""), "length")
+      greaterthan
+      setslot             12
+
+      getscopeobject      1
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getscopeobject      1
+      getslot             11
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 1
+      pushbyte            0
+      getscopeobject      1
+      getslot             10
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0U_8"), 4
+      coerce_s
+      setslot             1
+
+      getscopeobject      1
+      getslot             12
+      iffalse             L253
+
+      getscopeobject      1
+      getslot             3
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "lastIndex")
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             4
+
+      jump                L258
+
+L253:
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_"), 1
+      returnvalue
+
+L258:
+      jump                L280
+
+L259:
+      jump                L276
+
+L260:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      getslot             5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
+
+      popscope
+      kill                3
+L276:
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "length")
+      iftrue              L196
+
+L280:
+      getscopeobject      1
+      pushbyte            0
+      setslot             6
+
+      jump                L546
+
+L284:
+      label
+      getscopeobject      1
+      getscopeobject      1
+      getslot             4
+      getproperty         Multiname("index", [PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_i
+      setslot             13
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             13
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "("
+      equals
+      setslot             14
+
+      getscopeobject      1
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             6
+      getscopeobject      1
+      getslot             13
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      coerce_s
+      setslot             15
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             6
+      pushbyte            0
+      equals
+      iffalse             L327
+
+      getlocal0
+      getscopeobject      1
+      getslot             15
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace(""), "value")
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_"), 2
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      jump                L335
+
+L327:
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace(""), "value")
+      getscopeobject      1
+      getslot             15
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 2
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+L335:
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             16
+
+      getscopeobject      1
+      getslot             14
+      iffalse             L492
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             16
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce_a
+      setslot             17
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      pushstring          ")"
+      getscopeobject      1
+      getslot             13
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      convert_i
+      setslot             18
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             13
+      pushbyte            1
+      add
+      getscopeobject      1
+      getslot             18
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setslot             19
+
+      getscopeobject      1
+      getlocal0
+      getscopeobject      1
+      getslot             19
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      coerce_s
+      setslot             19
+
+      getscopeobject      1
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             20
+
+      getscopeobject      1
+      getslot             19
+      iffalse             L389
+
+      getscopeobject      1
+      getlocal0
+      getscopeobject      1
+      getslot             19
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_"), 1
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             20
+
+L389:
+      getscopeobject      1
+      getslot             17
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+      iftrue              L467
+
+L394:
+      getscopeobject      1
+      getlex              QName(PackageNamespace(""), "AS3")
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             21
+
+      pushbyte            0
+      setlocal3
+
+      getscopeobject      1
+      getslot             21
+      coerce_a
+      setlocal            4
+
+      jump                L437
+
+L406:
+      label
+      getscopeobject      1
+      getlocal            4
+      getlocal3
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Namespace")
+      setslot             22
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace(""), "obj")
+      getscopeobject      1
+      getslot             22
+      coerce              QName(PackageNamespace(""), "Namespace")
+      getscopeobject      1
+      getslot             15
+      convert_s
+      getproperty         RTQNameL()
+      coerce_a
+      setslot             23
+
+      getscopeobject      1
+      getslot             23
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+      iffalse             L437
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             23
+      coerce_a
+      setslot             17
+
+      jump                L439
+
+L437:
+      hasnext2            4, 3
+      iftrue              L406
+
+L439:
+      kill                4
+      kill                3
+L441:
+      jump                L455
+
+L442:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L455:
+      getscopeobject      1
+      getslot             17
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+      iftrue              L467
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      getscopeobject      1
+      getslot             15
+      pushstring          " is not a function."
+      add
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L467:
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             17
+      getlex              QName(PackageNamespace(""), "Function")
+      astypelate
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace(""), "value")
+      getscopeobject      1
+      getslot             20
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      getscopeobject      1
+      getslot             2
+      pushnull
+      setproperty         QName(PackageNamespace(""), "prop")
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             18
+      pushbyte            1
+      add
+      convert_i
+      setslot             13
+
+      jump                L497
+
+L492:
+      getscopeobject      1
+      getscopeobject      1
+      getslot             16
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             2
+
+L497:
+      getscopeobject      1
+      getscopeobject      1
+      getslot             13
+      pushbyte            1
+      add
+      convert_i
+      setslot             6
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             13
+      pushbyte            1
+      add
+      setproperty         QName(PackageNamespace(""), "lastIndex")
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             4
+
+      getscopeobject      1
+      getslot             4
+      pushnull
+      ifeq                L524
+
+      jump                L546
+
+L524:
+      getscopeobject      1
+      getslot             13
+      pushbyte            1
+      add
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "length")
+      ifnlt               L546
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "length")
+      setproperty         QName(PackageNamespace(""), "lastIndex")
+
+      getscopeobject      1
+      pushstring          "index"
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "length")
+      newobject           1
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             4
+
+L546:
+      getscopeobject      1
+      getslot             4
+      pushnull
+      ifne                L284
+
+      getscopeobject      1
+      getslot             2
+      returnvalue
+     end ; code
+     try from L204 to L259 target L260 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L394 to L441 target L442 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("_10U_"), "str") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_10U_"), "v") slotid 2 type QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue") end
+     trait slot QName(PackageInternalNs("_10U_"), "reg") slotid 3 type QName(PackageNamespace(""), "RegExp") end
+     trait slot QName(PackageInternalNs("_10U_"), "result") slotid 4 type QName(PackageNamespace(""), "Object") end
+     trait slot QName(PackageInternalNs("_10U_"), "firstparts") slotid 5 type QName(PackageNamespace(""), "Array") end
+     trait slot QName(PackageInternalNs("_10U_"), "previndex") slotid 6 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs("_10U_"), "newstr") slotid 7 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_10U_"), "defclose") slotid 8 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs("_10U_"), "newobj") slotid 9 end
+     trait slot QName(PackageInternalNs("_10U_"), "classstr") slotid 10 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_10U_"), "def") slotid 11 end
+     trait slot QName(PackageInternalNs("_10U_"), "havemore") slotid 12 type QName(PackageNamespace(""), "Boolean") end
+     trait slot QName(PackageInternalNs("_10U_"), "index") slotid 13 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs("_10U_"), "isFun") slotid 14 type QName(PackageNamespace(""), "Boolean") end
+     trait slot QName(PackageInternalNs("_10U_"), "basestr") slotid 15 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_10U_"), "newv") slotid 16 type QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue") end
+     trait slot QName(PackageInternalNs("_10U_"), "newbase") slotid 17 end
+     trait slot QName(PackageInternalNs("_10U_"), "closeindex") slotid 18 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs("_10U_"), "paramstr") slotid 19 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_10U_"), "params") slotid 20 type QName(PackageNamespace(""), "Array") end
+     trait slot QName(PackageInternalNs("_10U_"), "nss") slotid 21 type QName(PackageNamespace(""), "Array") end
+     trait slot QName(PackageInternalNs("_10U_"), "ns") slotid 22 type QName(PackageNamespace(""), "Namespace") end
+     trait slot QName(PackageInternalNs("_10U_"), "nsv") slotid 23 end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_W_G_"
+    param QName(PackageNamespace(""), "String")
+    param null
+    returns QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+    flag NEED_ACTIVATION
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             3
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             4
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             5
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getscopeobject      1
+      findpropstrict      QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      constructprop       QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue"), 0
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             3
+
+      getscopeobject      1
+      getslot             1
+      pushstring          "true"
+      ifne                L38
+
+      getscopeobject      1
+      getslot             3
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L192
+
+L38:
+      getscopeobject      1
+      getslot             1
+      pushstring          "false"
+      ifne                L47
+
+      getscopeobject      1
+      getslot             3
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L192
+
+L47:
+      getscopeobject      1
+      getslot             1
+      pushstring          "this"
+      ifne                L57
+
+      getscopeobject      1
+      getslot             3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_jz")
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L192
+
+L57:
+      getscopeobject      1
+      getslot             1
+      pushstring          "null"
+      ifne                L66
+
+      getscopeobject      1
+      getslot             3
+      pushnull
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L192
+
+L66:
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L81
+
+      getscopeobject      1
+      getslot             3
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L192
+
+L81:
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PrivateNamespace("*", "_10U_:Executer#0"), "_iG_")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            0
+      ifne                L105
+
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0vr")
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PrivateNamespace("*", "_10U_:Executer#0"), "_iG_")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+      setslot             4
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             4
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L192
+
+L105:
+      getscopeobject      1
+      getslot             1
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "$"
+      ifne                L161
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      coerce_s
+      setslot             5
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_gb")
+      getscopeobject      1
+      getslot             5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            0
+      ifnlt               L136
+
+      getscopeobject      1
+      getslot             3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             5
+      setproperty         QName(PackageNamespace(""), "prop")
+
+      jump                L160
+
+L136:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+      getlex              QName(PackageNamespace("_9M_"), "_00n")
+      istypelate
+      iffalse             L152
+
+      getscopeobject      1
+      getslot             3
+      findpropstrict      QName(PackageNamespace("_9M_"), "_00n")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+      callproperty        QName(PackageNamespace("_9M_"), "_00n"), 1
+      getscopeobject      1
+      getslot             5
+      callproperty        QName(PackageNamespace(""), "_get"), 1
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      jump                L160
+
+L152:
+      getscopeobject      1
+      getslot             3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10U_:Executer#0"), "_0e")
+      getscopeobject      1
+      getslot             5
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         QName(PackageNamespace(""), "obj")
+
+L160:
+      jump                L192
+
+L161:
+      getscopeobject      1
+      getslot             3
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+      setproperty         QName(PackageNamespace(""), "obj")
+
+L168:
+      jump                L192
+
+L169:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             2
+      setproperty         QName(PackageNamespace(""), "obj")
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             1
+      setproperty         QName(PackageNamespace(""), "prop")
+
+      popscope
+      kill                4
+L192:
+      getscopeobject      1
+      getslot             3
+      returnvalue
+     end ; code
+     try from L161 to L168 target L169 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("_10U_"), "str") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_10U_"), "base") slotid 2 value Null() end
+     trait slot QName(PackageInternalNs("_10U_"), "v") slotid 3 type QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue") end
+     trait slot QName(PackageInternalNs("_10U_"), "vv") slotid 4 type QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue") end
+     trait slot QName(PackageInternalNs("_10U_"), "key") slotid 5 type QName(PackageNamespace(""), "String") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_1M_l")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_1M_l"
+    param QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+    param QName(PackageNamespace(""), "String")
+    param QName(PrivateNamespace("*", "_10U_:Executer#1"), "ExeValue")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      jump                L195
+
+L3:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      returnvalue
+
+L7:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      add
+      returnvalue
+
+L14:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      subtract
+      returnvalue
+
+L21:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      multiply
+      returnvalue
+
+L28:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      divide
+      returnvalue
+
+L35:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      modulo
+      returnvalue
+
+L42:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      bitxor
+      returnvalue
+
+L49:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      bitand
+      returnvalue
+
+L56:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      rshift
+      returnvalue
+
+L63:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      urshift
+      returnvalue
+
+L70:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      lshift
+      returnvalue
+
+L77:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      bitnot
+      returnvalue
+
+L82:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      bitor
+      returnvalue
+
+L89:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      not
+      returnvalue
+
+L94:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      greaterthan
+      returnvalue
+
+L101:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      greaterequals
+      returnvalue
+
+L108:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      lessthan
+      returnvalue
+
+L115:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      lessequals
+      returnvalue
+
+L122:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce_a
+      dup
+      iftrue              L132
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce_a
+L132:
+      returnvalue
+
+L133:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce_a
+      dup
+      iffalse             L143
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce_a
+L143:
+      returnvalue
+
+L144:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      istypelate
+      returnvalue
+
+L151:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      typeof
+      returnvalue
+
+L156:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "obj")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "prop")
+      deleteproperty      MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L163:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      equals
+      returnvalue
+
+L170:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      strictequals
+      returnvalue
+
+L177:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      equals
+      not
+      returnvalue
+
+L185:
+      label
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      strictequals
+      not
+      returnvalue
+
+L193:
+      label
+      jump                L338
+
+L195:
+      getlocal2
+      setlocal            4
+
+      pushstring          "="
+      getlocal            4
+      ifstrictne          L202
+
+      pushbyte            0
+      jump                L336
+
+L202:
+      pushstring          "+"
+      getlocal            4
+      ifstrictne          L207
+
+      pushbyte            1
+      jump                L336
+
+L207:
+      pushstring          "-"
+      getlocal            4
+      ifstrictne          L212
+
+      pushbyte            2
+      jump                L336
+
+L212:
+      pushstring          "*"
+      getlocal            4
+      ifstrictne          L217
+
+      pushbyte            3
+      jump                L336
+
+L217:
+      pushstring          "/"
+      getlocal            4
+      ifstrictne          L222
+
+      pushbyte            4
+      jump                L336
+
+L222:
+      pushstring          "%"
+      getlocal            4
+      ifstrictne          L227
+
+      pushbyte            5
+      jump                L336
+
+L227:
+      pushstring          "^"
+      getlocal            4
+      ifstrictne          L232
+
+      pushbyte            6
+      jump                L336
+
+L232:
+      pushstring          "&"
+      getlocal            4
+      ifstrictne          L237
+
+      pushbyte            7
+      jump                L336
+
+L237:
+      pushstring          ">>"
+      getlocal            4
+      ifstrictne          L242
+
+      pushbyte            8
+      jump                L336
+
+L242:
+      pushstring          ">>>"
+      getlocal            4
+      ifstrictne          L247
+
+      pushbyte            9
+      jump                L336
+
+L247:
+      pushstring          "<<"
+      getlocal            4
+      ifstrictne          L252
+
+      pushbyte            10
+      jump                L336
+
+L252:
+      pushstring          "~"
+      getlocal            4
+      ifstrictne          L257
+
+      pushbyte            11
+      jump                L336
+
+L257:
+      pushstring          "|"
+      getlocal            4
+      ifstrictne          L262
+
+      pushbyte            12
+      jump                L336
+
+L262:
+      pushstring          "!"
+      getlocal            4
+      ifstrictne          L267
+
+      pushbyte            13
+      jump                L336
+
+L267:
+      pushstring          ">"
+      getlocal            4
+      ifstrictne          L272
+
+      pushbyte            14
+      jump                L336
+
+L272:
+      pushstring          ">="
+      getlocal            4
+      ifstrictne          L277
+
+      pushbyte            15
+      jump                L336
+
+L277:
+      pushstring          "<"
+      getlocal            4
+      ifstrictne          L282
+
+      pushbyte            16
+      jump                L336
+
+L282:
+      pushstring          "<="
+      getlocal            4
+      ifstrictne          L287
+
+      pushbyte            17
+      jump                L336
+
+L287:
+      pushstring          "||"
+      getlocal            4
+      ifstrictne          L292
+
+      pushbyte            18
+      jump                L336
+
+L292:
+      pushstring          "&&"
+      getlocal            4
+      ifstrictne          L297
+
+      pushbyte            19
+      jump                L336
+
+L297:
+      pushstring          "is"
+      getlocal            4
+      ifstrictne          L302
+
+      pushbyte            20
+      jump                L336
+
+L302:
+      pushstring          "typeof"
+      getlocal            4
+      ifstrictne          L307
+
+      pushbyte            21
+      jump                L336
+
+L307:
+      pushstring          "delete"
+      getlocal            4
+      ifstrictne          L312
+
+      pushbyte            22
+      jump                L336
+
+L312:
+      pushstring          "=="
+      getlocal            4
+      ifstrictne          L317
+
+      pushbyte            23
+      jump                L336
+
+L317:
+      pushstring          "==="
+      getlocal            4
+      ifstrictne          L322
+
+      pushbyte            24
+      jump                L336
+
+L322:
+      pushstring          "!="
+      getlocal            4
+      ifstrictne          L327
+
+      pushbyte            25
+      jump                L336
+
+L327:
+      pushstring          "!=="
+      getlocal            4
+      ifstrictne          L332
+
+      pushbyte            26
+      jump                L336
+
+L332:
+      jump                L335
+
+      pushbyte            27
+      jump                L336
+
+L335:
+      pushbyte            27
+L336:
+      kill                4
+      lookupswitch        L193, [L3, L7, L14, L21, L28, L35, L42, L49, L56, L63, L70, L77, L82, L89, L94, L101, L108, L115, L122, L133, L144, L151, L156, L163, L170, L177, L185, L193]
+
+L338:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_S_p")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_S_p"
+    param QName(PackageNamespace(""), "String")
+    body
+     maxstack 14
+     localcount 11
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      getlocal1
+      pushstring          "("
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      greaterthan
+      iffalse             L27
+
+      getlocal1
+      pushbyte            0
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      jump                L29
+
+L27:
+      getlocal1
+      coerce_s
+L29:
+      coerce_s
+      setlocal3
+
+      getlocal0
+      getlocal3
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      coerce_s
+      setlocal3
+
+      getlocal0
+      getlocal3
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_"), 1
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce_a
+      setlocal            4
+
+      getlocal2
+      pushbyte            0
+      ifngt               L314
+
+      getlocal1
+      pushstring          ")"
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      convert_i
+      setlocal            5
+
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      getlocal            5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setlocal            6
+
+      getlocal0
+      getlocal            6
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf"), 1
+      coerce_s
+      setlocal            6
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            7
+
+      getlocal            6
+      iffalse             L75
+
+      getlocal0
+      getlocal            6
+      callproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_W_G_"), 1
+      getproperty         QName(PackageNamespace(""), "value")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            7
+
+L75:
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      dup
+      setlocal            8
+
+      pushbyte            0
+      ifne                L85
+
+      getlocal            4
+      construct           0
+      returnvalue
+
+L85:
+      getlocal            8
+      pushbyte            1
+      ifne                L94
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           1
+      returnvalue
+
+L94:
+      getlocal            8
+      pushbyte            2
+      ifne                L106
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           2
+      returnvalue
+
+L106:
+      getlocal            8
+      pushbyte            3
+      ifne                L121
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           3
+      returnvalue
+
+L121:
+      getlocal            8
+      pushbyte            4
+      ifne                L139
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           4
+      returnvalue
+
+L139:
+      getlocal            8
+      pushbyte            5
+      ifne                L160
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           5
+      returnvalue
+
+L160:
+      getlocal            8
+      pushbyte            6
+      ifne                L184
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           6
+      returnvalue
+
+L184:
+      getlocal            8
+      pushbyte            7
+      ifne                L211
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           7
+      returnvalue
+
+L211:
+      getlocal            8
+      pushbyte            8
+      ifne                L241
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            7
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           8
+      returnvalue
+
+L241:
+      getlocal            8
+      pushbyte            9
+      ifne                L274
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            7
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            8
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           9
+      returnvalue
+
+L274:
+      getlocal            8
+      pushbyte            10
+      ifne                L310
+
+      getlocal            4
+      getlocal            7
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            6
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            7
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            8
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            7
+      pushbyte            9
+      getproperty         MultinameL([PrivateNamespace("*", "_10U_:Executer#0"), PackageNamespace(""), PackageNamespace("_10U_"), PackageInternalNs("_10U_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_10U_:Executer#1"), ProtectedNamespace("_0O_z"), StaticProtectedNs("_0O_z"), StaticProtectedNs("flash.events:EventDispatcher")])
+      construct           10
+      returnvalue
+
+L310:
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "CommandLine can't create new class instances with more than 10 arguments."
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L314:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10U_:Executer#0"), "_sf")
+   method
+    refid "_10U_:Executer/instance/_10U_:Executer/_sf"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\s*(.*)"
+      construct           1
+      pushstring          "$1"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal2
+
+      jump                L36
+
+L16:
+      label
+      getlocal1
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "\\s"
+      construct           1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "match"), 1
+      iffalse             L32
+
+      getlocal1
+      pushbyte            0
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setlocal1
+
+      jump                L33
+
+L32:
+      jump                L39
+
+L33:
+      getlocal2
+      decrement_i
+      setlocal2
+
+L36:
+      getlocal2
+      pushbyte            0
+      ifgt                L16
+
+L39:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_10U_:Executer/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_042")
+    pushstring          "returned"
+    initproperty        QName(PackageNamespace(""), "_042")
+
+    findproperty        QName(PackageNamespace(""), "_0tn")
+    pushstring          "ExeValue|((com.junkbyte.console.core::)?Executer)"
+    initproperty        QName(PackageNamespace(""), "_0tn")
+
+    findproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_iG_")
+    pushstring          "#"
+    initproperty        QName(PrivateNamespace("*", "_10U_:Executer#0"), "_iG_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_042") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("returned") end
+ trait const QName(PackageNamespace(""), "_0tn") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("ExeValue|((com.junkbyte.console.core::)?Executer)") end
+ trait method QName(PackageNamespace(""), "_P_X_") flag FINAL dispid 3
+  method
+   refid "_10U_:Executer/class/_P_X_"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     construct           0
+     coerce              QName(PackageNamespace("_10U_"), "Executer")
+     dup
+     setlocal            4
+
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "_1D_1"), 1
+
+     getlocal            4
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "exec"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait const QName(PrivateNamespace("*", "_10U_:Executer#0"), "_iG_") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("#") end
+end ; class

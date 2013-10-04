@@ -1,0 +1,694 @@
+class
+ refid "_V_C_:_0b5"
+ instance QName(PackageNamespace("_V_C_"), "_0b5")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_08O_")
+  iinit
+   refid "_V_C_:_0b5/instance/init"
+   param QName(PackageNamespace("_V_C_"), "_06z")
+   param QName(PackageNamespace("_V_C_"), "_0b5")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     not
+     dup
+     iffalse             L11
+
+     pop
+     getlocal2
+     not
+L11:
+     iffalse             L22
+
+     getlex              QName(PackageNamespace(""), "NIL")
+     iffalse             L18
+
+     findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+     pushstring          "Parameters head and tail are null. Use the NIL element instead."
+     constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+     throw
+L18:
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "nonEmpty")
+
+     jump                L43
+
+L22:
+     getlocal1
+     iftrue              L28
+
+     findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+     pushstring          "Parameter head cannot be null."
+     constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+     throw
+L28:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_0ng")
+
+     getlocal0
+     getlocal2
+     coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+     dup
+     iftrue              L39
+
+     pop
+     getlex              QName(PackageNamespace(""), "NIL")
+     coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+L39:
+     initproperty        QName(PackageNamespace(""), "_1dW_")
+
+     getlocal0
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "nonEmpty")
+
+L43:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_0ng") type QName(PackageNamespace("_V_C_"), "_06z") end
+  trait slot QName(PackageNamespace(""), "_1dW_") type QName(PackageNamespace("_V_C_"), "_0b5") end
+  trait slot QName(PackageNamespace(""), "nonEmpty") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait getter QName(PackageNamespace(""), "length")
+   method
+    refid "_V_C_:_0b5/instance/length/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L7
+
+      pushbyte            0
+      returnvalue
+
+L7:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      getlex              QName(PackageNamespace(""), "NIL")
+      ifne                L13
+
+      pushbyte            1
+      returnvalue
+
+L13:
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlocal0
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+      jump                L29
+
+L20:
+      label
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+L29:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L20
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "prepend")
+   method
+    refid "_V_C_:_0b5/instance/prepend"
+    param QName(PackageNamespace("_V_C_"), "_06z")
+    returns QName(PackageNamespace("_V_C_"), "_0b5")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "append")
+   method
+    refid "_V_C_:_0b5/instance/append"
+    param QName(PackageNamespace("_V_C_"), "_06z")
+    returns QName(PackageNamespace("_V_C_"), "_0b5")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L6
+
+      getlocal0
+      returnvalue
+
+L6:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L13
+
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal1
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      returnvalue
+
+L13:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      getlex              QName(PackageNamespace(""), "NIL")
+      ifne                L24
+
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal1
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      returnvalue
+
+L24:
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+      getlocal2
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            4
+
+      jump                L55
+
+L38:
+      label
+      getlocal3
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      dup
+      setlocal            5
+
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal            5
+      kill                5
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            4
+
+L55:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L38
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal1
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "insertWithPriority")
+   method
+    refid "_V_C_:_0b5/instance/insertWithPriority"
+    param QName(PackageNamespace("_V_C_"), "_06z")
+    returns QName(PackageNamespace("_V_C_"), "_0b5")
+    body
+     maxstack 5
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L9
+
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal1
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      returnvalue
+
+L9:
+      getlocal1
+      getproperty         QName(Namespace("_1Z_w"), "priority")
+      convert_i
+      setlocal2
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getproperty         QName(Namespace("_1Z_w"), "priority")
+      ifngt               L22
+
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      returnvalue
+
+L22:
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+      getlocal3
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            5
+
+      jump                L65
+
+L36:
+      label
+      getlocal2
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getproperty         QName(Namespace("_1Z_w"), "priority")
+      ifngt               L49
+
+      getlocal            4
+      getlocal            5
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "prepend"), 1
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal3
+      returnvalue
+
+L49:
+      getlocal            4
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      dup
+      setlocal            6
+
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal            6
+      kill                6
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            4
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            5
+
+L65:
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L36
+
+      getlocal            4
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal1
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1O_I_")
+   method
+    refid "_V_C_:_0b5/instance/_1O_I_"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("_V_C_"), "_0b5")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      not
+      dup
+      iftrue              L11
+
+      pop
+      getlocal1
+      pushnull
+      equals
+L11:
+      iffalse             L14
+
+      getlocal0
+      returnvalue
+
+L14:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getproperty         QName(Namespace("_1Z_w"), "listener")
+      ifne                L22
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      returnvalue
+
+L22:
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+      getlocal2
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            4
+
+      jump                L64
+
+L36:
+      label
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getproperty         QName(Namespace("_1Z_w"), "listener")
+      getlocal1
+      ifne                L48
+
+      getlocal3
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal2
+      returnvalue
+
+L48:
+      getlocal3
+      findpropstrict      QName(PackageNamespace("_V_C_"), "_0b5")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      constructprop       QName(PackageNamespace("_V_C_"), "_0b5"), 1
+      dup
+      setlocal            5
+
+      setproperty         QName(PackageNamespace(""), "_1dW_")
+
+      getlocal            5
+      kill                5
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal            4
+
+L64:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L36
+
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "contains")
+   method
+    refid "_V_C_:_0b5/instance/contains"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L7
+
+      pushfalse
+      returnvalue
+
+L7:
+      getlocal0
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+      jump                L23
+
+L11:
+      label
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getproperty         QName(Namespace("_1Z_w"), "listener")
+      getlocal1
+      ifne                L19
+
+      pushtrue
+      returnvalue
+
+L19:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+L23:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L11
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "find")
+   method
+    refid "_V_C_:_0b5/instance/find"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace("_V_C_"), "_06z")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L7
+
+      pushnull
+      returnvalue
+
+L7:
+      getlocal0
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+      jump                L24
+
+L11:
+      label
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getproperty         QName(Namespace("_1Z_w"), "listener")
+      getlocal1
+      ifne                L20
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      returnvalue
+
+L20:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+L24:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L11
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_V_C_:_0b5/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal1
+
+      getlocal0
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+      jump                L21
+
+L8:
+      label
+      getlocal1
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      pushstring          " -> "
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal2
+
+L21:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L8
+
+      getlocal1
+      pushstring          "NIL"
+      add
+      setlocal1
+
+      pushstring          "[List "
+      getlocal1
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_V_C_:_0b5/class/init"
+  body
+   maxstack 6
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "NIL")
+    getlocal0
+    pushnull
+    pushnull
+    construct           2
+    initproperty        QName(PackageNamespace(""), "NIL")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "NIL") slotid 1 type QName(PackageNamespace("_V_C_"), "_0b5") end
+end ; class

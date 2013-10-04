@@ -1,0 +1,146 @@
+class
+ refid "com.company.assembleegameclient.objects:ArenaPortal"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "ArenaPortal")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "Portal")
+  implements Multiname("_145", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0dB_")
+  iinit
+   refid "com.company.assembleegameclient.objects:ArenaPortal/instance/init"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     findproperty        QName(PackageNamespace(""), "_V_r")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "_V_r")
+
+     findproperty        QName(PackageNamespace(""), "name_")
+     pushstring          ""
+     initproperty        QName(PackageNamespace(""), "name_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "getPanel") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ArenaPortal/instance/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_06u"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_06u"), "ArenaPortalPanel")
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("_06u"), "ArenaPortalPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ArenaPortal/instance/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsupervoid       QName(PackageNamespace(""), "draw"), 3
+      findpropstrict      QName(PackageNamespace(""), "_zU_")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "_zU_"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_0dB_"), "makeNameBitmapData") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ArenaPortal/instance/_0dB_:makeNameBitmapData"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_0N_k")
+      getlex              QName(PackageNamespace(""), "name_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_0N_k"), 1
+      coerce              QName(PackageNamespace("_1X_w"), "_super")
+      setlocal1
+
+      getlex              QName(PackageNamespace("_1W_I_"), "_05")
+      callproperty        QName(PackageNamespace(""), "_07D_"), 0
+      getlex              QName(PackageNamespace("_1j9"), "_0oA_")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace("_1j9"), "_0oA_")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      pushbyte            16
+      pushint             16777215
+      pushtrue
+      getlex              QName(StaticProtectedNs("_E_j"), "_D_L_")
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "make"), 6
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:ArenaPortal/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,25 @@
+script ; 10
+ sinit
+  refid "_1G_e:_1C_p/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_1C_p", [PackageNamespace("_1G_e")])
+    pushnull
+    newclass            "_1G_e:_1C_p"
+    initproperty        QName(PackageNamespace("_1G_e"), "_1C_p")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_1G_e"), "_1C_p")
+  #include "_1C_p.class.asasm"
+ end ; trait
+end ; script

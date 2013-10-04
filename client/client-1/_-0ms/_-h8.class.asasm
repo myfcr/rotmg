@@ -1,0 +1,224 @@
+class
+ refid "_-0ms:_-h8"
+ instance QName(PackageNamespace("_-0ms"), "_-h8")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1lU")
+  iinit
+   refid "_-0ms:_-h8/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     astypelate
+     getlocal3
+     coerce_s
+     modulo
+     pushnull
+     bitnot
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     pushnull
+     multiply_i
+     multiply
+     getlocal3
+     dxnslate
+     convert_b
+L20:
+     getlocal1
+     dup
+     iftrue              L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iffalse             L38
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0ms"), "_-qX")
+     constructprop       QName(PackageNamespace("_-0ms"), "_-qX"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-1Po")
+
+     getlocal1
+     dup
+     iftrue              L37
+
+     pop
+     getlocal2
+     convert_b
+L37:
+     iffalse             L40
+
+L38:
+     getlocal0
+     constructsuper      0
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "objectType_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1Po") type QName(PackageNamespace("_-0ms"), "_-qX") end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput")
+   method
+    refid "_-0ms:_-h8/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      negate_i
+      rshift
+      declocal_i          2
+      inclocal            2
+      getlocal2
+      lessequals
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L22
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "objectType_")
+
+      getlocal2
+      iftrue              L26
+
+L22:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Po")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "parseFromInput"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-0ms:_-h8/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      subtract_i
+      multiply_i
+      multiply_i
+      astypelate
+      instanceof
+      strictequals
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "objectType_: "
+      getlocal1
+      iffalse             L42
+
+      jump                L23
+
+      nextname
+      add_i
+      multiply_i
+      lshift
+      pushnull
+      bitand
+L23:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "objectType_")
+      add
+      getlocal2
+      dup
+      iffalse             L32
+
+      pop
+      getlocal0
+      convert_b
+L32:
+      iftrue              L42
+
+      pushstring          " status_: "
+      add
+      getlocal2
+      dup
+      iffalse             L41
+
+      pop
+      getlocal1
+      convert_b
+L41:
+      iftrue              L45
+
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Po")
+      add
+L45:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0ms:_-h8/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

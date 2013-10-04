@@ -1,0 +1,250 @@
+class
+ refid "_0fZ_:StarBackground"
+ instance QName(PackageNamespace("_0fZ_"), "StarBackground")
+  extends QName(PackageNamespace("_0fZ_"), "Background")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0B_e")
+  iinit
+   refid "_0fZ_:StarBackground/instance/init"
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_0fZ_:StarBackground/instance"), PrivateNamespace("*", "_0fZ_:StarBackground"), PackageNamespace(""), PackageNamespace("_0fZ_"), PackageInternalNs("_0fZ_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0B_e"), StaticProtectedNs("_0B_e"), StaticProtectedNs("_N_v"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "_3g")
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_0fZ_:StarBackground/instance"), PrivateNamespace("*", "_0fZ_:StarBackground"), PackageNamespace(""), PackageNamespace("_0fZ_"), PackageInternalNs("_0fZ_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0B_e"), StaticProtectedNs("_0B_e"), StaticProtectedNs("_N_v"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     construct           0
+     initproperty        QName(ProtectedNamespace("_0B_e"), "graphicsData_")
+
+     getlocal0
+     constructsuper      0
+
+     pushbyte            0
+     setlocal1
+
+     jump                L23
+
+L19:
+     label
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_0fZ_:StarBackground/instance"), "_0L_E_"), 0
+
+     inclocal_i          1
+L23:
+     getlocal1
+     pushbyte            100
+     iflt                L19
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_3g") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")>) end
+  trait slot QName(ProtectedNamespace("_0B_e"), "graphicsData_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "_0fZ_:StarBackground/instance/draw"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_0B_e"), "graphicsData_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "length")
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_3g")
+      coerce_a
+      setlocal            5
+
+      jump                L28
+
+L16:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+      setlocal3
+
+      getlocal3
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_0B_e"), "graphicsData_")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "draw"), 3
+
+L28:
+      hasnext2            5, 4
+      iftrue              L16
+
+      kill                5
+      kill                4
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_0B_e"), "graphicsData_")
+      callpropvoid        QName(PackageNamespace(""), "drawGraphicsData"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0fZ_:StarBackground/instance"), "_0L_E_")
+   method
+    refid "_0fZ_:StarBackground/instance/_0fZ_:StarBackground/instance/_0L_E_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 8
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+      setlocal3
+
+      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+      pushstring          "stars"
+      callproperty        QName(PackageNamespace(""), "_0M_A_"), 1
+      coerce              QName(PackageNamespace("com.company.util"), "_0O_J_")
+      setlocal1
+
+      findpropstrict      QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      pushshort           1000
+      multiply
+      pushshort           500
+      subtract
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      pushshort           1000
+      multiply
+      pushshort           500
+      subtract
+      pushbyte            4
+      pushdouble          0.5
+      pushdouble          0.5
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      multiply
+      add
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_R_c")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_R_c")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      multiply
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "_0fZ_:StarBackground/instance"), PrivateNamespace("*", "_0fZ_:StarBackground"), PackageNamespace(""), PackageNamespace("_0fZ_"), PackageInternalNs("_0fZ_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0B_e"), StaticProtectedNs("_0B_e"), StaticProtectedNs("_N_v"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star"), 4
+      coerce              QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_3g")
+      coerce_a
+      setlocal            5
+
+      jump                L71
+
+L52:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_0fZ_:StarBackground"), "Star")
+      setlocal3
+
+      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y_")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y_")
+      callproperty        QName(PackageNamespace(""), "_U_1"), 4
+      pushbyte            3
+      ifnlt               L71
+
+      returnvoid
+
+L71:
+      hasnext2            5, 4
+      iftrue              L52
+
+      kill                5
+      kill                4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_3g")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0fZ_:StarBackground/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

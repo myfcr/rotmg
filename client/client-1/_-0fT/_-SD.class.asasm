@@ -1,0 +1,163 @@
+class
+ refid "_-0fT:_-SD"
+ instance QName(PackageNamespace("_-0fT"), "_-SD")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1G7")
+  iinit
+   refid "_-0fT:_-SD/instance/init"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     setlocal2
+
+     declocal            3
+     declocal            2
+     hasnext
+     declocal            2
+     declocal_i          3
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L27
+
+     getlocal0
+     getlocal1
+     pushtrue
+     pushtrue
+     constructsuper      3
+
+     getlocal3
+     iffalse             L30
+
+L27:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-0fT:_-SD/instance"), "_-C-")
+
+L30:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0fT:_-SD/instance"), "_-C-") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait getter QName(PackageNamespace("", "#0"), "view")
+   method
+    refid "_-0fT:_-SD/instance/view/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0fT:_-SD/instance"), "_-C-")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "_-0fT:_-SD/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0fT"), "_-SD")
+      jump                L10
+
+      pop
+      pushfalse
+      subtract
+      increment
+      hasnext
+      pushnan
+L10:
+      getlex              QName(PackageNamespace("", "#0"), "type")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0fT:_-SD/instance"), "_-C-")
+      constructprop       QName(PackageNamespace("_-0fT"), "_-SD"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0fT:_-SD/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    greaterequals
+    typeof
+    setlocal2
+
+    greaterequals
+    convert_d
+    strictequals
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L19
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-Eq")
+    pushstring          "configureView"
+    initproperty        QName(PackageNamespace("", "#0"), "_-Eq")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-Eq") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("configureView") end
+end ; class

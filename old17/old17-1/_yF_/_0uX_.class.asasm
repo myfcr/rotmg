@@ -1,0 +1,221 @@
+class
+ refid "_yF_:_0uX_"
+ instance QName(PackageNamespace("_yF_"), "_0uX_")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  implements Multiname("_1D_r", [PackageNamespace("_0lk")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1g6")
+  iinit
+   refid "_yF_:_0uX_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_12F_") flag METADATA type QName(PackageNamespace("_0O_c"), "_0O_a")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "data") flag METADATA type QName(PackageNamespace("_04t"), "_1A_k")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_13m") flag METADATA type QName(PackageNamespace("_0zq"), "_T_y")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "client") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_1g6"), "startTask") flag OVERRIDE
+   method
+    refid "_yF_:_0uX_/instance/_1g6:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushbyte            2
+      callpropvoid        QName(Namespace("_0T_S_"), "_1P_F_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_yF_:_0uX_/instance"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushstring          "/kongregate/internalRegister"
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_yF_:_0uX_/instance"), "_03q"), 0
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_yF_:_0uX_/instance"), "_03q")
+   method
+    refid "_yF_:_0uX_/instance/_yF_:_0uX_/instance/_03q"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      callproperty        QName(Namespace("_Z_B_"), "_03A_"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "getUserId"), 0
+      setproperty         Multiname("guid", [PrivateNamespace("*", "_yF_:_0uX_/instance"), PackageNamespace(""), PrivateNamespace("*", "_yF_:_0uX_/instance/_yF_:_0uX_/instance"), PackageNamespace("_yF_"), PackageInternalNs("_yF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1g6"), StaticProtectedNs("_1g6"), StaticProtectedNs("_4w")])
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_yF_:_0uX_/instance"), "onComplete")
+   method
+    refid "_yF_:_0uX_/instance/_yF_:_0uX_/instance/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L8
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_yF_:_0uX_/instance"), "_M_R_"), 1
+
+      jump                L16
+
+L8:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "_lb")
+      ifne                L16
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_13m")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "data")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+L16:
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_yF_:_0uX_/instance"), "_M_R_")
+   method
+    refid "_yF_:_0uX_/instance/_yF_:_0uX_/instance/_M_R_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "XML"), 1
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      getlocal2
+      getproperty         Multiname("GUID", [PrivateNamespace("*", "_yF_:_0uX_/instance"), PackageNamespace(""), PrivateNamespace("*", "_yF_:_0uX_/instance/_yF_:_0uX_/instance"), PackageNamespace("_yF_"), PackageInternalNs("_yF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1g6"), StaticProtectedNs("_1g6"), StaticProtectedNs("_4w")])
+      getlocal2
+      getproperty         Multiname("Secret", [PrivateNamespace("*", "_yF_:_0uX_/instance"), PackageNamespace(""), PrivateNamespace("*", "_yF_:_0uX_/instance/_yF_:_0uX_/instance"), PackageNamespace("_yF_"), PackageInternalNs("_yF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1g6"), StaticProtectedNs("_1g6"), StaticProtectedNs("_4w")])
+      callpropvoid        QName(Namespace("_D_3"), "_0oZ_"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      getlocal2
+      getproperty         Multiname("PlatformToken", [PrivateNamespace("*", "_yF_:_0uX_/instance"), PackageNamespace(""), PrivateNamespace("*", "_yF_:_0uX_/instance/_yF_:_0uX_/instance"), PackageNamespace("_yF_"), PackageInternalNs("_yF_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1g6"), StaticProtectedNs("_1g6"), StaticProtectedNs("_4w")])
+      callpropvoid        QName(Namespace("_D_3"), "_03n"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_yF_:_0uX_/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_lb")
+    pushstring          "Kongregate account already registered"
+    initproperty        QName(PackageNamespace(""), "_lb")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_lb") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("Kongregate account already registered") end
+end ; class

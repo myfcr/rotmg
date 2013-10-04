@@ -1,0 +1,1211 @@
+class
+ refid "_10p:CharacterBox"
+ instance QName(PackageNamespace("_10p"), "CharacterBox")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1W_m")
+  iinit
+   refid "_10p:CharacterBox/instance/init"
+   param QName(PackageNamespace(""), "XML")
+   param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_0Z_O_")
+   param QName(PackageNamespace("_0_1"), "_0V_5")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 10
+    localcount 8
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     setlocal            5
+
+     getlocal0
+     getlex              QName(PackageNamespace("_10p"), "_14n")
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_Z_P_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "model")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "playerXML_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "charStats_")
+
+     getlocal0
+     getlocal            4
+     convert_b
+     dup
+     iftrue              L30
+
+     pop
+     getlocal3
+     getlocal0
+     callproperty        QName(PackageNamespace(""), "objectType"), 0
+     callproperty        QName(PackageNamespace(""), "_0j9"), 1
+     convert_b
+L30:
+     initproperty        QName(PackageNamespace(""), "_1_s")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_1_s")
+     iftrue              L44
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "LockedCharBoxGraphic")
+     constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "LockedCharBoxGraphic"), 0
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "playerXML_")
+     getproperty         Multiname("UnlockCost", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "cost")
+
+     jump                L48
+
+L44:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "FullCharBoxGraphic")
+     constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "FullCharBoxGraphic"), 0
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+
+L48:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_0A_1"), "_03y")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     constructprop       QName(PackageNamespace("_0A_1"), "_03y"), 3
+     initproperty        QName(PackageNamespace(""), "_0D_P_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     pushnull
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_")
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_1I_q")
+     getproperty         QName(PackageNamespace(""), "DOWN")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_1I_q")
+     getproperty         QName(PackageNamespace(""), "_n0")
+     pushbyte            0
+     callpropvoid        QName(PrivateNamespace("*", "_10p:CharacterBox"), "setImage"), 3
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+     constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+     pushbyte            14
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "CENTER")
+     callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+     getproperty         QName(PackageNamespace(""), "width")
+     callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "setBold"), 1
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+     findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+     constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "playerXML_")
+     getproperty         Multiname("DisplayId", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "setParams"), 1
+     callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     pushbyte            4
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_f"), 0
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1B_F_"), 0
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_1_s")
+     iffalse             L185
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_tl")
+     getlocal3
+     getlocal0
+     callproperty        QName(PackageNamespace(""), "objectType"), 0
+     callproperty        QName(PackageNamespace(""), "_0T_N_"), 1
+     callproperty        QName(PackageNamespace(""), "numStars"), 1
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_tl")
+     getproperty         QName(PackageNamespace(""), "_0K_B_")
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0Z_x"), 2
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     dup
+     setlocal            5
+
+     pushbyte            60
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal            5
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     subtract
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            5
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     pushbyte            4
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+     pushbyte            74
+     setproperty         QName(PackageNamespace(""), "y")
+
+     jump                L225
+
+L185:
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+     pushstring          "lofiInterface2"
+     pushbyte            5
+     callproperty        QName(PackageNamespace(""), "_0rL_"), 2
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "scaleX")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "scaleY")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+     pushbyte            4
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+     pushbyte            8
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+     pushbyte            78
+     setproperty         QName(PackageNamespace(""), "y")
+
+L225:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_Z_P_") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(PackageNamespace(""), "playerXML_") type QName(PackageNamespace(""), "XML") value Null() end
+  trait slot QName(PackageNamespace(""), "charStats_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_0Z_O_") end
+  trait slot QName(PackageNamespace(""), "model") type QName(PackageNamespace("_0_1"), "_0V_5") end
+  trait slot QName(PackageNamespace(""), "_1_s") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_") type QName(PackageNamespace("_17v"), "_03N_") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "cost") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_") end
+  trait slot QName(PackageNamespace(""), "_0R_m") type QName(PackageNamespace("_0A_1"), "_03y") end
+  trait slot QName(PackageNamespace(""), "_0D_P_") type QName(PackageNamespace("_0A_1"), "_03y") end
+  trait method QName(PackageNamespace(""), "objectType")
+   method
+    refid "_10p:CharacterBox/instance/objectType"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "playerXML_")
+      getproperty         MultinameA("type", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "unlock")
+   method
+    refid "_10p:CharacterBox/instance/unlock"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("_9i"), "GTween")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1_s")
+      pushfalse
+      ifne                L184
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "_1_s")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "FullCharBoxGraphic")
+      constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "FullCharBoxGraphic"), 0
+      initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0X_X_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_1I_q")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_1I_q")
+      getproperty         QName(PackageNamespace(""), "_n0")
+      pushbyte            0
+      callpropvoid        QName(PrivateNamespace("*", "_10p:CharacterBox"), "setImage"), 3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L55
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L55:
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L64
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L64:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+      convert_b
+      dup
+      iffalse             L75
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L75:
+      iffalse             L80
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1O_T_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L80:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      convert_b
+      dup
+      iffalse             L91
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L91:
+      iffalse             L96
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L96:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      convert_b
+      dup
+      iffalse             L107
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L107:
+      iffalse             L112
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L112:
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_tl")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "objectType"), 0
+      callproperty        QName(PackageNamespace(""), "_0T_N_"), 1
+      callproperty        QName(PackageNamespace(""), "numStars"), 1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_tl")
+      getproperty         QName(PackageNamespace(""), "_0K_B_")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0Z_x"), 2
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+      getlocal1
+      pushbyte            60
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      pushbyte            4
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "classNameText_")
+      pushbyte            74
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      iftrue              L164
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_n1"), 0
+
+L164:
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("_9i"), "GTween")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      pushdouble          2.5
+      pushstring          "alpha"
+      pushdouble          0
+      pushstring          "y"
+      pushbyte            226
+      newobject           2
+      constructprop       QName(PackageNamespace("_9i"), "GTween"), 3
+      coerce              QName(PackageNamespace("_9i"), "GTween")
+      setlocal2
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_k8")
+      setproperty         QName(PackageNamespace(""), "onComplete")
+
+L184:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "_k8")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/_k8"
+    param QName(PackageNamespace("_9i"), "GTween")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTooltip")
+   method
+    refid "_10p:CharacterBox/instance/getTooltip"
+    returns QName(PackageNamespace("_pO_"), "_1hr")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_pO_"), "_L_d")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "playerXML_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "charStats_")
+      constructprop       QName(PackageNamespace("_pO_"), "_L_d"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_t9")
+   method
+    refid "_10p:CharacterBox/instance/_t9"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1_s")
+      iftrue              L6
+
+      returnvoid
+
+L6:
+      getlocal1
+      iffalse             L16
+
+      getlex              QName(PackageNamespace(""), "transform")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushdouble          1.2
+      pushdouble          1.2
+      pushdouble          1.2
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      jump                L23
+
+L16:
+      getlex              QName(PackageNamespace(""), "transform")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushbyte            1
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "setImage")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/setImage"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 11
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "SavedCharacter")
+      pushnull
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "playerXML_")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1_s")
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "getImage"), 7
+      setproperty         QName(PackageNamespace(""), "bitmapData")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "bitmap_")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            2
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0Z_x")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/_0Z_x"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "Sprite")
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L36
+
+L14:
+      label
+      findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic")
+      constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      dup
+      setlocal            5
+
+      getlocal            6
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlex              QName(PrivateNamespace("*", "_10p:CharacterBox"), "_4Q_")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      getlocal3
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal            6
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      convert_i
+      setlocal            6
+
+      inclocal_i          4
+L36:
+      getlocal            4
+      getlocal1
+      iflt                L14
+
+      jump                L62
+
+L40:
+      label
+      findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic")
+      constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      dup
+      setlocal            5
+
+      getlocal            6
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlex              QName(PrivateNamespace("*", "_10p:CharacterBox"), "_C_Z_")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      getlocal3
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal            6
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      convert_i
+      setlocal            6
+
+      inclocal_i          4
+L62:
+      getlocal            4
+      getlocal2
+      iflt                L40
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0F_2")
+   method
+    refid "_10p:CharacterBox/instance/_0F_2"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      iftrue              L21
+
+      getlocal0
+      getlocal0
+      constructprop       QName(PrivateNamespace("*", "_10p:CharacterBox"), "_Z_P_"), 0
+      initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      pushbyte            38
+      setproperty         Multiname("x", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      pushbyte            8
+      setproperty         Multiname("y", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L21:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      iftrue              L30
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0Z_L_"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L30:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_12f")
+      pushstring          "percent"
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      newobject           1
+      callproperty        QName(PackageNamespace(""), "setParams"), 2
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_f")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/_W_f"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_17v"), "_03N_")
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_jt")
+      pushbyte            13
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "cost")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "_U_s")
+      constructprop       QName(PackageNamespace("_17v"), "_03N_"), 4
+      initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getproperty         QName(PackageNamespace(""), "width")
+      callpropvoid        QName(PackageNamespace(""), "setWidth"), 1
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_0A_1"), "_03y")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      constructprop       QName(PackageNamespace("_0A_1"), "_03y"), 3
+      initproperty        QName(PackageNamespace(""), "_0R_m")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "_1B_F_")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/_1B_F_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            14
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16711680
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setBold"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_9E_")
+      getproperty         QName(PackageNamespace(""), "width")
+      callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+      initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "LOCKED")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      pushbyte            4
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_W_H_")
+      pushbyte            58
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0Z_L_")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/_0Z_L_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            14
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setBold"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      getproperty         Multiname("height", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "setTextHeight"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_cW_")
+      getproperty         Multiname("width", [PrivateNamespace("*", "_10p:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_10p:CharacterBox/instance"), PackageNamespace("_10p"), PackageInternalNs("_10p"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1W_m"), StaticProtectedNs("_1W_m"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+      initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      pushbyte            42
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_L_N_")
+      pushbyte            12
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_10p:CharacterBox"), "_n1")
+   method
+    refid "_10p:CharacterBox/instance/_10p:CharacterBox/_n1"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            14
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             65280
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setBold"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+      initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      pushbyte            4
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      findpropstrict      QName(PackageNamespace("_1X_w"), "_1O_V_")
+      constructprop       QName(PackageNamespace("_1X_w"), "_1O_V_"), 0
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_pd")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_0E_i")
+      pushbyte            236
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0E_Q_")
+   method
+    refid "_10p:CharacterBox/instance/_0E_Q_"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_10p:CharacterBox"), "_nL_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setEnabled"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_10p:CharacterBox/class/init"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "DELETE_CHAR")
+    pushstring          "DELETE_CHAR"
+    initproperty        QName(PackageNamespace(""), "DELETE_CHAR")
+
+    findproperty        QName(PackageNamespace(""), "ENTER_NAME")
+    pushstring          "ENTER_NAME"
+    initproperty        QName(PackageNamespace(""), "ENTER_NAME")
+
+    findproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_4Q_")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushdouble          0.8
+    pushdouble          0.8
+    pushdouble          0.8
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+    initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_4Q_")
+
+    findproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_C_Z_")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushdouble          0.2
+    pushdouble          0.2
+    pushdouble          0.2
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+    initproperty        QName(PrivateNamespace("*", "_10p:CharacterBox"), "_C_Z_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "DELETE_CHAR") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("DELETE_CHAR") end
+ trait const QName(PackageNamespace(""), "ENTER_NAME") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("ENTER_NAME") end
+ trait const QName(PrivateNamespace("*", "_10p:CharacterBox"), "_4Q_") slotid 3 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+ trait const QName(PrivateNamespace("*", "_10p:CharacterBox"), "_C_Z_") slotid 4 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+end ; class

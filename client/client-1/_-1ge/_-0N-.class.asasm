@@ -1,0 +1,238 @@
+class
+ refid "_-1ge:_-0N-"
+ instance QName(PackageNamespace("_-1ge"), "_-0N-")
+  extends QName(PackageNamespace("_-1RF"), "_-Hc")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0YA")
+  iinit
+   refid "_-1ge:_-0N-/instance/init"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     pushnull
+     kill                2
+     getlocal2
+     bitnot
+     decrement_i
+     bitand
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iffalse             L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "start") flag OVERRIDE
+   method
+    refid "_-1ge:_-0N-/instance/start"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      nextvalue
+      negate_i
+      convert_d
+      increment
+      astypelate
+      getlocal2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0ES"), "GTween")
+      getlex              QName(ProtectedNamespace("_-0vm"), "target")
+      pushbyte            1
+      pushstring          "alpha"
+      pushbyte            0
+      newobject           1
+      constructprop       QName(PackageNamespace("_-0ES"), "GTween"), 3
+      coerce              QName(PackageNamespace("_-0ES"), "GTween")
+      setlocal1
+
+      getlocal3
+      iffalse             L29
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1ge:_-0N-/instance"), "_-JR")
+      setproperty         QName(PackageNamespace("", "#0"), "onComplete")
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1ge:_-0N-/instance"), "_-JR")
+   method
+    refid "_-1ge:_-0N-/instance/_-1ge:_-0N-/instance/_-JR"
+    param QName(PackageNamespace("_-0ES"), "GTween")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      checkfilter
+      convert_b
+      dxnslate
+      astypelate
+      kill                2
+      popscope
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0ES"), "GTween")
+      jump                L22
+
+      dxnslate
+      greaterthan
+      setlocal3
+
+      inclocal            2
+      inclocal            2
+      inclocal            3
+L22:
+      getlex              QName(ProtectedNamespace("_-0vm"), "target")
+      pushdouble          1.4
+      pushbyte            2
+      divide
+      pushstring          "alpha"
+      pushbyte            1
+      newobject           1
+      constructprop       QName(PackageNamespace("_-0ES"), "GTween"), 3
+      coerce              QName(PackageNamespace("_-0ES"), "GTween")
+      setlocal2
+
+      getlocal3
+      dup
+      iffalse             L38
+
+      pop
+      getlocal2
+      convert_b
+L38:
+      iftrue              L43
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1ge:_-0N-/instance"), "_-0wU")
+      setproperty         QName(PackageNamespace("", "#0"), "onComplete")
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1ge:_-0N-/instance"), "_-0wU")
+   method
+    refid "_-1ge:_-0N-/instance/_-1ge:_-0N-/instance/_-0wU"
+    param QName(PackageNamespace("_-0ES"), "GTween")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            2
+      modulo
+      dup
+      declocal_i          2
+      bitor
+      inclocal_i          2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L18
+
+      findpropstrict      QName(ProtectedNamespace("_-0vm"), "onComplete")
+      callpropvoid        QName(ProtectedNamespace("_-0vm"), "onComplete"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1ge:_-0N-/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,33 @@
+script ; 632
+ sinit
+  refid "_-ta/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-ta", [PackageNamespace("", "#0")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "BitmapData")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "BitmapData")
+    newclass            "_-ta"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("", "#0"), "_-ta")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("", "#0"), "_-ta")
+  #include "_-ta.class.asasm"
+ end ; trait
+end ; script

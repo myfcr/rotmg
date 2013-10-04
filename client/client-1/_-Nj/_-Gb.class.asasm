@@ -1,0 +1,241 @@
+class
+ refid "_-Nj:_-Gb"
+ instance QName(PackageNamespace("_-Nj"), "_-Gb")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Aw")
+  iinit
+   refid "_-Nj:_-Gb/instance/init"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     declocal_i          3
+     decrement
+     inclocal            2
+     add_i
+     swap
+     inclocal_i          2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     jump                L22
+
+     kill                3
+     nextname
+     declocal_i          2
+     setlocal2
+
+     kill                3
+     convert_i
+L22:
+     iftrue              L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iffalse             L41
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     iftrue              L44
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "a")
+
+     getlocal            4
+     dup
+     iffalse             L40
+
+     pop
+     getlocal2
+     convert_b
+L40:
+     iftrue              L44
+
+L41:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "r")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "a") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "r") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "_-1Mr")
+   method
+    refid "_-Nj:_-Gb/instance/_-1Mr"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal_i          2
+      declocal            2
+      declocal_i          2
+      instanceof
+      inclocal            2
+      lshift
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "a")
+      getlocal3
+      iftrue              L53
+
+      pushbyte            1
+      getlocal3
+      dup
+      jump                L27
+
+      getlocal3
+      bitxor
+      setlocal2
+
+      strictequals
+      swap
+      getlocal2
+L27:
+      iffalse             L31
+
+      pop
+      getlocal3
+      convert_b
+L31:
+      iftrue              L49
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "r")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "pow"), 2
+      subtract
+      getlocal3
+      dup
+      iffalse             L44
+
+      pop
+      getlocal1
+      convert_b
+L44:
+      iftrue              L52
+
+      multiply
+      getlocal2
+      iffalse             L53
+
+      pushbyte            1
+L49:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "r")
+      subtract
+L52:
+      divide
+L53:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-oq")
+   method
+    refid "_-Nj:_-Gb/instance/_-oq"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal3
+
+      convert_s
+      convert_d
+      greaterthan
+      bitor
+      setlocal2
+
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "a")
+      getlocal2
+      iftrue              L24
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nj:_-Gb/instance"), "r")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "pow"), 2
+      multiply
+L24:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Nj:_-Gb/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

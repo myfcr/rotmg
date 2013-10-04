@@ -1,0 +1,74 @@
+class
+ refid "com.company.util:_dB_"
+ instance QName(PackageNamespace("com.company.util"), "_dB_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0bj")
+  iinit
+   refid "com.company.util:_dB_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.util:_dB_/class/init"
+  body
+   maxstack 6
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_S_Q_")
+    getlex              QName(PackageNamespace(""), "RegExp")
+    pushstring          "^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\\.)+[A-Z]{2,4}$"
+    pushstring          "i"
+    construct           2
+    initproperty        QName(PackageNamespace(""), "_S_Q_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_S_Q_") slotid 1 type QName(PackageNamespace(""), "RegExp") end
+ trait method QName(PackageNamespace(""), "_f") flag FINAL dispid 3
+  method
+   refid "com.company.util:_dB_/class/_f"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 5
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "Boolean")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "_S_Q_")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "match"), 1
+     callproperty        QName(PackageNamespace(""), "Boolean"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

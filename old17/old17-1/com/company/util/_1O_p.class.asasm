@@ -1,0 +1,112 @@
+class
+ refid "com.company.util:_1O_p"
+ instance QName(PackageNamespace("com.company.util"), "_1O_p")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_fJ_")
+  iinit
+   refid "com.company.util:_1O_p/instance/init"
+   body
+    maxstack 15
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "January"
+     pushstring          "February"
+     pushstring          "March"
+     pushstring          "April"
+     pushstring          "May"
+     pushstring          "June"
+     pushstring          "July"
+     pushstring          "August"
+     pushstring          "September"
+     pushstring          "October"
+     pushstring          "November"
+     pushstring          "December"
+     newarray            12
+     initproperty        QName(PrivateNamespace("*", "com.company.util:_1O_p/instance"), "_0p0")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_1O_b") type QName(PackageNamespace(""), "String") end
+  trait const QName(PrivateNamespace("*", "com.company.util:_1O_p/instance"), "_0p0") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "_1R_1")
+   method
+    refid "com.company.util:_1O_p/instance/_1R_1"
+    param QName(PackageNamespace(""), "Date")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1O_b")
+      coerce_s
+      setlocal2
+
+      getlocal2
+      pushstring          "D"
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "date")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal2
+
+      getlocal2
+      pushstring          "YYYY"
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "fullYear")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal2
+
+      getlocal2
+      pushstring          "MMMM"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.util:_1O_p/instance"), "_0p0")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "month")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_1O_p/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.util:_1O_p/instance/_1R_1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), ProtectedNamespace("_fJ_"), StaticProtectedNs("_fJ_")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal2
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.util:_1O_p/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

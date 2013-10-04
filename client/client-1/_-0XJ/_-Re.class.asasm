@@ -1,0 +1,127 @@
+class
+ refid "_-0XJ:_-Re"
+ instance QName(PackageNamespace("_-0XJ"), "_-Re")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Me")
+  iinit
+   refid "_-0XJ:_-Re/instance/init"
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     inclocal            2
+     getlocal2
+     inclocal            2
+     declocal_i          2
+     declocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L29
+
+     getlocal0
+     constructsuper      0
+
+     jump                L29
+
+     bitnot
+     declocal            2
+     setlocal2
+
+     declocal_i          2
+     popscope
+     greaterthan
+L29:
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     setlocal1
+
+     getlocal2
+     iffalse             L53
+
+     jump                L42
+
+     declocal_i          2
+     negate_i
+     coerce_a
+     pushwith
+     getlocal2
+     declocal            2
+L42:
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "graphics")
+     pushint             3552822
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 1
+
+     getlocal3
+     dup
+     iffalse             L52
+
+     pop
+     getlocal1
+     convert_b
+L52:
+     iftrue              L62
+
+L53:
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     pushshort           200
+     pushshort           600
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlocal3
+     iftrue              L65
+
+L62:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal1
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L65:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0XJ:_-Re/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

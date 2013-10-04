@@ -1,0 +1,41 @@
+script ; 1454
+ sinit
+  refid "_05B_:Animations/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_05B_:Animations"
+    popscope
+    initproperty        QName(PackageNamespace("_05B_"), "Animations")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_05B_:Animations/RunningAnimation"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_05B_:Animations"), "RunningAnimation")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_05B_"), "Animations") slotid 1
+  #include "Animations.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_05B_:Animations"), "RunningAnimation") slotid 2
+  #include "Animations/RunningAnimation.class.asasm"
+ end ; trait
+end ; script

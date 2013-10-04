@@ -1,0 +1,47 @@
+method
+ refid "_-SW:allOf"
+ returns QName(PackageNamespace("_-yU"), "_-1hD")
+ flag NEED_REST
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   getlocal1
+   coerce              QName(PackageNamespace("", "#0"), "Array")
+   setlocal2
+
+   getlocal1
+   getproperty         QName(PackageNamespace("", "#0"), "length")
+   pushbyte            1
+   equals
+   dup
+   iffalse             L17
+
+   pop
+   getlocal1
+   pushbyte            0
+   getproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-SW:allOf"), PackageNamespace("_-SW"), PackageInternalNs("_-SW"), Namespace("http://adobe.com/AS3/2006/builtin")])
+   getlex              QName(PackageNamespace("", "#0"), "Array")
+   istypelate
+L17:
+   iffalse             L23
+
+   getlocal1
+   pushbyte            0
+   getproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-SW:allOf"), PackageNamespace("_-SW"), PackageInternalNs("_-SW"), Namespace("http://adobe.com/AS3/2006/builtin")])
+   coerce              QName(PackageNamespace("", "#0"), "Array")
+   setlocal2
+
+L23:
+   findpropstrict      QName(PackageNamespace("_-SW"), "_-YX")
+   getlocal2
+   constructprop       QName(PackageNamespace("_-SW"), "_-YX"), 1
+   returnvalue
+  end ; code
+ end ; body
+end ; method

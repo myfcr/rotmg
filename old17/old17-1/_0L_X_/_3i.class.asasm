@@ -1,0 +1,165 @@
+class
+ refid "_0L_X_:_3i"
+ instance QName(PackageNamespace("_0L_X_"), "_3i")
+  extends QName(PackageNamespace("_0L_X_"), "_0W_F_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0sr")
+  iinit
+   refid "_0L_X_:_3i/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   body
+    maxstack 9
+    localcount 10
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("*", "_0L_X_:_3i/instance"), "_1L_X_")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     constructsuper      6
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0L_X_:_3i/instance"), "_1L_X_") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_0L_X_:_3i/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      findproperty        QName(PackageNamespace(""), "timeLeft_")
+      getlex              QName(PackageNamespace(""), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace(""), "timeLeft_")
+
+      getlex              QName(PackageNamespace(""), "timeLeft_")
+      pushbyte            0
+      ifnle               L14
+
+      pushfalse
+      returnvalue
+
+L14:
+      getlex              QName(PackageNamespace(""), "_1eF_")
+      getproperty         QName(PackageNamespace(""), "obj_")
+      convert_b
+      dup
+      iffalse             L25
+
+      pop
+      getlex              QName(PackageNamespace(""), "_1eF_")
+      getproperty         QName(PackageNamespace(""), "obj_")
+      getproperty         QName(PackageNamespace(""), "props_")
+      getproperty         Multiname("static_", [PrivateNamespace("*", "_0L_X_:_3i/instance"), PackageNamespace(""), PrivateNamespace("*", "_0L_X_:_3i/instance/update"), PackageNamespace("_0L_X_"), PackageInternalNs("_0L_X_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0sr"), StaticProtectedNs("_0sr"), StaticProtectedNs("_18C_"), StaticProtectedNs("_0N_H_"), StaticProtectedNs("_1N_p")])
+      convert_b
+L25:
+      iffalse             L28
+
+      pushfalse
+      returnvalue
+
+L28:
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0L_X_:_3i/instance"), "_1L_X_")
+      multiply
+      convert_d
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0L_X_:_3i/instance"), "_1L_X_")
+      multiply
+      convert_d
+      setlocal            4
+
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "dx_")
+      getlocal3
+      multiply
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      add
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlex              QName(PackageNamespace(""), "y_")
+      getlex              QName(PackageNamespace(""), "dy_")
+      getlocal            4
+      multiply
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      add
+      initproperty        QName(PackageNamespace(""), "y_")
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      getlex              QName(PackageNamespace(""), "timeLeft_")
+      getlex              QName(PackageNamespace(""), "lifetime_")
+      divide
+      getlex              QName(PackageNamespace(""), "initialSize_")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 1
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0L_X_:_3i/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

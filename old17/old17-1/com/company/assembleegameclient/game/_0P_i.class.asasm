@@ -1,0 +1,455 @@
+class
+ refid "com.company.assembleegameclient.game:_0P_i"
+ instance QName(PackageNamespace("com.company.assembleegameclient.game"), "_0P_i")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_Z_6")
+  iinit
+   refid "com.company.assembleegameclient.game:_0P_i/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlex              QName(PackageNamespace("_1W_I_"), "_05")
+     callproperty        QName(PackageNamespace(""), "_07D_"), 0
+     getlex              QName(PackageNamespace("_L_8"), "_0zp")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_H_N_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "gs_") type QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite") value Null() end
+  trait slot QName(PackageNamespace(""), "_096") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_H_N_") type QName(PackageNamespace("_L_8"), "_0zp") end
+  trait method QName(PackageNamespace(""), "start")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/start"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "gs_")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "_096")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_MOVE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "onMouseMove")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_15U_")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/update"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_096")
+      convert_i
+      setlocal2
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_096")
+      getlocal1
+      add
+      initproperty        QName(PackageNamespace(""), "_096")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_096")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      ifnlt               L20
+
+      pushfalse
+      returnvalue
+
+L20:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_096")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      greaterequals
+      dup
+      iffalse             L34
+
+      pop
+      getlocal2
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      lessthan
+L34:
+      iffalse             L42
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_H_N_")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_rc"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      pushfalse
+      returnvalue
+
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_096")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1Z_Y_")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      greaterequals
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1Z_Y_")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      lessthan
+L56:
+      iffalse             L64
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_H_N_")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_te"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      pushfalse
+      returnvalue
+
+L64:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_096")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      greaterequals
+      dup
+      iffalse             L78
+
+      pop
+      getlocal2
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+      multiply
+      lessthan
+L78:
+      iffalse             L86
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_H_N_")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_0un"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      pushtrue
+      returnvalue
+
+L86:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_rc")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/com.company.assembleegameclient.game:_0P_i/_rc"
+    returns QName(PackageNamespace("_E_4"), "_1P_7")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_E_4"), "_1P_7")
+      constructprop       QName(PackageNamespace("_E_4"), "_1P_7"), 0
+      coerce              QName(PackageNamespace("_E_4"), "_1P_7")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "_nU_")
+      setproperty         QName(PackageNamespace(""), "name")
+
+      getlocal1
+      pushstring          "You have been idle for "
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y")
+      add
+      pushstring          " minutes, you will be disconnected if you are idle for "
+      add
+      pushstring          "more than "
+      add
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+      add
+      pushstring          " minutes."
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_te")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/com.company.assembleegameclient.game:_0P_i/_te"
+    returns QName(PackageNamespace("_E_4"), "_1P_7")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_E_4"), "_1P_7")
+      constructprop       QName(PackageNamespace("_E_4"), "_1P_7"), 0
+      coerce              QName(PackageNamespace("_E_4"), "_1P_7")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "_nU_")
+      setproperty         QName(PackageNamespace(""), "name")
+
+      getlocal1
+      pushstring          "You have been idle for "
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1Z_Y_")
+      add
+      pushstring          " minutes, you will be disconnected if you are idle for "
+      add
+      pushstring          "more than "
+      add
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+      add
+      pushstring          " minutes."
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_0un")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/com.company.assembleegameclient.game:_0P_i/_0un"
+    returns QName(PackageNamespace("_E_4"), "_1P_7")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_E_4"), "_1P_7")
+      constructprop       QName(PackageNamespace("_E_4"), "_1P_7"), 0
+      coerce              QName(PackageNamespace("_E_4"), "_1P_7")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "_nU_")
+      setproperty         QName(PackageNamespace(""), "name")
+
+      getlocal1
+      pushstring          "You have been idle for "
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+      add
+      pushstring          " minutes, disconnecting."
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "stop")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/stop"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_MOVE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "onMouseMove")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gs_")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_15U_")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "gs_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "onMouseMove")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/com.company.assembleegameclient.game:_0P_i/onMouseMove"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "_096")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_15U_")
+   method
+    refid "com.company.assembleegameclient.game:_0P_i/instance/com.company.assembleegameclient.game:_0P_i/_15U_"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "_096")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.game:_0P_i/class/init"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+    pushbyte            60
+    pushshort           1000
+    multiply
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y")
+    pushbyte            10
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1Z_Y_")
+    pushbyte            15
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1Z_Y_")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+    pushbyte            20
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1dy") slotid 1 type QName(PackageNamespace(""), "int") value Double(60000) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_R_y") slotid 2 type QName(PackageNamespace(""), "int") value Integer(10) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1Z_Y_") slotid 3 type QName(PackageNamespace(""), "int") value Integer(15) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.game:_0P_i"), "_1H_X_") slotid 4 type QName(PackageNamespace(""), "int") value Integer(20) end
+end ; class

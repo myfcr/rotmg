@@ -1,0 +1,466 @@
+class
+ refid "_-0XJ:CharacterSlotNeedGoldDialog"
+ instance QName(PackageNamespace("_-0XJ"), "CharacterSlotNeedGoldDialog")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0uM")
+  iinit
+   refid "_-0XJ:CharacterSlotNeedGoldDialog/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     not
+     decrement_i
+     convert_i
+     divide
+     equals
+     convert_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     jump                L21
+
+     dup
+     pushtrue
+     popscope
+     pushscope
+
+     pushfalse
+     pop
+L21:
+     iftrue              L33
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-a"), "_-uD")
+     constructprop       QName(PackageNamespace("_-a"), "_-uD"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-1S-")
+
+     getlocal1
+     dup
+     iftrue              L32
+
+     pop
+     getlocal1
+     convert_b
+L32:
+     iffalse             L41
+
+L33:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-a"), "_-uD")
+     constructprop       QName(PackageNamespace("_-a"), "_-uD"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "cancel")
+
+     getlocal2
+     iftrue              L41
+
+     getlocal0
+     constructsuper      0
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageNamespace("", "#0"), "_-1S-") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait const QName(PackageNamespace("", "#0"), "cancel") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait slot QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn") type QName(PackageNamespace("_-1Jt"), "Dialog") end
+  trait slot QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "price") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "setPrice")
+   method
+    refid "_-0XJ:CharacterSlotNeedGoldDialog/instance/setPrice"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      popscope
+      declocal_i          2
+      declocal_i          2
+      kill                2
+      inclocal_i          2
+      getlocal2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "price")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+      getlocal3
+      iftrue              L86
+
+      coerce_a
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      iftrue              L84
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+      callproperty        QName(PackageNamespace("", "#0"), "contains"), 1
+      coerce_a
+L31:
+      dup
+      iffalse             L46
+
+      pop
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeChild")
+      jump                L42
+
+      kill                2
+      declocal            2
+      modulo
+      setlocal2
+
+      getlocal2
+      declocal            2
+L42:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+      callproperty        QName(PackageNamespace("", "#0"), "removeChild"), 1
+      coerce_a
+L46:
+      pop
+      getlocal3
+      dup
+      iffalse             L53
+
+      pop
+      getlocal1
+      convert_b
+L53:
+      iftrue              L84
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-j6"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+      getlocal2
+      dup
+      iftrue              L71
+
+      jump                L68
+
+      convert_d
+      declocal_i          2
+      getlocal2
+      declocal            2
+      convert_u
+      lessequals
+L68:
+      pop
+      getlocal1
+      convert_b
+L71:
+      iffalse             L86
+
+      getlex              QName(PackageNamespace("_-1Jt"), "Dialog")
+      getproperty         QName(PackageNamespace("", "#0"), "LEFT_BUTTON")
+      getlocal2
+      dup
+      iftrue              L80
+
+      pop
+      getlocal0
+      convert_b
+L80:
+      iffalse             L88
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "onCancel")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L84:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+L86:
+      getlex              QName(PackageNamespace("_-1Jt"), "Dialog")
+      getproperty         QName(PackageNamespace("", "#0"), "RIGHT_BUTTON")
+L88:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-a6")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-j6")
+   method
+    refid "_-0XJ:CharacterSlotNeedGoldDialog/instance/_-0XJ:CharacterSlotNeedGoldDialog/_-j6"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      getlocal3
+      instanceof
+      increment_i
+      modulo
+      dup
+      pushwith
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L48
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-1Jt"), "Dialog")
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1m0")
+      pushstring          ""
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0lK")
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1kx")
+      jump                L31
+
+      lshift
+      not
+      checkfilter
+      greaterthan
+      greaterthan
+      pushwith
+L31:
+      getlex              QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-DD")
+      constructprop       QName(PackageNamespace("_-1Jt"), "Dialog"), 5
+      initproperty        QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+
+      getlocal2
+      dup
+      iffalse             L47
+
+      pop
+      jump                L45
+
+      lessthan
+      lshift
+      rshift
+      decrement
+      equals
+      getlocal3
+L45:
+      getlocal2
+      convert_b
+L47:
+      iftrue              L68
+
+L48:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1EK")
+      pushstring          "price"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "price")
+      newobject           1
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-1Pr"), 2
+
+      getlocal2
+      dup
+      iffalse             L63
+
+      pop
+      getlocal0
+      convert_b
+L63:
+      iftrue              L68
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-0bn")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L68:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "onCancel")
+   method
+    refid "_-0XJ:CharacterSlotNeedGoldDialog/instance/onCancel"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      kill                2
+      typeof
+      kill                2
+      divide
+      pushtrue
+      kill                2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L18
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "cancel")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-a6")
+   method
+    refid "_-0XJ:CharacterSlotNeedGoldDialog/instance/_-a6"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          2
+      getlocal2
+      kill                2
+      inclocal_i          2
+      instanceof
+      convert_i
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L24
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1S-")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0XJ:CharacterSlotNeedGoldDialog/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    convert_s
+    popscope
+    getlocal1
+    increment_i
+    negate
+    divide
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal2
+    convert_b
+L20:
+    iffalse             L24
+
+    findproperty        QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-DD")
+    pushstring          "/charSlotNeedGold"
+    initproperty        QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-DD")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0XJ:CharacterSlotNeedGoldDialog"), "_-DD") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("/charSlotNeedGold") end
+end ; class

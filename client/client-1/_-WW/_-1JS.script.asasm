@@ -1,0 +1,29 @@
+script ; 1760
+ sinit
+  refid "_-WW:_-1JS/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-1JS", [PackageNamespace("_-WW")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-WW:_-1JS"
+    popscope
+    initproperty        QName(PackageNamespace("_-WW"), "_-1JS")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-WW"), "_-1JS")
+  #include "_-1JS.class.asasm"
+ end ; trait
+end ; script

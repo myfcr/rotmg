@@ -1,0 +1,617 @@
+class
+ refid "_0A_1:_kd"
+ instance QName(PackageNamespace("_0A_1"), "_kd")
+  extends QName(PackageNamespace("_0A_1"), "_0bt")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0H_3")
+  iinit
+   refid "_0A_1:_kd/instance/init"
+   param QName(PackageNamespace("flash.events"), "IEventDispatcher")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Class")
+   flag NEED_REST
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 6
+    localcount 7
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "valueClasses")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0A_1:_kd/instance#0"), "_0yA_") type QName(PackageNamespace(""), "Function") value Null() end
+  trait getter QName(ProtectedNamespace("_0H_3"), "_0V_6")
+   method
+    refid "_0A_1:_kd/instance/_0H_3:_0V_6/getter"
+    returns QName(PackageNamespace(""), "Function")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0A_1:_kd/instance#0"), "_0yA_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "eventClass") flag OVERRIDE
+   method
+    refid "_0A_1:_kd/instance/eventClass/getter"
+    returns QName(PackageNamespace(""), "Class")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("_0eC_"), "_X_e")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "eventClass") flag OVERRIDE
+   method
+    refid "_0A_1:_kd/instance/eventClass/setter"
+    param QName(PackageNamespace(""), "Class")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("_0eC_"), "_X_e")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_0eC_"), "_X_e")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "valueClasses") flag OVERRIDE
+   method
+    refid "_0A_1:_kd/instance/valueClasses/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("_1_v"), "_s3")
+      getlocal1
+      iffalse             L9
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      jump                L11
+
+L9:
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+L11:
+      initproperty        QName(ProtectedNamespace("_1_v"), "_s3")
+
+      getlex              QName(ProtectedNamespace("_1_v"), "_s3")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      jump                L46
+
+L17:
+      label
+      getlex              QName(ProtectedNamespace("_1_v"), "_s3")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      getlex              QName(PackageNamespace(""), "Class")
+      istypelate
+      iftrue              L46
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Invalid valueClasses argument: "
+      pushstring          "item at index "
+      add
+      getlocal2
+      add
+      pushstring          " should be a Class but was:<"
+      add
+      getlex              QName(ProtectedNamespace("_1_v"), "_s3")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      add
+      pushstring          ">."
+      add
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getlex              QName(ProtectedNamespace("_1_v"), "_s3")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L46:
+      getlocal2
+      dup
+      decrement_i
+      setlocal2
+
+      iftrue              L17
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_qT_")
+   method
+    refid "_0A_1:_kd/instance/_qT_"
+    returns QName(PackageNamespace("_0A_1"), "_kd")
+    flag NEED_ACTIVATION
+    flag NEED_REST
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 8
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      equals
+      dup
+      iffalse             L23
+
+      pop
+      getscopeobject      1
+      getslot             1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+L23:
+      iffalse             L48
+
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      getlex              QName(PackageNamespace(""), "Function")
+      astypelate
+      initproperty        QName(PrivateNamespace("*", "_0A_1:_kd/instance#0"), "_0yA_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0A_1:_kd/instance#0"), "_0yA_")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifngt               L47
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Mapping function has "
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0A_1:_kd/instance#0"), "_0yA_")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      pushstring          " arguments but it needs zero or one of type Event"
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L47:
+      jump                L51
+
+L48:
+      getlocal0
+      newfunction         "_0A_1:_kd/instance/_qT_/inline_method"
+      initproperty        QName(PrivateNamespace("*", "_0A_1:_kd/instance#0"), "_0yA_")
+
+L51:
+      getlocal0
+      returnvalue
+     end ; code
+     trait slot QName(PackageNamespace(""), "objectListOrFunction") slotid 1 type QName(PackageNamespace(""), "Array") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_0H_3"), "_or")
+   method
+    refid "_0A_1:_kd/instance/_0H_3:_or"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_0H_3"), "_0V_6")
+      pushnull
+      ifeq                L21
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_0H_3"), "_0V_6")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifne                L17
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_0H_3"), "_0V_6")
+      getglobalscope
+      getlocal1
+      call                1
+      returnvalue
+
+L17:
+      getlocal0
+      callproperty        QName(ProtectedNamespace("_0H_3"), "_0V_6"), 0
+      returnvalue
+
+      jump                L27
+
+L21:
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L27
+
+      newarray            0
+      returnvalue
+
+L27:
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "There are valueClasses set to be dispatched <"
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      add
+      pushstring          "> but mappingFunction is null."
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dispatchEvent") flag OVERRIDE
+   method
+    refid "_0A_1:_kd/instance/dispatchEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 10
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      getlocal0
+      getlocal1
+      callproperty        QName(ProtectedNamespace("_0H_3"), "_or"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "Array")
+      istypelate
+      iffalse             L73
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "Array")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            7
+
+      jump                L69
+
+L34:
+      label
+      getlocal            4
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal            6
+
+      getlocal            5
+      pushnull
+      strictequals
+      dup
+      iftrue              L54
+
+      pop
+      getlocal            5
+      getlocal            6
+      istypelate
+L54:
+      iffalse             L56
+
+      jump                L68
+
+L56:
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Value object <"
+      getlocal            5
+      add
+      pushstring          "> is not an instance of <"
+      add
+      getlocal            6
+      add
+      pushstring          ">."
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L68:
+      inclocal_i          7
+L69:
+      getlocal            7
+      getlocal3
+      iflt                L34
+
+      jump                L102
+
+L73:
+      getlocal3
+      pushbyte            1
+      ifngt               L80
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Expected more than one value."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L80:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      istypelate
+      iftrue              L102
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Mapping returned "
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getlocal2
+      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+      add
+      pushstring          ", expected "
+      add
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      add
+      pushstring          "."
+      add
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L102:
+      getlocal0
+      getlocal1
+      callsuper           QName(PackageNamespace(""), "dispatchEvent"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_0H_3"), "onNativeEvent") flag OVERRIDE
+   method
+    refid "_0A_1:_kd/instance/_0H_3:onNativeEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      getlocal0
+      getlocal1
+      callproperty        QName(ProtectedNamespace("_0H_3"), "_or"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("_1_v"), "_aK_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "Array")
+      istypelate
+      iffalse             L63
+
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      equals
+      dup
+      iffalse             L29
+
+      pop
+      getlex              QName(PackageNamespace(""), "valueClasses")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_0A_1:_kd/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_0A_1:_kd/instance#1"), PackageNamespace("_0A_1"), PackageInternalNs("_0A_1"), ProtectedNamespace("_0H_3"), StaticProtectedNs("_0H_3"), StaticProtectedNs("_0eC_"), StaticProtectedNs("_rX_"), StaticProtectedNs("_1_v")])
+      getlex              QName(PackageNamespace(""), "Array")
+      equals
+L29:
+      iffalse             L44
+
+      jump                L40
+
+L31:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getlocal2
+      callpropvoid        QName(Namespace("_1Z_w"), "execute1"), 1
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+L40:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L31
+
+      jump                L62
+
+L44:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "Array")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      jump                L59
+
+L50:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getlocal            4
+      callpropvoid        QName(Namespace("_1Z_w"), "execute"), 1
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+L59:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L50
+
+L62:
+      jump                L76
+
+L63:
+      jump                L73
+
+L64:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "_0ng")
+      getlocal2
+      callpropvoid        QName(Namespace("_1Z_w"), "execute1"), 1
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "_1dW_")
+      coerce              QName(PackageNamespace("_V_C_"), "_0b5")
+      setlocal3
+
+L73:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "nonEmpty")
+      iftrue              L64
+
+L76:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0A_1:_kd/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

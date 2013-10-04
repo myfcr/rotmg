@@ -1,0 +1,134 @@
+class
+ refid "_-0R0:JSON"
+ instance QName(PackageNamespace("_-0R0"), "JSON")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-gJ")
+  iinit
+   refid "_-0R0:JSON/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     increment_i
+     checkfilter
+     equals
+     popscope
+     getlocal0
+     negate_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0R0:JSON/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "encode") flag FINAL dispid 3
+  method
+   refid "_-0R0:JSON/class/encode"
+   param QName(PackageNamespace("", "#0"), "Object")
+   returns QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-0R0"), "_-1Es")
+     jump                L10
+
+     decrement
+     lessequals
+     negate_i
+     instanceof
+     urshift
+     convert_b
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("_-0R0"), "_-1Es"), 1
+     coerce              QName(PackageNamespace("_-0R0"), "_-1Es")
+     setlocal2
+
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "getString"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "decode") flag FINAL dispid 4
+  method
+   refid "_-0R0:JSON/class/decode"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-0R0"), "_-0XE")
+     jump                L10
+
+     swap
+     divide
+     pushundefined
+     setlocal2
+
+     multiply_i
+     urshift
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("_-0R0"), "_-0XE"), 1
+     coerce              QName(PackageNamespace("_-0R0"), "_-0XE")
+     setlocal2
+
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "getValue"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

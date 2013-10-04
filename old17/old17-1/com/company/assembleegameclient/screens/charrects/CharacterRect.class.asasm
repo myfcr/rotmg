@@ -1,0 +1,533 @@
+class
+ refid "com.company.assembleegameclient.screens.charrects:CharacterRect"
+ instance QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRect")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_2E_")
+  iinit
+   refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/init#1"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "color") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "overColor") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(ProtectedNamespace("_2E_"), "taglineIcon") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("_2E_"), "taglineText") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(ProtectedNamespace("_2E_"), "classNameText") type QName(PackageNamespace("_1j9"), "_try") end
+  trait slot QName(ProtectedNamespace("_2E_"), "className") type QName(PackageNamespace("_1X_w"), "_super") end
+  trait slot QName(PackageNamespace(""), "selectContainer") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait method QName(PackageNamespace(""), "init")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/init#0"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "tabChildren")
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "tabChildren")
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "makeBox"), 0
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "makeContainer"), 0
+
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_2E_"), "makeClassNameText"), 0
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "addEventListeners"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "addEventListeners")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/com.company.assembleegameclient.screens.charrects:CharacterRect/instance/addEventListeners"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "onRollOut")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "makeBox")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/makeBox"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_2E_"), "onMouseOver")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_2E_:onMouseOver"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_2E_"), "onRollOut")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_2E_:onRollOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/com.company.assembleegameclient.screens.charrects:CharacterRect/instance/drawBox"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "overColor")
+      convert_u
+      jump                L16
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "color")
+      convert_u
+L16:
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "makeContainer")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/makeContainer"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(PackageNamespace(""), "selectContainer")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushint             16711935
+      pushdouble          0
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_2E_"), "makeTaglineIcon")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_2E_:makeTaglineIcon"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic")
+      constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic"), 0
+      initproperty        QName(ProtectedNamespace("_2E_"), "taglineIcon")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      getproperty         QName(PackageNamespace(""), "transform")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushshort           179
+      pushshort           255
+      divide
+      pushshort           179
+      pushshort           255
+      divide
+      pushshort           179
+      pushshort           255
+      divide
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      pushdouble          1.2
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      pushdouble          1.2
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectConstants")
+      getproperty         QName(PackageNamespace(""), "TAGLINE_ICON_POS_X")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectConstants")
+      getproperty         QName(PackageNamespace(""), "TAGLINE_ICON_POS_Y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineIcon")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_2E_"), "makeClassNameText")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_2E_:makeClassNameText"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            18
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      initproperty        QName(ProtectedNamespace("_2E_"), "classNameText")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "classNameText")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setBold"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "classNameText")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "className")
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "classNameText")
+      findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "makeDropShadowFilter")
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "makeDropShadowFilter"), 0
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "classNameText")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectConstants")
+      getproperty         QName(PackageNamespace(""), "CLASS_NAME_POS_X")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "classNameText")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectConstants")
+      getproperty         QName(PackageNamespace(""), "CLASS_NAME_POS_Y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "classNameText")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_2E_"), "makeTaglineText")
+   method
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_2E_:makeTaglineText"
+    param QName(PackageNamespace("_1X_w"), "_super")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_1j9"), "_try")
+      constructprop       QName(PackageNamespace("_1j9"), "_try"), 0
+      pushbyte            14
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             11776947
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      initproperty        QName(ProtectedNamespace("_2E_"), "taglineText")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineText")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineText")
+      findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "makeDropShadowFilter")
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "makeDropShadowFilter"), 0
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineText")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectConstants")
+      getproperty         QName(PackageNamespace(""), "TAGLINE_TEXT_POS_X")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineText")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRectConstants")
+      getproperty         QName(PackageNamespace(""), "TAGLINE_TEXT_POS_Y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selectContainer")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_2E_"), "taglineText")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.screens.charrects:CharacterRect/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "WIDTH")
+    pushshort           419
+    initproperty        QName(PackageNamespace(""), "WIDTH")
+
+    findproperty        QName(PackageNamespace(""), "HEIGHT")
+    pushbyte            59
+    initproperty        QName(PackageNamespace(""), "HEIGHT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "WIDTH") slotid 1 type QName(PackageNamespace(""), "int") value Integer(419) end
+ trait const QName(PackageNamespace(""), "HEIGHT") slotid 2 type QName(PackageNamespace(""), "int") value Integer(59) end
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "makeDropShadowFilter") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.screens.charrects:CharacterRect/class/com.company.assembleegameclient.screens.charrects:CharacterRect/instance/makeDropShadowFilter"
+   returns QName(PackageNamespace(""), "Array")
+   body
+    maxstack 7
+    localcount 1
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     pushbyte            8
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+     newarray            1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

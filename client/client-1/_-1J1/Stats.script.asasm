@@ -1,0 +1,61 @@
+script ; 1501
+ sinit
+  refid "_-1J1:Stats/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 8
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    newclass            "_-1J1:Stats"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-1J1"), "Stats")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-1J1:Stats/Colors"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-1J1:Stats"), "Colors")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1J1"), "Stats") slotid 1
+  #include "Stats.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-1J1:Stats"), "Colors") slotid 2
+  #include "Stats/Colors.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,281 @@
+class
+ refid "com.company.assembleegameclient.appengine:RemoteTexture"
+ instance QName(PackageNamespace("com.company.assembleegameclient.appengine"), "RemoteTexture")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0si")
+  iinit
+   refid "com.company.assembleegameclient.appengine:RemoteTexture/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "id_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "_0n2")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "callback_")
+
+     getlex              QName(PackageNamespace("_1W_I_"), "_05")
+     callproperty        QName(PackageNamespace(""), "_07D_"), 0
+     coerce              QName(PackageNamespace("_tm"), "_9n")
+     setlocal            4
+
+     getlocal0
+     getlocal            4
+     getlex              QName(PackageNamespace("_1G_e"), "_1A_Z_")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_0x6")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_0n2") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "callback_") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_0x6") type QName(PackageNamespace("_1G_e"), "_1A_Z_") end
+  trait method QName(PackageNamespace(""), "run")
+   method
+    refid "com.company.assembleegameclient.appengine:RemoteTexture/instance/run"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0n2")
+      pushstring          "testing"
+      ifne                L8
+
+      pushstring          "rotmgtesting.appspot.com"
+      jump                L9
+
+L8:
+      pushstring          "realmofthemadgod.appspot.com"
+L9:
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_uP_")
+      pushstring          "{DOMAIN}"
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal2
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "id_")
+      setproperty         Multiname("id", [PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture/instance/run"), PackageNamespace("com.company.assembleegameclient.appengine"), PackageInternalNs("com.company.assembleegameclient.appengine"), ProtectedNamespace("_0si"), StaticProtectedNs("_0si")])
+
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_1Y_y")
+      setproperty         Multiname("time", [PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture/instance/run"), PackageNamespace("com.company.assembleegameclient.appengine"), PackageInternalNs("com.company.assembleegameclient.appengine"), ProtectedNamespace("_0si"), StaticProtectedNs("_0si")])
+
+      findpropstrict      QName(PackageNamespace("_00R_"), "_0Q_n")
+      constructprop       QName(PackageNamespace("_00R_"), "_0Q_n"), 0
+      coerce              QName(PackageNamespace("_ag"), "_0E_J_")
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("flash.net"), "URLLoaderDataFormat")
+      getproperty         QName(PackageNamespace(""), "BINARY")
+      callpropvoid        QName(Namespace("_3S_"), "_03W_"), 1
+
+      getlocal            4
+      getproperty         QName(Namespace("_3S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal            4
+      getlocal2
+      getlocal3
+      callpropvoid        QName(Namespace("_3S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "onComplete")
+   method
+    refid "com.company.assembleegameclient.appengine:RemoteTexture/instance/com.company.assembleegameclient.appengine:RemoteTexture/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L8
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "_rv"), 1
+
+      jump                L11
+
+L8:
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "reportError"), 1
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_rv")
+   method
+    refid "com.company.assembleegameclient.appengine:RemoteTexture/instance/_rv"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_tN_"), "_06q")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "_19Q_"), 1
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "callback_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "reportError")
+   method
+    refid "com.company.assembleegameclient.appengine:RemoteTexture/instance/reportError"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_km")
+      pushstring          "{ERROR}"
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      pushstring          "{ID}"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "id_")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      pushstring          "{INSTANCE}"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0n2")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_0x6")
+      pushstring          "RemoteTexture.reportError: {0}"
+      getlocal1
+      newarray            1
+      callpropvoid        QName(Namespace("_1U_g"), "_9b"), 2
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+      pushbyte            1
+      dup
+      constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "callback_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.appengine:RemoteTexture/class/init"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_uP_")
+    pushstring          "http://{DOMAIN}/picture/_get"
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_uP_")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_km")
+    pushstring          "Remote Texture Error: {ERROR} (id:{ID}, instance:{INSTANCE})"
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_km")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_1Y_y")
+    findpropstrict      QName(PackageNamespace(""), "int")
+    findpropstrict      QName(PackageNamespace(""), "Date")
+    constructprop       QName(PackageNamespace(""), "Date"), 0
+    callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+    callproperty        QName(PackageNamespace(""), "int"), 1
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_1Y_y")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_uP_") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("http://{DOMAIN}/picture/_get") end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_km") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("Remote Texture Error: {ERROR} (id:{ID}, instance:{INSTANCE})") end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:RemoteTexture"), "_1Y_y") slotid 3 type QName(PackageNamespace(""), "int") end
+end ; class

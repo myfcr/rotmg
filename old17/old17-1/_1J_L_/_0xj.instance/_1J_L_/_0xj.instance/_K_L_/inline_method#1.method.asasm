@@ -1,0 +1,38 @@
+method
+ refid "_1J_L_:_0xj/instance/_1J_L_:_0xj/instance/_K_L_/inline_method#1"
+ param QName(PackageNamespace("_1G_e"), "_0K_Z_")
+ returns QName(PackageNamespace(""), "void")
+ flag NEED_ARGUMENTS
+ body
+  maxstack 3
+  localcount 3
+  initscopedepth 6
+  maxscopedepth 6
+  code
+   getlex              QName(PackageInternalNs("_1J_L_"), "once")
+   coerce_a
+   dup
+   iffalse             L15
+
+   pop
+   findpropstrict      QName(PackageNamespace("flash.events"), "IEventDispatcher")
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "target")
+   callproperty        QName(PackageNamespace("flash.events"), "IEventDispatcher"), 1
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "type")
+   getlocal2
+   getproperty         Multiname("callee", [PrivateNamespace("*", "_1J_L_:_0xj/instance"), PackageNamespace(""), PrivateNamespace("*", "_1J_L_:_0xj/instance/_1J_L_"), PackageNamespace("_1J_L_"), PackageInternalNs("_1J_L_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_09T_"), StaticProtectedNs("_09T_"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callproperty        QName(Namespace("flash.events:IEventDispatcher"), "removeEventListener"), 2
+   coerce_a
+L15:
+   pop
+   findpropstrict      QName(PackageInternalNs("_1J_L_"), "handler")
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "type")
+   callproplex         QName(PackageInternalNs("_1J_L_"), "handler"), 1
+   pop
+   returnvoid
+  end ; code
+ end ; body
+end ; method

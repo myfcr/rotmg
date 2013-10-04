@@ -1,0 +1,673 @@
+class
+ refid "_X_8:_0B_2"
+ instance QName(PackageNamespace("_X_8"), "_0B_2")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1F_Y_")
+  iinit
+   refid "_X_8:_0B_2/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_17v"), "_0jq")
+     constructprop       QName(PackageNamespace("_17v"), "_0jq"), 0
+     initproperty        QName(PackageNamespace(""), "list")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "list") type QName(PackageNamespace("_17v"), "_0jq") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "size") type QName(PackageNamespace("_v4"), "Size") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_1J_A_") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_01g") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "DisplayObject")>) end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "padding") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_ld") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "setSize")
+   method
+    refid "_X_8:_0B_2/instance/setSize"
+    param QName(PackageNamespace("_v4"), "Size")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "size")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "list")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "list")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_E_6")
+   method
+    refid "_X_8:_0B_2/instance/_E_6"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "padding")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "list")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "_E_6"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setItems")
+   method
+    refid "_X_8:_0B_2/instance/setItems"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_E_A_"), 0
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      coerce_a
+      setlocal            5
+
+      jump                L22
+
+L13:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "addItem"), 1
+
+L22:
+      hasnext2            5, 4
+      iftrue              L13
+
+      kill                5
+      kill                4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "list")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_01g")
+      callpropvoid        QName(PackageNamespace(""), "setItems"), 1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iftrue              L35
+
+      returnvoid
+
+L35:
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      getlocal0
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_03v"), 0
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "width")
+      divide
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_ld")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0eX_")
+   method
+    refid "_X_8:_0B_2/instance/_0eX_"
+    returns QName(PackageNamespace("_v4"), "Size")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "size")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0f8")
+   method
+    refid "_X_8:_0B_2/instance/_0f8"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getItem")
+   method
+    refid "_X_8:_0B_2/instance/getItem"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_E_A_")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/_E_A_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_")
+
+      getlocal0
+      getlex              Multiname("Vector", [PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      applytype           1
+      construct           0
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_01g")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l")
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0U_s"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "addItem")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/addItem"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "position"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_1J_A_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      callpropvoid        Multiname("push", [PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "position")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/position"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_1W_7"), 1
+      iffalse             L12
+
+      getlocal1
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0U_s"), 0
+
+      jump                L15
+
+L12:
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_02W_"), 1
+
+L15:
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "padding")
+      add
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0U_s")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/_0U_s"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_1J_A_")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_01g")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_1J_A_")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      newarray            0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_02W_")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/_02W_"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_1W_7")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/_1W_7"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_05l")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_03v"), 0
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_03v")
+   method
+    refid "_X_8:_0B_2/instance/_X_8:_0B_2/instance/_03v"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "size")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace("_17v"), "_0jq")
+      getproperty         QName(PackageNamespace(""), "_0vU_")
+      subtract
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0rR_")
+   method
+    refid "_X_8:_0B_2/instance/_0rR_"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_")
+      getproperty         QName(PackageNamespace(""), "length")
+      iffalse             L11
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_0lA_")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L11:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0el")
+   method
+    refid "_X_8:_0B_2/instance/_0el"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getproperty         QName(PackageNamespace(""), "length")
+      iffalse             L21
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_ld")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L21:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0Z_Q_")
+   method
+    refid "_X_8:_0B_2/instance/_0Z_Q_"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifnge               L23
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L23:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0C_k")
+   method
+    refid "_X_8:_0B_2/instance/_0C_k"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifnge               L25
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_V_V_")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_8:_0B_2/instance#0"), "_ld")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "_X_8:_0B_2/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_X_8:_0B_2/instance#1"), PackageNamespace("_X_8"), PackageInternalNs("_X_8"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_1F_Y_"), StaticProtectedNs("_1F_Y_"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L25:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_X_8:_0B_2/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

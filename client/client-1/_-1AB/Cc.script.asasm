@@ -1,0 +1,29 @@
+script ; 1976
+ sinit
+  refid "_-1AB:Cc/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Cc", [PackageNamespace("_-1AB")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-1AB:Cc"
+    popscope
+    initproperty        QName(PackageNamespace("_-1AB"), "Cc")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1AB"), "Cc")
+  #include "Cc.class.asasm"
+ end ; trait
+end ; script

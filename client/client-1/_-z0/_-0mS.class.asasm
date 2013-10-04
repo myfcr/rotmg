@@ -1,0 +1,203 @@
+class
+ refid "_-z0:_-0mS"
+ instance QName(PackageNamespace("_-z0"), "_-0mS")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Cs")
+  iinit
+   refid "_-z0:_-0mS/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     nextname
+     checkfilter
+     getlocal3
+     multiply
+     subtract
+     istypelate
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "_-1Na")
+   method
+    refid "_-z0:_-0mS/instance/_-1Na"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      inclocal            3
+      kill                2
+      divide
+      lessequals
+      getlocal3
+      declocal            2
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-z0"), "_-0cr")
+      setlocal1
+
+      pushbyte            0
+      jump                L24
+
+      subtract_i
+      lessthan
+      inclocal_i          2
+      astypelate
+      declocal            4
+      not
+L24:
+      setlocal2
+
+      getlex              QName(PackageNamespace("", "#0"), "_-0tY")
+      coerce_a
+      setlocal3
+
+      jump                L44
+
+L29:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PackageNamespace("_-z0"), "_-0cr")
+      setlocal1
+
+      getlocal            5
+      dup
+      iffalse             L41
+
+      pop
+      getlocal1
+      convert_b
+L41:
+      iftrue              L44
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-19G"), 0
+
+L44:
+      hasnext2            3, 2
+      iftrue              L29
+
+      kill                3
+      kill                2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-z0:_-0mS/class/init"
+  body
+   maxstack 10
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    bitnot
+    getlocal0
+    urshift
+    pushnan
+    strictequals
+    add_i
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L26
+
+    pop
+    getlocal0
+    jump                L25
+
+    pushnull
+    rshift
+    increment
+    multiply_i
+    typeof
+    getlocal0
+L25:
+    convert_b
+L26:
+    iftrue              L50
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0tY")
+    getlex              Multiname("Vector", [PrivateNamespace("*", "_-z0:_-0mS/class/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-z0:_-0mS/class/init#0"), PackageNamespace("_-z0"), PackageInternalNs("_-z0"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Cs"), StaticProtectedNs("_-0Cs"), PackageNamespace("__AS3__.vec")])
+    getlex              QName(PackageNamespace("_-z0"), "_-0cr")
+    applytype           1
+    getglobalscope
+    findpropstrict      QName(PackageNamespace("_-z0"), "_-0cr")
+    getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+    getproperty         QName(PackageNamespace("", "#0"), "_-1lZ")
+    pushstring          "alltime"
+    constructprop       QName(PackageNamespace("_-z0"), "_-0cr"), 2
+    findpropstrict      QName(PackageNamespace("_-z0"), "_-0cr")
+    getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+    getproperty         QName(PackageNamespace("", "#0"), "_-00Z")
+    pushstring          "weekly"
+    constructprop       QName(PackageNamespace("_-z0"), "_-0cr"), 2
+    findpropstrict      QName(PackageNamespace("_-z0"), "_-0cr")
+    getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+    getproperty         QName(PackageNamespace("", "#0"), "_-0vU")
+    pushstring          "personal"
+    constructprop       QName(PackageNamespace("_-z0"), "_-0cr"), 2
+    newarray            3
+    call                1
+    initproperty        QName(PackageNamespace("", "#0"), "_-0tY")
+
+L50:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-0tY") slotid 1 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-z0"), "_-0cr")>) end
+end ; class

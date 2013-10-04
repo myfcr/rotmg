@@ -1,0 +1,29 @@
+script ; 1478
+ sinit
+  refid "com.hurlant.crypto:Crypto/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Crypto", [PackageNamespace("com.hurlant.crypto")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.hurlant.crypto:Crypto"
+    popscope
+    initproperty        QName(PackageNamespace("com.hurlant.crypto"), "Crypto")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto"), "Crypto")
+  #include "Crypto.class.asasm"
+ end ; trait
+end ; script

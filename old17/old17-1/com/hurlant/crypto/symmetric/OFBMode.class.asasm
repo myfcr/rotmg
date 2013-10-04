@@ -1,0 +1,259 @@
+class
+ refid "com.hurlant.crypto.symmetric:OFBMode"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "OFBMode")
+  extends QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+  implements Multiname("IMode", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_F_g")
+  iinit
+   refid "com.hurlant.crypto.symmetric:OFBMode/instance/init"
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     pushnull
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "encrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_0V_a"), "getIV4e")
+      callproperty        QName(ProtectedNamespace("_0V_a"), "getIV4e"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), "core"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "decrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_0V_a"), "getIV4d")
+      callproperty        QName(ProtectedNamespace("_0V_a"), "getIV4d"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), "core"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), "core")
+   method
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L81
+
+L20:
+      label
+      getlex              QName(ProtectedNamespace("_0V_a"), "key")
+      getlocal2
+      callpropvoid        QName(Namespace("_0uU_"), "encrypt"), 1
+
+      getlocal            4
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "position")
+
+      getlocal            4
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
+
+      getlocal            5
+      getlex              QName(ProtectedNamespace("_0V_a"), "blockSize")
+      add
+      getlocal3
+      ifnlt               L38
+
+      getlex              QName(ProtectedNamespace("_0V_a"), "blockSize")
+      convert_u
+      jump                L42
+
+L38:
+      getlocal3
+      getlocal            5
+      subtract
+      convert_u
+L42:
+      convert_u
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      jump                L67
+
+L48:
+      label
+      getlocal1
+      getlocal            5
+      getlocal            7
+      add
+      getlocal1
+      getlocal            5
+      getlocal            7
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_F_g"), StaticProtectedNs("_F_g"), StaticProtectedNs("_0V_a")])
+      getlocal2
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_F_g"), StaticProtectedNs("_F_g"), StaticProtectedNs("_0V_a")])
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_F_g"), StaticProtectedNs("_F_g"), StaticProtectedNs("_0V_a")])
+
+      getlocal            7
+      increment
+      convert_u
+      setlocal            7
+
+L67:
+      getlocal            7
+      getlocal            6
+      iflt                L48
+
+      getlocal2
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "position")
+
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
+
+      getlocal            5
+      getlex              QName(ProtectedNamespace("_0V_a"), "blockSize")
+      add
+      convert_u
+      setlocal            5
+
+L81:
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L20
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("_0V_a"), "key")
+      callproperty        QName(Namespace("_0uU_"), "toString"), 0
+      pushstring          "-ofb"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:OFBMode/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

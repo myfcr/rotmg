@@ -1,0 +1,80 @@
+method
+ refid "com.company.assembleegameclient.ui:RankText/instance/draw/inline_method"
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 7
+  localcount 3
+  initscopedepth 10
+  maxscopedepth 10
+  code
+   getlex              QName(PackageInternalNs("com.company.assembleegameclient.ui"), "text")
+   getlex              QName(PackageInternalNs("com.company.assembleegameclient.ui"), "text")
+   getproperty         QName(PackageNamespace(""), "height")
+   setproperty         QName(PackageNamespace(""), "y")
+
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getlex              QName(PackageInternalNs("com.company.assembleegameclient.ui"), "text")
+   getproperty         QName(PackageNamespace(""), "width")
+   pushbyte            2
+   add
+   setproperty         QName(PackageNamespace(""), "x")
+
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getlex              QName(PackageInternalNs("com.company.assembleegameclient.ui"), "text")
+   getproperty         QName(PackageNamespace(""), "y")
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getproperty         QName(PackageNamespace(""), "height")
+   subtract
+   setproperty         QName(PackageNamespace(""), "y")
+
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getproperty         QName(PackageNamespace(""), "x")
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getproperty         QName(PackageNamespace(""), "width")
+   add
+   convert_i
+   setlocal1
+
+   getlex              QName(PackageNamespace(""), "background")
+   getproperty         QName(PackageNamespace(""), "graphics")
+   callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+   getlex              QName(PackageNamespace(""), "background")
+   getproperty         QName(PackageNamespace(""), "graphics")
+   pushbyte            0
+   pushdouble          0.4
+   callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getproperty         QName(PackageNamespace(""), "height")
+   pushbyte            8
+   add
+   convert_d
+   setlocal2
+
+   getlex              QName(PackageNamespace(""), "background")
+   getproperty         QName(PackageNamespace(""), "graphics")
+   pushbyte            254
+   getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "icon")
+   getproperty         QName(PackageNamespace(""), "y")
+   pushbyte            3
+   subtract
+   getlocal1
+   pushbyte            6
+   add
+   getlocal2
+   pushbyte            12
+   dup
+   callpropvoid        QName(PackageNamespace(""), "drawRoundRect"), 6
+
+   getlex              QName(PackageNamespace(""), "background")
+   getproperty         QName(PackageNamespace(""), "graphics")
+   callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+   findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "position")
+   callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:RankText/instance"), "position"), 0
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

@@ -1,0 +1,195 @@
+class
+ refid "_-a:_-uD"
+ instance QName(PackageNamespace("_-a"), "_-uD")
+  extends QName(PackageNamespace("_-a"), "_-w5")
+  implements Multiname("_-01w", [PackageNamespace("_-a")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1lz")
+  iinit
+   refid "_-a:_-uD/instance/init"
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     convert_d
+     pushundefined
+     inclocal_i          2
+     declocal            2
+     getlocal3
+     astypelate
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L64
+
+     getlocal1
+     getlocal2
+     iffalse             L77
+
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     pushbyte            1
+     equals
+     getlocal2
+     iffalse             L63
+
+     dup
+     iffalse             L63
+
+     getlocal2
+     iffalse             L63
+
+     jump                L39
+
+     kill                2
+     inclocal_i          2
+     getlocal2
+     bitor
+     inclocal            2
+     setlocal2
+
+L39:
+     pop
+     getlocal2
+     dup
+     iftrue              L46
+
+     pop
+     getlocal1
+     convert_b
+L46:
+     iffalse             L64
+
+     getlocal1
+     getlocal2
+     iffalse             L72
+
+     pushbyte            0
+     getlocal3
+     iftrue              L73
+
+     getproperty         MultinameL([PrivateNamespace("*", "_-a:_-uD/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-a:_-uD/instance/init#0"), PackageNamespace("_-a"), PackageInternalNs("_-a"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1lz"), StaticProtectedNs("_-1lz"), StaticProtectedNs("_-0Wk")])
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     jump                L62
+
+     multiply_i
+     setlocal2
+
+     convert_b
+     setlocal3
+
+     declocal_i          2
+     inclocal_i          2
+L62:
+     istypelate
+L63:
+     iffalse             L76
+
+L64:
+     getlocal1
+     getlocal2
+     dup
+     iftrue              L71
+
+     pop
+     getlocal1
+     convert_b
+L71:
+     iffalse             L77
+
+L72:
+     pushbyte            0
+L73:
+     getproperty         MultinameL([PrivateNamespace("*", "_-a:_-uD/instance/init#1"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-a:_-uD/instance/init#0"), PackageNamespace("_-a"), PackageInternalNs("_-a"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1lz"), StaticProtectedNs("_-1lz"), StaticProtectedNs("_-0Wk")])
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     jump                L78
+
+L76:
+     getlocal1
+L77:
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+L78:
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal1
+
+     getlocal2
+     iffalse             L85
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L85:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "add")
+   method
+    refid "_-a:_-uD/instance/add"
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("_-a"), "_-0Xz")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0Wk"), "_-0VJ")
+      jump                L10
+
+      setlocal3
+
+      newactivation
+      lshift
+      bitxor
+      greaterthan
+      pushfalse
+L10:
+      getlocal1
+      callproperty        QName(ProtectedNamespace("_-0Wk"), "_-0VJ"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-a:_-uD/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

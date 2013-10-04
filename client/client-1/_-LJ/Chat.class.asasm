@@ -1,0 +1,330 @@
+class
+ refid "_-LJ:Chat"
+ instance QName(PackageNamespace("_-LJ"), "Chat")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-50")
+  iinit
+   refid "_-LJ:Chat/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     swap
+     lshift
+     greaterequals
+     swap
+     subtract
+     subtract_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L46
+
+     getlocal0
+     jump                L23
+
+     greaterthan
+     pop
+     pop
+     swap
+     pushscope
+
+     pop
+L23:
+     constructsuper      0
+
+     getlocal1
+     dup
+     iftrue              L30
+
+     pop
+     getlocal1
+     convert_b
+L30:
+     iffalse             L46
+
+     findproperty        QName(PackageNamespace("", "#0"), "mouseEnabled")
+     pushfalse
+     initproperty        QName(PackageNamespace("", "#0"), "mouseEnabled")
+
+     getlocal1
+     iffalse             L42
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-LJ"), "_-1ZR")
+     constructprop       QName(PackageNamespace("_-LJ"), "_-1ZR"), 0
+     initproperty        QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "list")
+
+     getlocal1
+     iffalse             L46
+
+L42:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "list")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L46:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "list") type QName(PackageNamespace("_-LJ"), "_-1ZR") end
+  trait slot QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "input") type QName(PackageNamespace("_-LJ"), "_-1SW") end
+  trait slot QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "model") type QName(PackageNamespace("_-1Vb"), "_-1o0") end
+  trait method QName(PackageNamespace("", "#0"), "setup")
+   method
+    refid "_-LJ:Chat/instance/setup"
+    param QName(PackageNamespace("_-1Vb"), "_-1o0")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      negate
+      declocal            2
+      kill                3
+      setlocal3
+
+      bitand
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iffalse             L45
+
+      getlocal0
+      jump                L24
+
+      setlocal3
+
+      getlocal3
+      convert_i
+      bitnot
+      getlocal3
+      declocal            3
+L24:
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "model")
+
+      getlocal0
+      pushshort           600
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Wi")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal3
+      iftrue              L41
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "list")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Wi")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L41:
+      getlocal2
+      iffalse             L46
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "_-0mN"), 0
+
+L45:
+      jump                L48
+
+L46:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "_-aQ"), 0
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "_-0mN")
+   method
+    refid "_-LJ:Chat/instance/_-LJ:Chat/instance/_-0mN"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      decrement_i
+      hasnext
+      lshift
+      negate_i
+      pushscope
+
+      convert_o
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iffalse             L26
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-LJ"), "_-1SW")
+      constructprop       QName(PackageNamespace("_-LJ"), "_-1SW"), 0
+      initproperty        QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "input")
+
+      getlocal2
+      iftrue              L30
+
+L26:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "input")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "_-aQ")
+   method
+    refid "_-LJ:Chat/instance/_-LJ:Chat/instance/_-aQ"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          2
+      declocal            2
+      getlocal2
+      declocal            2
+      convert_d
+      inclocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-LJ"), "_-0gR")
+      constructprop       QName(PackageNamespace("_-LJ"), "_-0gR"), 0
+      coerce              QName(PackageNamespace("_-LJ"), "_-0gR")
+      jump                L24
+
+      declocal            2
+      subtract_i
+      pushnan
+      getlocal2
+      increment_i
+      pushwith
+L24:
+      setlocal1
+
+      getlocal2
+      iftrue              L37
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      getlocal3
+      dup
+      iftrue              L36
+
+      pop
+      getlocal0
+      convert_b
+L36:
+      iffalse             L48
+
+L37:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "list")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "model")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Wi")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-LJ:Chat/instance"), "model")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1FH")
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-LJ:Chat/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,270 @@
+class
+ refid "_-1Si:_-1V3"
+ instance QName(PackageNamespace("_-1Si"), "_-1V3")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-01u")
+  iinit
+   refid "_-1Si:_-1V3/instance/init"
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     kill                2
+     newactivation
+     decrement_i
+     add_i
+     decrement_i
+     inclocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iffalse             L70
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iftrue              L35
+
+     jump                L32
+
+     kill                2
+     bitand
+     negate_i
+     declocal_i          2
+     divide
+     pushtrue
+L32:
+     pop
+     getlocal3
+     convert_b
+L35:
+     iffalse             L70
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1Si"), "_-0jO")
+     constructprop       QName(PackageNamespace("_-1Si"), "_-0jO"), 0
+     jump                L47
+
+     divide
+     inclocal            2
+     istypelate
+     getlocal2
+     strictequals
+     kill                2
+L47:
+     dup
+     setlocal1
+
+     initproperty        QName(PackageNamespace("", "#0"), "output")
+
+     getlocal1
+     kill                1
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal3
+     dup
+     iffalse             L59
+
+     pop
+     getlocal1
+     convert_b
+L59:
+     iftrue              L70
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1Si"), "_-15U")
+     constructprop       QName(PackageNamespace("_-1Si"), "_-15U"), 0
+     dup
+     setlocal1
+
+     initproperty        QName(PackageNamespace("", "#0"), "input")
+
+     getlocal1
+     kill                1
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L70:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "output") type QName(PackageNamespace("_-1Si"), "_-0jO") end
+  trait slot QName(PackageNamespace("", "#0"), "input") type QName(PackageNamespace("_-1Si"), "_-15U") end
+  trait setter QName(PackageNamespace("", "#0"), "visible") flag OVERRIDE
+   method
+    refid "_-1Si:_-1V3/instance/visible/setter"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      inclocal            2
+      getlocal2
+      setlocal2
+
+      rshift
+      convert_b
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L78
+
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace("", "#0"), "visible")
+
+      getlocal3
+      dup
+      iftrue              L30
+
+      pop
+      getlocal3
+      convert_b
+L30:
+      iffalse             L78
+
+      jump                L38
+
+      getlocal2
+      lessthan
+      declocal_i          2
+      declocal            2
+      kill                2
+      pushscope
+
+L38:
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L45
+
+      pop
+      getlocal1
+      convert_b
+L45:
+      iffalse             L65
+
+      convert_b
+      getlocal3
+      iffalse             L65
+
+      dup
+      iffalse             L70
+
+      getlocal3
+      jump                L59
+
+      inclocal_i          2
+      setlocal2
+
+      inclocal_i          2
+      inclocal_i          2
+      declocal_i          2
+      kill                2
+L59:
+      dup
+      iftrue              L64
+
+      pop
+      getlocal1
+      convert_b
+L64:
+      iffalse             L70
+
+L65:
+      pop
+      getlocal3
+      iffalse             L82
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      convert_b
+L70:
+      iffalse             L82
+
+      getlocal2
+      dup
+      iffalse             L77
+
+      pop
+      getlocal2
+      convert_b
+L77:
+      iftrue              L82
+
+L78:
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "input")
+      setproperty         QName(PackageNamespace("", "#0"), "focus")
+
+L82:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1Si:_-1V3/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

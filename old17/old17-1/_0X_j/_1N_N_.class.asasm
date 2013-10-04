@@ -1,0 +1,177 @@
+class
+ refid "_0X_j:_1N_N_"
+ instance QName(PackageNamespace("_0X_j"), "_1N_N_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_P_Q_")
+  iinit
+   refid "_0X_j:_1N_N_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_0X_j:_1N_N_/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0")
+    pushnull
+    setproperty         QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0")
+
+    findproperty        QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_D_I_")
+    pushnull
+    setproperty         QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_D_I_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0") slotid 1 type QName(PackageNamespace("flash.media"), "Sound") value Null() end
+ trait slot QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_D_I_") slotid 2 type QName(PackageNamespace("flash.media"), "SoundChannel") value Null() end
+ trait method QName(PackageNamespace(""), "load") flag FINAL dispid 3
+  method
+   refid "_0X_j:_1N_N_/class/load"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 8
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("_1W_I_"), "_05")
+     callproperty        QName(PackageNamespace(""), "_07D_"), 0
+     getlex              QName(PackageNamespace("_T_q"), "_0B_w")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     coerce              QName(PackageNamespace("_T_q"), "_0B_w")
+     setlocal1
+
+     getlocal1
+     pushtrue
+     callproperty        QName(Namespace("_var"), "_b6"), 1
+     pushstring          "/music/sorc.mp3"
+     add
+     setlocal2
+
+     findproperty        QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0")
+     findpropstrict      QName(PackageNamespace("flash.media"), "Sound")
+     constructprop       QName(PackageNamespace("flash.media"), "Sound"), 0
+     setproperty         QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0")
+
+     getlex              QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0")
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+     getlocal2
+     constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+     callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+     findproperty        QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_D_I_")
+     getlex              QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_0r0")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "int")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+     getproperty         QName(PackageNamespace(""), "data_")
+     getproperty         Multiname("playMusic", [PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), PackageNamespace(""), PrivateNamespace("*", "_0X_j:_1N_N_/class#1"), PackageNamespace("_0X_j"), PackageInternalNs("_0X_j"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_P_Q_"), StaticProtectedNs("_P_Q_")])
+     iffalse             L36
+
+     pushdouble          0.3
+     convert_d
+     jump                L38
+
+L36:
+     pushbyte            0
+     convert_d
+L38:
+     constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
+     callproperty        QName(PackageNamespace(""), "play"), 3
+     setproperty         QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_D_I_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_0_c") flag FINAL dispid 4
+  method
+   refid "_0X_j:_1N_N_/class/_0_c"
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+     callproperty        QName(PackageNamespace(""), "global"), 0
+     pushstring          "sound"
+     getlocal1
+     iffalse             L9
+
+     pushstring          "musicOn"
+     jump                L10
+
+L9:
+     pushstring          "musicOff"
+L10:
+     callpropvoid        QName(PackageNamespace(""), "trackEvent"), 2
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+     getproperty         QName(PackageNamespace(""), "data_")
+     getlocal1
+     setproperty         Multiname("playMusic", [PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), PackageNamespace(""), PrivateNamespace("*", "_0X_j:_1N_N_/class#1"), PackageNamespace("_0X_j"), PackageInternalNs("_0X_j"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_P_Q_"), StaticProtectedNs("_P_Q_")])
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+     callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+     getlex              QName(PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), "_D_I_")
+     findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+     getproperty         QName(PackageNamespace(""), "data_")
+     getproperty         Multiname("playMusic", [PrivateNamespace("*", "_0X_j:_1N_N_/class#0"), PackageNamespace(""), PrivateNamespace("*", "_0X_j:_1N_N_/class#1"), PackageNamespace("_0X_j"), PackageInternalNs("_0X_j"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_P_Q_"), StaticProtectedNs("_P_Q_")])
+     iffalse             L26
+
+     pushdouble          0.3
+     convert_d
+     jump                L28
+
+L26:
+     pushbyte            0
+     convert_d
+L28:
+     constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
+     setproperty         QName(PackageNamespace(""), "soundTransform")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

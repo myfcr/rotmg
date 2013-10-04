@@ -1,0 +1,25 @@
+script ; 698
+ sinit
+  refid "_-p:_-J/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-J", [PackageNamespace("_-p")])
+    pushnull
+    newclass            "_-p:_-J"
+    initproperty        QName(PackageNamespace("_-p"), "_-J")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-p"), "_-J")
+  #include "_-J.class.asasm"
+ end ; trait
+end ; script

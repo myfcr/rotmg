@@ -1,0 +1,33 @@
+script ; 18
+ sinit
+  refid "_-a:_-uD/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-uD", [PackageNamespace("_-a")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-a"), "_-w5")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-a"), "_-w5")
+    newclass            "_-a:_-uD"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-a"), "_-uD")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-a"), "_-uD")
+  #include "_-uD.class.asasm"
+ end ; trait
+end ; script

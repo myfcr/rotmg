@@ -1,0 +1,96 @@
+class
+ refid "_-05e:_-0TY"
+ instance QName(PackageNamespace("_-05e"), "_-0TY")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-FV")
+  iinit
+   refid "_-05e:_-0TY/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     decrement
+     pushnan
+     getlocal2
+     typeof
+     hasnext
+     convert_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iftrue              L25
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "MONEY_CHANGED")
+     pushtrue
+     constructsuper      2
+
+L25:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-05e:_-0TY/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    dup
+    multiply_i
+    nextname
+    getlocal3
+    typeof
+    negate_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L19
+
+    findproperty        QName(PackageNamespace("", "#0"), "MONEY_CHANGED")
+    pushstring          "MONEY_CHANGED"
+    initproperty        QName(PackageNamespace("", "#0"), "MONEY_CHANGED")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "MONEY_CHANGED") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("MONEY_CHANGED") end
+end ; class

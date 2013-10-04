@@ -1,0 +1,331 @@
+class
+ refid "_95:BuyPackageTask"
+ instance QName(PackageNamespace("_95"), "BuyPackageTask")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0I_I_")
+  iinit
+   refid "_95:BuyPackageTask/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "client") flag METADATA type QName(PackageNamespace("_ag"), "_0W_h")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0R_D_") flag METADATA type QName(PackageNamespace("_95"), "_I__")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_aT_") flag METADATA type QName(PackageNamespace("_0_1"), "_0V_5")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1N_2") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.map"), "_4W_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0fn") flag METADATA type QName(PackageNamespace("_0sO_"), "_1d1")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0au") flag METADATA type QName(PackageNamespace("_0aH_"), "_1O_q")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_0I_I_"), "startTask") flag OVERRIDE
+   method
+    refid "_95:BuyPackageTask/instance/_0I_I_:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_1E_p"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      getproperty         QName(PackageNamespace(""), "packageID")
+      setproperty         Multiname("packageId", [PrivateNamespace("*", "_95:BuyPackageTask"), PackageNamespace(""), PrivateNamespace("*", "_95:BuyPackageTask/instance"), PackageNamespace("_95"), PackageInternalNs("_95"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0I_I_"), StaticProtectedNs("_0I_I_"), StaticProtectedNs("_4w")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_aT_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      getproperty         QName(PackageNamespace(""), "price")
+      negate
+      callpropvoid        QName(PackageNamespace(""), "_0zF_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      getproperty         QName(Namespace("_0T_S_"), "complete")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_95:BuyPackageTask"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "client")
+      pushstring          "/account/purchasePackage"
+      getlocal1
+      callpropvoid        QName(Namespace("_0T_S_"), "sendRequest"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_95:BuyPackageTask"), "onComplete")
+   method
+    refid "_95:BuyPackageTask/instance/_95:BuyPackageTask/onComplete"
+    param QName(PackageNamespace(""), "Boolean")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlocal2
+      constructprop       QName(PackageNamespace(""), "XML"), 1
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal3
+
+      getlocal1
+      jump                L15
+
+      getlocal2
+      kill                4
+      inclocal            3
+      declocal_i          3
+      add
+      inclocal            2
+L15:
+      iffalse             L20
+
+      getlocal0
+      getlocal3
+      callpropvoid        QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_w"), 1
+
+      jump                L23
+
+L20:
+      getlocal0
+      getlocal3
+      callpropvoid        QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_0Q_o"), 1
+
+L23:
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      pushtrue
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_w")
+   method
+    refid "_95:BuyPackageTask/instance/_95:BuyPackageTask/_w"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      getproperty         QName(PackageNamespace(""), "quantity")
+      getlex              QName(PackageNamespace("_0sO_"), "_1d1")
+      getproperty         QName(PackageNamespace(""), "_0wH_")
+      ifeq                L20
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      dup
+      setlocal2
+
+      getproperty         QName(PackageNamespace(""), "quantity")
+      decrement_i
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "quantity")
+
+      kill                3
+      kill                2
+L20:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      dup
+      setlocal2
+
+      getproperty         QName(PackageNamespace(""), "numPurchased")
+      increment_i
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "numPurchased")
+
+      kill                3
+      kill                2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1N_2")
+      getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+      getproperty         QName(PackageNamespace(""), "_Z_z")
+      pushint             11495650
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0au")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      getproperty         QName(PackageNamespace(""), "quantity")
+      pushbyte            0
+      ifnle               L49
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0R_D_")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_0Q_o")
+   method
+    refid "_95:BuyPackageTask/instance/_95:BuyPackageTask/_0Q_o"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_aT_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0fn")
+      getproperty         QName(PackageNamespace(""), "price")
+      callpropvoid        QName(PackageNamespace(""), "_0zF_"), 1
+
+      getlocal0
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_95:BuyPackageTask"), PackageNamespace(""), PrivateNamespace("*", "_95:BuyPackageTask/instance"), PackageNamespace("_95"), PackageInternalNs("_95"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0I_I_"), StaticProtectedNs("_0I_I_"), StaticProtectedNs("_4w")])
+      callpropvoid        QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_1gL_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_1gL_")
+   method
+    refid "_95:BuyPackageTask/instance/_95:BuyPackageTask/_1gL_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1N_2")
+      getlocal1
+      pushint             16744576
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 2
+
+      getlex              QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_cj")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      ifeq                L15
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0R_D_")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_95:BuyPackageTask/class/init"
+  body
+   maxstack 6
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_cj")
+    pushstring          "Package is not Available"
+    pushstring          "Package is not Available Right Now"
+    pushstring          "Invalid PackageId"
+    newarray            3
+    initproperty        QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_cj")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_95:BuyPackageTask"), "_cj") slotid 1 type QName(PackageNamespace(""), "Array") end
+end ; class

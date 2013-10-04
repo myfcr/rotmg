@@ -1,0 +1,237 @@
+class
+ refid "_1G__:_xQ_"
+ instance QName(PackageNamespace("_1G__"), "_xQ_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_61")
+  iinit
+   refid "_1G__:_xQ_/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal2
+     pushnull
+     equals
+     not
+     initproperty        QName(PrivateNamespace("*", "_1G__:_xQ_/instance"), "_0kG_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "callback")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "pool") type QName(PackageNamespace("_1G__"), "_i_") end
+  trait slot QName(PackageNamespace(""), "_0co") type QName(PackageNamespace("_1G__"), "_xQ_") end
+  trait slot QName(PackageNamespace(""), "next") type QName(PackageNamespace("_1G__"), "_xQ_") end
+  trait slot QName(PrivateNamespace("*", "_1G__:_xQ_/instance"), "_0kG_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "callback") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "parseFromInput")
+   method
+    refid "_1G__:_xQ_/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeToOutput")
+   method
+    refid "_1G__:_xQ_/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_1G__:_xQ_/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushstring          "MESSAGE"
+      pushstring          "id"
+      callproperty        QName(ProtectedNamespace("_61"), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_61"), "formatToString")
+   method
+    refid "_1G__:_xQ_/instance/_61:formatToString"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_REST
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "["
+      getlocal1
+      add
+      coerce_s
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L31
+
+L10:
+      label
+      getlocal3
+      pushstring          " "
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_1G__:_xQ_/instance"), PackageNamespace(""), ProtectedNamespace("_61"), PrivateNamespace("*", "_1G__:_xQ_/instance/_61:formatToString"), PackageNamespace("_1G__"), PackageInternalNs("_1G__"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_61")])
+      add
+      pushstring          "=\""
+      add
+      getlocal0
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_1G__:_xQ_/instance"), PackageNamespace(""), ProtectedNamespace("_61"), PrivateNamespace("*", "_1G__:_xQ_/instance/_61:formatToString"), PackageNamespace("_1G__"), PackageInternalNs("_1G__"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_61")])
+      getproperty         MultinameL([PrivateNamespace("*", "_1G__:_xQ_/instance"), PackageNamespace(""), ProtectedNamespace("_61"), PrivateNamespace("*", "_1G__:_xQ_/instance/_61:formatToString"), PackageNamespace("_1G__"), PackageInternalNs("_1G__"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_61")])
+      add
+      pushstring          "\""
+      add
+      add
+      coerce_s
+      setlocal3
+
+      inclocal_i          4
+L31:
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L10
+
+      getlocal3
+      pushstring          "]"
+      add
+      setlocal3
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "consume")
+   method
+    refid "_1G__:_xQ_/instance/consume"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1G__:_xQ_/instance"), "_0kG_")
+      coerce_a
+      dup
+      iffalse             L12
+
+      pop
+      getlocal0
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "callback"), 1
+      coerce_a
+L12:
+      pop
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "_0co")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "next")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "pool")
+      getlocal0
+      callpropvoid        QName(PackageInternalNs("_1G__"), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1G__:_xQ_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

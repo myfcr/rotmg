@@ -1,0 +1,266 @@
+class
+ refid "_-1AB:_-17a"
+ instance QName(PackageNamespace("_-1AB"), "_-17a")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Ue")
+  iinit
+   refid "_-1AB:_-17a/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     divide
+     bitand
+     popscope
+     pushscope
+
+     convert_s
+     typeof
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L65
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-1AB"), "Console")
+     getproperty         QName(PackageNamespace("", "#0"), "FATAL")
+     initproperty        QName(PackageNamespace("", "#0"), "_-0Al")
+
+     getlocal1
+     dup
+     iffalse             L33
+
+     pop
+     jump                L31
+
+     setlocal2
+
+     dup
+     nextname
+     istypelate
+     lessthan
+     bitand
+L31:
+     getlocal1
+     convert_b
+L33:
+     iftrue              L51
+
+     getlocal0
+     newfunction         "_-1AB:_-17a/instance/init/inline_method#1"
+     initproperty        QName(PackageNamespace("", "#0"), "traceCall")
+
+     getlocal1
+     dup
+     jump                L46
+
+     negate
+     swap
+     coerce_s
+     pushnan
+     nextvalue
+     getlocal2
+L46:
+     iffalse             L50
+
+     pop
+     getlocal2
+     convert_b
+L50:
+     iftrue              L61
+
+L51:
+     getlocal0
+     newfunction         "_-1AB:_-17a/instance/init/inline_method#0"
+     initproperty        QName(PackageNamespace("", "#0"), "timeStampFormatter")
+
+     getlocal2
+     dup
+     iftrue              L60
+
+     pop
+     getlocal1
+     convert_b
+L60:
+     iffalse             L69
+
+L61:
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iftrue              L69
+
+L65:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1AB"), "_-0zb")
+     constructprop       QName(PackageNamespace("_-1AB"), "_-0zb"), 0
+     initproperty        QName(PrivateNamespace("*", "_-1AB:_-17a/instance"), "_-fn")
+
+L69:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "keystrokePassword") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "remotingPassword") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "maxLines") type QName(PackageNamespace("", "#0"), "uint") value Integer(1000) end
+  trait slot QName(PackageNamespace("", "#0"), "maxRepeats") type QName(PackageNamespace("", "#0"), "int") value Integer(75) end
+  trait slot QName(PackageNamespace("", "#0"), "_-0Al") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1Ng") type QName(PackageNamespace("", "#0"), "int") value Integer(2) end
+  trait slot QName(PackageNamespace("", "#0"), "useObjectLinking") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "objectHardReferenceTimer") type QName(PackageNamespace("", "#0"), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace("", "#0"), "tracing") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "traceCall") type QName(PackageNamespace("", "#0"), "Function") end
+  trait slot QName(PackageNamespace("", "#0"), "showTimestamp") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "timeStampFormatter") type QName(PackageNamespace("", "#0"), "Function") end
+  trait method QName(PrivateNamespace("*", "_-1AB:_-17a/instance"), "_-PD")
+   method
+    refid "_-1AB:_-17a/instance/_-1AB:_-17a/instance/_-PD"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitnot
+      add
+      bitxor
+      declocal_i          2
+      declocal_i          2
+      setlocal2
+
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L27
+
+      jump                L24
+
+      convert_b
+      multiply_i
+      bitnot
+      pop
+      nextname
+      declocal_i          2
+L24:
+      pop
+      getlocal3
+      convert_b
+L27:
+      iffalse             L44
+
+      getlocal1
+      pushbyte            10
+      ifnlt               L44
+
+      getlocal2
+      iftrue              L44
+
+      pushstring          "0"
+      getlocal3
+      dup
+      iftrue              L40
+
+      pop
+      getlocal3
+      convert_b
+L40:
+      iffalse             L43
+
+      getlocal1
+      add
+L43:
+      returnvalue
+
+L44:
+      findpropstrict      QName(PackageNamespace("", "#0"), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "String"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "showLineNumber") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "remotingConnectionName") type QName(PackageNamespace("", "#0"), "String") value Utf8("_Console") end
+  trait slot QName(PackageNamespace("", "#0"), "allowedRemoteDomain") type QName(PackageNamespace("", "#0"), "String") value Utf8("*") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineAllowed") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineAutoScope") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineInputPassThrough") type QName(PackageNamespace("", "#0"), "Function") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineAutoCompleteEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "keyBindsEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "displayRollerEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "rulerToolEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "_-0oN") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "_-Fc") type QName(PackageNamespace("", "#0"), "String") value Utf8("com.junkbyte/Console/UserData") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1o5") type QName(PackageNamespace("", "#0"), "String") value Utf8("/") end
+  trait slot QName(PackageNamespace("", "#0"), "rememberFilterSettings") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "_-A5") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait getter QName(PackageNamespace("", "#0"), "style")
+   method
+    refid "_-1AB:_-17a/instance/style/getter"
+    returns QName(PackageNamespace("_-1AB"), "_-0zb")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1AB:_-17a/instance"), "_-fn")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-1AB:_-17a/instance"), "_-fn") type QName(PackageNamespace("_-1AB"), "_-0zb") end
+ end ; instance
+ cinit
+  refid "_-1AB:_-17a/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

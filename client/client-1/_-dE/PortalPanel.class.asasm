@@ -1,0 +1,1664 @@
+class
+ refid "_-dE:PortalPanel"
+ instance QName(PackageNamespace("_-dE"), "PortalPanel")
+  extends QName(PackageNamespace("_-dE"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Co")
+  iinit
+   refid "_-dE:PortalPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Portal")
+   body
+    maxstack 7
+    localcount 6
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     istypelate
+     convert_i
+     getlocal3
+     getlocal1
+     inclocal            4
+     dxnslate
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iftrue              L102
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "RegExp")
+     pushstring          "\\{\"text\":\"(.+)\"}"
+     construct           1
+     initproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0kD")
+
+     getlocal            4
+     dup
+     iffalse             L32
+
+     pop
+     getlocal2
+     convert_b
+L32:
+     iftrue              L152
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-a"), "_-uD")
+     constructprop       QName(PackageNamespace("_-a"), "_-uD"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-1JB")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0XJ"), "_-Wu")
+     constructprop       QName(PackageNamespace("_-0XJ"), "_-Wu"), 0
+     initproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0he")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-0fo")
+
+     getlocal            4
+     dup
+     iffalse             L53
+
+     pop
+     getlocal1
+     convert_b
+L53:
+     iftrue              L152
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1X1"), "_-Fw")
+     constructprop       QName(PackageNamespace("_-1X1"), "_-Fw"), 0
+     pushbyte            18
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace("", "#0"), "setBold"), 1
+     getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+     callproperty        QName(PackageNamespace("", "#0"), "setTextWidth"), 1
+     getlex              QName(PackageNamespace("flash.text"), "TextFormatAlign")
+     getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+     callproperty        QName(PackageNamespace("", "#0"), "setHorizontalAlign"), 1
+     initproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+
+     getlocal            5
+     dup
+     iftrue              L75
+
+     pop
+     getlocal0
+     convert_b
+L75:
+     iffalse             L85
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+L85:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0he")
+     getlocal            5
+     dup
+     iftrue              L97
+
+     pop
+     getlocal0
+     convert_b
+L97:
+     iffalse             L115
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     callpropvoid        QName(PackageNamespace("", "#0"), "push"), 1
+
+L102:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc")
+     pushbyte            16
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0m4")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc"), 2
+     initproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0he")
+L115:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     jump                L125
+
+     kill                4
+     getlocal3
+     kill                3
+     inclocal_i          4
+     getlocal3
+     pushnull
+L125:
+     callpropvoid        QName(PackageNamespace("", "#0"), "push"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1X1"), "_-Fw")
+     constructprop       QName(PackageNamespace("_-1X1"), "_-Fw"), 0
+     pushbyte            18
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             16711680
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace("", "#0"), "setHTML"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace("", "#0"), "setBold"), 1
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+     callproperty        QName(PackageNamespace("", "#0"), "setAutoSize"), 1
+     initproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+
+     getlocal            4
+     dup
+     iffalse             L147
+
+     pop
+     getlocal0
+     convert_b
+L147:
+     iftrue              L152
+
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0xA")
+     iffalse             L165
+
+L152:
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-190")
+     getlocal            4
+     iftrue              L164
+
+     coerce_s
+     getlocal            4
+     dup
+     iffalse             L163
+
+     pop
+     getlocal0
+     convert_b
+L163:
+     iftrue              L174
+
+L164:
+     jump                L177
+
+L165:
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-z4")
+     getlocal            5
+     dup
+     iftrue              L173
+
+     pop
+     getlocal2
+     convert_b
+L173:
+     iffalse             L177
+
+L174:
+     coerce_s
+     getlocal            4
+     iftrue              L178
+
+L177:
+     coerce_s
+L178:
+     setlocal3
+
+     getlocal            5
+     dup
+     iftrue              L185
+
+     pop
+     getlocal2
+     convert_b
+L185:
+     iffalse             L257
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+     getlocal            4
+     iftrue              L215
+
+     findpropstrict      QName(PackageNamespace("_-th"), "_-ox")
+     constructprop       QName(PackageNamespace("_-th"), "_-ox"), 0
+     getlocal3
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+     pushstring          "<p align=\"center\">"
+     callproperty        QName(PackageNamespace("", "#0"), "setPrefix"), 1
+     pushstring          "</p>"
+     callproperty        QName(PackageNamespace("", "#0"), "setPostfix"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal            4
+     dup
+     iffalse             L205
+
+     pop
+     getlocal0
+     convert_b
+L205:
+     iftrue              L224
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+     getlocal            4
+     dup
+     iffalse             L214
+
+     pop
+     getlocal2
+     convert_b
+L214:
+     iftrue              L226
+
+L215:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+     getlocal            4
+     iftrue              L257
+
+L224:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+L226:
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     jump                L234
+
+     pushtrue
+     declocal_i          2
+     multiply_i
+     kill                4
+     inclocal_i          3
+     inclocal_i          4
+L234:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "alignUI")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            4
+     iftrue              L257
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0he")
+     getproperty         QName(PackageNamespace("", "#0"), "complete")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "alignUI")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+L257:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "LOCKED") type QName(PackageNamespace("", "#0"), "String") value Utf8("Locked ") end
+  trait const QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0kD") type QName(PackageNamespace("", "#0"), "RegExp") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0fo") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "Portal") end
+  trait slot QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_") type QName(PackageNamespace("_-1X1"), "_-Fw") end
+  trait slot QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc") end
+  trait slot QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE") type QName(PackageNamespace("_-1X1"), "_-Fw") end
+  trait const QName(PackageNamespace("", "#0"), "_-1JB") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait const QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0he") type QName(PackageNamespace("_-0XJ"), "_-Wu") end
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "alignUI")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/alignUI"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      coerce_a
+      increment_i
+      equals
+      getlocal2
+      convert_s
+      pushwith
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iffalse             L112
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+      pushbyte            6
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal1
+      iftrue              L95
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      getlocal1
+      dup
+      iffalse             L35
+
+      pop
+      getlocal2
+      convert_b
+L35:
+      iftrue              L76
+
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal1
+      dup
+      iffalse             L45
+
+      pop
+      getlocal1
+      convert_b
+L45:
+      iftrue              L83
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      jump                L56
+
+      instanceof
+      not
+      typeof
+      lshift
+      convert_d
+      pushscope
+
+L56:
+      pushbyte            2
+      divide
+      subtract
+      getlocal1
+      dup
+      iffalse             L65
+
+      pop
+      getlocal2
+      convert_b
+L65:
+      iftrue              L85
+
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal1
+      dup
+      iffalse             L73
+
+      pop
+      getlocal1
+      convert_b
+L73:
+      iftrue              L112
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+L76:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      getlocal1
+      iftrue              L85
+
+L83:
+      pushbyte            4
+      subtract
+L85:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal1
+      iftrue              L118
+
+      jump                L95
+
+      increment_i
+      not
+      getlocal1
+      setlocal2
+
+      pushscope
+
+      convert_u
+L95:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+      getlocal1
+      iftrue              L114
+
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      pushbyte            30
+      subtract
+      getlocal1
+      iftrue              L117
+
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal1
+      dup
+      iffalse             L111
+
+      pop
+      getlocal2
+      convert_b
+L111:
+      iftrue              L118
+
+L112:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+L114:
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      pushbyte            2
+      divide
+L117:
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L118:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "onAddedToStage")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      setlocal2
+
+      getlocal2
+      dxnslate
+      declocal            2
+      setlocal2
+
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L30
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-024")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal3
+      iftrue              L30
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-jO")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "onRemovedFromStage")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_b
+      decrement
+      convert_u
+      declocal            2
+      negate
+      istypelate
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L27
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-jO")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-024")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/_-024"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      subtract
+      getlocal2
+      nextvalue
+      convert_d
+      popscope
+      declocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L22
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "enterPortal"), 0
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-jO")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/_-jO"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pop
+      increment
+      declocal            2
+      declocal            2
+      declocal            2
+      getlocal3
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L63
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyCode")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_-dE:PortalPanel/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance"), PackageNamespace("_-dE"), PackageInternalNs("_-dE"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Co"), StaticProtectedNs("_-Co"), StaticProtectedNs("_-g-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      equals
+      jump                L28
+
+      getlocal2
+      convert_i
+      add
+      declocal            2
+      multiply_i
+      declocal            2
+L28:
+      getlocal2
+      iffalse             L41
+
+      dup
+      iffalse             L53
+
+      getlocal3
+      jump                L40
+
+      coerce_a
+      declocal_i          2
+      convert_i
+      setlocal2
+
+      multiply_i
+      subtract_i
+L40:
+      iftrue              L53
+
+L41:
+      pop
+      getlocal2
+      dup
+      iftrue              L48
+
+      pop
+      getlocal0
+      convert_b
+L48:
+      iffalse             L63
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "focus")
+      pushnull
+      equals
+L53:
+      iffalse             L63
+
+      getlocal3
+      dup
+      iffalse             L60
+
+      pop
+      getlocal3
+      convert_b
+L60:
+      iftrue              L63
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "enterPortal"), 0
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "enterPortal")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/enterPortal"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushtrue
+      kill                2
+      pushwith
+      setlocal2
+
+      kill                2
+      declocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace("", "#0"), "_-Ao")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      getproperty         QName(PackageNamespace("", "#0"), "objectType_")
+      getproperty         MultinameL([PrivateNamespace("*", "_-dE:PortalPanel/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance"), PackageNamespace("_-dE"), PackageInternalNs("_-dE"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Co"), StaticProtectedNs("_-Co"), StaticProtectedNs("_-g-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "Nexus Portal"
+      ifne                L51
+
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace("", "#0"), "global"), 0
+      getlocal3
+      dup
+      iffalse             L32
+
+      pop
+      getlocal3
+      convert_b
+L32:
+      iftrue              L53
+
+      jump                L40
+
+      declocal_i          2
+      kill                2
+      inclocal            2
+      setlocal2
+
+      setlocal2
+
+      declocal            2
+L40:
+      pushstring          "enterPortal"
+      getlocal2
+      dup
+      iftrue              L47
+
+      pop
+      getlocal1
+      convert_b
+L47:
+      iffalse             L54
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "trackEvent"), 2
+
+      jump                L65
+
+L51:
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace("", "#0"), "global"), 0
+L53:
+      pushstring          "enterPortal"
+L54:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      jump                L63
+
+      bitor
+      setlocal2
+
+      bitxor
+      negate_i
+      inclocal            2
+      inclocal_i          2
+L63:
+      callproperty        QName(PackageNamespace("", "#0"), "getName"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "trackEvent"), 2
+
+L65:
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "doneAction")
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Tutorial")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0dL")
+      callpropvoid        QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "doneAction"), 2
+
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "usePortal"), 1
+
+      getlocal2
+      dup
+      iftrue              L82
+
+      pop
+      getlocal2
+      convert_b
+L82:
+      iffalse             L86
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1JB")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L86:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "_-dE:PortalPanel/instance/draw"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      coerce_s
+      multiply
+      getglobalscope
+      bitor
+      coerce_a
+      greaterthan
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L133
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0Nx"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      getlocal1
+      iffalse             L114
+
+      getproperty         QName(PackageNamespace("", "#0"), "_-0xA")
+      getlocal2
+      dup
+      iffalse             L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iftrue              L125
+
+      not
+      getlocal2
+      dup
+      iffalse             L41
+
+      pop
+      getlocal1
+      convert_b
+L41:
+      iftrue              L73
+
+      dup
+      getlocal1
+      iffalse             L145
+
+      iffalse             L69
+
+      pop
+      getlocal2
+      dup
+      iffalse             L53
+
+      pop
+      getlocal0
+      convert_b
+L53:
+      iftrue              L96
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      getlocal2
+      dup
+      iffalse             L62
+
+      pop
+      getlocal2
+      convert_b
+L62:
+      iftrue              L114
+
+      getproperty         QName(PackageNamespace("", "#0"), "_-0LE")
+      getlocal2
+      iftrue              L88
+
+      convert_b
+      getlocal2
+      iftrue              L143
+
+L69:
+      dup
+      getlocal2
+      iftrue              L124
+
+      iffalse             L88
+
+L73:
+      pop
+      getlocal2
+      iftrue              L177
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "contains")
+      getlocal0
+      jump                L85
+
+      convert_i
+      pop
+      typeof
+      pushnull
+      dup
+      add_i
+L85:
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+      callproperty        QName(PackageNamespace("", "#0"), "contains"), 1
+      convert_b
+L88:
+      iffalse             L105
+
+      getlocal1
+      dup
+      iftrue              L95
+
+      pop
+      getlocal0
+      convert_b
+L95:
+      iffalse             L154
+
+L96:
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeChild"), 1
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      jump                L177
+
+L105:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      getlocal2
+      dup
+      iffalse             L113
+
+      pop
+      getlocal1
+      convert_b
+L113:
+      iftrue              L135
+
+L114:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0xA")
+      convert_b
+      dup
+      getlocal2
+      dup
+      iffalse             L123
+
+      pop
+      getlocal0
+      convert_b
+L123:
+      iftrue              L145
+
+L124:
+      iftrue              L144
+
+L125:
+      pop
+      getlocal2
+      dup
+      iffalse             L132
+
+      pop
+      getlocal2
+      convert_b
+L132:
+      iftrue              L167
+
+L133:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+L135:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0LE")
+      getlocal2
+      dup
+      iffalse             L142
+
+      pop
+      getlocal2
+      convert_b
+L142:
+      iftrue              L144
+
+L143:
+      not
+L144:
+      dup
+L145:
+      iffalse             L159
+
+      pop
+      jump                L154
+
+      pop
+      pushwith
+      newactivation
+      pushscope
+
+      popscope
+      coerce_a
+L154:
+      findpropstrict      QName(PackageNamespace("", "#0"), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      callproperty        QName(PackageNamespace("", "#0"), "contains"), 1
+      convert_b
+L159:
+      iffalse             L177
+
+      getlocal1
+      dup
+      iftrue              L166
+
+      pop
+      getlocal1
+      convert_b
+L166:
+      iffalse             L177
+
+L167:
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-1A8")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeChild"), 1
+
+      getlocal2
+      iftrue              L177
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-lE")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L177:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0Nx")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/_-0Nx"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      pushfalse
+      getlocal2
+      inclocal_i          2
+      getlocal2
+      setlocal2
+
+      decrement
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "getName"), 0
+      getlocal3
+      iffalse             L18
+
+      coerce_s
+L18:
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-0BL")
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-0BL"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "makeBuilder"), 1
+      coerce              QName(PackageNamespace("_-th"), "_-5r")
+      setlocal2
+
+      getlocal            4
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      convert_b
+L31:
+      iftrue              L90
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+      getlocal3
+      dup
+      iftrue              L40
+
+      pop
+      getlocal2
+      convert_b
+L40:
+      iffalse             L106
+
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      getlocal            4
+      dup
+      iffalse             L49
+
+      pop
+      getlocal2
+      convert_b
+L49:
+      iftrue              L122
+
+      getlocal0
+      jump                L58
+
+      declocal            3
+      setlocal2
+
+      getlocal3
+      lshift
+      inclocal            2
+      inclocal            2
+L58:
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+      getlocal3
+      dup
+      iftrue              L65
+
+      pop
+      getlocal0
+      convert_b
+L65:
+      iffalse             L112
+
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      subtract
+      getlocal            4
+      iftrue              L82
+
+      pushdouble          0.5
+      multiply
+      getlocal            4
+      dup
+      iffalse             L81
+
+      pop
+      getlocal0
+      convert_b
+L81:
+      iftrue              L121
+
+L82:
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            4
+      dup
+      iffalse             L89
+
+      pop
+      getlocal1
+      convert_b
+L89:
+      iftrue              L122
+
+L90:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+      jump                L99
+
+      astypelate
+      kill                3
+      greaterequals
+      coerce_a
+      pushnull
+      nextname
+L99:
+      getlocal3
+      dup
+      iftrue              L105
+
+      pop
+      getlocal3
+      convert_b
+L105:
+      iffalse             L112
+
+L106:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "nameText_")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      pushbyte            30
+      greaterthan
+      iffalse             L119
+
+L112:
+      pushbyte            0
+      getlocal            4
+      iftrue              L120
+
+      convert_d
+      getlocal            4
+      iftrue              L121
+
+      jump                L121
+
+L119:
+      pushbyte            6
+L120:
+      convert_d
+L121:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L122:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "getName")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/getName"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      checkfilter
+      swap
+      newactivation
+      declocal_i          2
+      bitor
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      callproperty        QName(PackageNamespace("", "#0"), "getName"), 0
+      coerce_s
+      setlocal1
+
+      getlocal2
+      dup
+      iffalse             L25
+
+      pop
+      getlocal0
+      convert_b
+L25:
+      iftrue              L88
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fo")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0xA")
+      getlocal3
+      iffalse             L73
+
+      convert_b
+      getlocal3
+      iffalse             L73
+
+      dup
+      iffalse             L73
+
+      getlocal2
+      dup
+      iffalse             L49
+
+      pop
+      getlocal0
+      convert_b
+      jump                L49
+
+      declocal            2
+      not
+      add
+      pushfalse
+      bitor
+      setlocal2
+
+L49:
+      iftrue              L73
+
+      pop
+      getlocal3
+      iffalse             L101
+
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L60
+
+      pop
+      getlocal3
+      convert_b
+L60:
+      iffalse             L96
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "LOCKED")
+      getlocal2
+      dup
+      iffalse             L69
+
+      pop
+      getlocal0
+      convert_b
+L69:
+      iftrue              L98
+
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            0
+      equals
+L73:
+      iffalse             L101
+
+      jump                L81
+
+      setlocal2
+
+      getlocal2
+      pushtrue
+      istypelate
+      kill                2
+      declocal_i          2
+L81:
+      getlocal3
+      dup
+      iftrue              L87
+
+      pop
+      getlocal2
+      convert_b
+L87:
+      iffalse             L101
+
+L88:
+      getlocal1
+      getlocal2
+      dup
+      iffalse             L95
+
+      pop
+      getlocal3
+      convert_b
+L95:
+      iftrue              L104
+
+L96:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "LOCKED")
+L98:
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      returnvalue
+
+L101:
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0dv"), 1
+L104:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0dv")
+   method
+    refid "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance/_-0dv"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      kill                2
+      instanceof
+      kill                2
+      inclocal            2
+      getlocal2
+      getlocal3
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-dE:PortalPanel/instance"), "_-0kD")
+      jump                L23
+
+      decrement_i
+      add_i
+      convert_b
+      divide
+      typeof
+      decrement
+L23:
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "match"), 1
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      getlocal3
+      iffalse             L30
+
+      getlocal2
+      iffalse             L37
+
+L30:
+      getlocal2
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_-dE:PortalPanel/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-dE:PortalPanel/instance/_-dE:PortalPanel/instance"), PackageNamespace("_-dE"), PackageInternalNs("_-dE"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Co"), StaticProtectedNs("_-Co"), StaticProtectedNs("_-g-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      getlocal            4
+      iftrue              L45
+
+      jump                L46
+
+L37:
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L44
+
+      pop
+      getlocal0
+      convert_b
+L44:
+      iffalse             L46
+
+L45:
+      coerce_s
+L46:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-dE:PortalPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

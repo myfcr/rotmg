@@ -1,0 +1,215 @@
+class
+ refid "_X_x:_1U_R_"
+ instance QName(PackageNamespace("_X_x"), "_1U_R_")
+  extends QName(PackageNamespace("_N__"), "_1X_a")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_T_5")
+  iinit
+   refid "_X_x:_1U_R_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("_X_x"), "_dv")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_5z") flag METADATA type QName(PackageNamespace("_0aH_"), "_0mm")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0tj") flag METADATA type QName(PackageNamespace("_0ky"), "_uf")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_X_x:_1U_R_/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "_D_7")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_x:_1U_R_/instance"), "_uO_")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "_X_x:_1U_R_/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "_D_7")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_X_x:_1U_R_/instance"), "_uO_")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_X_x:_1U_R_/instance"), "_uO_")
+   method
+    refid "_X_x:_1U_R_/instance/_X_x:_1U_R_/instance/_uO_"
+    param QName(PackageNamespace("_00L_"), "_le")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setlocal2
+
+      jump                L36
+
+L6:
+      label
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "linkDetail")
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
+      getlocal2
+      pushstring          "_blank"
+      callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
+
+      jump                L63
+
+L18:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_5z")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "linkDetail")
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      jump                L63
+
+L27:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0tj")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "linkDetail")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      jump                L63
+
+L34:
+      label
+      jump                L63
+
+L36:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "linkType")
+      setlocal3
+
+      getlex              QName(PackageNamespace("_00L_"), "_I_w")
+      getproperty         QName(PackageNamespace(""), "_0dg")
+      getlocal3
+      ifstrictne          L45
+
+      pushbyte            0
+      jump                L61
+
+L45:
+      getlex              QName(PackageNamespace("_00L_"), "_I_w")
+      getproperty         QName(PackageNamespace(""), "_15v")
+      getlocal3
+      ifstrictne          L51
+
+      pushbyte            1
+      jump                L61
+
+L51:
+      getlex              QName(PackageNamespace("_00L_"), "_I_w")
+      getproperty         QName(PackageNamespace(""), "_J_m")
+      getlocal3
+      ifstrictne          L57
+
+      pushbyte            2
+      jump                L61
+
+L57:
+      jump                L60
+
+      pushbyte            3
+      jump                L61
+
+L60:
+      pushbyte            3
+L61:
+      kill                3
+      lookupswitch        L34, [L6, L18, L27, L34]
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_X_x:_1U_R_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

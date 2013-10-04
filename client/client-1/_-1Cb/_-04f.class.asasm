@@ -1,0 +1,128 @@
+class
+ refid "_-1Cb:_-04f"
+ instance QName(PackageNamespace("_-1Cb"), "_-04f")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-LL")
+  iinit
+   refid "_-1Cb:_-04f/instance/init"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          4
+     pop
+     istypelate
+     pop
+     lshift
+     pop
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     iffalse             L31
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     jump                L28
+
+     swap
+     declocal            4
+     getlocal3
+     setlocal2
+
+     getlocal3
+     nextvalue
+L28:
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 2
+
+     getlocal            6
+     iffalse             L62
+
+L31:
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     jump                L39
+
+     getlocal            5
+     setlocal            5
+
+     getlocal            4
+     declocal_i          5
+     convert_i
+     pushscope
+
+L39:
+     pushbyte            0
+     dup
+     getlocal3
+     getlocal            4
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+     getlocal            6
+     dup
+     iftrue              L52
+
+     pop
+     getlocal0
+     convert_b
+L52:
+     iffalse             L62
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "x")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "y")
+
+     findproperty        QName(PackageNamespace("", "#0"), "buttonMode")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "buttonMode")
+
+L62:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-1Cb:_-04f/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

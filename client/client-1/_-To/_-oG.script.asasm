@@ -1,0 +1,29 @@
+script ; 115
+ sinit
+  refid "_-To:_-oG/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-oG", [PackageNamespace("_-To")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-To:_-oG"
+    popscope
+    initproperty        QName(PackageNamespace("_-To"), "_-oG")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-To"), "_-oG")
+  #include "_-oG.class.asasm"
+ end ; trait
+end ; script

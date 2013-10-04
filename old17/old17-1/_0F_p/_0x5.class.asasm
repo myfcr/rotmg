@@ -1,0 +1,464 @@
+class
+ refid "_0F_p:_0x5"
+ instance QName(PackageNamespace("_0F_p"), "_0x5")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_t_", [PackageNamespace("_0F_p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_4w")
+  iinit
+   refid "_0F_p:_0x5/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_") type QName(PackageNamespace("_0F_p"), "_0ab") end
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q") type QName(PackageNamespace("_0F_p"), "_11S_") end
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_") type QName(PackageNamespace("_0F_p"), "_11S_") end
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0wb") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_jw") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0_q") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fR_") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "start") flag FINAL
+   method
+    refid "_0F_p:_0x5/instance/start"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0wb")
+      iftrue              L22
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0wb")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_")
+      coerce_a
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_")
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "dispatch"), 1
+      coerce_a
+L19:
+      pop
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_4w"), "startTask"), 0
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "reset") flag FINAL
+   method
+    refid "_0F_p:_0x5/instance/reset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0wb")
+      iffalse             L15
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0wb")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_jw")
+      iftrue              L15
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "Unable to Task.reset() when a task is ongoing"
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L15:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_")
+      coerce_a
+      dup
+      iffalse             L25
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_")
+      callproperty        QName(PackageNamespace(""), "removeAll"), 0
+      coerce_a
+L25:
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q")
+      coerce_a
+      dup
+      iffalse             L36
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q")
+      callproperty        QName(PackageNamespace(""), "removeAll"), 0
+      coerce_a
+L36:
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_")
+      coerce_a
+      dup
+      iffalse             L47
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_")
+      callproperty        QName(PackageNamespace(""), "removeAll"), 0
+      coerce_a
+L47:
+      pop
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_4w"), "onReset"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_4w"), "startTask")
+   method
+    refid "_0F_p:_0x5/instance/_4w:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_4w"), "onReset")
+   method
+    refid "_0F_p:_0x5/instance/_4w:onReset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_4w"), "_1A_L_") flag FINAL
+   method
+    refid "_0F_p:_0x5/instance/_4w:_1A_L_"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0_q")
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fR_")
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_jw")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q")
+      coerce_a
+      dup
+      iffalse             L24
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q")
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "dispatch"), 3
+      coerce_a
+L24:
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_")
+      coerce_a
+      dup
+      iffalse             L38
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_")
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "dispatch"), 3
+      coerce_a
+L38:
+      pop
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "_1gh") flag FINAL
+   method
+    refid "_0F_p:_0x5/instance/_1gh/getter"
+    returns QName(PackageNamespace("_V_C_"), "_f4")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_")
+      coerce              QName(PackageNamespace("_0F_p"), "_0ab")
+      dup
+      iftrue              L12
+
+      pop
+      findpropstrict      QName(PackageNamespace("_0F_p"), "_0ab")
+      constructprop       QName(PackageNamespace("_0F_p"), "_0ab"), 0
+      coerce              QName(PackageNamespace("_0F_p"), "_0ab")
+L12:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0qJ_")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "_01a") flag FINAL
+   method
+    refid "_0F_p:_0x5/instance/_01a/getter"
+    returns QName(PackageNamespace("_0F_p"), "_11S_")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q")
+      coerce              QName(PackageNamespace("_0F_p"), "_11S_")
+      dup
+      iftrue              L12
+
+      pop
+      findpropstrict      QName(PackageNamespace("_0F_p"), "_11S_")
+      constructprop       QName(PackageNamespace("_0F_p"), "_11S_"), 0
+      coerce              QName(PackageNamespace("_0F_p"), "_11S_")
+L12:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0M_q")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "lastly") flag FINAL
+   method
+    refid "_0F_p:_0x5/instance/lastly/getter"
+    returns QName(PackageNamespace("_0F_p"), "_11S_")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_")
+      coerce              QName(PackageNamespace("_0F_p"), "_11S_")
+      dup
+      iftrue              L12
+
+      pop
+      findpropstrict      QName(PackageNamespace("_0F_p"), "_11S_")
+      constructprop       QName(PackageNamespace("_0F_p"), "_11S_"), 0
+      coerce              QName(PackageNamespace("_0F_p"), "_11S_")
+L12:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fL_")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "_1I_K_")
+   method
+    refid "_0F_p:_0x5/instance/_1I_K_/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0wb")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "_06N_")
+   method
+    refid "_0F_p:_0x5/instance/_06N_/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_jw")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "_0P_K_")
+   method
+    refid "_0F_p:_0x5/instance/_0P_K_/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_0_q")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "error")
+   method
+    refid "_0F_p:_0x5/instance/error/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0F_p:_0x5/instance"), "_fR_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0F_p:_0x5/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

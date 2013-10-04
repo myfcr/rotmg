@@ -1,0 +1,181 @@
+class
+ refid "_-1Qt:_-1CD"
+ instance QName(PackageNamespace("_-1Qt"), "_-1CD")
+  extends QName(PackageNamespace("_-1Qt"), "_-1Sf")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1TP")
+  iinit
+   refid "_-1Qt:_-1CD/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   body
+    maxstack 9
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal2
+     subtract
+     declocal            3
+     pushscope
+
+     pushtrue
+     lshift
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L53
+
+     getlocal0
+     pushint             6036765
+     pushbyte            1
+     pushint             16549442
+     pushbyte            1
+     pushfalse
+     constructsuper      5
+
+     getlocal            4
+     iffalse             L31
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 0
+     initproperty        QName(PrivateNamespace("*", "_-1Qt:_-1CD/instance/init"), "_-0xx")
+
+     getlocal3
+     iftrue              L42
+
+L31:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Qt:_-1CD/instance/init"), "_-0xx")
+     pushbyte            0
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal            4
+     dup
+     iftrue              L41
+
+     pop
+     getlocal1
+     convert_b
+L41:
+     iffalse             L53
+
+L42:
+     getlocal0
+     jump                L50
+
+     getlocal2
+     convert_u
+     urshift
+     declocal_i          2
+     nextname
+     rshift
+L50:
+     getproperty         QName(PrivateNamespace("*", "_-1Qt:_-1CD/instance/init"), "_-0xx")
+     pushbyte            0
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L53:
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "getPortrait"), 0
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal2
+
+     getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+     getlocal2
+     pushbyte            10
+     dup
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "width")
+     pushbyte            20
+     subtract
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "height")
+     pushbyte            20
+     subtract
+     callproperty        QName(PackageNamespace("", "#0"), "_-0FH"), 5
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal2
+
+     getlocal3
+     iftrue              L103
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Qt:_-1CD/instance/init"), "_-0xx")
+     jump                L83
+
+     lshift
+     getlocal2
+     inclocal_i          3
+     getlocal2
+     swap
+     typeof
+L83:
+     getlocal2
+     setproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+
+     getlocal            4
+     dup
+     iftrue              L91
+
+     pop
+     getlocal3
+     convert_b
+L91:
+     iffalse             L103
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1Qt:_-1CD/instance/init"), "_-0xx")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal3
+     dup
+     iffalse             L102
+
+     pop
+     getlocal1
+     convert_b
+L102:
+     iftrue              L106
+
+L103:
+     findproperty        QName(PackageNamespace("", "#0"), "filters")
+     newarray            0
+     initproperty        QName(PackageNamespace("", "#0"), "filters")
+
+L106:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1Qt:_-1CD/instance/init"), "_-0xx") type QName(PackageNamespace("flash.display"), "Bitmap") end
+ end ; instance
+ cinit
+  refid "_-1Qt:_-1CD/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,61 @@
+script ; 1485
+ sinit
+  refid "_-Yf:ExplosionEffect/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ExplosionEffect", [PackageNamespace("_-Yf")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "_-00p")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "_-00p")
+    newclass            "_-Yf:ExplosionEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-Yf"), "ExplosionEffect")
+
+    findpropstrict      Multiname("ExplosionParticle", [PrivateNamespace("*", "_-Yf:ExplosionEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-Yf"), "Particle")
+    newclass            "_-Yf:ExplosionEffect/ExplosionParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Yf"), "ExplosionEffect")
+  #include "ExplosionEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-Yf:ExplosionEffect"), "ExplosionParticle")
+  #include "ExplosionEffect/ExplosionParticle.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,110 @@
+class
+ refid "_-0yh:StatModel"
+ instance QName(PackageNamespace("_-0yh"), "StatModel")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0hs")
+  iinit
+   refid "_-0yh:StatModel/instance/init"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     declocal            3
+     inclocal            2
+     pushundefined
+     dup
+     increment_i
+     declocal            4
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     iftrue              L44
+
+     jump                L22
+
+     convert_u
+     setlocal3
+
+     bitor
+     declocal_i          3
+     nextname
+     setlocal            4
+
+L22:
+     getlocal0
+     constructsuper      0
+
+     getlocal            6
+     iftrue              L44
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "name")
+
+     getlocal            6
+     iftrue              L36
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-J3")
+
+     getlocal            6
+     iftrue              L41
+
+L36:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "description")
+
+     getlocal            5
+     iffalse             L44
+
+L41:
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "_-1eS")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-J3") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "description") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1eS") type QName(PackageNamespace("", "#0"), "Boolean") end
+ end ; instance
+ cinit
+  refid "_-0yh:StatModel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

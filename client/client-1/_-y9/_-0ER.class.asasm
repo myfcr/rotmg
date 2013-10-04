@@ -1,0 +1,432 @@
+class
+ refid "_-y9:_-0ER"
+ instance QName(PackageInternalNs("_-y9"), "_-0ER")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1cI")
+  iinit
+   refid "_-y9:_-0ER/instance/init"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          4
+     getlocal0
+     increment
+     pushundefined
+     setlocal2
+
+     declocal            4
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L39
+
+     jump                L28
+
+     getlocal3
+     dup
+     getlocal            4
+     declocal_i          4
+     add
+     lshift
+L28:
+     getlocal0
+     constructsuper      0
+
+     getlocal            5
+     iftrue              L54
+
+     jump                L39
+
+     kill                4
+     coerce_a
+     getlocal1
+     rshift
+     decrement
+     decrement_i
+L39:
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "id_")
+
+     getlocal            5
+     iftrue              L59
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "price_")
+
+     getlocal            5
+     dup
+     iffalse             L53
+
+     pop
+     getlocal0
+     convert_b
+L53:
+     iftrue              L62
+
+L54:
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "currency_")
+
+     getlocal            6
+     iffalse             L62
+
+L59:
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "converted_")
+
+L62:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "id_") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "price_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "currency_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "converted_") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "record")
+   method
+    refid "_-y9:_-0ER/instance/record"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal            2
+      instanceof
+      decrement
+      getlocal2
+      greaterequals
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      jump                L121
+
+L14:
+      label
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace("", "#0"), "global"), 0
+      getlocal3
+      iftrue              L109
+
+      pushstring          "credits"
+      getlocal3
+      iftrue              L74
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "converted_")
+      iffalse             L36
+
+      getlocal3
+      dup
+      iffalse             L31
+
+      pop
+      getlocal0
+      convert_b
+L31:
+      iftrue              L74
+
+      pushstring          "buyConverted"
+      getlocal2
+      iffalse             L39
+
+      jump                L39
+
+L36:
+      pushstring          "buy"
+      getlocal3
+      iftrue              L111
+
+L39:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "id_")
+      getlocal2
+      dup
+      iftrue              L47
+
+      pop
+      getlocal1
+      convert_b
+L47:
+      iffalse             L113
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "price_")
+      getlocal2
+      iffalse             L115
+
+      callpropvoid        QName(PackageNamespace("", "#0"), "trackEvent"), 4
+
+      getlocal3
+      iftrue              L189
+
+      jump                L189
+
+L56:
+      label
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace("", "#0"), "global"), 0
+      getlocal3
+      dup
+      iffalse             L65
+
+      pop
+      getlocal1
+      convert_b
+L65:
+      iftrue              L109
+
+      pushstring          "credits"
+      getlocal2
+      dup
+      iftrue              L73
+
+      pop
+      getlocal1
+      convert_b
+L73:
+      iffalse             L110
+
+L74:
+      pushstring          "buyFame"
+      getlocal3
+      iftrue              L111
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "id_")
+      getlocal3
+      dup
+      iffalse             L92
+
+      pop
+      getlocal3
+      jump                L91
+
+      getlocal2
+      nextname
+      kill                2
+      checkfilter
+      typeof
+      kill                2
+L91:
+      convert_b
+L92:
+      iftrue              L113
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "price_")
+      getlocal3
+      dup
+      iffalse             L101
+
+      pop
+      getlocal0
+      convert_b
+L101:
+      iftrue              L115
+
+      callpropvoid        QName(PackageNamespace("", "#0"), "trackEvent"), 4
+
+      getlocal2
+      iffalse             L189
+
+      jump                L189
+
+L106:
+      label
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace("", "#0"), "global"), 0
+L109:
+      pushstring          "credits"
+L110:
+      pushstring          "buyGuildFame"
+L111:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "id_")
+L113:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "price_")
+L115:
+      callpropvoid        QName(PackageNamespace("", "#0"), "trackEvent"), 4
+
+      getlocal2
+      iffalse             L189
+
+      jump                L189
+
+L119:
+      label
+      jump                L189
+
+L121:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:_-0ER/instance"), "currency_")
+      getlocal3
+      iftrue              L188
+
+      setlocal1
+
+      getlocal3
+      dup
+      iffalse             L132
+
+      pop
+      getlocal2
+      convert_b
+L132:
+      iftrue              L181
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1em")
+      getlocal3
+      iftrue              L182
+
+      getlocal1
+      getlocal2
+      dup
+      iftrue              L144
+
+      pop
+      getlocal2
+      convert_b
+L144:
+      iffalse             L180
+
+      ifstrictne          L150
+
+      getlocal3
+      iftrue              L181
+
+      pushbyte            0
+      jump                L187
+
+L150:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace("", "#0"), "FAME")
+      getlocal1
+      getlocal3
+      dup
+      iffalse             L166
+
+      pop
+      getlocal3
+      convert_b
+      jump                L166
+
+      subtract_i
+      declocal            2
+      declocal_i          2
+      coerce_s
+      setlocal2
+
+      greaterthan
+L166:
+      iftrue              L180
+
+      ifstrictne          L177
+
+      getlocal3
+      dup
+      iffalse             L174
+
+      pop
+      getlocal3
+      convert_b
+L174:
+      iftrue              L181
+
+      pushbyte            1
+      jump                L187
+
+L177:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0IY")
+      getlocal1
+L180:
+      ifstrictne          L183
+
+L181:
+      pushbyte            2
+L182:
+      jump                L187
+
+L183:
+      jump                L186
+
+      pushbyte            3
+      jump                L187
+
+L186:
+      pushbyte            3
+L187:
+      kill                1
+L188:
+      lookupswitch        L119, [L14, L56, L106, L119]
+
+L189:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-y9:_-0ER/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

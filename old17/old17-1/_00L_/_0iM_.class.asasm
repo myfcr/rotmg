@@ -1,0 +1,102 @@
+class
+ refid "_00L_:_0iM_"
+ instance QName(PackageNamespace("_00L_"), "_0iM_")
+  extends QName(PackageNamespace("_00L_"), "_le")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0aB_")
+  iinit
+   refid "_00L_:_0iM_/instance/init"
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "_18P_")
+     pushstring          ""
+     initproperty        QName(PackageNamespace(""), "_18P_")
+
+     findproperty        QName(PackageNamespace(""), "linkDetail")
+     pushstring          "https://forums.wildshadow.com/"
+     initproperty        QName(PackageNamespace(""), "linkDetail")
+
+     findproperty        QName(PackageNamespace(""), "_0a")
+     getlocal1
+     pushbyte            0
+     equals
+     iffalse             L17
+
+     pushstring          "Realm Forums and Wiki"
+     jump                L18
+
+L17:
+     pushstring          "Forums"
+L18:
+     initproperty        QName(PackageNamespace(""), "_0a")
+
+     findproperty        QName(PackageNamespace(""), "_030")
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+     pushint             1000000000
+     subtract
+     initproperty        QName(PackageNamespace(""), "_030")
+
+     findproperty        QName(PackageNamespace(""), "_0dF_")
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+     pushint             1000000000
+     add
+     initproperty        QName(PackageNamespace(""), "_0dF_")
+
+     findproperty        QName(PackageNamespace(""), "_16a")
+     pushstring          "kabam.com"
+     pushstring          "kongregate"
+     pushstring          "steam"
+     pushstring          "rotmg"
+     newarray            4
+     initproperty        QName(PackageNamespace(""), "_16a")
+
+     findproperty        QName(PackageNamespace(""), "linkType")
+     getlex              QName(PackageNamespace("_00L_"), "_I_w")
+     getproperty         QName(PackageNamespace(""), "_0dg")
+     initproperty        QName(PackageNamespace(""), "linkType")
+
+     findproperty        QName(PackageNamespace(""), "priority")
+     pushint             999999
+     initproperty        QName(PackageNamespace(""), "priority")
+
+     findproperty        QName(PackageNamespace(""), "slot")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "slot")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_00L_:_0iM_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

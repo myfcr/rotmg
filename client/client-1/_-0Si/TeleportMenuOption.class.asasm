@@ -1,0 +1,767 @@
+class
+ refid "_-0Si:TeleportMenuOption"
+ instance QName(PackageNamespace("_-0Si"), "TeleportMenuOption")
+  extends QName(PackageNamespace("_-0Si"), "_-11D")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1f1")
+  iinit
+   refid "_-0Si:TeleportMenuOption/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     kill                2
+     increment
+     typeof
+     getlocal1
+     convert_d
+     bitnot
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+     pushstring          "lofiInterface2"
+     pushbyte            3
+     callproperty        QName(PackageNamespace("", "#0"), "_-1aH"), 2
+     pushint             16777215
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0Ym")
+     constructsuper      3
+
+     getlocal            4
+     dup
+     iffalse             L32
+
+     pop
+     getlocal2
+     convert_b
+L32:
+     iftrue              L125
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "player_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1X1"), "_-Fw")
+     constructprop       QName(PackageNamespace("_-1X1"), "_-Fw"), 0
+     pushbyte            18
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+     getlocal            4
+     dup
+     iffalse             L52
+
+     pop
+     getlocal3
+     convert_b
+L52:
+     iftrue              L76
+
+     pushtrue
+     callpropvoid        QName(PackageNamespace("", "#0"), "setBold"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+     getlocal3
+     iffalse             L102
+
+     findpropstrict      QName(PackageNamespace("_-th"), "_-ox")
+     constructprop       QName(PackageNamespace("_-th"), "_-ox"), 0
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     jump                L69
+
+     declocal            2
+     greaterthan
+     getlocal2
+     dup
+     getlocal3
+     declocal_i          2
+L69:
+     getproperty         QName(PackageNamespace("", "#0"), "_-0Ym")
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+     getlocal            4
+     iftrue              L121
+
+L76:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+     getlex              QName(ProtectedNamespace("_-Wi"), "text_")
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     dup
+     setlocal2
+
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal2
+     kill                2
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal            4
+     dup
+     iffalse             L92
+
+     pop
+     getlocal0
+     convert_b
+L92:
+     iftrue              L144
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+     getlocal            4
+     dup
+     iffalse             L101
+
+     pop
+     getlocal3
+     convert_b
+L101:
+     iftrue              L121
+
+L102:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+     getlex              QName(ProtectedNamespace("_-Wi"), "text_")
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     dup
+     setlocal2
+
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     getlocal2
+     kill                2
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+     jump                L121
+
+     getlocal2
+     decrement_i
+     getlocal3
+     setlocal2
+
+     inclocal            2
+     bitand
+L121:
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onTextChanged")
+     callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+L125:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal3
+     dup
+     iftrue              L137
+
+     pop
+     getlocal0
+     convert_b
+L137:
+     iffalse             L144
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L144:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "player_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player") end
+  trait slot QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-1NB") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r") type QName(PackageNamespace("_-1X1"), "_-Fw") end
+  trait slot QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-Cp") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait method QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onTextChanged")
+   method
+    refid "_-0Si:TeleportMenuOption/instance/_-0Si:TeleportMenuOption/onTextChanged"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      greaterequals
+      getglobalscope
+      convert_u
+      newactivation
+      decrement
+      increment_i
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iffalse             L63
+
+      getlocal0
+      jump                L28
+
+      bitand
+      pushundefined
+      getglobalscope
+      convert_s
+      pushundefined
+      subtract
+L28:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Hn")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-Cp")
+
+      jump                L40
+
+      pop
+      coerce_s
+      bitor
+      coerce_s
+      bitxor
+      pushtrue
+L40:
+      getlocal1
+      iffalse             L63
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+      getproperty         QName(PackageNamespace("", "#0"), "graphics")
+      pushint             16711935
+      callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 1
+
+      getlocal1
+      iffalse             L63
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+      getproperty         QName(PackageNamespace("", "#0"), "graphics")
+      pushbyte            0
+      dup
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Hn")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Hn")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onAddedToStage")
+   method
+    refid "_-0Si:TeleportMenuOption/instance/_-0Si:TeleportMenuOption/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      inclocal            2
+      lessthan
+      convert_o
+      setlocal2
+
+      getlocal2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L27
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onRemovedFromStage")
+   method
+    refid "_-0Si:TeleportMenuOption/instance/_-0Si:TeleportMenuOption/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      multiply_i
+      not
+      pushnull
+      coerce_a
+      nextvalue
+      lessthan
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L22
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "onEnterFrame")
+   method
+    refid "_-0Si:TeleportMenuOption/instance/_-0Si:TeleportMenuOption/onEnterFrame"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      inclocal_i          4
+      kill                3
+      inclocal            3
+      coerce_s
+      kill                3
+      getlocal2
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "player_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1J5"), 0
+      getlocal            5
+      iftrue              L21
+
+      convert_i
+L21:
+      setlocal2
+
+      getlocal            4
+      dup
+      iftrue              L28
+
+      pop
+      getlocal3
+      convert_b
+L28:
+      iffalse             L43
+
+      getlocal2
+      getlocal            5
+      iftrue              L79
+
+      pushbyte            0
+      getlocal            4
+      iffalse             L80
+
+      ifngt               L114
+
+      getlocal            4
+      iffalse             L133
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      callproperty        QName(PackageNamespace("", "#0"), "contains"), 1
+      iftrue              L77
+
+L43:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      getlocal            5
+      dup
+      iffalse             L53
+
+      pop
+      getlocal3
+      convert_b
+L53:
+      iftrue              L129
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      jump                L63
+
+      istypelate
+      getlocal2
+      kill                2
+      multiply_i
+      declocal            4
+      checkfilter
+L63:
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+      setproperty         QName(PackageNamespace("", "#0"), "mask")
+
+      getlocal            4
+      dup
+      iftrue              L76
+
+      pop
+      getlocal2
+      convert_b
+L76:
+      iffalse             L101
+
+L77:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-Cp")
+L79:
+      pushbyte            1
+L80:
+      getlocal2
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fh")
+      divide
+      subtract
+      multiply
+      getlocal            5
+      dup
+      iffalse             L92
+
+      pop
+      getlocal3
+      convert_b
+L92:
+      iftrue              L94
+
+      convert_d
+L94:
+      setlocal3
+
+      getlocal            4
+      iffalse             L129
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0Pp")
+      getlocal3
+      setproperty         QName(PackageNamespace("", "#0"), "width")
+
+L101:
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-5h")
+      getlex              QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0PQ")
+      jump                L110
+
+      nextname
+      astypelate
+      typeof
+      pushfalse
+      inclocal            2
+      inclocal_i          4
+L110:
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-5h"), 1
+
+      getlocal            5
+      iftrue              L126
+
+      jump                L133
+
+L114:
+      findpropstrict      QName(PackageNamespace("", "#0"), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      callproperty        QName(PackageNamespace("", "#0"), "contains"), 1
+      iffalse             L123
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-00r")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeChild"), 1
+
+L123:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-1NB")
+      iffalse             L130
+
+L126:
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-5h")
+      getlex              QName(StaticProtectedNs("_-Wi"), "_-1EI")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-5h"), 1
+
+L129:
+      jump                L133
+
+L130:
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-5h")
+      pushnull
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-5h"), 1
+
+L133:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1f1"), "onMouseOver") flag OVERRIDE
+   method
+    refid "_-0Si:TeleportMenuOption/instance/_-1f1:onMouseOver"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal_i          2
+      declocal_i          2
+      add_i
+      decrement
+      pushwith
+      dup
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iffalse             L23
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-1NB")
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1f1"), "onMouseOut") flag OVERRIDE
+   method
+    refid "_-0Si:TeleportMenuOption/instance/_-1f1:onMouseOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal            2
+      equals
+      subtract_i
+      convert_i
+      increment
+      negate
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L23
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-1NB")
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Si:TeleportMenuOption/class/init"
+  body
+   maxstack 8
+   localcount 3
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    convert_b
+    convert_o
+    equals
+    coerce_a
+    astypelate
+    lshift
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L29
+
+    findproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0PQ")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushbyte            84
+    pushshort           255
+    divide
+    pushbyte            84
+    pushshort           255
+    divide
+    pushbyte            84
+    pushshort           255
+    divide
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+    initproperty        QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0PQ")
+
+L29:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0Si:TeleportMenuOption"), "_-0PQ") slotid 1 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+end ; class

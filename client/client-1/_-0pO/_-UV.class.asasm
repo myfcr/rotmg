@@ -1,0 +1,95 @@
+class
+ refid "_-0pO:_-UV"
+ instance QName(PackageNamespace("_-0pO"), "_-UV")
+  extends QName(PackageNamespace("", "#0"), "Error")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-34")
+  iinit
+   refid "_-0pO:_-UV/instance/init"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                2
+     bitxor
+     dup
+     declocal            2
+     getlocal2
+     increment
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L19
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0pO:_-UV/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    multiply
+    multiply_i
+    swap
+    getlocal2
+    coerce_a
+    lessequals
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal0
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-Gs")
+    pushstring          "An empty matcher will create a filter which matches nothing. You should specify at least one condition for the filter."
+    initproperty        QName(PackageNamespace("", "#0"), "_-Gs")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-Gs") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("An empty matcher will create a filter which matches nothing. You should specify at least one condition for the filter.") end
+end ; class

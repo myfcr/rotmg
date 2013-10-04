@@ -1,0 +1,249 @@
+class
+ refid "_-0oy:_-0gD"
+ instance QName(PackageNamespace("_-0oy"), "_-0gD")
+  extends QName(PackageNamespace("_-0oy"), "_-SE")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0ve")
+  iinit
+   refid "_-0oy:_-0gD/instance/init"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     convert_d
+     getlocal2
+     istypelate
+     declocal            3
+     multiply_i
+     modulo
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L19
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "errorId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "errorDescription_") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-0oy:_-0gD/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      declocal            2
+      kill                2
+      pushtrue
+      declocal            2
+      nextvalue
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L31
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "errorId_")
+
+      getlocal3
+      iffalse             L31
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "errorDescription_")
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-0oy:_-0gD/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0vK"), "formatToString")
+      jump                L10
+
+      subtract_i
+      add_i
+      convert_d
+      getlocal1
+      subtract
+      decrement_i
+L10:
+      pushstring          "FAILURE"
+      pushstring          "errorId_"
+      pushstring          "errorDescription_"
+      callproperty        QName(ProtectedNamespace("_-0vK"), "formatToString"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oy:_-0gD/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    convert_s
+    multiply_i
+    add_i
+    strictequals
+    bitnot
+    divide
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal2
+    convert_b
+L19:
+    iftrue              L44
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0Vt")
+    jump                L28
+
+    greaterthan
+    bitxor
+    instanceof
+    divide
+    pushscope
+
+    multiply
+L28:
+    pushbyte            4
+    initproperty        QName(PackageNamespace("", "#0"), "_-0Vt")
+
+    getlocal1
+    dup
+    jump                L39
+
+    subtract
+    coerce_s
+    increment
+    subtract_i
+    pushfalse
+    convert_o
+L39:
+    iftrue              L43
+
+    pop
+    getlocal0
+    convert_b
+L43:
+    iffalse             L54
+
+L44:
+    findproperty        QName(PackageNamespace("", "#0"), "_-0jg")
+    pushbyte            5
+    initproperty        QName(PackageNamespace("", "#0"), "_-0jg")
+
+    getlocal1
+    dup
+    iftrue              L53
+
+    pop
+    getlocal2
+    convert_b
+L53:
+    iffalse             L59
+
+L54:
+    findproperty        QName(PackageNamespace("", "#0"), "_-1UG")
+    pushbyte            6
+    initproperty        QName(PackageNamespace("", "#0"), "_-1UG")
+
+    getlocal2
+    iftrue              L62
+
+L59:
+    findproperty        QName(PackageNamespace("", "#0"), "_-0pX")
+    pushbyte            7
+    initproperty        QName(PackageNamespace("", "#0"), "_-0pX")
+
+L62:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-0Vt") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(4) end
+ trait const QName(PackageNamespace("", "#0"), "_-0jg") slotid 2 type QName(PackageNamespace("", "#0"), "int") value Integer(5) end
+ trait const QName(PackageNamespace("", "#0"), "_-1UG") slotid 3 type QName(PackageNamespace("", "#0"), "int") value Integer(6) end
+ trait const QName(PackageNamespace("", "#0"), "_-0pX") slotid 4 type QName(PackageNamespace("", "#0"), "int") value Integer(7) end
+end ; class

@@ -1,0 +1,4202 @@
+class
+ refid "com.company.assembleegameclient.objects:Projectile"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Projectile")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0-Q")
+  iinit
+   refid "com.company.assembleegameclient.objects:Projectile/instance/init"
+   body
+    maxstack 9
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal2
+     pushundefined
+     swap
+     decrement_i
+     greaterthan
+     greaterequals
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iftrue              L82
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-1kM")
+     pushbyte            100
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-1kM"), 1
+     initproperty        QName(PackageNamespace("", "#0"), "_-1K6")
+
+     getlocal1
+     dup
+     iffalse             L39
+
+     pop
+     getlocal2
+     jump                L38
+
+     convert_d
+     convert_s
+     add_i
+     hasnext
+     setlocal2
+
+     hasnext
+L38:
+     convert_b
+L39:
+     iftrue              L82
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-un")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1U7")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsGradientFill")
+     getlex              QName(PackageNamespace("flash.display"), "GradientType")
+     getproperty         QName(PackageNamespace("", "#0"), "RADIAL")
+     jump                L59
+
+     modulo
+     convert_d
+     pushundefined
+     rshift
+     getglobalscope
+     pushundefined
+L59:
+     pushbyte            0
+     dup
+     newarray            2
+     pushdouble          0.5
+     pushbyte            0
+     newarray            2
+     pushnull
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsGradientFill"), 5
+     initproperty        QName(ProtectedNamespace("_-0-Q"), "_-Uf")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
+     getlex              QName(PackageNamespace("com.company.util"), "_-VO")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0i6")
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     applytype           1
+     construct           0
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
+     initproperty        QName(ProtectedNamespace("_-0-Q"), "_-3w")
+
+     getlocal0
+     constructsuper      0
+
+L82:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "props_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectProperties") end
+  trait slot QName(PackageNamespace("", "#0"), "_-mK") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectProperties") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0Fn") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-1FO") end
+  trait slot QName(PackageNamespace("", "#0"), "texture_") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PackageNamespace("", "#0"), "bulletId_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "ownerId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "containerType_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "bulletType_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0IC") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0XW") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "damage_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-143") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1m") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "_-12V") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "startTime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "angle_") type QName(PackageNamespace("", "#0"), "Number") value Integer(0) end
+  trait slot QName(PackageNamespace("", "#0"), "_-18U") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1K6") type QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-1kM") end
+  trait method QName(PackageNamespace("", "#0"), "reset")
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/reset"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 11
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            7
+      declocal            4
+      setlocal            5
+
+      getlocal2
+      coerce_a
+      lessequals
+L10:
+      setlocal            9
+
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            8
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "clear")
+      callpropvoid        QName(PackageNamespace("", "#0"), "clear"), 0
+
+      getlocal            10
+      iffalse             L25
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "containerType_")
+
+      getlocal            9
+      iftrue              L64
+
+L25:
+      getlocal0
+      getlocal2
+      initproperty        QName(PackageNamespace("", "#0"), "bulletType_")
+
+      getlocal0
+      getlocal3
+      initproperty        QName(PackageNamespace("", "#0"), "ownerId_")
+
+      getlocal0
+      getlocal            4
+      initproperty        QName(PackageNamespace("", "#0"), "bulletId_")
+
+      getlocal            9
+      dup
+      iffalse             L40
+
+      pop
+      getlocal2
+      convert_b
+L40:
+      iftrue              L90
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.util"), "Trig")
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "_-WZ"), 1
+      initproperty        QName(PackageNamespace("", "#0"), "angle_")
+
+      getlocal            10
+      dup
+      iftrue              L52
+
+      pop
+      getlocal3
+      convert_b
+L52:
+      iffalse             L104
+
+      getlocal0
+      getlocal            6
+      initproperty        QName(PackageNamespace("", "#0"), "startTime_")
+
+      findproperty        QName(PackageNamespace("", "#0"), "objectId_")
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-1LY")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1LY"), 2
+      initproperty        QName(PackageNamespace("", "#0"), "objectId_")
+
+L64:
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      pushdouble          0.5
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+      getlocal            10
+      dup
+      iftrue              L73
+
+      pop
+      getlocal1
+      convert_b
+L73:
+      iffalse             L90
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1-I")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "containerType_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      initproperty        QName(PackageNamespace("", "#0"), "_-mK")
+
+      getlocal            10
+      iffalse             L97
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-mK")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Yo")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      initproperty        QName(PackageNamespace("", "#0"), "_-0Fn")
+
+L90:
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-nQ"), 1
+      initproperty        QName(PackageNamespace("", "#0"), "props_")
+
+L97:
+      findproperty        QName(PackageNamespace("", "#0"), "_-0XO")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-uk")
+      pushbyte            0
+      greaterthan
+      initproperty        QName(PackageNamespace("", "#0"), "_-0XO")
+
+L104:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L112
+
+      greaterequals
+      getlocal            6
+      getlocal1
+      convert_s
+      greaterequals
+      multiply_i
+L112:
+      getproperty         QName(PackageNamespace("", "#0"), "_-hu")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "type_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-1Zi")
+      setlocal            7
+
+      getlocal0
+      getlocal            7
+      getlex              QName(PackageNamespace("", "#0"), "objectId_")
+      callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 1
+      initproperty        QName(PackageNamespace("", "#0"), "texture_")
+
+      getlocal            10
+      iffalse             L230
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-mK")
+      getproperty         QName(PackageNamespace("", "#0"), "isEnemy_")
+      initproperty        QName(PackageNamespace("", "#0"), "_-0XW")
+
+      getlocal            9
+      iftrue              L152
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0XW")
+      getlocal            9
+      dup
+      iffalse             L142
+
+      pop
+      getlocal1
+      convert_b
+L142:
+      iftrue              L144
+
+      not
+L144:
+      initproperty        QName(PackageNamespace("", "#0"), "_-0IC")
+
+      getlocal            10
+      dup
+      iftrue              L151
+
+      pop
+      getlocal3
+      convert_b
+L151:
+      iffalse             L187
+
+L152:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-mK")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0hl")
+      initproperty        QName(PackageNamespace("", "#0"), "_-143")
+
+      getlocal0
+      getlocal            10
+      iffalse             L164
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1LM")
+      iffalse             L168
+
+L164:
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+      jump                L170
+
+L168:
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+L170:
+      initproperty        QName(PackageNamespace("", "#0"), "_-18U")
+
+      getlocal            9
+      iftrue              L217
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            9
+      dup
+      iffalse             L181
+
+      pop
+      getlocal0
+      convert_b
+L181:
+      iftrue              L189
+
+      getproperty         QName(PackageNamespace("", "#0"), "size_")
+      getlocal            10
+      iffalse             L213
+
+      pushbyte            0
+      ifnge               L209
+
+L187:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+L189:
+      getproperty         QName(PackageNamespace("", "#0"), "size_")
+      getlocal            9
+      iftrue              L213
+
+      convert_d
+      getlocal            10
+      dup
+      iftrue              L199
+
+      pop
+      getlocal1
+      convert_b
+L199:
+      iffalse             L214
+
+      jump                L207
+
+      declocal_i          6
+      kill                3
+      setlocal            6
+
+      declocal_i          7
+      lshift
+      convert_b
+L207:
+      setlocal            8
+
+      jump                L217
+
+L209:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "containerType_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0M1"), 1
+L213:
+      convert_d
+L214:
+      setlocal            8
+
+      getlocal            9
+      iftrue              L227
+
+L217:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1K6")
+      pushbyte            8
+      getlocal            8
+      getlocal            9
+      iftrue              L225
+
+      pushbyte            100
+      divide
+L225:
+      multiply
+      callpropvoid        QName(PackageNamespace("", "#0"), "setSize"), 1
+
+L227:
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace("", "#0"), "damage_")
+
+L230:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0fs")
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/_-0fs"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      kill                2
+      dup
+      popscope
+      declocal            2
+      istypelate
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L19
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "damage_")
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addTo") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/addTo"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      kill                5
+      getlocal            5
+      inclocal            4
+      declocal_i          2
+      coerce_a
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal            4
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PackageNamespace("", "#0"), "_-1m")
+
+      getlocal0
+      getlocal3
+      initproperty        QName(PackageNamespace("", "#0"), "_-12V")
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsuper           QName(PackageNamespace("", "#0"), "addTo"), 3
+      getlocal            6
+      dup
+      iftrue              L34
+
+      pop
+      getlocal0
+      convert_b
+L34:
+      iffalse             L138
+
+      iftrue              L40
+
+      getlocal            6
+      iffalse             L47
+
+      pushfalse
+      returnvalue
+
+L40:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-mK")
+      getproperty         QName(PackageNamespace("", "#0"), "flying_")
+      not
+      dup
+      iffalse             L50
+
+      pop
+L47:
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "sink_")
+      convert_b
+L50:
+      iffalse             L69
+
+      getlocal            5
+      dup
+      iffalse             L57
+
+      pop
+      getlocal0
+      convert_b
+L57:
+      iftrue              L68
+
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      jump                L66
+
+      getlocal            5
+      inclocal_i          3
+      decrement_i
+      kill                4
+      convert_d
+      coerce_s
+L66:
+      pushdouble          0.1
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+L68:
+      jump                L137
+
+L69:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "goDict_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      astypelate
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      dup
+      setlocal            4
+
+      pushnull
+      equals
+      getlocal            6
+      dup
+      iftrue              L87
+
+      pop
+      getlocal2
+      convert_b
+L87:
+      iffalse             L107
+
+      not
+      getlocal            6
+      iffalse             L107
+
+      dup
+      iffalse             L107
+
+      getlocal            6
+      dup
+      iftrue              L99
+
+      pop
+      getlocal1
+      convert_b
+L99:
+      iffalse             L107
+
+      pop
+      getlocal            5
+      iftrue              L137
+
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Ho")
+      pushbyte            0
+      greaterthan
+L107:
+      iffalse             L137
+
+      jump                L115
+
+      divide
+      greaterthan
+      bitxor
+      inclocal            4
+      lshift
+      declocal            4
+L115:
+      getlocal            6
+      iffalse             L137
+
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      pushdouble          0.5
+      getlocal            5
+      dup
+      iffalse             L125
+
+      pop
+      getlocal1
+      convert_b
+L125:
+      iftrue              L136
+
+      pushdouble          0.4
+      getlocal            5
+      iftrue              L135
+
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Ho")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0FR")
+      divide
+      multiply
+L135:
+      subtract
+L136:
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+L137:
+      pushtrue
+L138:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "moveTo")
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/moveTo"
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            4
+      inclocal            2
+      hasnext
+      declocal            2
+      kill                2
+      bitor
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "getSquare"), 2
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Square")
+      setlocal3
+
+      getlocal            4
+      iftrue              L34
+
+      getlocal3
+      jump                L30
+
+      inclocal_i          3
+      pop
+      inclocal            4
+      negate
+      getlocal            4
+      pushnull
+L30:
+      pushnull
+      ifne                L47
+
+      getlocal            5
+      iffalse             L57
+
+L34:
+      pushfalse
+      getlocal            4
+      jump                L43
+
+      subtract
+      convert_d
+      kill                3
+      declocal            3
+      declocal_i          3
+      pushnan
+L43:
+      iftrue              L66
+
+      returnvalue
+
+      getlocal            4
+      iftrue              L57
+
+L47:
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      getlocal            4
+      dup
+      iffalse             L56
+
+      pop
+      getlocal3
+      convert_b
+L56:
+      iftrue              L62
+
+L57:
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlocal2
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+      getlocal            4
+      iftrue              L65
+
+L62:
+      findproperty        QName(PackageNamespace("", "#0"), "_-1BC")
+      getlocal3
+      initproperty        QName(PackageNamespace("", "#0"), "_-1BC")
+
+L65:
+      pushtrue
+L66:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "removeFromMap") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/removeFromMap"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      coerce_a
+      swap
+      equals
+      getlocal3
+      bitnot
+      pushwith
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L52
+
+      getlocal0
+      jump                L29
+
+      lessequals
+      convert_b
+      multiply
+      swap
+      bitor
+      pushnull
+L29:
+      callsupervoid       QName(PackageNamespace("", "#0"), "removeFromMap"), 0
+      getlocal1
+      iftrue              L62
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-0tF")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      jump                L42
+
+      lessthan
+      bitor
+      nextvalue
+      multiply_i
+      convert_s
+      negate
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0tF"), 2
+
+      getlocal1
+      dup
+      iffalse             L51
+
+      pop
+      getlocal2
+      convert_b
+L51:
+      iftrue              L62
+
+L52:
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace("", "#0"), "_-18U")
+
+      getlocal2
+      dup
+      iftrue              L61
+
+      pop
+      getlocal1
+      convert_b
+L61:
+      iffalse             L65
+
+L62:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0WN")
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-1Ir"), 1
+
+L65:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1A0")
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/com.company.assembleegameclient.objects:Projectile/_-1A0"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("flash.geom"), "Point")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 9
+     localcount 17
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal            15
+
+      jump                L10
+
+      swap
+      getlocal3
+      bitor
+      negate_i
+      add
+      declocal            8
+L10:
+      setlocal            16
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      getlocal            15
+      iffalse             L41
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1m")
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            15
+      iffalse             L45
+
+L41:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-12V")
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L45:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "speed_")
+      pushshort           10000
+      divide
+      multiply
+      getlocal            16
+      iftrue              L55
+
+      convert_d
+L55:
+      setlocal3
+
+      getlocal            16
+      iftrue              L71
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      pushbyte            2
+      modulo
+      getlocal            16
+      dup
+      iffalse             L68
+
+      pop
+      getlocal2
+      convert_b
+L68:
+      iftrue              L75
+
+      pushbyte            0
+      ifne                L76
+
+L71:
+      pushbyte            0
+      convert_d
+      getlocal            15
+      iffalse             L86
+
+L75:
+      jump                L86
+
+L76:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      convert_d
+      getlocal            16
+      dup
+      iffalse             L85
+
+      pop
+      getlocal3
+      convert_b
+L85:
+      iftrue              L87
+
+L86:
+      convert_d
+L87:
+      setlocal            4
+
+      getlocal            15
+      dup
+      iftrue              L94
+
+      pop
+      getlocal3
+      convert_b
+L94:
+      iffalse             L531
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            16
+      dup
+      iffalse             L103
+
+      pop
+      getlocal0
+      convert_b
+L103:
+      iftrue              L366
+
+      getproperty         QName(PackageNamespace("", "#0"), "_-1aS")
+      getlocal            15
+      iffalse             L356
+
+      iffalse             L200
+
+      getlocal            16
+      dup
+      iffalse             L114
+
+      pop
+      getlocal2
+      convert_b
+L114:
+      iftrue              L177
+
+      pushbyte            6
+      getlocal            15
+      iffalse             L367
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      convert_d
+      setlocal            5
+
+      getlocal            16
+      dup
+      iffalse             L129
+
+      pop
+      getlocal1
+      convert_b
+L129:
+      iftrue              L350
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      pushbyte            64
+      divide
+      convert_d
+      setlocal            6
+
+      getlocal            15
+      dup
+      iftrue              L142
+
+      pop
+      getlocal3
+      convert_b
+L142:
+      iffalse             L302
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlocal            15
+      iffalse             L245
+
+      getlocal            6
+      getlocal            16
+      dup
+      iffalse             L154
+
+      pop
+      getlocal1
+      convert_b
+L154:
+      iftrue              L167
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            4
+      getlocal            5
+      getlocal1
+      multiply
+      pushshort           1000
+      divide
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      getlocal            15
+      iffalse             L421
+
+L167:
+      add
+      convert_d
+      setlocal            7
+
+      getlocal            15
+      dup
+      iftrue              L176
+
+      pop
+      getlocal2
+      convert_b
+L176:
+      iffalse             L187
+
+L177:
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            7
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L187:
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            7
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal            16
+      iftrue              L281
+
+      jump                L547
+
+L200:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            16
+      dup
+      iffalse             L208
+
+      pop
+      getlocal3
+      convert_b
+L208:
+      iftrue              L355
+
+      getproperty         QName(PackageNamespace("", "#0"), "_-0AU")
+      getlocal            16
+      iftrue              L356
+
+      iffalse             L351
+
+      getlocal1
+      getlocal            16
+      iftrue              L367
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            16
+      dup
+      iffalse             L224
+
+      pop
+      getlocal0
+      convert_b
+L224:
+      iftrue              L369
+
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+      getlocal            15
+      iffalse             L370
+
+      divide
+      getlocal            15
+      dup
+      iftrue              L235
+
+      pop
+      getlocal1
+      convert_b
+L235:
+      iffalse             L411
+
+      pushbyte            2
+      getlocal            16
+      dup
+      iffalse             L243
+
+      pop
+      getlocal0
+      convert_b
+L243:
+      iftrue              L381
+
+      multiply
+L245:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      convert_d
+      getlocal            15
+      iffalse             L502
+
+      setlocal            8
+
+      getlocal            16
+      iftrue              L473
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            8
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      pushbyte            2
+      modulo
+      iffalse             L272
+
+      pushbyte            1
+      jump                L270
+
+      inclocal_i          8
+      declocal_i          9
+      greaterthan
+      urshift
+      pushwith
+      inclocal            14
+L270:
+      coerce_a
+      jump                L274
+
+L272:
+      pushbyte            255
+      coerce_a
+L274:
+      multiply
+      getlocal            15
+      iffalse             L411
+
+      convert_d
+      setlocal            9
+
+      getlocal            16
+      iftrue              L547
+
+L281:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      pushbyte            2
+      getlocal            8
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      pushbyte            4
+      modulo
+      pushbyte            2
+      ifnlt               L295
+
+      pushbyte            1
+      coerce_a
+      jump                L297
+
+L295:
+      pushbyte            255
+      coerce_a
+L297:
+      multiply
+      convert_d
+      setlocal            10
+
+      getlocal            16
+      iftrue              L410
+
+L302:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      convert_d
+      setlocal            11
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      convert_d
+      setlocal            12
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            9
+      getlocal            12
+      multiply
+      getlocal            10
+      getlocal            11
+      multiply
+      subtract
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0w2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            16
+      iftrue              L473
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal            9
+      getlocal            11
+      multiply
+      getlocal            10
+      getlocal            12
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0w2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal            16
+      iftrue              L410
+
+L350:
+      jump                L547
+
+L351:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            15
+      iffalse             L366
+
+L355:
+      getproperty         QName(PackageNamespace("", "#0"), "_-gQ")
+L356:
+      iffalse             L428
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            16
+      dup
+      iffalse             L365
+
+      pop
+      getlocal0
+      convert_b
+L365:
+      iftrue              L468
+
+L366:
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+L367:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+L369:
+      getproperty         QName(PackageNamespace("", "#0"), "speed_")
+L370:
+      pushshort           10000
+      divide
+      multiply
+      pushbyte            2
+      getlocal            16
+      dup
+      iffalse             L380
+
+      pop
+      getlocal2
+      convert_b
+L380:
+      iftrue              L472
+
+L381:
+      divide
+      convert_d
+      getlocal            15
+      dup
+      iftrue              L389
+
+      pop
+      getlocal3
+      convert_b
+L389:
+      iffalse             L424
+
+      setlocal            13
+
+      getlocal3
+      getlocal            16
+      dup
+      iffalse             L398
+
+      pop
+      getlocal3
+      convert_b
+L398:
+      iftrue              L483
+
+      getlocal            13
+      getlocal            15
+      dup
+      iftrue              L406
+
+      pop
+      getlocal1
+      convert_b
+L406:
+      iffalse             L421
+
+      ifngt               L428
+
+      getlocal            16
+      iftrue              L441
+
+L410:
+      getlocal            13
+L411:
+      getlocal3
+      getlocal            16
+      dup
+      iffalse             L418
+
+      pop
+      getlocal3
+      convert_b
+L418:
+      iftrue              L421
+
+      getlocal            13
+      subtract
+L421:
+      subtract
+      getlocal            16
+      iftrue              L503
+
+L424:
+      convert_d
+      getlocal            15
+      iffalse             L503
+
+      setlocal3
+
+L428:
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            15
+      iffalse             L473
+
+L441:
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal            15
+      dup
+      iftrue              L458
+
+      pop
+      getlocal2
+      convert_b
+L458:
+      iffalse             L473
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            15
+      dup
+      iftrue              L467
+
+      pop
+      getlocal1
+      convert_b
+L467:
+      iffalse             L475
+
+L468:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0DS")
+      getlocal            15
+      iffalse             L483
+
+      pushbyte            0
+L472:
+      ifeq                L547
+
+L473:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+L475:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0DS")
+      getlocal            15
+      dup
+      iftrue              L482
+
+      pop
+      getlocal3
+      convert_b
+L482:
+      iffalse             L502
+
+L483:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            4
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+      divide
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-19j")
+      multiply
+      pushbyte            2
+      multiply
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+L502:
+      convert_d
+L503:
+      setlocal            14
+
+      getlocal            16
+      iftrue              L547
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            14
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      pushbyte            2
+      divide
+      jump                L524
+
+      pushnull
+      declocal            8
+      strictequals
+      subtract_i
+      bitnot
+      setlocal            14
+
+L524:
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            16
+      iftrue              L547
+
+L531:
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal            14
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      pushbyte            2
+      divide
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L547:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-un") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1U7") type QName(PackageNamespace("flash.geom"), "Vector3D") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 9
+     localcount 15
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushnull
+      getlocal3
+      declocal            7
+      pushwith
+      pop
+      pushwith
+L10:
+      setlocal            13
+
+      setlocal            14
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal            7
+
+      pushfalse
+      setlocal            8
+
+      pushfalse
+      setlocal            9
+
+      pushfalse
+      setlocal            10
+
+      pushbyte            0
+      setlocal            11
+
+      pushfalse
+      setlocal            12
+
+      getlocal1
+      getlocal            14
+      iffalse             L37
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      subtract
+      convert_i
+L37:
+      setlocal3
+
+      getlocal            13
+      dup
+      iffalse             L44
+
+      pop
+      getlocal2
+      convert_b
+L44:
+      iftrue              L57
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+      ifngt               L59
+
+      getlocal            13
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      convert_b
+L56:
+      iftrue              L59
+
+L57:
+      pushfalse
+      returnvalue
+
+L59:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-un")
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            4
+
+      getlocal0
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1A0"), 2
+
+      getlocal0
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callproperty        QName(PackageNamespace("", "#0"), "moveTo"), 2
+      getlocal            13
+      dup
+      iffalse             L79
+
+      pop
+      getlocal1
+      convert_b
+L79:
+      iftrue              L222
+
+      not
+      dup
+      getlocal            13
+      dup
+      iffalse             L88
+
+      pop
+      getlocal2
+      convert_b
+L88:
+      iftrue              L204
+
+      iftrue              L111
+
+      getlocal            14
+      iffalse             L121
+
+      pop
+      getlocal            13
+      dup
+      iffalse             L99
+
+      pop
+      getlocal2
+      convert_b
+L99:
+      iftrue              L229
+
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "tileType_")
+      pushshort           255
+      equals
+      getlocal            14
+      dup
+      iftrue              L110
+
+      pop
+      getlocal1
+      convert_b
+L110:
+      iffalse             L212
+
+L111:
+      iffalse             L167
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0XW")
+      getlocal            13
+      dup
+      iffalse             L120
+
+      pop
+      getlocal1
+      convert_b
+L120:
+      iftrue              L277
+
+L121:
+      iffalse             L132
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "squareHit"), 3
+
+      jump                L165
+
+L132:
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      pushnull
+      ifeq                L165
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0W-")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0Pl"), 1
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+      setlocal            5
+
+      getlocal            13
+      dup
+      iffalse             L148
+
+      pop
+      getlocal1
+      convert_b
+L148:
+      iftrue              L165
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      findpropstrict      QName(PackageNamespace("_-Yf"), "HitEffect")
+      getlocal            5
+      pushbyte            100
+      pushbyte            3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "speed_")
+      constructprop       QName(PackageNamespace("_-Yf"), "HitEffect"), 5
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+L165:
+      pushfalse
+      returnvalue
+
+L167:
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      pushnull
+      equals
+      getlocal            13
+      iftrue              L325
+
+      not
+      dup
+      getlocal            13
+      dup
+      iffalse             L181
+
+      pop
+      getlocal3
+      convert_b
+L181:
+      iftrue              L244
+
+      iffalse             L222
+
+      pop
+      getlocal            13
+      dup
+      iffalse             L190
+
+      pop
+      getlocal1
+      convert_b
+L190:
+      iftrue              L246
+
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "isEnemy_")
+      not
+      dup
+      getlocal            14
+      dup
+      iftrue              L203
+
+      pop
+      getlocal1
+      convert_b
+L203:
+      iffalse             L225
+
+L204:
+      iftrue              L222
+
+      getlocal            13
+      dup
+      iffalse             L211
+
+      pop
+      getlocal1
+      convert_b
+L211:
+      iftrue              L245
+
+L212:
+      pop
+      getlocal            14
+      iffalse             L246
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0IC")
+      getlocal            14
+      iffalse             L267
+
+      not
+      getlocal            14
+      iffalse             L228
+
+L222:
+      dup
+      getlocal            14
+      iffalse             L253
+
+L225:
+      iffalse             L267
+
+      getlocal            14
+      iffalse             L236
+
+L228:
+      pop
+L229:
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "enemyOccupySquare_")
+      convert_b
+      getlocal            13
+      iftrue              L252
+
+L236:
+      dup
+      getlocal            14
+      dup
+      iftrue              L243
+
+      pop
+      getlocal1
+      convert_b
+L243:
+      iffalse             L253
+
+L244:
+      iftrue              L267
+
+L245:
+      pop
+L246:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-B7")
+      not
+      getlocal            13
+      iftrue              L261
+
+L252:
+      dup
+L253:
+      iffalse             L267
+
+      getlocal            13
+      dup
+      iffalse             L260
+
+      pop
+      getlocal3
+      convert_b
+L260:
+      iftrue              L277
+
+L261:
+      pop
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "occupySquare_")
+      convert_b
+L267:
+      iffalse             L326
+
+      getlocal            14
+      dup
+      iftrue              L274
+
+      pop
+      getlocal1
+      convert_b
+L274:
+      iffalse             L299
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0XW")
+L277:
+      iffalse             L300
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      getlex              QName(PackageNamespace("", "#0"), "_-1BC")
+      getproperty         QName(PackageNamespace("", "#0"), "obj_")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "otherHit"), 4
+
+      getlocal            14
+      iffalse             L326
+
+      jump                L299
+
+      inclocal            11
+      urshift
+      pushwith
+      checkfilter
+      decrement
+      kill                10
+L299:
+      jump                L324
+
+L300:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0W-")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0Pl"), 1
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+      setlocal            5
+
+      getlocal            14
+      iffalse             L324
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      findpropstrict      QName(PackageNamespace("_-Yf"), "HitEffect")
+      getlocal            5
+      pushbyte            100
+      pushbyte            3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "speed_")
+      constructprop       QName(PackageNamespace("_-Yf"), "HitEffect"), 5
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+L324:
+      pushfalse
+L325:
+      returnvalue
+
+L326:
+      getlocal0
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      callproperty        QName(PackageNamespace("", "#0"), "_-kY"), 2
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      dup
+      setlocal            6
+
+      pushnull
+      ifeq                L604
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      dup
+      setlocal            7
+
+      pushnull
+      equals
+      not
+      setlocal            8
+
+      getlocal            13
+      dup
+      iffalse             L352
+
+      pop
+      getlocal0
+      convert_b
+L352:
+      iftrue              L478
+
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getlocal            14
+      iffalse             L520
+
+      getproperty         QName(PackageNamespace("", "#0"), "isEnemy_")
+      getlocal            14
+      dup
+      iftrue              L364
+
+      pop
+      getlocal1
+      convert_b
+L364:
+      iffalse             L487
+
+      convert_b
+      getlocal            14
+      iffalse             L374
+
+      setlocal            9
+
+      getlocal            14
+      iffalse             L419
+
+      getlocal            8
+      getlocal            14
+      iffalse             L466
+
+L374:
+      convert_b
+      dup
+      getlocal            13
+      dup
+      iffalse             L382
+
+      pop
+      getlocal0
+      convert_b
+L382:
+      iftrue              L417
+
+      iffalse             L394
+
+      getlocal            13
+      iftrue              L603
+
+      pop
+      getlocal            13
+      iftrue              L478
+
+      getlocal            7
+      callproperty        QName(PackageNamespace("", "#0"), "isPaused"), 0
+      not
+      getlocal            14
+      iffalse             L443
+
+L394:
+      dup
+      getlocal            14
+      dup
+      iftrue              L401
+
+      pop
+      getlocal0
+      convert_b
+L401:
+      iffalse             L440
+
+      iffalse             L438
+
+      getlocal            14
+      iffalse             L418
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0XW")
+      convert_b
+      dup
+      getlocal            13
+      dup
+      iffalse             L416
+
+      pop
+      getlocal1
+      convert_b
+L416:
+      iftrue              L424
+
+L417:
+      iftrue              L438
+
+L418:
+      pop
+L419:
+      getlocal            9
+      convert_b
+      dup
+      getlocal            13
+      iftrue              L440
+
+L424:
+      iffalse             L438
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      getlocal            13
+      dup
+      iffalse             L434
+
+      pop
+      getlocal2
+      convert_b
+L434:
+      iftrue              L460
+
+      getlocal            7
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      equals
+L438:
+      convert_b
+      dup
+L440:
+      setlocal            10
+
+      getlocal            13
+      iftrue              L487
+
+L443:
+      iffalse             L585
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "damage_")
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "_-xw")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0MZ")
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "condition_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-sz"), 4
+      getlocal            13
+      iftrue              L460
+
+      convert_i
+      getlocal            13
+      iftrue              L469
+
+L460:
+      setlocal            11
+
+      getlocal            14
+      iffalse             L604
+
+      pushfalse
+      getlocal            14
+      iffalse             L603
+
+L466:
+      setlocal            12
+
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "_-1kq")
+L469:
+      getlocal            11
+      ifnle               L494
+
+      getlocal            13
+      dup
+      iffalse             L477
+
+      pop
+      getlocal2
+      convert_b
+L477:
+      iftrue              L604
+
+L478:
+      pushtrue
+      setlocal            12
+
+      getlocal            13
+      iftrue              L585
+
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getlocal            13
+      iftrue              L520
+
+      getproperty         QName(PackageNamespace("", "#0"), "isEnemy_")
+L487:
+      iffalse             L494
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "doneAction")
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Tutorial")
+      getproperty         QName(PackageNamespace("", "#0"), "_-Sa")
+      callpropvoid        QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "doneAction"), 2
+
+L494:
+      getlocal            6
+      getlocal            7
+      ifne                L518
+
+      getlocal            13
+      iftrue              L534
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "playerHit"), 2
+
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "containerType_")
+      getlocal            11
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "effects_")
+      pushfalse
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "damage"), 5
+
+      jump                L585
+
+L518:
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+L520:
+      getproperty         QName(PackageNamespace("", "#0"), "isEnemy_")
+      iffalse             L547
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      getlocal            12
+      callpropvoid        QName(PackageNamespace("", "#0"), "enemyHit"), 4
+
+      getlocal            14
+      iffalse             L585
+
+L534:
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "containerType_")
+      getlocal            11
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "effects_")
+      getlocal            12
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "damage"), 5
+
+      getlocal            14
+      iffalse             L604
+
+      jump                L585
+
+L547:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getlocal            14
+      dup
+      iftrue              L555
+
+      pop
+      getlocal2
+      convert_b
+L555:
+      iffalse             L587
+
+      getproperty         QName(PackageNamespace("", "#0"), "_-1LM")
+      getlocal            14
+      iffalse             L603
+
+      iftrue              L585
+
+      getlocal            13
+      dup
+      iffalse             L566
+
+      pop
+      getlocal2
+      convert_b
+L566:
+      iftrue              L601
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      jump                L582
+
+      getlocal            13
+      declocal_i          2
+      declocal            13
+      kill                7
+      astypelate
+      hasnext
+L582:
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "otherHit"), 4
+
+L585:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+L587:
+      getproperty         QName(PackageNamespace("", "#0"), "_-1LM")
+      iffalse             L602
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-18U")
+      getlocal            6
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+
+      getlocal            13
+      dup
+      iffalse             L600
+
+      pop
+      getlocal2
+      convert_b
+L600:
+      iftrue              L604
+
+L601:
+      jump                L604
+
+L602:
+      pushfalse
+L603:
+      returnvalue
+
+L604:
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-kY")
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/_-kY"
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    body
+     maxstack 6
+     localcount 14
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitor
+      nextvalue
+      inclocal            8
+      getglobalscope
+      getlocal0
+      declocal_i          3
+L10:
+      setlocal            12
+
+      setlocal            13
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      getproperty         QName(PackageNamespace("", "#0"), "MAX_VALUE")
+      convert_d
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            10
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "goDict_")
+      coerce_a
+      setlocal            11
+
+      jump                L323
+
+L39:
+      label
+      getlocal            11
+      getlocal            10
+      nextvalue
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      dup
+      setlocal            5
+
+      callproperty        QName(PackageNamespace("", "#0"), "_-Za"), 0
+      iffalse             L49
+
+      jump                L323
+
+L49:
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "_-0fN"), 0
+      getlocal            12
+      iftrue              L120
+
+      iffalse             L55
+
+      jump                L323
+
+L55:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0IC")
+      convert_b
+      dup
+      getlocal            13
+      iffalse             L106
+
+      iffalse             L88
+
+      pop
+      getlocal            13
+      dup
+      iftrue              L69
+
+      pop
+      getlocal3
+      convert_b
+L69:
+      iffalse             L235
+
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getlocal            13
+      dup
+      iftrue              L78
+
+      pop
+      getlocal3
+      convert_b
+L78:
+      iffalse             L119
+
+      getproperty         QName(PackageNamespace("", "#0"), "isEnemy_")
+      getlocal            12
+      dup
+      iffalse             L86
+
+      pop
+      getlocal0
+      convert_b
+L86:
+      iftrue              L114
+
+      convert_b
+L88:
+      dup
+      getlocal            12
+      dup
+      iffalse             L95
+
+      pop
+      getlocal1
+      convert_b
+L95:
+      iftrue              L138
+
+      iftrue              L123
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0XW")
+      getlocal            12
+      iftrue              L120
+
+      convert_b
+      dup
+      getlocal            13
+      iffalse             L226
+
+L106:
+      iffalse             L123
+
+      getlocal            12
+      dup
+      iffalse             L113
+
+      pop
+      getlocal2
+      convert_b
+L113:
+      iftrue              L169
+
+L114:
+      pop
+      getlocal            13
+      iffalse             L205
+
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+L119:
+      getproperty         QName(PackageNamespace("", "#0"), "_-md")
+L120:
+      convert_b
+      getlocal            13
+      iffalse             L130
+
+L123:
+      iftrue              L125
+
+      jump                L323
+
+L125:
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "_-0-p")
+      convert_b
+      getlocal            12
+      iftrue              L153
+
+L130:
+      dup
+      getlocal            12
+      dup
+      iffalse             L137
+
+      pop
+      getlocal2
+      convert_b
+L137:
+      iftrue              L248
+
+L138:
+      iftrue              L163
+
+      getlocal            13
+      iffalse             L246
+
+      pop
+      getlocal            12
+      dup
+      iffalse             L148
+
+      pop
+      getlocal3
+      convert_b
+L148:
+      iftrue              L235
+
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "isPaused"), 0
+      getlocal            13
+      iffalse             L256
+
+L153:
+      convert_b
+      jump                L161
+
+      convert_u
+      pushundefined
+      setlocal3
+
+      kill                5
+      newactivation
+      declocal_i          10
+L161:
+      getlocal            13
+      iffalse             L239
+
+L163:
+      iffalse             L165
+
+      jump                L323
+
+L165:
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal1
+      greaterthan
+L169:
+      iffalse             L176
+
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal1
+      subtract
+      convert_d
+      jump                L181
+
+L176:
+      getlocal1
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      subtract
+      convert_d
+L181:
+      convert_d
+      setlocal            6
+
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlocal2
+      greaterthan
+      iffalse             L196
+
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlocal2
+      subtract
+      convert_d
+      getlocal            12
+      iftrue              L204
+
+      jump                L201
+
+L196:
+      getlocal2
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      subtract
+      convert_d
+L201:
+      convert_d
+      getlocal            12
+      iftrue              L286
+
+L204:
+      setlocal            7
+
+L205:
+      getlocal            6
+      getlocal            13
+      iffalse             L313
+
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "radius_")
+      getlocal            13
+      dup
+      iftrue              L216
+
+      pop
+      getlocal1
+      convert_b
+L216:
+      iffalse             L314
+
+      greaterthan
+      dup
+      getlocal            12
+      dup
+      iffalse             L225
+
+      pop
+      getlocal2
+      convert_b
+L225:
+      iftrue              L248
+
+L226:
+      iftrue              L239
+
+      getlocal            12
+      dup
+      iffalse             L233
+
+      pop
+      getlocal0
+      convert_b
+L233:
+      iftrue              L239
+
+      pop
+L235:
+      getlocal            7
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "radius_")
+      greaterthan
+L239:
+      iffalse             L243
+
+      getlocal            13
+      iffalse             L320
+
+      jump                L323
+
+L243:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1LM")
+L246:
+      convert_b
+      dup
+L248:
+      iffalse             L257
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-18U")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      pushnull
+      equals
+L256:
+      not
+L257:
+      iffalse             L266
+
+      getlocal            12
+      dup
+      iffalse             L264
+
+      pop
+      getlocal2
+      convert_b
+L264:
+      iftrue              L315
+
+      jump                L323
+
+L266:
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      ifne                L274
+
+      getlocal            13
+      iffalse             L315
+
+      getlocal            5
+      returnvalue
+
+L274:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            6
+      getlocal            6
+      multiply
+      getlocal            7
+      getlocal            7
+      multiply
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "sqrt"), 1
+      convert_d
+      setlocal            8
+
+      getlocal            6
+L286:
+      getlocal            6
+      getlocal            13
+      iffalse             L293
+
+      multiply
+      getlocal            7
+      getlocal            7
+      multiply
+L293:
+      add
+      getlocal            13
+      dup
+      iftrue              L307
+
+      pop
+      jump                L305
+
+      declocal            10
+      checkfilter
+      astypelate
+      hasnext
+      add_i
+      decrement_i
+L305:
+      getlocal1
+      convert_b
+L307:
+      iffalse             L319
+
+      convert_d
+      dup
+      getlocal            13
+      iffalse             L314
+
+      setlocal            9
+
+L313:
+      getlocal3
+L314:
+      ifnlt               L323
+
+L315:
+      getlocal            9
+      getlocal            13
+      iffalse             L319
+
+      convert_d
+L319:
+      setlocal3
+
+L320:
+      getlocal            5
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      setlocal            4
+
+L323:
+      hasnext2            11, 10
+      iftrue              L39
+
+      kill                11
+      kill                10
+      getlocal            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-1El")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 11
+     localcount 11
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal            9
+
+      jump                L10
+
+      setlocal            5
+
+      urshift
+      inclocal            3
+      urshift
+      pushfalse
+      getlocal0
+L10:
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      getlocal            10
+      iftrue              L26
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Gk")
+      iftrue              L27
+
+      getlocal            9
+      iffalse             L27
+
+L26:
+      returnvoid
+
+L27:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "texture_")
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+      getlocal            9
+      dup
+      iftrue              L37
+
+      pop
+      getlocal1
+      convert_b
+L37:
+      iffalse             L42
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-09L")
+      pushbyte            0
+      ifeq                L297
+
+L42:
+      jump                L190
+
+L43:
+      label
+      pushint             16777100
+      convert_u
+      getlocal            9
+      iffalse             L167
+
+      setlocal            6
+
+      pushint             16777215
+      getlocal            9
+      dup
+      iftrue              L56
+
+      pop
+      getlocal1
+      convert_b
+L56:
+      iffalse             L88
+
+      convert_u
+      setlocal            7
+
+      getlocal            10
+      dup
+      iffalse             L65
+
+      pop
+      getlocal3
+      convert_b
+L65:
+      iftrue              L97
+
+      jump                L289
+
+L67:
+      label
+      pushint             16777100
+      getlocal            9
+      iffalse             L183
+
+      convert_u
+      getlocal            9
+      dup
+      iftrue              L78
+
+      pop
+      getlocal3
+      convert_b
+L78:
+      iffalse             L167
+
+      setlocal            6
+
+      pushint             16777100
+      getlocal            9
+      dup
+      iftrue              L87
+
+      pop
+      getlocal3
+      convert_b
+L87:
+      iffalse             L286
+
+L88:
+      convert_u
+      getlocal            10
+      dup
+      iffalse             L95
+
+      pop
+      getlocal0
+      convert_b
+L95:
+      iftrue              L184
+
+      setlocal            7
+
+L97:
+      jump                L289
+
+L98:
+      label
+      pushint             16711680
+      convert_u
+      getlocal            10
+      iftrue              L179
+
+      setlocal            6
+
+      getlocal            9
+      dup
+      iftrue              L110
+
+      pop
+      getlocal0
+      convert_b
+L110:
+      iffalse             L289
+
+      pushint             16711680
+      convert_u
+      setlocal            7
+
+      jump                L289
+
+L115:
+      label
+      pushshort           255
+      convert_u
+      getlocal            10
+      iftrue              L134
+
+      setlocal            6
+
+      getlocal            9
+      iffalse             L305
+
+      pushshort           255
+      getlocal            10
+      dup
+      iffalse             L130
+
+      pop
+      getlocal0
+      convert_b
+L130:
+      iftrue              L183
+
+      convert_u
+      getlocal            9
+      iffalse             L167
+
+L134:
+      setlocal            7
+
+      getlocal            10
+      iftrue              L180
+
+      jump                L289
+
+L138:
+      label
+      pushint             16777215
+      getlocal            10
+      dup
+      iffalse             L146
+
+      pop
+      getlocal0
+      convert_b
+L146:
+      iftrue              L286
+
+      convert_u
+      getlocal            10
+      dup
+      iffalse             L154
+
+      pop
+      getlocal3
+      convert_b
+L154:
+      iftrue              L184
+
+      setlocal            6
+
+      getlocal            10
+      dup
+      iffalse             L162
+
+      pop
+      getlocal2
+      convert_b
+L162:
+      iftrue              L289
+
+      pushint             16777215
+      convert_u
+      getlocal            9
+      iffalse             L179
+
+L167:
+      setlocal            7
+
+      getlocal            10
+      dup
+      iffalse             L174
+
+      pop
+      getlocal2
+      convert_b
+L174:
+      iftrue              L187
+
+      jump                L289
+
+L176:
+      label
+      pushbyte            0
+      convert_u
+L179:
+      setlocal            6
+
+L180:
+      pushbyte            0
+      getlocal            10
+      iftrue              L192
+
+L183:
+      convert_u
+L184:
+      setlocal            7
+
+      getlocal            9
+      iffalse             L289
+
+L187:
+      jump                L289
+
+L188:
+      label
+      jump                L289
+
+L190:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-09L")
+L192:
+      setlocal            8
+
+      getlocal            9
+      iffalse             L228
+
+      pushbyte            1
+      getlocal            10
+      dup
+      iffalse             L202
+
+      pop
+      getlocal3
+      convert_b
+L202:
+      iftrue              L238
+
+      getlocal            8
+      getlocal            10
+      jump                L212
+
+      increment_i
+      coerce_a
+      setlocal3
+
+      strictequals
+      newactivation
+      getlocal0
+L212:
+      dup
+      iffalse             L217
+
+      pop
+      getlocal2
+      convert_b
+L217:
+      iftrue              L278
+
+      ifstrictne          L221
+
+      pushbyte            0
+      jump                L285
+
+L221:
+      pushbyte            2
+      getlocal            9
+      iffalse             L268
+
+      getlocal            8
+      getlocal            10
+      iftrue              L260
+
+      ifstrictne          L237
+
+L228:
+      pushbyte            1
+      getlocal            9
+      dup
+      iftrue              L235
+
+      pop
+      getlocal3
+      convert_b
+L235:
+      iffalse             L238
+
+      jump                L285
+
+L237:
+      pushbyte            3
+L238:
+      getlocal            8
+      getlocal            10
+      dup
+      iffalse             L245
+
+      pop
+      getlocal0
+      convert_b
+L245:
+      iftrue              L278
+
+      ifstrictne          L249
+
+      pushbyte            2
+      jump                L285
+
+L249:
+      pushbyte            4
+      getlocal            9
+      iffalse             L273
+
+      getlocal            8
+      getlocal            9
+      dup
+      iftrue              L259
+
+      pop
+      getlocal3
+      convert_b
+L259:
+      iffalse             L271
+
+L260:
+      ifstrictne          L265
+
+      pushbyte            3
+      getlocal            9
+      iffalse             L268
+
+      jump                L285
+
+L265:
+      pushbyte            5
+      getlocal            10
+      iftrue              L280
+
+L268:
+      getlocal            8
+      getlocal            10
+      iftrue              L278
+
+L271:
+      ifstrictne          L274
+
+      pushbyte            4
+L273:
+      jump                L285
+
+L274:
+      pushbyte            6
+      getlocal            10
+      iftrue              L280
+
+      getlocal            8
+L278:
+      ifstrictne          L281
+
+      pushbyte            5
+L280:
+      jump                L285
+
+L281:
+      jump                L284
+
+      pushbyte            6
+      jump                L285
+
+L284:
+      pushbyte            6
+L285:
+      kill                8
+L286:
+      lookupswitch        L188, [L43, L67, L98, L115, L138, L176, L188]
+
+      getlocal            10
+      iftrue              L305
+
+L289:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlocal            4
+      pushbyte            120
+      pushtrue
+      getlocal            7
+      callproperty        QName(PackageNamespace("", "#0"), "redraw"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+L297:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "rotation_")
+      getlocal            9
+      iffalse             L309
+
+      pushbyte            0
+      equals
+      iffalse             L310
+
+L305:
+      pushbyte            0
+      convert_d
+      getlocal            10
+      iftrue              L322
+
+L309:
+      jump                L325
+
+L310:
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "rotation_")
+      divide
+      getlocal            9
+      dup
+      iftrue              L321
+
+      pop
+      getlocal1
+      convert_b
+L321:
+      iffalse             L326
+
+L322:
+      convert_d
+      getlocal            10
+      iftrue              L326
+
+L325:
+      convert_d
+L326:
+      setlocal            5
+
+      getlocal            10
+      dup
+      iffalse             L333
+
+      pop
+      getlocal3
+      convert_b
+L333:
+      iftrue              L430
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1U7")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            9
+      iffalse             L373
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1U7")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1U7")
+      getlex              QName(PackageNamespace("", "#0"), "z_")
+      setproperty         QName(PackageNamespace("", "#0"), "z")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1K6")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-1U7")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "angleRad_")
+      subtract
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Re")
+      add
+      getlocal            5
+      add
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "wToS_")
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 6
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Fn")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1V-")
+      iffalse             L430
+
+L373:
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      findpropstrict      QName(PackageNamespace("_-Yf"), "_-1EZ")
+      pushbyte            100
+      pushint             16711935
+      pushshort           600
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0mx"), 1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0mx"), 1
+      constructprop       QName(PackageNamespace("_-Yf"), "_-1EZ"), 6
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            10
+      iftrue              L414
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      findpropstrict      QName(PackageNamespace("_-Yf"), "_-1EZ")
+      pushbyte            100
+      pushint             16711935
+      pushshort           600
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0mx"), 1
+      jump                L407
+
+      negate
+      coerce_s
+      add
+      nextvalue
+      multiply
+      declocal            9
+L407:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0mx"), 1
+      constructprop       QName(PackageNamespace("_-Yf"), "_-1EZ"), 6
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+L414:
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      findpropstrict      QName(PackageNamespace("_-Yf"), "_-1EZ")
+      pushbyte            100
+      pushint             16711935
+      pushshort           600
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0mx"), 1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0mx"), 1
+      constructprop       QName(PackageNamespace("_-Yf"), "_-1EZ"), 6
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+L430:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("_-0-Q"), "_-Uf") type QName(PackageNamespace("flash.display"), "GraphicsGradientFill") end
+  trait slot QName(ProtectedNamespace("_-0-Q"), "_-3w") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait method QName(PackageNamespace("", "#0"), "drawShadow") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Projectile/instance/drawShadow"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-1El")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 12
+     localcount 9
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      checkfilter
+      bitor
+      coerce_a
+      kill                3
+      getlocal            4
+      not
+L10:
+      setlocal            7
+
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      getlocal            7
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L32
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Gk")
+      iftrue              L32
+
+      getlocal            7
+      dup
+      iffalse             L30
+
+      pop
+      getlocal2
+      convert_b
+L30:
+      iftrue              L32
+
+      returnvoid
+
+L32:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "props_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-uk")
+      pushshort           400
+      divide
+      getlocal            8
+      iffalse             L40
+
+      convert_d
+L40:
+      setlocal            4
+
+      pushbyte            30
+      getlocal            4
+      multiply
+      getlocal            8
+      dup
+      iftrue              L50
+
+      pop
+      getlocal2
+      convert_b
+L50:
+      iffalse             L52
+
+      convert_d
+L52:
+      setlocal            5
+
+      pushbyte            15
+      getlocal            4
+      multiply
+      getlocal            8
+      dup
+      iftrue              L62
+
+      pop
+      getlocal1
+      convert_b
+L62:
+      iffalse             L64
+
+      convert_d
+L64:
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0-Q"), "_-Uf")
+      getproperty         QName(PackageNamespace("", "#0"), "matrix")
+      getlocal            5
+      pushbyte            2
+      multiply
+      getlocal            6
+      pushbyte            2
+      multiply
+      pushbyte            0
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      jump                L83
+
+      kill                7
+      declocal            6
+      swap
+      inclocal_i          3
+      getlocal            5
+      setlocal            4
+
+L83:
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            5
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            6
+      subtract
+      callpropvoid        QName(PackageNamespace("", "#0"), "createGradientBox"), 5
+
+      getlocal            8
+      dup
+      iftrue              L99
+
+      pop
+      getlocal2
+      convert_b
+L99:
+      iffalse             L169
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0-Q"), "_-Uf")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0-Q"), "_-3w")
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace("", "#0"), "Number")
+      applytype           1
+      getglobalscope
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0-Q"), "_-3w")
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      call                1
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            5
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            6
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            5
+      add
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            6
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            5
+      add
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      jump                L150
+
+      inclocal_i          2
+      declocal_i          5
+      getglobalscope
+      add
+      declocal            6
+      greaterequals
+L150:
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            6
+      add
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            5
+      subtract
+      getlex              QName(PackageNamespace("", "#0"), "_-Io")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+      getlocal            6
+      add
+      callpropvoid        Multiname("push", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")]), 8
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0-Q"), "_-3w")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L169:
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.util"), "_-VO")
+      getproperty         QName(PackageNamespace("", "#0"), "END_FILL")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Projectile/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    coerce_a
+    hasnext
+    checkfilter
+    nextvalue
+    increment_i
+    instanceof
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal0
+    convert_b
+L19:
+    iftrue              L24
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS") slotid 1 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PackageNamespace("", "#0"), "_-1mm") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.objects:Projectile/class/_-1mm"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "uint")
+   returns QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+     jump                L10
+
+     pushwith
+     pushscope
+
+     hasnext
+     coerce_a
+     hasnext
+     modulo
+L10:
+     getlocal2
+     pushbyte            24
+     lshift
+     getlocal1
+     bitor
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-1LY") flag FINAL dispid 4
+  method
+   refid "com.company.assembleegameclient.objects:Projectile/class/_-1LY"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "uint")
+   returns QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal1
+     inclocal_i          4
+     getlocal1
+     declocal            4
+     setlocal2
+
+     pushundefined
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     declocal            2
+     setlocal2
+
+     swap
+     declocal_i          3
+     inclocal            2
+     newactivation
+L21:
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-0Gc")
+     callproperty        QName(PackageNamespace("", "#0"), "_-0Gc"), 0
+     convert_i
+     setlocal3
+
+     getlocal            4
+     dup
+     iffalse             L31
+
+     pop
+     getlocal0
+     convert_b
+L31:
+     iftrue              L40
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+     getlocal2
+     pushbyte            24
+     lshift
+     getlocal1
+     bitor
+     getlocal3
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+
+L40:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-0tF") flag FINAL dispid 5
+  method
+   refid "com.company.assembleegameclient.objects:Projectile/class/_-0tF"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "uint")
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     inclocal_i          3
+     setlocal3
+
+     declocal            3
+     pushnull
+     add_i
+     instanceof
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iffalse             L28
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+     getlocal2
+     pushbyte            24
+     lshift
+     getlocal1
+     bitor
+     deleteproperty      MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#1"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-Q"), StaticProtectedNs("_-0-Q"), StaticProtectedNs("_-1hK")])
+     pop
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "dispose") flag FINAL dispid 6
+  method
+   refid "com.company.assembleegameclient.objects:Projectile/class/dispose"
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_d
+     hasnext
+     pushtrue
+     pushscope
+
+     negate
+     convert_d
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iftrue              L25
+
+     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Projectile#0"), "_-0pS")
+
+L25:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

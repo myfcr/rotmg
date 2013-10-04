@@ -1,0 +1,146 @@
+class
+ refid "_E_l:_sN_"
+ instance QName(PackageNamespace("_E_l"), "_sN_")
+  extends QName(PackageNamespace("_E_l"), "_0D_O_")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_xP_")
+  iinit
+   refid "_E_l:_sN_/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace("flash.utils"), "Dictionary")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_19f")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0Y_k")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0cQ_")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "injectParameters")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_19f") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0Y_k") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0cQ_") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "applyInjection") flag OVERRIDE
+   method
+    refid "_E_l:_sN_/instance/applyInjection"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Class")
+    param QName(PackageNamespace("_tm"), "_9n")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      setlocal            5
+
+      getlex              QName(PackageNamespace("_1fN_"), "SsInternal")
+      coerce              QName(PackageNamespace(""), "Namespace")
+      getproperty         RTQName("_P_e")
+      getlocal            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0Y_k")
+      call                1
+      kill                5
+      coerce              QName(PackageNamespace("_A_I_"), "_bP_")
+      dup
+      setlocal            4
+
+      iftrue              L45
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0cQ_")
+      iffalse             L21
+
+      returnvoid
+
+L21:
+      findpropstrict      QName(PackageNamespace("_B_h"), "_1J_M_")
+      pushstring          "Injector is missing a mapping to handle injection into property \""
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_19f")
+      add
+      pushstring          "\" of object \""
+      add
+      getlocal1
+      add
+      pushstring          "\" with type \""
+      add
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getlocal2
+      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+      add
+      pushstring          "\". Target dependency: \""
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_0Y_k")
+      add
+      pushstring          "\""
+      add
+      constructprop       QName(PackageNamespace("_B_h"), "_1J_M_"), 1
+      throw
+L45:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_E_l:_sN_/instance"), "_19f")
+      getlocal            4
+      getlocal2
+      getlocal3
+      getlex              QName(PackageNamespace(""), "injectParameters")
+      callproperty        QName(Namespace("_1B_H_"), "apply"), 3
+      setproperty         MultinameL([PrivateNamespace("*", "_E_l:_sN_/instance"), PackageNamespace(""), PrivateNamespace("*", "_E_l:_sN_/instance/applyInjection"), PackageNamespace("_E_l"), PackageInternalNs("_E_l"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_xP_"), StaticProtectedNs("_xP_"), StaticProtectedNs("_F_y")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_E_l:_sN_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

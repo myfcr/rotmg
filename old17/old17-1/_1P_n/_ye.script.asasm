@@ -1,0 +1,29 @@
+script ; 741
+ sinit
+  refid "_1P_n:_ye/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_1P_n:_ye"
+    popscope
+    initproperty        QName(PackageNamespace("_1P_n"), "_ye")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_1P_n"), "_ye") slotid 1
+  #include "_ye.class.asasm"
+ end ; trait
+end ; script

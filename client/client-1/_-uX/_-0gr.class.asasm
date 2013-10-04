@@ -1,0 +1,413 @@
+class
+ refid "_-uX:_-0gr"
+ instance QName(PackageNamespace("_-uX"), "_-0gr")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Qr")
+  iinit
+   refid "_-uX:_-0gr/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     greaterequals
+     increment
+     pushnan
+     strictequals
+     equals
+     modulo
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-0QA"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "client") flag METADATA type QName(PackageNamespace("_-zS"), "_-1S0")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "setup") flag METADATA type QName(PackageNamespace("_-wc"), "_-vI")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "event") flag METADATA type QName(PackageNamespace("flash.events"), "ErrorEvent")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error") end
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-uX:_-0gr/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      nextname
+      setlocal2
+
+      kill                2
+      convert_o
+      lessequals
+      convert_o
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L33
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "event")
+      callpropvoid        QName(PackageNamespace("", "#0"), "preventDefault"), 0
+
+      getlocal3
+      dup
+      iffalse             L24
+
+      pop
+      getlocal0
+      convert_b
+L24:
+      iftrue              L35
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "event")
+      pushstring          "error"
+      getproperty         MultinameL([PrivateNamespace("*", "_-uX:_-0gr/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-uX:_-0gr/instance#1"), PackageNamespace("_-uX"), PackageInternalNs("_-uX"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Qr"), StaticProtectedNs("_-1Qr")])
+      initproperty        QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+
+      getlocal3
+      iftrue              L35
+
+L33:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "_-0Db"), 0
+
+L35:
+      newarray            0
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal1
+
+      getlocal2
+      dup
+      iftrue              L51
+
+      pop
+      getlocal1
+      convert_b
+      jump                L51
+
+      inclocal            2
+      getlocal2
+      convert_o
+      getlocal0
+      getlocal2
+      inclocal_i          2
+L51:
+      iffalse             L71
+
+      getlocal1
+      pushstring          "Build: "
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "setup")
+      callproperty        QName(Namespace("_-JQ"), "_-0G8"), 0
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      pushstring          "message: "
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "_-0Db"), 0
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      pushstring          "stackTrace: "
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "getStackTrace"), 0
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L71:
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.util"), "_-1hk")
+      callproperty        QName(PackageNamespace("", "#0"), "_-021"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "client")
+      getlocal2
+      jump                L85
+
+      pushundefined
+      checkfilter
+      modulo
+      pushfalse
+      kill                2
+      declocal            2
+L85:
+      iffalse             L97
+
+      pushfalse
+      callpropvoid        QName(Namespace("_-zI"), "_-1DB"), 1
+
+      getlocal2
+      dup
+      iftrue              L94
+
+      pop
+      getlocal0
+      convert_b
+L94:
+      iffalse             L108
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "client")
+L97:
+      pushstring          "/clientError/add"
+      pushstring          "text"
+      getlocal1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      pushstring          "guid"
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-06"), "getUserId"), 0
+      newobject           2
+      callpropvoid        QName(Namespace("_-zI"), "sendRequest"), 2
+
+L108:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "_-0Db")
+   method
+    refid "_-uX:_-0gr/instance/_-uX:_-0gr/instance/_-0Db"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      multiply
+      setlocal2
+
+      popscope
+      getlocal0
+      subtract_i
+      increment_i
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L27
+
+      pop
+      getlocal2
+      convert_b
+      jump                L27
+
+      negate
+      convert_s
+      divide
+      pushtrue
+      pushundefined
+      not
+L27:
+      iffalse             L60
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+      getlex              QName(PackageNamespace("", "#0"), "Error")
+      jump                L38
+
+      pushundefined
+      astypelate
+      convert_d
+      pushscope
+
+      negate
+      subtract
+L38:
+      istypelate
+      iffalse             L44
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+      getproperty         Multiname("message", [PrivateNamespace("*", "_-uX:_-0gr/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-uX:_-0gr/instance#1"), PackageNamespace("_-uX"), PackageInternalNs("_-uX"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Qr"), StaticProtectedNs("_-1Qr")])
+      returnvalue
+
+L44:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "event")
+      pushnull
+      ifeq                L52
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "event")
+      getproperty         QName(PackageNamespace("", "#0"), "text")
+      returnvalue
+
+L52:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+      pushnull
+      ifeq                L60
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+      callproperty        Multiname("toString", [PrivateNamespace("*", "_-uX:_-0gr/instance#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-uX:_-0gr/instance#1"), PackageNamespace("_-uX"), PackageInternalNs("_-uX"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Qr"), StaticProtectedNs("_-1Qr")]), 0
+      returnvalue
+
+L60:
+      pushstring          "(empty)"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "getStackTrace")
+   method
+    refid "_-uX:_-0gr/instance/_-uX:_-0gr/instance/getStackTrace"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      bitnot
+      rshift
+      setlocal3
+
+      convert_b
+      coerce_a
+      multiply
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      jump                L20
+
+      greaterequals
+      lessthan
+      lessequals
+      decrement
+      convert_i
+      divide
+L20:
+      getlocal2
+      dup
+      iffalse             L26
+
+      pop
+      getlocal1
+      convert_b
+L26:
+      iftrue              L32
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+      getlex              QName(PackageNamespace("", "#0"), "Error")
+      istypelate
+      iffalse             L39
+
+L32:
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-uX:_-0gr/instance#0"), "error")
+      callproperty        QName(PackageNamespace("", "#0"), "Error"), 1
+      callproperty        QName(PackageNamespace("", "#0"), "getStackTrace"), 0
+      coerce_s
+      jump                L40
+
+L39:
+      pushstring          "(empty)"
+L40:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-uX:_-0gr/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,68 @@
+class
+ refid "com.google.analytics:API"
+ instance QName(PackageNamespace("com.google.analytics"), "API")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics:API")
+  iinit
+   refid "com.google.analytics:API/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.google.analytics:API/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "version")
+    findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Version")
+    constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Version"), 0
+    setproperty         QName(PackageNamespace(""), "version")
+
+    getlex              QName(PackageNamespace(""), "version")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "major")
+
+    getlex              QName(PackageNamespace(""), "version")
+    pushbyte            0
+    setproperty         QName(PackageNamespace(""), "minor")
+
+    getlex              QName(PackageNamespace(""), "version")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "build")
+
+    getlex              QName(PackageNamespace(""), "version")
+    pushstring          "$Rev: 319 $ "
+    pushstring          " "
+    callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+    pushbyte            1
+    getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics:API/class/init#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics:API/class/init#1"), PackageNamespace("com.google.analytics"), PackageInternalNs("com.google.analytics"), ProtectedNamespace("com.google.analytics:API"), StaticProtectedNs("com.google.analytics:API"), StaticProtectedNs("Object")])
+    setproperty         QName(PackageNamespace(""), "revision")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "version") slotid 1 type QName(PackageNamespace("com.google.analytics.utils"), "Version") end
+end ; class

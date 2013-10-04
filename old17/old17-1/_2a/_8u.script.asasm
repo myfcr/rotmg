@@ -1,0 +1,29 @@
+script ; 166
+ sinit
+  refid "_2a:_8u/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_8u", [PackageNamespace("_2a")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_2a:_8u"
+    popscope
+    initproperty        QName(PackageNamespace("_2a"), "_8u")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_2a"), "_8u")
+  #include "_8u.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,400 @@
+class
+ refid "_0C_0:_09b"
+ instance QName(PackageNamespace("_0C_0"), "_09b")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1iJ_")
+  iinit
+   refid "_0C_0:_09b/instance/init"
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "type_")
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "type_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(ProtectedNamespace("_1iJ_"), "selected_") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("_1iJ_"), "_1bu") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "setSelected")
+   method
+    refid "_0C_0:_09b/instance/setSelected"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_1iJ_"), "selected_")
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onAddedToStage")
+   method
+    refid "_0C_0:_09b/instance/_0C_0:_09b/instance/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onRollOut")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onRemovedFromStage")
+   method
+    refid "_0C_0:_09b/instance/_0C_0:_09b/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onRollOut")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onMouseOver")
+   method
+    refid "_0C_0:_09b/instance/_0C_0:_09b/instance/onMouseOver"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushtrue
+      initproperty        QName(ProtectedNamespace("_1iJ_"), "_1bu")
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "draw"), 0
+
+      getlocal0
+      getlocal0
+      callproperty        QName(ProtectedNamespace("_1iJ_"), "getToolTip"), 0
+      callpropvoid        QName(ProtectedNamespace("_1iJ_"), "_el"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "onRollOut")
+   method
+    refid "_0C_0:_09b/instance/_0C_0:_09b/instance/onRollOut"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushfalse
+      initproperty        QName(ProtectedNamespace("_1iJ_"), "_1bu")
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "draw"), 0
+
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_1iJ_"), "_Z_N_"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_1iJ_"), "_el")
+   method
+    refid "_0C_0:_09b/instance/_1iJ_:_el"
+    param QName(PackageNamespace("_pO_"), "_1hr")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_1iJ_"), "_Z_N_"), 0
+
+      findproperty        QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      getlocal1
+      setproperty         QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+
+      getlex              QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      pushnull
+      ifeq                L13
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_1iJ_"), "_Z_N_")
+   method
+    refid "_0C_0:_09b/instance/_1iJ_:_Z_N_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      pushnull
+      ifeq                L16
+
+      getlex              QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushnull
+      ifeq                L13
+
+      getlex              QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L13:
+      findproperty        QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+      pushnull
+      setproperty         QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_1iJ_"), "getToolTip")
+   method
+    refid "_0C_0:_09b/instance/_1iJ_:getToolTip"
+    returns QName(PackageNamespace("_pO_"), "_1hr")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_0C_0:_09b/instance"), "draw")
+   method
+    refid "_0C_0:_09b/instance/_0C_0:_09b/instance/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      pushint             3552822
+      convert_u
+      setlocal1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1iJ_"), "selected_")
+      iffalse             L17
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      pushint             16777215
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
+
+      pushint             8355711
+      convert_u
+      setlocal1
+
+L17:
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1iJ_"), "_1bu")
+      iffalse             L24
+
+      pushint             5658198
+      convert_u
+      jump                L26
+
+L24:
+      pushint             3552822
+      convert_u
+L26:
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            2
+      dup
+      getlex              QName(PackageNamespace(""), "WIDTH")
+      pushbyte            4
+      subtract
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      pushbyte            4
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1iJ_"), "selected_")
+      iffalse             L43
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 0
+
+L43:
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0C_0:_09b/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "WIDTH")
+    pushbyte            50
+    initproperty        QName(PackageNamespace(""), "WIDTH")
+
+    findproperty        QName(PackageNamespace(""), "HEIGHT")
+    pushbyte            50
+    initproperty        QName(PackageNamespace(""), "HEIGHT")
+
+    findproperty        QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+    pushnull
+    setproperty         QName(StaticProtectedNs("_1iJ_"), "toolTip_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "WIDTH") slotid 1 type QName(PackageNamespace(""), "int") value Integer(50) end
+ trait const QName(PackageNamespace(""), "HEIGHT") slotid 2 type QName(PackageNamespace(""), "int") value Integer(50) end
+ trait slot QName(StaticProtectedNs("_1iJ_"), "toolTip_") slotid 3 type QName(PackageNamespace("_pO_"), "_1hr") value Null() end
+end ; class

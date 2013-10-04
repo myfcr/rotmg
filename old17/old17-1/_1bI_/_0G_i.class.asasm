@@ -1,0 +1,275 @@
+class
+ refid "_1bI_:_0G_i"
+ instance QName(PackageNamespace("_1bI_"), "_0G_i")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0rq")
+  iinit
+   refid "_1bI_:_0G_i/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_0Z_b"), 0
+     initproperty        QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_U_7")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_1X_w"), "_0N_k")
+     constructprop       QName(PackageNamespace("_1X_w"), "_0N_k"), 0
+     initproperty        QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_pt")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+     pushshort           1000
+     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
+     initproperty        QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "timer")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_U_7") type QName(PackageNamespace("_1j9"), "_1aT_") end
+  trait const QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_pt") type QName(PackageNamespace("_1X_w"), "_0N_k") end
+  trait slot QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_1X_M_") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait const QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "timer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait method QName(PackageNamespace(""), "start")
+   method
+    refid "_1bI_:_0G_i/instance/start"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushnull
+      callpropvoid        QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_0X_9"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_0X_9")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "timer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "stop")
+   method
+    refid "_1bI_:_0G_i/instance/stop"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_0X_9")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "timer")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_0X_9")
+   method
+    refid "_1bI_:_0G_i/instance/_1bI_:_0G_i/instance/_0X_9"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 9
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_1X_M_")
+      pushbyte            60
+      divide
+      convert_i
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_1X_M_")
+      pushbyte            60
+      modulo
+      convert_i
+      setlocal3
+
+      getlocal2
+      pushbyte            10
+      lessthan
+      iffalse             L20
+
+      pushstring          "0"
+      jump                L21
+
+L20:
+      pushstring          ""
+L21:
+      coerce_s
+      dup
+      setlocal            4
+
+      getlocal2
+      pushstring          ":"
+      add
+      add
+      coerce_s
+      dup
+      setlocal            4
+
+      getlocal3
+      pushbyte            10
+      lessthan
+      iffalse             L38
+
+      pushstring          "0"
+      coerce_a
+      jump                L40
+
+L38:
+      pushstring          ""
+      coerce_a
+L40:
+      add
+      coerce_s
+      dup
+      setlocal            4
+
+      getlocal3
+      add
+      coerce_s
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_U_7")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_pt")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "setString"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_1X_M_")
+      increment
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_1X_M_")
+
+      kill                6
+      kill                5
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1bI_:_0G_i/instance"), "_0Z_b")
+   method
+    refid "_1bI_:_0G_i/instance/_1bI_:_0G_i/instance/_0Z_b"
+    returns QName(PackageNamespace("_1j9"), "_1aT_")
+    body
+     maxstack 10
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_1j9"), "_1aT_")
+      constructprop       QName(PackageNamespace("_1j9"), "_1aT_"), 0
+      coerce              QName(PackageNamespace("_1j9"), "_1aT_")
+      setlocal1
+
+      getlocal1
+      pushbyte            24
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "setBold"), 1
+      pushint             16777215
+      callpropvoid        QName(PackageNamespace(""), "setColor"), 1
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      pushbyte            8
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1bI_:_0G_i/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

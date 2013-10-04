@@ -1,0 +1,124 @@
+class
+ refid "com.company.assembleegameclient.util:_-1JF"
+ instance QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1JF")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0EK")
+  iinit
+   refid "com.company.assembleegameclient.util:_-1JF/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     typeof
+     getglobalscope
+     lessthan
+     bitand
+     decrement
+     not
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.util:_-1JF/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "_-0mx") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.util:_-1JF/class/_-0mx"
+   param QName(PackageNamespace("", "#0"), "Number")
+   returns QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     getlocal2
+     declocal            2
+     rshift
+     inclocal_i          2
+     convert_d
+     bitand
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     getlocal1
+     multiply
+     getlocal3
+     iftrue              L30
+
+     pushbyte            2
+     multiply
+     getlocal3
+     dup
+     iffalse             L27
+
+     pop
+     getlocal3
+     convert_b
+L27:
+     iftrue              L30
+
+     getlocal1
+     subtract
+L30:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

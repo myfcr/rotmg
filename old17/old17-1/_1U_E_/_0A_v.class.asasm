@@ -1,0 +1,307 @@
+class
+ refid "_1U_E_:_0A_v"
+ instance QName(PackageNamespace("_1U_E_"), "_0A_v")
+  extends QName(PackageNamespace("_1U_E_"), "_1R_w")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0pw")
+  iinit
+   refid "_1U_E_:_0A_v/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushint             16352321
+     pushint             12919330
+     pushtrue
+     constructsuper      3
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "map_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "map_") type QName(PackageNamespace("com.company.assembleegameclient.map"), "Map") end
+  trait method QName(PackageNamespace(""), "refreshToolTip")
+   method
+    refid "_1U_E_:_0A_v/instance/refreshToolTip"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_mk"), "_el")
+      getlocal0
+      getlex              QName(PackageNamespace(""), "go_")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      callproperty        QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "getToolTip"), 2
+      callpropvoid        QName(ProtectedNamespace("_mk"), "_el"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_0pw"), "onMouseOver") flag OVERRIDE
+   method
+    refid "_1U_E_:_0A_v/instance/_0pw:onMouseOver"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("_mk"), "onMouseOver"), 1
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "refreshToolTip"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_0pw"), "onMouseOut") flag OVERRIDE
+   method
+    refid "_1U_E_:_0A_v/instance/_0pw:onMouseOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("_mk"), "onMouseOut"), 1
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "refreshToolTip"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "getToolTip")
+   method
+    refid "_1U_E_:_0A_v/instance/_1U_E_:_0A_v/instance/getToolTip"
+    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("_pO_"), "_1hr")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushnull
+      equals
+      dup
+      iftrue              L12
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "texture_")
+      pushnull
+      equals
+L12:
+      iffalse             L15
+
+      pushnull
+      returnvalue
+
+L15:
+      getlocal0
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "_2e"), 1
+      iffalse             L23
+
+      findpropstrict      QName(PackageNamespace("_pO_"), "QuestToolTip")
+      getlex              QName(PackageNamespace(""), "go_")
+      constructprop       QName(PackageNamespace("_pO_"), "QuestToolTip"), 1
+      returnvalue
+
+L23:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getproperty         Multiname("showQuestPortraits", [PrivateNamespace("*", "_1U_E_:_0A_v/instance"), PackageNamespace(""), PrivateNamespace("*", "_1U_E_:_0A_v/instance/_1U_E_:_0A_v/instance/getToolTip"), PackageNamespace("_1U_E_"), PackageInternalNs("_1U_E_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0pw"), StaticProtectedNs("_0pw"), StaticProtectedNs("_mk"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iffalse             L31
+
+      findpropstrict      QName(PackageNamespace("_pO_"), "_Q_n")
+      getlocal1
+      constructprop       QName(PackageNamespace("_pO_"), "_Q_n"), 1
+      returnvalue
+
+L31:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "_2e")
+   method
+    refid "_1U_E_:_0A_v/instance/_1U_E_:_0A_v/instance/_2e"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "map_")
+      getproperty         QName(PackageNamespace(""), "quest_")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "Quest")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "_1bu")
+      convert_b
+      dup
+      iftrue              L16
+
+      pop
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isNew"), 1
+      convert_b
+L16:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "_1U_E_:_0A_v/instance/draw"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_1V_I_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal            4
+
+      pushfalse
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "map_")
+      getproperty         QName(PackageNamespace(""), "quest_")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getObject"), 1
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "go_")
+      ifeq                L26
+
+      findpropstrict      QName(PackageNamespace(""), "_5A_")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "_5A_"), 1
+
+      findpropstrict      QName(ProtectedNamespace("_mk"), "_el")
+      getlocal0
+      getlocal3
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "getToolTip"), 2
+      callpropvoid        QName(ProtectedNamespace("_mk"), "_el"), 1
+
+      jump                L47
+
+L26:
+      getlex              QName(PackageNamespace(""), "go_")
+      pushnull
+      ifeq                L47
+
+      getlex              QName(ProtectedNamespace("_mk"), "_0yq")
+      getlex              QName(PackageNamespace("_pO_"), "QuestToolTip")
+      istypelate
+      setlocal            4
+
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "_2e"), 1
+      convert_b
+      setlocal            5
+
+      getlocal            4
+      getlocal            5
+      ifeq                L47
+
+      findpropstrict      QName(ProtectedNamespace("_mk"), "_el")
+      getlocal0
+      getlocal3
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_1U_E_:_0A_v/instance"), "getToolTip"), 2
+      callpropvoid        QName(ProtectedNamespace("_mk"), "_el"), 1
+
+L47:
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "draw"), 2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1U_E_:_0A_v/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

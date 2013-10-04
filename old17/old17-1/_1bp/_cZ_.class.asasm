@@ -1,0 +1,106 @@
+class
+ refid "_1bp:_cZ_"
+ instance QName(PackageNamespace("_1bp"), "_cZ_")
+  extends QName(PackageNamespace("_1bp"), "_m2")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_s5")
+  iinit
+   refid "_1bp:_cZ_/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Function")
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "callback")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "parameters")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "callback") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "parameters") type QName(PackageNamespace(""), "Array") end
+  trait method QName(ProtectedNamespace("_s5"), "run") flag OVERRIDE
+   method
+    refid "_1bp:_cZ_/instance/_s5:run"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "callback")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parameters")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_s5"), "onDestroyed") flag OVERRIDE
+   method
+    refid "_1bp:_cZ_/instance/_s5:onDestroyed"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "callback")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "parameters")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1bp:_cZ_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

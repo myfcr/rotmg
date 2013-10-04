@@ -1,0 +1,208 @@
+class
+ refid "com.company.assembleegameclient.tutorial:UIDrawBox"
+ instance QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "UIDrawBox")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0mC_")
+  iinit
+   refid "com.company.assembleegameclient.tutorial:UIDrawBox/instance/init"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     pushshort           250
+     pushshort           200
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     initproperty        QName(PackageNamespace(""), "_147")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.util"), "ConversionUtil")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "_3p"), 1
+     initproperty        QName(PackageNamespace(""), "rect_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     getlocal1
+     getproperty         MultinameA("color", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawBox/instance/init#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawBox/instance/init#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_0mC_"), StaticProtectedNs("_0mC_")])
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     initproperty        QName(PackageNamespace(""), "color_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "rect_") type QName(PackageNamespace("flash.geom"), "Rectangle") end
+  trait slot QName(PackageNamespace(""), "color_") type QName(PackageNamespace(""), "uint") end
+  trait const QName(PackageNamespace(""), "_l4") type QName(PackageNamespace(""), "int") value Integer(500) end
+  trait const QName(PackageNamespace(""), "_147") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait method QName(PackageNamespace(""), "draw")
+   method
+    refid "com.company.assembleegameclient.tutorial:UIDrawBox/instance/draw"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("flash.display"), "Graphics")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 10
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rect_")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal1
+      subtract
+      convert_d
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rect_")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal1
+      subtract
+      convert_d
+      setlocal            7
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_l4")
+      ifnlt               L77
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_147")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rect_")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_147")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      getlocal3
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_l4")
+      divide
+      add
+      convert_d
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_147")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rect_")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_147")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      getlocal3
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_l4")
+      divide
+      add
+      convert_d
+      setlocal            5
+
+      getlocal            6
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_l4")
+      divide
+      multiply
+      convert_d
+      setlocal            6
+
+      getlocal            7
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_l4")
+      divide
+      multiply
+      convert_d
+      setlocal            7
+
+      jump                L95
+
+L77:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rect_")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      pushbyte            2
+      divide
+      add
+      convert_d
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rect_")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      pushbyte            2
+      divide
+      add
+      convert_d
+      setlocal            5
+
+L95:
+      getlocal2
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "color_")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
+
+      getlocal2
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.tutorial:UIDrawBox/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

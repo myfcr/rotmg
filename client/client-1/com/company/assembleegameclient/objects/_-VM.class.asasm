@@ -1,0 +1,528 @@
+class
+ refid "com.company.assembleegameclient.objects:_-VM"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-VM")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0lM")
+  iinit
+   refid "com.company.assembleegameclient.objects:_-VM/instance/init"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     declocal            2
+     subtract
+     setlocal3
+
+     setlocal            5
+
+     not
+     declocal            4
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "startTime_")
+
+     getlocal            5
+     dup
+     iftrue              L24
+
+     pop
+     getlocal1
+     convert_b
+L24:
+     iffalse             L79
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "color_")
+
+     getlocal0
+     jump                L36
+
+     declocal_i          5
+     inclocal            5
+     typeof
+     hasnext
+     declocal_i          4
+     inclocal_i          4
+L36:
+     getlocal3
+     getlocal            6
+     iftrue              L41
+
+     pushshort           1000
+     multiply
+L41:
+     initproperty        QName(PackageNamespace("", "#0"), "_-da")
+
+     getlocal            5
+     iffalse             L63
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "_-078")
+
+     getlocal0
+     getlocal2
+     jump                L56
+
+     kill                3
+     declocal_i          4
+     setlocal2
+
+     declocal_i          5
+     setlocal3
+
+     pushfalse
+L56:
+     pushbyte            16
+     rshift
+     getlocal            5
+     iffalse             L62
+
+     pushshort           255
+     bitand
+L62:
+     initproperty        QName(PackageNamespace("", "#0"), "_-vM")
+
+L63:
+     getlocal0
+     getlocal2
+     pushbyte            8
+     rshift
+     getlocal            5
+     iffalse             L71
+
+     pushshort           255
+     bitand
+L71:
+     initproperty        QName(PackageNamespace("", "#0"), "_-7d")
+
+     getlocal            5
+     iffalse             L79
+
+     getlocal0
+     getlocal2
+     pushshort           255
+     bitand
+     initproperty        QName(PackageNamespace("", "#0"), "package")
+
+L79:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "startTime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "color_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "_-da") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-078") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-vM") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-7d") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "package") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "apply")
+   method
+    refid "com.company.assembleegameclient.objects:_-VM/instance/apply"
+    param QName(PackageNamespace("flash.display"), "BitmapData")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 11
+     localcount 10
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            8
+
+      jump                L10
+
+      inclocal            8
+      inclocal            4
+      setlocal            7
+
+      convert_s
+      pushfalse
+      inclocal            4
+L10:
+      setlocal            9
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      getlocal            8
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L35
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      subtract
+      getlocal            8
+      dup
+      iftrue              L30
+
+      pop
+      getlocal0
+      convert_b
+L30:
+      iffalse             L34
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-da")
+      modulo
+L34:
+      convert_i
+L35:
+      setlocal3
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-da")
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      convert_d
+      dup
+      setlocal            4
+
+      jump                L55
+
+      getlocal2
+      inclocal_i          4
+      getlocal1
+      typeof
+      getlocal            6
+      dxnslate
+L55:
+      getlocal            8
+      dup
+      iftrue              L61
+
+      pop
+      getlocal0
+      convert_b
+L61:
+      iffalse             L72
+
+      pushdouble          0.5
+      multiply
+      getlocal            8
+      dup
+      iftrue              L70
+
+      pop
+      getlocal3
+      convert_b
+L70:
+      iffalse             L72
+
+      convert_d
+L72:
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushbyte            1
+      getlocal            5
+      subtract
+      pushbyte            1
+      getlocal            5
+      subtract
+      pushbyte            1
+      getlocal            5
+      subtract
+      pushbyte            1
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-vM")
+      jump                L94
+
+      setlocal            6
+
+      declocal            7
+      nextname
+      inclocal_i          6
+      kill                8
+      getlocal2
+L94:
+      multiply
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-7d")
+      multiply
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "package")
+      multiply
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 8
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal            6
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "clone"), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      dup
+      dup
+      setlocal            7
+
+      getproperty         QName(PackageNamespace("", "#0"), "rect")
+      getlocal            6
+      callpropvoid        QName(PackageNamespace("", "#0"), "colorTransform"), 2
+
+      getlocal            7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1fx")
+   method
+    refid "com.company.assembleegameclient.objects:_-VM/instance/_-1fx"
+    param QName(PackageNamespace("flash.display"), "BitmapData")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 11
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          5
+      pushtrue
+      inclocal            3
+      inclocal_i          5
+      pushwith
+      setlocal            6
+
+L10:
+      setlocal            7
+
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      getlocal            8
+      dup
+      iftrue              L21
+
+      pop
+      getlocal3
+      convert_b
+L21:
+      iffalse             L31
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      subtract
+      getlocal            7
+      iftrue              L30
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-da")
+      modulo
+L30:
+      convert_i
+L31:
+      setlocal3
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-da")
+      divide
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      convert_d
+      dup
+      setlocal            4
+
+      getlocal            8
+      dup
+      iftrue              L57
+
+      jump                L54
+
+      greaterthan
+      greaterequals
+      strictequals
+      inclocal_i          4
+      checkfilter
+      getlocal            6
+L54:
+      pop
+      getlocal0
+      convert_b
+L57:
+      iffalse             L68
+
+      pushdouble          0.5
+      multiply
+      getlocal            8
+      dup
+      iftrue              L66
+
+      pop
+      getlocal3
+      convert_b
+L66:
+      iffalse             L68
+
+      convert_d
+L68:
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushbyte            1
+      getlocal            5
+      subtract
+      pushbyte            1
+      getlocal            5
+      subtract
+      pushbyte            1
+      getlocal            5
+      subtract
+      pushbyte            1
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-vM")
+      multiply
+      jump                L91
+
+      inclocal            7
+      getlocal            5
+      popscope
+      declocal            3
+      multiply
+      increment
+L91:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-7d")
+      multiply
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "package")
+      multiply
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 8
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal            6
+
+      getlocal            7
+      dup
+      iffalse             L109
+
+      pop
+      getlocal3
+      convert_b
+L109:
+      iftrue              L114
+
+      getlex              QName(PackageNamespace("_-07c"), "_-0ll")
+      getlocal1
+      getlocal            6
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-5h"), 2
+
+L114:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0j7")
+   method
+    refid "com.company.assembleegameclient.objects:_-VM/instance/_-0j7"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      jump                L10
+
+      add
+      multiply
+      setlocal2
+
+      pushundefined
+      bitor
+      checkfilter
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-da")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-078")
+      multiply
+      add
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:_-VM/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

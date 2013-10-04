@@ -1,0 +1,29 @@
+script ; 1637
+ sinit
+  refid "_-KX:_-us/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-us", [PackageNamespace("_-KX")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-KX:_-us"
+    popscope
+    initproperty        QName(PackageNamespace("_-KX"), "_-us")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-KX"), "_-us")
+  #include "_-us.class.asasm"
+ end ; trait
+end ; script

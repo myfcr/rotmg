@@ -1,0 +1,363 @@
+class
+ refid "_-pY:MoneyChangerPanel"
+ instance QName(PackageNamespace("_-pY"), "MoneyChangerPanel")
+  extends QName(PackageNamespace("_-dE"), "_-0iX")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Nc")
+  iinit
+   refid "_-pY:MoneyChangerPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     pushnull
+     getlocal2
+     declocal            2
+     inclocal_i          2
+     declocal_i          2
+     bitand
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L49
+
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0cG")
+     getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+     getproperty         QName(PackageNamespace("", "#0"), "_-VT")
+     jump                L28
+
+     negate
+     negate
+     inclocal            2
+     subtract
+     setlocal2
+
+     inclocal            2
+L28:
+     constructsuper      3
+
+     getlocal2
+     dup
+     iftrue              L42
+
+     pop
+     jump                L40
+
+     nextvalue
+     declocal_i          2
+     inclocal            2
+     greaterthan
+     bitand
+     istypelate
+L40:
+     getlocal3
+     convert_b
+L42:
+     iffalse             L49
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-a"), "_-uD")
+     constructprop       QName(PackageNamespace("_-a"), "_-uD"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-PV")
+
+     getlocal3
+     iftrue              L57
+
+L49:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal2
+     iffalse             L63
+
+L57:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L63:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-PV") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait method QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "onAddedToStage")
+   method
+    refid "_-pY:MoneyChangerPanel/instance/_-pY:MoneyChangerPanel/instance/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      hasnext
+      lshift
+      inclocal_i          2
+      pushnan
+      decrement
+      hasnext
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iffalse             L27
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "_-jO")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "onRemovedFromStage")
+   method
+    refid "_-pY:MoneyChangerPanel/instance/_-pY:MoneyChangerPanel/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushscope
+
+      inclocal_i          2
+      declocal_i          2
+      declocal_i          2
+      inclocal            2
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iffalse             L26
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "_-jO")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1Nc"), "onButtonClick") flag OVERRIDE
+   method
+    refid "_-pY:MoneyChangerPanel/instance/_-1Nc:onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      modulo
+      getlocal2
+      inclocal_i          2
+      bitor
+      getlocal2
+      getlocal2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L19
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-PV")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), "_-jO")
+   method
+    refid "_-pY:MoneyChangerPanel/instance/_-pY:MoneyChangerPanel/instance/_-jO"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      lshift
+      pushtrue
+      popscope
+      convert_s
+      getlocal3
+      setlocal2
+
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L50
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyCode")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      jump                L27
+
+      declocal_i          2
+      add
+      declocal            2
+      inclocal            2
+      convert_u
+      getlocal2
+L27:
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-pY:MoneyChangerPanel/instance/_-pY:MoneyChangerPanel/instance/_-jO"), PackageNamespace("_-pY"), PackageInternalNs("_-pY"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("_-dE"), ProtectedNamespace("_-1Nc"), StaticProtectedNs("_-1Nc"), StaticProtectedNs("_-3L"), StaticProtectedNs("_-g-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      equals
+      getlocal2
+      iftrue              L47
+
+      dup
+      iffalse             L47
+
+      getlocal3
+      dup
+      iftrue              L39
+
+      pop
+      getlocal1
+      convert_b
+L39:
+      iffalse             L47
+
+      pop
+      getlocal3
+      iffalse             L50
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "focus")
+      pushnull
+      equals
+L47:
+      iffalse             L53
+
+      getlocal2
+      iftrue              L53
+
+L50:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-PV")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L53:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-pY:MoneyChangerPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

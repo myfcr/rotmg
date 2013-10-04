@@ -1,0 +1,318 @@
+class
+ refid "_-Yf:FountainEffect"
+ instance QName(PackageNamespace("_-Yf"), "FountainEffect")
+  extends QName(PackageNamespace("_-Yf"), "_-00p")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-07E")
+  iinit
+   refid "_-Yf:FountainEffect/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     getlocal2
+     instanceof
+     inclocal            2
+     lshift
+     setlocal2
+
+     istypelate
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     getlocal2
+     kill                2
+     kill                2
+     bitnot
+     setlocal2
+
+     kill                2
+L20:
+     getlocal3
+     dup
+     iffalse             L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iftrue              L36
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iftrue              L35
+
+     pop
+     getlocal2
+     convert_b
+L35:
+     iffalse             L39
+
+L36:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "go_")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace("", "#0"), "lastUpdate_") type QName(PackageNamespace("", "#0"), "int") value Integer(-1) end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-Yf:FountainEffect/instance/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 7
+     localcount 8
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            3
+      setlocal3
+
+      inclocal_i          4
+      getlocal            6
+      decrement_i
+      declocal_i          2
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-Yf:FountainEffect"), "FountainParticle")
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "map_")
+      pushnull
+      ifne                L35
+
+      getlocal            6
+      dup
+      iffalse             L30
+
+      pop
+      getlocal0
+      convert_b
+L30:
+      iftrue              L35
+
+      pushfalse
+      returnvalue
+
+      getlocal            7
+      iffalse             L73
+
+L35:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "lastUpdate_")
+      getlocal            6
+      dup
+      iffalse             L43
+
+      pop
+      getlocal3
+      convert_b
+L43:
+      iftrue              L85
+
+      pushbyte            0
+      getlocal            7
+      dup
+      iftrue              L51
+
+      pop
+      getlocal0
+      convert_b
+L51:
+      iffalse             L83
+
+      ifnlt               L61
+
+      getlocal0
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      pushbyte            0
+      getlocal1
+      pushshort           400
+      subtract
+      callproperty        QName(PackageNamespace("", "#0"), "max"), 2
+      initproperty        QName(PackageNamespace("", "#0"), "lastUpdate_")
+
+L61:
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      jump                L69
+
+      inclocal            4
+      inclocal_i          5
+      setlocal            5
+
+      getlocal            4
+      dup
+      kill                2
+L69:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+L73:
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "lastUpdate_")
+      getlocal            7
+      iffalse             L85
+
+      pushbyte            50
+L83:
+      divide
+      convert_i
+L85:
+      setlocal3
+
+      jump                L134
+
+L87:
+      label
+      getlocal3
+      getlocal            6
+      iftrue              L98
+
+      pushbyte            50
+      getlocal            6
+      iftrue              L136
+
+      multiply
+      convert_i
+      getlocal            6
+      iftrue              L135
+
+L98:
+      setlocal            4
+
+      getlocal            6
+      iftrue              L144
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0WN")
+      getlex              QName(PrivateNamespace("*", "_-Yf:FountainEffect"), "FountainParticle")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0OV"), 1
+      getlex              QName(PrivateNamespace("*", "_-Yf:FountainEffect"), "FountainParticle")
+      astypelate
+      coerce              QName(PrivateNamespace("*", "_-Yf:FountainEffect"), "FountainParticle")
+      dup
+      setlocal            5
+
+      getlocal            4
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "restart"), 2
+
+      getlocal            6
+      iftrue              L134
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      jump                L122
+
+      urshift
+      declocal            6
+      swap
+      setlocal3
+
+      pop
+      inclocal_i          2
+L122:
+      getlocal            5
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            6
+      dup
+      iffalse             L132
+
+      pop
+      getlocal1
+      convert_b
+L132:
+      iftrue              L134
+
+      inclocal_i          3
+L134:
+      getlocal3
+L135:
+      getlocal1
+L136:
+      pushbyte            50
+      divide
+      iflt                L87
+
+      getlocal            6
+      iftrue              L144
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "lastUpdate_")
+
+L144:
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Yf:FountainEffect/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

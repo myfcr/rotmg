@@ -1,0 +1,1259 @@
+class
+ refid "_-WP:_-DZ"
+ instance QName(PackageNamespace("_-WP"), "_-DZ")
+  extends QName(PackageNamespace("_-WP"), "_-0EF")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-16K")
+  iinit
+   refid "_-WP:_-DZ/instance/init"
+   param QName(PackageNamespace("_-1AB"), "Console")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     inclocal_i          2
+     nextname
+     setlocal2
+
+     inclocal            2
+     subtract_i
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L26
+
+     pop
+     getlocal2
+     jump                L25
+
+     declocal_i          2
+     declocal_i          2
+     declocal            2
+     getlocal2
+     kill                2
+     getlocal2
+L25:
+     convert_b
+L26:
+     iffalse             L42
+
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12e")
+
+     getlocal3
+     dup
+     iffalse             L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iftrue              L42
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     iffalse             L49
+
+L42:
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "cl")
+     pushstring          "keybinds"
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-0DO")
+     pushstring          "List all keybinds used"
+     callpropvoid        QName(PackageNamespace("", "#0"), "addCLCmd"), 3
+
+L49:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12e") type QName(PackageNamespace("", "#0"), "Object") end
+  trait slot QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "_-0N3")
+   method
+    refid "_-WP:_-DZ/instance/_-0N3"
+    param QName(PackageNamespace("_-1AB"), "_-P")
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("", "#0"), "Array")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      inclocal            3
+      declocal            2
+      istypelate
+      convert_d
+      inclocal_i          4
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("_-64"), "config")
+      getproperty         QName(PackageNamespace("", "#0"), "keystrokePassword")
+      convert_b
+      getlocal            4
+      iftrue              L25
+
+      dup
+      getlocal            5
+      iffalse             L30
+
+      iffalse             L55
+
+      getlocal            4
+      iftrue              L94
+
+L25:
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "_-RG")
+      not
+      dup
+L30:
+      iffalse             L55
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "key")
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      getlex              QName(ProtectedNamespace("_-64"), "config")
+      getproperty         QName(PackageNamespace("", "#0"), "keystrokePassword")
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      equals
+      getlocal            4
+      jump                L49
+
+      inclocal_i          2
+      getlocal2
+      declocal_i          4
+      declocal            4
+      declocal_i          4
+      bitor
+L49:
+      dup
+      iffalse             L54
+
+      pop
+      getlocal2
+      convert_b
+L54:
+      iftrue              L94
+
+L55:
+      iffalse             L84
+
+      findpropstrict      QName(ProtectedNamespace("_-64"), "report")
+      pushstring          "Error: KeyBind ["
+      getlocal            4
+      dup
+      iffalse             L64
+
+      pop
+      getlocal0
+      convert_b
+L64:
+      iftrue              L72
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "key")
+      add
+      getlocal            4
+      iftrue              L72
+
+      pushstring          "] is conflicting with Console password."
+      add
+L72:
+      pushbyte            9
+      callpropvoid        QName(ProtectedNamespace("_-64"), "report"), 2
+
+      jump                L81
+
+      nextname
+      bitnot
+      kill                2
+      inclocal            4
+      increment_i
+      bitand
+L81:
+      returnvoid
+
+      getlocal            4
+      iftrue              L89
+
+L84:
+      getlocal2
+      pushnull
+      ifne                L96
+
+      getlocal            4
+      iftrue              L104
+
+L89:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12e")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "key")
+      deleteproperty      MultinameL([PrivateNamespace("*", "_-WP:_-DZ/instance#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-WP:_-DZ/instance#1"), PackageNamespace("_-WP"), PackageInternalNs("_-WP"), ProtectedNamespace("_-16K"), StaticProtectedNs("_-16K"), StaticProtectedNs("_-64"), StaticProtectedNs("flash.events:EventDispatcher")])
+L94:
+      pop
+      jump                L104
+
+L96:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12e")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "key")
+      getlocal2
+      getlocal3
+      newarray            2
+      setproperty         MultinameL([PrivateNamespace("*", "_-WP:_-DZ/instance#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-WP:_-DZ/instance#1"), PackageNamespace("_-WP"), PackageInternalNs("_-WP"), ProtectedNamespace("_-16K"), StaticProtectedNs("_-16K"), StaticProtectedNs("_-64"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L104:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1am")
+   method
+    refid "_-WP:_-DZ/instance/_-1am"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      declocal_i          2
+      negate_i
+      declocal            2
+      bitand
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L24
+
+      getlocal0
+      getlocal1
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-11m"), 2
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-MW")
+   method
+    refid "_-WP:_-DZ/instance/_-MW"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      nextname
+      astypelate
+      increment_i
+      modulo
+      inclocal_i          2
+      increment
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L19
+
+      getlocal0
+      getlocal1
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-11m"), 2
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-11m")
+   method
+    refid "_-WP:_-DZ/instance/_-WP:_-DZ/instance/_-11m"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 9
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                3
+      inclocal            6
+      getlocal3
+      pushundefined
+      getlocal3
+      inclocal_i          7
+L10:
+      setlocal            7
+
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-1AB"), "_-P")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("", "#0"), "String")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "charCode")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "fromCharCode"), 1
+      coerce_s
+      setlocal3
+
+      getlocal            8
+      iffalse             L130
+
+      getlocal2
+      getlocal            7
+      iftrue              L171
+
+      dup
+      getlocal            8
+      iffalse             L149
+
+      iffalse             L47
+
+      getlocal            8
+      dup
+      iftrue              L38
+
+      pop
+      getlocal2
+      convert_b
+L38:
+      iffalse             L44
+
+      pop
+      getlex              QName(ProtectedNamespace("_-64"), "config")
+      getproperty         QName(PackageNamespace("", "#0"), "keystrokePassword")
+      pushnull
+      equals
+L44:
+      not
+      getlocal            7
+      iftrue              L60
+
+L47:
+      coerce_a
+      convert_b
+      getlocal            8
+      iffalse             L85
+
+      dup
+      getlocal            7
+      dup
+      iffalse             L58
+
+      pop
+      getlocal2
+      convert_b
+L58:
+      iftrue              L88
+
+      iffalse             L85
+
+L60:
+      pop
+      getlocal            7
+      dup
+      iffalse             L67
+
+      pop
+      getlocal1
+      convert_b
+L67:
+      iftrue              L225
+
+      getlocal3
+      getlocal            7
+      dup
+      iffalse             L75
+
+      pop
+      getlocal0
+      convert_b
+L75:
+      iftrue              L91
+
+      coerce_a
+      convert_b
+      getlocal            8
+      dup
+      iftrue              L84
+
+      pop
+      getlocal0
+      convert_b
+L84:
+      iffalse             L146
+
+L85:
+      dup
+      getlocal            7
+      iftrue              L172
+
+L88:
+      iffalse             L101
+
+      pop
+      getlocal3
+L91:
+      getlex              QName(ProtectedNamespace("_-64"), "config")
+      getproperty         QName(PackageNamespace("", "#0"), "keystrokePassword")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      equals
+L101:
+      iffalse             L237
+
+      getlocal0
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+      getlocal            8
+      iffalse             L109
+
+      increment_i
+L109:
+      setlocal            6
+
+      getlocal            8
+      dup
+      iftrue              L116
+
+      pop
+      getlocal3
+      convert_b
+L116:
+      iffalse             L120
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+
+L120:
+      kill                6
+      kill                5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+      getlex              QName(ProtectedNamespace("_-64"), "config")
+      getproperty         QName(PackageNamespace("", "#0"), "keystrokePassword")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      ifnge               L236
+
+      getlocal            7
+      iftrue              L194
+
+L130:
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-Fl"), 0
+      iffalse             L199
+
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "visible")
+      jump                L145
+
+      inclocal_i          6
+      add_i
+      bitxor
+      declocal_i          5
+      inclocal            7
+      convert_d
+L145:
+      convert_b
+L146:
+      dup
+      getlocal            7
+      iftrue              L172
+
+L149:
+      iffalse             L156
+
+      pop
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "panels")
+      getproperty         QName(PackageNamespace("", "#0"), "mainPanel")
+      getproperty         QName(PackageNamespace("", "#0"), "visible")
+      not
+L156:
+      iffalse             L163
+
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "panels")
+      getproperty         QName(PackageNamespace("", "#0"), "mainPanel")
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "visible")
+
+      jump                L168
+
+L163:
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "visible")
+      not
+      setproperty         QName(PackageNamespace("", "#0"), "visible")
+
+L168:
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "visible")
+      convert_b
+L171:
+      dup
+L172:
+      iffalse             L186
+
+      pop
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "panels")
+      getproperty         QName(PackageNamespace("", "#0"), "mainPanel")
+      getproperty         QName(PackageNamespace("", "#0"), "visible")
+      convert_b
+      getlocal            8
+      dup
+      iftrue              L185
+
+      pop
+      getlocal0
+      convert_b
+L185:
+      iffalse             L238
+
+L186:
+      iffalse             L198
+
+      getlocal            7
+      iftrue              L198
+
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "panels")
+      getproperty         QName(PackageNamespace("", "#0"), "mainPanel")
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "visible")
+
+L194:
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "panels")
+      getproperty         QName(PackageNamespace("", "#0"), "mainPanel")
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveBackSafePosition"), 0
+
+L198:
+      jump                L236
+
+L199:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F")
+      pushbyte            3
+      ifnlt               L236
+
+      getlocal            7
+      dup
+      iffalse             L209
+
+      pop
+      getlocal3
+      convert_b
+L209:
+      iftrue              L241
+
+      getlocal0
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F")
+      increment
+      setlocal            6
+
+      getlocal            7
+      iftrue              L221
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F")
+
+L221:
+      kill                6
+      kill                5
+      getlocal            7
+      iftrue              L241
+
+L225:
+      findpropstrict      QName(ProtectedNamespace("_-64"), "report")
+      pushstring          "Password did not trigger because you have focus on an input TextField."
+      pushbyte            8
+      callpropvoid        QName(ProtectedNamespace("_-64"), "report"), 2
+
+      getlocal            8
+      dup
+      iftrue              L235
+
+      pop
+      getlocal0
+      convert_b
+L235:
+      iffalse             L241
+
+L236:
+      jump                L297
+
+L237:
+      getlocal2
+L238:
+      iffalse             L244
+
+      getlocal            8
+      iffalse             L244
+
+L241:
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-074")
+
+L244:
+      findpropstrict      QName(PackageNamespace("_-1AB"), "_-P")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyCode")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "shiftKey")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "ctrlKey")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "altKey")
+      getlocal2
+      constructprop       QName(PackageNamespace("_-1AB"), "_-P"), 5
+      coerce              QName(PackageNamespace("_-1AB"), "_-P")
+      setlocal            4
+
+      getlocal            8
+      iffalse             L277
+
+      getlocal0
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "key")
+      callpropvoid        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-1dj"), 1
+
+      getlocal            8
+      dup
+      iftrue              L276
+
+      pop
+      jump                L274
+
+      lshift
+      setlocal            4
+
+      istypelate
+      urshift
+      inclocal            5
+      typeof
+L274:
+      getlocal3
+      convert_b
+L276:
+      iffalse             L279
+
+L277:
+      getlocal3
+      iffalse             L297
+
+L279:
+      findpropstrict      QName(PackageNamespace("_-1AB"), "_-P")
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "shiftKey")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "ctrlKey")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "altKey")
+      getlocal2
+      constructprop       QName(PackageNamespace("_-1AB"), "_-P"), 5
+      coerce              QName(PackageNamespace("_-1AB"), "_-P")
+      setlocal            4
+
+      getlocal            7
+      iftrue              L297
+
+      getlocal0
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "key")
+      callpropvoid        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-1dj"), 1
+
+L297:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-0DO")
+   method
+    refid "_-WP:_-DZ/instance/_-WP:_-DZ/instance/_-0DO"
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag NEED_REST
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      newactivation
+      getlocal            5
+      dxnslate
+      strictequals
+      setlocal3
+
+      declocal_i          3
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal3
+
+      getlocal            6
+      dup
+      iffalse             L23
+
+      pop
+      getlocal3
+      convert_b
+L23:
+      iftrue              L28
+
+      findpropstrict      QName(ProtectedNamespace("_-64"), "report")
+      pushstring          "Key binds:"
+      pushbyte            254
+      callpropvoid        QName(ProtectedNamespace("_-64"), "report"), 2
+
+L28:
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12e")
+      coerce_a
+      setlocal            5
+
+      jump                L77
+
+      jump                L45
+
+      greaterequals
+      divide
+      lessthan
+      multiply_i
+      declocal_i          4
+      inclocal_i          3
+L45:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce_s
+      setlocal3
+
+      getlocal            6
+      iftrue              L77
+
+      getlocal2
+      getlocal            6
+      dup
+      iffalse             L60
+
+      pop
+      getlocal1
+      convert_b
+L60:
+      iftrue              L63
+
+      increment
+      convert_u
+L63:
+      setlocal2
+
+      getlocal            7
+      iffalse             L77
+
+      jump                L73
+
+      declocal            2
+      setlocal2
+
+      lessthan
+      lessthan
+      convert_s
+      inclocal            6
+L73:
+      findpropstrict      QName(ProtectedNamespace("_-64"), "report")
+      getlocal3
+      pushbyte            254
+      callpropvoid        QName(ProtectedNamespace("_-64"), "report"), 2
+
+L77:
+      hasnext2            5, 4
+      iftrue              L45
+
+      kill                5
+      kill                4
+      getlocal            6
+      iftrue              L96
+
+      findpropstrict      QName(ProtectedNamespace("_-64"), "report")
+      pushstring          "--- Found "
+      getlocal            6
+      dup
+      iffalse             L91
+
+      pop
+      getlocal1
+      convert_b
+L91:
+      iftrue              L94
+
+      getlocal2
+      add
+L94:
+      pushbyte            254
+      callpropvoid        QName(ProtectedNamespace("_-64"), "report"), 2
+
+L96:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-1dj")
+   method
+    refid "_-WP:_-DZ/instance/_-WP:_-DZ/instance/_-1dj"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      getlocal0
+      subtract_i
+      setlocal2
+
+      inclocal            5
+      nextname
+      dxnslate
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12e")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "_-WP:_-DZ/instance#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-WP:_-DZ/instance#1"), PackageNamespace("_-WP"), PackageInternalNs("_-WP"), ProtectedNamespace("_-16K"), StaticProtectedNs("_-16K"), StaticProtectedNs("_-64"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("_-64"), "config")
+      getproperty         QName(PackageNamespace("", "#0"), "keyBindsEnabled")
+      convert_b
+      getlocal            5
+      iffalse             L52
+
+      dup
+      iffalse             L35
+
+      getlocal            6
+      iftrue              L35
+
+      pop
+      getlocal            5
+      iffalse             L50
+
+      getlocal2
+      convert_b
+      getlocal            6
+      iftrue              L52
+
+L35:
+      iffalse             L105
+
+      getlocal            6
+      dup
+      iffalse             L49
+
+      pop
+      getlocal3
+      convert_b
+      jump                L49
+
+      inclocal_i          4
+      inclocal_i          4
+      bitand
+      convert_s
+      declocal_i          4
+      setlocal2
+
+L49:
+      iftrue              L88
+
+L50:
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-Fl"), 0
+L52:
+      iffalse             L64
+
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_-WP:_-DZ/instance#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-WP:_-DZ/instance#1"), PackageNamespace("_-WP"), PackageInternalNs("_-WP"), ProtectedNamespace("_-16K"), StaticProtectedNs("_-16K"), StaticProtectedNs("_-64"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("", "#0"), "Function")
+      astypelate
+      pushnull
+      getlocal2
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_-WP:_-DZ/instance#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-WP:_-DZ/instance#1"), PackageNamespace("_-WP"), PackageInternalNs("_-WP"), ProtectedNamespace("_-16K"), StaticProtectedNs("_-16K"), StaticProtectedNs("_-64"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      jump                L105
+
+L64:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F")
+      pushbyte            3
+      ifnlt               L105
+
+      getlocal0
+      dup
+      setlocal3
+
+      getproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F")
+      increment
+      setlocal            4
+
+      getlocal            6
+      jump                L82
+
+      declocal_i          4
+      convert_s
+      declocal            5
+      multiply
+      setlocal            4
+
+      inclocal            5
+L82:
+      iftrue              L86
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-12F")
+
+L86:
+      kill                4
+      kill                3
+L88:
+      findpropstrict      QName(ProtectedNamespace("_-64"), "report")
+      pushstring          "Key bind ["
+      getlocal            6
+      iftrue              L101
+
+      getlocal1
+      add
+      getlocal            6
+      dup
+      iffalse             L100
+
+      pop
+      getlocal1
+      convert_b
+L100:
+      iftrue              L103
+
+L101:
+      pushstring          "] did not trigger because you have focus on an input TextField."
+      add
+L103:
+      pushbyte            8
+      callpropvoid        QName(ProtectedNamespace("_-64"), "report"), 2
+
+L105:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-WP:_-DZ/instance#0"), "_-Fl")
+   method
+    refid "_-WP:_-DZ/instance/_-WP:_-DZ/instance/_-Fl"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 9
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      getlocal2
+      equals
+      declocal            2
+      declocal            3
+      kill                2
+      getglobalscope
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal1
+
+L16:
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      convert_b
+      getlocal            4
+      iftrue              L52
+
+      dup
+      iffalse             L52
+
+      getlocal            4
+      dup
+      iffalse             L29
+
+      pop
+      getlocal0
+      convert_b
+L29:
+      iftrue              L52
+
+      pop
+      getlocal3
+      iffalse             L53
+
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      jump                L42
+
+      kill                3
+      strictequals
+      getlocal3
+      inclocal            3
+      declocal_i          2
+      declocal            2
+L42:
+      getproperty         QName(PackageNamespace("", "#0"), "focus")
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      getlocal            4
+      dup
+      iffalse             L51
+
+      pop
+      getlocal1
+      convert_b
+L51:
+      iftrue              L91
+
+L52:
+      iffalse             L78
+
+L53:
+      getlex              QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "focus")
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal1
+
+      getlocal            4
+      jump                L68
+
+      getlocal2
+      inclocal_i          2
+      newactivation
+      multiply
+      inclocal            3
+      inclocal_i          2
+L68:
+      iftrue              L78
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "type")
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace("", "#0"), "INPUT")
+      ifne                L78
+
+      getlocal            4
+      iftrue              L78
+
+      pushfalse
+      returnvalue
+
+L78:
+      jump                L90
+
+L79:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L90:
+      pushtrue
+L91:
+      returnvalue
+     end ; code
+     try from L16 to L78 target L79 type QName(PackageNamespace("", "#0"), "Error") name QName(PackageNamespace("", "#0"), "err") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-WP:_-DZ/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

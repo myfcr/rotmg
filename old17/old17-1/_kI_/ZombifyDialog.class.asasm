@@ -1,0 +1,120 @@
+class
+ refid "_kI_:ZombifyDialog"
+ instance QName(PackageNamespace("_kI_"), "ZombifyDialog")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1Z_R_")
+  iinit
+   refid "_kI_:ZombifyDialog/instance/init"
+   body
+    maxstack 9
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_V_C_"), "_f4")
+     constructprop       QName(PackageNamespace("_V_C_"), "_f4"), 0
+     initproperty        QName(PackageNamespace(""), "closed")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_0V_x"), "Dialog")
+     getlex              QName(PackageNamespace(""), "TITLE")
+     getlex              QName(PackageNamespace(""), "_1G_D_")
+     getlex              QName(PackageNamespace(""), "_mE_")
+     pushnull
+     pushnull
+     constructprop       QName(PackageNamespace("_0V_x"), "Dialog"), 5
+     initproperty        QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "_0N_U_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "_0N_U_")
+     pushbyte            156
+     setproperty         QName(PackageNamespace(""), "_01y")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "_0N_U_")
+     pushshort           200
+     setproperty         QName(PackageNamespace(""), "_4e")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "_0N_U_")
+     getlex              QName(PackageNamespace("_0V_x"), "Dialog")
+     getproperty         QName(PackageNamespace(""), "LEFT_BUTTON")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "onButtonClick")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "_0N_U_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageNamespace(""), "closed") type QName(PackageNamespace("_V_C_"), "_f4") end
+  trait slot QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "_0N_U_") type QName(PackageNamespace("_0V_x"), "Dialog") end
+  trait method QName(PrivateNamespace("*", "_kI_:ZombifyDialog/instance/init"), "onButtonClick")
+   method
+    refid "_kI_:ZombifyDialog/instance/_kI_:ZombifyDialog/instance/init/onButtonClick"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "closed")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_kI_:ZombifyDialog/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "TITLE")
+    pushstring          "ZombifyDialog.title"
+    initproperty        QName(PackageNamespace(""), "TITLE")
+
+    findproperty        QName(PackageNamespace(""), "_1G_D_")
+    pushstring          "ZombifyDialog.body"
+    initproperty        QName(PackageNamespace(""), "_1G_D_")
+
+    findproperty        QName(PackageNamespace(""), "_mE_")
+    pushstring          "ZombifyDialog.button"
+    initproperty        QName(PackageNamespace(""), "_mE_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "TITLE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ZombifyDialog.title") end
+ trait const QName(PackageNamespace(""), "_1G_D_") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("ZombifyDialog.body") end
+ trait const QName(PackageNamespace(""), "_mE_") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("ZombifyDialog.button") end
+end ; class

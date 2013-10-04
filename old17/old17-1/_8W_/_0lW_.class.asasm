@@ -1,0 +1,188 @@
+class
+ refid "_8W_:_0lW_"
+ instance QName(PackageNamespace("_8W_"), "_0lW_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_3r")
+  iinit
+   refid "_8W_:_0lW_/instance/init"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_P_E_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "_T_A_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_P_E_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "_T_A_") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_8W_:_0lW_/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "("
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_P_E_")
+      add
+      pushstring          ", "
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_T_A_")
+      add
+      pushstring          ")"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_8W_:_0lW_/class/init"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_0_b")
+    pushshort           180
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    divide
+    initproperty        QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_0_b")
+
+    findproperty        QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_w2")
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    pushshort           180
+    divide
+    initproperty        QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_w2")
+
+    findproperty        QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_yl")
+    pushbyte            60
+    pushdouble          1.1515
+    multiply
+    pushdouble          1.609344
+    multiply
+    pushshort           1000
+    multiply
+    initproperty        QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_yl")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_0_b") slotid 1 type QName(PackageNamespace(""), "Number") value Double(57.29577951308232) end
+ trait const QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_w2") slotid 2 type QName(PackageNamespace(""), "Number") value Double(0.017453292519943296) end
+ trait const QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_yl") slotid 3 type QName(PackageNamespace(""), "Number") value Double(111189.57696) end
+ trait method QName(PackageNamespace(""), "distance") flag FINAL dispid 3
+  method
+   refid "_8W_:_0lW_/class/distance"
+   param QName(PackageNamespace("_8W_"), "_0lW_")
+   param QName(PackageNamespace("_8W_"), "_0lW_")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 6
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_w2")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "_T_A_")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_T_A_")
+     subtract
+     multiply
+     convert_d
+     setlocal3
+
+     getlex              QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_w2")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "_P_E_")
+     multiply
+     convert_d
+     setlocal            4
+
+     getlex              QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_w2")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_P_E_")
+     multiply
+     convert_d
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "cos"), 1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "cos"), 1
+     multiply
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "cos"), 1
+     multiply
+     add
+     convert_d
+     setlocal            6
+
+     getlex              QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_0_b")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "acos"), 1
+     multiply
+     getlex              QName(PrivateNamespace("*", "_8W_:_0lW_/class"), "_yl")
+     multiply
+     convert_d
+     dup
+     setlocal            6
+
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,285 @@
+class
+ refid "com.google.analytics.core:BrowserInfo"
+ instance QName(PackageNamespace("com.google.analytics.core"), "BrowserInfo")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:BrowserInfo")
+  iinit
+   refid "com.google.analytics.core:BrowserInfo/instance/init"
+   param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
+   param QName(PackageNamespace("com.google.analytics.utils"), "Environment")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_config")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_config")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
+  trait getter QName(PackageNamespace(""), "utmul")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/utmul/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+      getproperty         QName(PackageNamespace(""), "language")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "utmje")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/utmje/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "0"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toURLString")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/toURLString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "toVariables")
+      callproperty        QName(PackageNamespace(""), "toVariables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "utmsr")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/utmsr/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+      getproperty         QName(PackageNamespace(""), "screenWidth")
+      pushstring          "x"
+      add
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+      getproperty         QName(PackageNamespace(""), "screenHeight")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
+  trait getter QName(PackageNamespace(""), "utmfl")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/utmfl/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+      setlocal1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_config")
+      getproperty         QName(PackageNamespace(""), "detectFlash")
+      iffalse             L25
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+      getproperty         QName(PackageNamespace(""), "flashVersion")
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "major")
+      pushstring          "."
+      add
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "minor")
+      add
+      pushstring          " r"
+      add
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "build")
+      add
+      returnvalue
+
+L25:
+      pushstring          "-"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "utmcs")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/utmcs/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+      getproperty         QName(PackageNamespace(""), "languageEncoding")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toVariables")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/toVariables"
+    returns QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Variables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "URIencode")
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "utmcs")
+      setproperty         Multiname("utmcs", [PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "utmsr")
+      setproperty         Multiname("utmsr", [PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "utmsc")
+      setproperty         Multiname("utmsc", [PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "utmul")
+      setproperty         Multiname("utmul", [PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "utmje")
+      setproperty         Multiname("utmje", [PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "utmfl")
+      setproperty         Multiname("utmfl", [PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("com.google.analytics.core:BrowserInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "utmsc")
+   method
+    refid "com.google.analytics.core:BrowserInfo/instance/utmsc/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:BrowserInfo/instance"), "_info")
+      getproperty         QName(PackageNamespace(""), "screenColorDepth")
+      pushstring          "-bit"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:BrowserInfo/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

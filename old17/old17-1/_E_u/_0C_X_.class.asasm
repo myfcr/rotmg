@@ -1,0 +1,114 @@
+class
+ refid "_E_u:_0C_X_"
+ instance QName(PackageNamespace("_E_u"), "_0C_X_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1F_j")
+  iinit
+   refid "_E_u:_0C_X_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "decode")
+   method
+    refid "_E_u:_0C_X_/instance/decode"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "-"
+      pushstring          "g"
+      construct           2
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "_"
+      pushstring          "g"
+      construct           2
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal3
+
+      pushbyte            4
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      modulo
+      subtract
+      convert_i
+      setlocal            4
+
+      jump                L28
+
+L23:
+      label
+      getlocal1
+      pushstring          "="
+      add
+      setlocal1
+
+L28:
+      getlocal            4
+      dup
+      decrement_i
+      setlocal            4
+
+      iftrue              L23
+
+      getlocal1
+      getlocal2
+      pushstring          "+"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      getlocal3
+      pushstring          "/"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Base64")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "decode"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_E_u:_0C_X_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

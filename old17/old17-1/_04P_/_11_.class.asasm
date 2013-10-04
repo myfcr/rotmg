@@ -1,0 +1,239 @@
+class
+ refid "_04P_:_11_"
+ instance QName(PackageNamespace("_04P_"), "_11_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_12s")
+  iinit
+   refid "_04P_:_11_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "layout")
+   method
+    refid "_04P_:_11_/instance/layout"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      jump                L32
+
+L7:
+      label
+      getlocal0
+      getlocal1
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), PackageNamespace(""), PrivateNamespace("*", "_04P_:_11_/instance/layout#1"), PackageNamespace("_04P_"), PackageInternalNs("_04P_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_12s"), StaticProtectedNs("_12s")])
+      callpropvoid        QName(PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), "_07Q_"), 2
+
+      jump                L50
+
+L15:
+      label
+      getlocal0
+      getlocal1
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), PackageNamespace(""), PrivateNamespace("*", "_04P_:_11_/instance/layout#1"), PackageNamespace("_04P_"), PackageInternalNs("_04P_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_12s"), StaticProtectedNs("_12s")])
+      getlocal2
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), PackageNamespace(""), PrivateNamespace("*", "_04P_:_11_/instance/layout#1"), PackageNamespace("_04P_"), PackageInternalNs("_04P_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_12s"), StaticProtectedNs("_12s")])
+      callpropvoid        QName(PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), "_0zc"), 3
+
+      jump                L50
+
+L26:
+      label
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "Currently unable to layout more than 2 buttons"
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+      jump                L50
+
+L32:
+      getlocal3
+      setlocal            4
+
+      pushbyte            1
+      getlocal            4
+      ifstrictne          L39
+
+      pushbyte            0
+      jump                L48
+
+L39:
+      pushbyte            2
+      getlocal            4
+      ifstrictne          L44
+
+      pushbyte            1
+      jump                L48
+
+L44:
+      jump                L47
+
+      pushbyte            2
+      jump                L48
+
+L47:
+      pushbyte            2
+L48:
+      kill                4
+      lookupswitch        L26, [L7, L15, L26]
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), "_07Q_")
+   method
+    refid "_04P_:_11_/instance/_04P_:_11_/instance/layout/_07Q_"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getRect"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal3
+
+      getlocal2
+      getlocal1
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushdouble          0.5
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "left")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_04P_:_11_/instance/layout#0"), "_0zc")
+   method
+    refid "_04P_:_11_/instance/_04P_:_11_/instance/layout/_0zc"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal            5
+
+      getlocal2
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getRect"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal            4
+
+      getlocal3
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRect"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal            5
+
+      getlocal2
+      getlocal1
+      pushbyte            2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      multiply
+      subtract
+      pushdouble          0.25
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "left")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      pushbyte            3
+      getlocal1
+      multiply
+      pushbyte            2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "width")
+      multiply
+      subtract
+      pushdouble          0.25
+      multiply
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "left")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_04P_:_11_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,113 @@
+class
+ refid "_0I_o:_0P_8"
+ instance QName(PackageNamespace("_0I_o"), "_0P_8")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_16q")
+  iinit
+   refid "_0I_o:_0P_8/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_0I_o:_0P_8/instance"), "_0rP_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0I_o:_0P_8/instance"), "_0rP_") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait getter QName(PackageNamespace(""), "container")
+   method
+    refid "_0I_o:_0P_8/instance/container/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0I_o:_0P_8/instance"), "_0rP_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_0I_o:_0P_8/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_0I_o"), "_0P_8")
+      getlex              QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0I_o:_0P_8/instance"), "_0rP_")
+      constructprop       QName(PackageNamespace("_0I_o"), "_0P_8"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0I_o:_0P_8/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_0lD_")
+    pushstring          "containerAdd"
+    initproperty        QName(PackageNamespace(""), "_0lD_")
+
+    findproperty        QName(PackageNamespace(""), "_bw")
+    pushstring          "containerRemove"
+    initproperty        QName(PackageNamespace(""), "_bw")
+
+    findproperty        QName(PackageNamespace(""), "_false")
+    pushstring          "rootContainerAdd"
+    initproperty        QName(PackageNamespace(""), "_false")
+
+    findproperty        QName(PackageNamespace(""), "_1h0")
+    pushstring          "rootContainerRemove"
+    initproperty        QName(PackageNamespace(""), "_1h0")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_0lD_") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("containerAdd") end
+ trait const QName(PackageNamespace(""), "_bw") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("containerRemove") end
+ trait const QName(PackageNamespace(""), "_false") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("rootContainerAdd") end
+ trait const QName(PackageNamespace(""), "_1h0") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("rootContainerRemove") end
+end ; class

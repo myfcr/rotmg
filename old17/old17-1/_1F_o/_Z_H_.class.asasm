@@ -1,0 +1,276 @@
+class
+ refid "_1F_o:_Z_H_"
+ instance QName(PackageNamespace("_1F_o"), "_Z_H_")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_I_k", [PackageNamespace("_1G_e")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_2J_")
+  iinit
+   refid "_1F_o:_Z_H_/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("_1J_L_"), "_0O_m")
+     getlex              QName(PackageNamespace("_1F_o"), "_Z_H_")
+     callproperty        QName(PackageNamespace(""), "create"), 1
+     initproperty        QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0X_B_")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0X_B_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0M_k") type QName(PackageNamespace("_1G_e"), "_1C_p") end
+  trait slot QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1R_x") type QName(PackageNamespace("_1G_e"), "_1A_Z_") end
+  trait method QName(PackageNamespace(""), "extend")
+   method
+    refid "_1F_o:_Z_H_/instance/extend"
+    param QName(PackageNamespace("_1G_e"), "_1C_p")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0M_k")
+
+      getlocal0
+      getlocal1
+      getlocal0
+      callproperty        QName(Namespace("_A_"), "_2X_"), 1
+      initproperty        QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1R_x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0M_k")
+      findpropstrict      QName(PackageNamespace("_9l"), "instanceOf")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      callproperty        QName(PackageNamespace("_9l"), "instanceOf"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1W_B_")
+      callpropvoid        QName(Namespace("_A_"), "_n3"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_1F_o:_Z_H_/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0X_B_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1W_B_")
+   method
+    refid "_1F_o:_Z_H_/instance/_1F_o:_Z_H_/instance/_1W_B_"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+      iffalse             L12
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1R_x")
+      pushstring          "A contextView has already been set, ignoring {0}"
+      getlocal1
+      newarray            1
+      callpropvoid        QName(Namespace("_1U_g"), "_9b"), 2
+
+      returnvoid
+
+L12:
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+      getproperty         QName(PackageNamespace(""), "stage")
+      iffalse             L22
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_E_h"), 0
+
+      jump                L33
+
+L22:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1R_x")
+      pushstring          "Context view is not yet on stage. Waiting..."
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "onAddedToStage")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L33:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "onAddedToStage")
+   method
+    refid "_1F_o:_Z_H_/instance/_1F_o:_Z_H_/instance/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "onAddedToStage")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_E_h"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_E_h")
+   method
+    refid "_1F_o:_Z_H_/instance/_1F_o:_Z_H_/instance/_E_h"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1R_x")
+      pushstring          "Context view is now on stage. Initializing context..."
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0M_k")
+      getproperty         QName(Namespace("_A_"), "_R_j")
+      callpropvoid        QName(Namespace("_sU_"), "initialize"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "onRemovedFromStage")
+   method
+    refid "_1F_o:_Z_H_/instance/_1F_o:_Z_H_/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1R_x")
+      pushstring          "Context view has left the stage. Destroying context..."
+      callpropvoid        QName(Namespace("_1U_g"), "debug"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_1d2")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1F_o:_Z_H_/instance"), "_0M_k")
+      getproperty         QName(Namespace("_A_"), "_R_j")
+      callpropvoid        QName(Namespace("_sU_"), "destroy"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1F_o:_Z_H_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

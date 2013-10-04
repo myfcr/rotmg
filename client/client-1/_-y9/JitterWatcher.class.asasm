@@ -1,0 +1,729 @@
+class
+ refid "_-y9:JitterWatcher"
+ instance QName(PackageNamespace("_-y9"), "JitterWatcher")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-9U")
+  iinit
+   refid "_-y9:JitterWatcher/instance/init"
+   body
+    maxstack 7
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     newactivation
+     urshift
+     bitnot
+     dup
+     popscope
+     dxnslate
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L36
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-y9:JitterWatcher"), PrivateNamespace("*", "_-y9:JitterWatcher/instance/init"), PackageNamespace("", "#0"), PackageNamespace("_-y9"), PackageInternalNs("_-y9"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-9U"), StaticProtectedNs("_-9U"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "int")
+     applytype           1
+     construct           0
+     initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iftrue              L35
+
+     pop
+     getlocal0
+     convert_b
+L35:
+     iffalse             L83
+
+L36:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1X1"), "_-Fw")
+     constructprop       QName(PackageNamespace("_-1X1"), "_-Fw"), 0
+     jump                L46
+
+     negate
+     subtract_i
+     getlocal0
+     coerce_a
+     subtract
+     setlocal2
+
+L46:
+     pushbyte            14
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "text_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "text_")
+     getlocal2
+     iffalse             L67
+
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace("", "#0"), "LEFT")
+     callpropvoid        QName(PackageNamespace("", "#0"), "setAutoSize"), 1
+
+     getlocal2
+     dup
+     iftrue              L64
+
+     pop
+     getlocal2
+     convert_b
+L64:
+     iffalse             L83
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "text_")
+L67:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     jump                L76
+
+     pop
+     newactivation
+     pushnull
+     convert_u
+     getlocal3
+     getlocal2
+L76:
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+     getlocal1
+     iftrue              L87
+
+L83:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "text_")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L87:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "text_") type QName(PackageNamespace("_-1X1"), "_-Fw") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-1nh") type QName(PackageNamespace("", "#0"), "int") value Integer(-1) end
+  trait slot QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) end
+  trait slot QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-il") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "record")
+   method
+    refid "_-y9:JitterWatcher/instance/record"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      inclocal            3
+      istypelate
+      kill                2
+      getlocal            4
+      convert_d
+      subtract_i
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      convert_i
+      setlocal1
+
+      getlocal            5
+      iftrue              L41
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-1nh")
+      getlocal            5
+      dup
+      iffalse             L29
+
+      pop
+      getlocal1
+      convert_b
+L29:
+      iftrue              L52
+
+      pushbyte            255
+      getlocal            5
+      iftrue              L54
+
+      ifne                L42
+
+      getlocal            4
+      iffalse             L42
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-1nh")
+
+      getlocal            4
+      iffalse             L42
+
+L41:
+      returnvoid
+
+L42:
+      getlocal1
+      getlocal            5
+      jump                L51
+
+      declocal            4
+      setlocal            4
+
+      kill                4
+      setlocal3
+
+      kill                4
+      setlocal2
+
+L51:
+      iftrue              L56
+
+L52:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-1nh")
+L54:
+      subtract
+      convert_i
+L56:
+      setlocal2
+
+      getlocal            4
+      dup
+      iftrue              L63
+
+      pop
+      getlocal2
+      convert_b
+L63:
+      iffalse             L109
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      dup
+      iftrue              L74
+
+      pop
+      getlocal0
+      convert_b
+L74:
+      iffalse             L106
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-il")
+      getlocal2
+      jump                L86
+
+      dup
+      dup
+      setlocal2
+
+      kill                3
+      coerce_s
+      inclocal_i          3
+L86:
+      add
+      initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-il")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            50
+      ifngt               L106
+
+      getlocal            5
+      iftrue              L100
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      convert_i
+      setlocal3
+
+L100:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-il")
+      getlocal3
+      subtract
+      initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-il")
+
+L106:
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-1nh")
+
+L109:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onAddedToStage")
+   method
+    refid "_-y9:JitterWatcher/instance/_-y9:JitterWatcher/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      coerce_s
+      urshift
+      newactivation
+      istypelate
+      getglobalscope
+      kill                2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L27
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onRemovedFromStage")
+   method
+    refid "_-y9:JitterWatcher/instance/_-y9:JitterWatcher/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      bitxor
+      pushtrue
+      inclocal            2
+      getlocal2
+      setlocal2
+
+      inclocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iffalse             L26
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onEnterFrame")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "onEnterFrame")
+   method
+    refid "_-y9:JitterWatcher/instance/_-y9:JitterWatcher/onEnterFrame"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      decrement
+      kill                2
+      kill                2
+      equals
+      checkfilter
+      convert_d
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      jump                L20
+
+      pushnull
+      setlocal2
+
+      declocal_i          2
+      declocal_i          2
+      declocal            2
+      inclocal_i          2
+L20:
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L27
+
+      pop
+      getlocal0
+      convert_b
+L27:
+      iffalse             L39
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "text_")
+      getlex              QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0L6")
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-8B")
+      pushstring          "jitter"
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "jitter"), 0
+      newobject           1
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+L39:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "jitter")
+   method
+    refid "_-y9:JitterWatcher/instance/_-y9:JitterWatcher/jitter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 6
+     localcount 9
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          5
+      nextvalue
+      pushnan
+      kill                2
+      convert_i
+      convert_d
+L10:
+      setlocal            7
+
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_i
+      setlocal1
+
+      getlocal            8
+      dup
+      iftrue              L27
+
+      pop
+      getlocal3
+      convert_b
+L27:
+      iffalse             L46
+
+      getlocal1
+      getlocal            8
+      iffalse             L45
+
+      pushbyte            0
+      getlocal            7
+      iftrue              L49
+
+      ifne                L46
+
+      getlocal            8
+      iffalse             L46
+
+      pushbyte            0
+      getlocal            7
+      dup
+      iffalse             L44
+
+      pop
+      getlocal1
+      convert_b
+L44:
+      iftrue              L48
+
+L45:
+      returnvalue
+
+L46:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-il")
+L48:
+      getlocal1
+L49:
+      divide
+      getlocal            7
+      jump                L58
+
+      pop
+      kill                3
+      decrement_i
+      rshift
+      modulo
+      lessequals
+L58:
+      dup
+      iffalse             L63
+
+      pop
+      getlocal3
+      convert_b
+L63:
+      iftrue              L65
+
+      convert_d
+L65:
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0ls")
+      coerce_a
+      setlocal            6
+
+      jump                L113
+
+L76:
+      label
+      getlocal            6
+      getlocal            5
+      nextvalue
+      convert_i
+      setlocal            4
+
+      getlocal            8
+      dup
+      iftrue              L88
+
+      pop
+      getlocal2
+      convert_b
+L88:
+      iffalse             L113
+
+      getlocal3
+      getlocal            7
+      iftrue              L111
+
+      jump                L99
+
+      convert_s
+      declocal_i          6
+      subtract
+      multiply
+      checkfilter
+      strictequals
+L99:
+      getlocal            4
+      getlocal2
+      subtract
+      getlocal            8
+      iffalse             L108
+
+      getlocal            4
+      getlocal2
+      subtract
+      multiply
+L108:
+      add
+      getlocal            7
+      iftrue              L112
+
+L111:
+      convert_d
+L112:
+      setlocal3
+
+L113:
+      hasnext2            6, 5
+      iftrue              L76
+
+      kill                6
+      kill                5
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      getlocal1
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "sqrt"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-y9:JitterWatcher/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    decrement
+    lshift
+    equals
+    coerce_s
+    astypelate
+    bitand
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iffalse             L19
+
+    findproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0L6")
+    findpropstrict      QName(PackageNamespace("_-th"), "_-ox")
+    constructprop       QName(PackageNamespace("_-th"), "_-ox"), 0
+    initproperty        QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0L6")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-y9:JitterWatcher"), "_-0L6") slotid 1 type QName(PackageNamespace("_-th"), "_-ox") end
+end ; class

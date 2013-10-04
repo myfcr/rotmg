@@ -1,0 +1,370 @@
+class
+ refid "_1cu:_gP_"
+ instance QName(PackageNamespace("_1cu"), "_gP_")
+  extends QName(PackageNamespace("_N__"), "_1X_a")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0gz")
+  iinit
+   refid "_1cu:_gP_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("_1cu"), "_ga")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "closeDialogs") flag METADATA type QName(PackageNamespace("_D_r"), "_0zi")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "trackEvent") flag METADATA type QName(PackageNamespace("_0H_D_"), "_0dH_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0hP_") flag METADATA type QName(PackageNamespace("_Y_M_"), "_1hB_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_") type QName(PackageNamespace("com.company.assembleegameclient.game"), "_0S_7") end
+  trait slot QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "name") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_1cu:_gP_/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "_0jJ_")
+      initproperty        QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "choose")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_06Q_")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "cancel")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "onCancel")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "_1cu:_gP_/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "choose")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_06Q_")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "cancel")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "onCancel")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_06Q_")
+   method
+    refid "_1cu:_gP_/instance/_1cu:_gP_/instance/_06Q_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "name")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_")
+      getlex              QName(PackageNamespace("_1J_9"), "_08K_")
+      getproperty         QName(PackageNamespace(""), "NAMERESULTEVENT")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_ar")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_")
+      getproperty         QName(PackageNamespace(""), "gsc_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "chooseName"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "disable"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_ar")
+   method
+    refid "_1cu:_gP_/instance/_ar"
+    param QName(PackageNamespace("_1J_9"), "_08K_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_")
+      getlex              QName(PackageNamespace("_1J_9"), "_08K_")
+      getproperty         QName(PackageNamespace(""), "NAMERESULTEVENT")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_ar")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_18B_")
+      getproperty         QName(PackageNamespace(""), "success_")
+      convert_b
+      setlocal2
+
+      getlocal2
+      iffalse             L19
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_1fR_"), 0
+
+      jump                L24
+
+L19:
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_18B_")
+      getproperty         QName(PackageNamespace(""), "errorText_")
+      callpropvoid        QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_1P_E_"), 1
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_1fR_")
+   method
+    refid "_1cu:_gP_/instance/_1cu:_gP_/instance/_1fR_"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "_0N_w")
+      iffalse             L8
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0E_r"), 0
+
+L8:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_")
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "name")
+      callpropvoid        QName(PackageNamespace(""), "setName"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "closeDialogs")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0hP_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "name")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0E_r")
+   method
+    refid "_1cu:_gP_/instance/_1cu:_gP_/instance/_0E_r"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_zC_"), "_0E_b")
+      constructprop       QName(PackageNamespace("_zC_"), "_0E_b"), 0
+      coerce              QName(PackageNamespace("_zC_"), "_0E_b")
+      setlocal1
+
+      getlocal1
+      pushstring          "credits"
+      setproperty         QName(PackageNamespace(""), "category")
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_0jJ_")
+      getproperty         QName(PackageNamespace(""), "model")
+      callproperty        QName(PackageNamespace(""), "getConverted"), 0
+      iffalse             L17
+
+      pushstring          "buyConverted"
+      jump                L18
+
+L17:
+      pushstring          "buy"
+L18:
+      setproperty         QName(PackageNamespace(""), "_1J_p")
+
+      getlocal1
+      pushstring          "Name Change"
+      setproperty         QName(PackageNamespace(""), "label")
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "_6l")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "trackEvent")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "_1P_E_")
+   method
+    refid "_1cu:_gP_/instance/_1cu:_gP_/instance/_1P_E_"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "_0qI_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "_Z_d"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_1cu:_gP_/instance"), "onCancel")
+   method
+    refid "_1cu:_gP_/instance/_1cu:_gP_/instance/onCancel"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "closeDialogs")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1cu:_gP_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

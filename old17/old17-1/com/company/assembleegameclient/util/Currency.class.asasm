@@ -1,0 +1,143 @@
+class
+ refid "com.company.assembleegameclient.util:Currency"
+ instance QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1Q_Q_")
+  iinit
+   refid "com.company.assembleegameclient.util:Currency/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.util:Currency/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "INVALID")
+    pushbyte            255
+    initproperty        QName(PackageNamespace(""), "INVALID")
+
+    findproperty        QName(PackageNamespace(""), "_U_s")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "_U_s")
+
+    findproperty        QName(PackageNamespace(""), "FAME")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "FAME")
+
+    findproperty        QName(PackageNamespace(""), "_0M_U_")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_0M_U_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "INVALID") slotid 1 type QName(PackageNamespace(""), "int") value Integer(-1) end
+ trait const QName(PackageNamespace(""), "_U_s") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "FAME") slotid 3 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_0M_U_") slotid 4 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait method QName(PackageNamespace(""), "_1I_2") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.util:Currency/class/_1I_2"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     jump                L14
+
+L3:
+     label
+     pushstring          "Gold"
+     returnvalue
+
+L6:
+     label
+     pushstring          "Fame"
+     returnvalue
+
+L9:
+     label
+     pushstring          "Guild Fame"
+     returnvalue
+
+L12:
+     label
+     jump                L37
+
+L14:
+     getlocal1
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "_U_s")
+     getlocal2
+     ifstrictne          L21
+
+     pushbyte            0
+     jump                L35
+
+L21:
+     getlex              QName(PackageNamespace(""), "FAME")
+     getlocal2
+     ifstrictne          L26
+
+     pushbyte            1
+     jump                L35
+
+L26:
+     getlex              QName(PackageNamespace(""), "_0M_U_")
+     getlocal2
+     ifstrictne          L31
+
+     pushbyte            2
+     jump                L35
+
+L31:
+     jump                L34
+
+     pushbyte            3
+     jump                L35
+
+L34:
+     pushbyte            3
+L35:
+     kill                2
+     lookupswitch        L12, [L3, L6, L9, L12]
+
+L37:
+     pushstring          ""
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,41 @@
+script ; 617
+ sinit
+  refid "com.company.util:AssetLibrary/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.company.util:AssetLibrary"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.util"), "AssetLibrary")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.company.util:AssetLibrary/StaticEnforcer"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.util:AssetLibrary"), "StaticEnforcer")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.util"), "AssetLibrary") slotid 1
+  #include "AssetLibrary.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.util:AssetLibrary"), "StaticEnforcer") slotid 2
+  #include "AssetLibrary/StaticEnforcer.class.asasm"
+ end ; trait
+end ; script

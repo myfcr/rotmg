@@ -1,0 +1,193 @@
+class
+ refid "_1cA_:_0E_I_"
+ instance QName(PackageNamespace("_1cA_"), "_0E_I_")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_O_H_")
+  iinit
+   refid "_1cA_:_0E_I_/instance/init"
+   param null
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   optional False()
+   optional False()
+   optional False()
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "uint")
+     istypelate
+     iffalse             L18
+
+     getlocal0
+     pushtrue
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_0C_")
+
+     jump                L38
+
+L18:
+     getlocal1
+     not
+     dup
+     iftrue              L29
+
+     pop
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            1
+     equals
+     not
+L29:
+     iffalse             L38
+
+     findpropstrict      QName(PackageNamespace(""), "Error")
+     pushstring          "KeyBind: character (first char) must be a single character. You gave ["
+     getlocal1
+     add
+     pushstring          "]"
+     add
+     constructprop       QName(PackageNamespace(""), "Error"), 1
+     throw
+L38:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_0C_")
+     iffalse             L47
+
+     getlocal0
+     pushstring          "keycode:"
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+     add
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+
+L47:
+     getlocal2
+     iffalse             L55
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+     pushstring          "+shift"
+     add
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+
+L55:
+     getlocal3
+     iffalse             L63
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+     pushstring          "+ctrl"
+     add
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+
+L63:
+     getlocal            4
+     iffalse             L71
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+     pushstring          "+alt"
+     add
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+
+L71:
+     getlocal            5
+     iffalse             L79
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+     pushstring          "+up"
+     add
+     initproperty        QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+
+L79:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_0C_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "_o7")
+   method
+    refid "_1cA_:_0E_I_/instance/_o7/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_0C_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "key")
+   method
+    refid "_1cA_:_0E_I_/instance/key/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1cA_:_0E_I_/instance"), "_key")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1cA_:_0E_I_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

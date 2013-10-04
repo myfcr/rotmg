@@ -1,0 +1,45 @@
+script ; 1975
+ sinit
+  refid "_-WP:Executer/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Executer", [PackageNamespace("_-WP")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "_-WP:Executer"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-WP"), "Executer")
+
+    findpropstrict      Multiname("ExeValue", [PrivateNamespace("*", "_-WP:Executer#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-WP:Executer/ExeValue"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-WP:Executer#1"), "ExeValue")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-WP"), "Executer")
+  #include "Executer.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-WP:Executer#1"), "ExeValue")
+  #include "Executer/ExeValue.class.asasm"
+ end ; trait
+end ; script

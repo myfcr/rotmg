@@ -1,0 +1,953 @@
+class
+ refid "_1I_I_:StatData"
+ instance QName(PackageNamespace("_1I_I_"), "StatData")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1jG_")
+  iinit
+   refid "_1I_I_:StatData/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_11x") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "_Q_b") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "_0Z_v") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "_8G_")
+   method
+    refid "_1I_I_:StatData/instance/_8G_"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      jump                L8
+
+L3:
+      label
+      pushtrue
+      returnvalue
+
+L6:
+      label
+      jump                L42
+
+L8:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_11x")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "_sD_")
+      getlocal1
+      ifstrictne          L16
+
+      pushbyte            0
+      jump                L40
+
+L16:
+      getlex              QName(PackageNamespace(""), "_0Z_K_")
+      getlocal1
+      ifstrictne          L21
+
+      pushbyte            1
+      jump                L40
+
+L21:
+      getlex              QName(PackageNamespace(""), "_1J_N_")
+      getlocal1
+      ifstrictne          L26
+
+      pushbyte            2
+      jump                L40
+
+L26:
+      getlex              QName(PackageNamespace(""), "_0M_x")
+      getlocal1
+      ifstrictne          L31
+
+      pushbyte            3
+      jump                L40
+
+L31:
+      getlex              QName(PackageNamespace(""), "_1O_e")
+      getlocal1
+      ifstrictne          L36
+
+      pushbyte            4
+      jump                L40
+
+L36:
+      jump                L39
+
+      pushbyte            5
+      jump                L40
+
+L39:
+      pushbyte            5
+L40:
+      kill                1
+      lookupswitch        L6, [L3, L3, L3, L3, L3, L6]
+
+L42:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "parseFromInput")
+   method
+    refid "_1I_I_:StatData/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      initproperty        QName(PackageNamespace(""), "_11x")
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_8G_"), 0
+      iftrue              L14
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "_Q_b")
+
+      jump                L18
+
+L14:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      initproperty        QName(PackageNamespace(""), "_0Z_v")
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeToOutput")
+   method
+    refid "_1I_I_:StatData/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_11x")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeByte"), 1
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_8G_"), 0
+      iftrue              L14
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_Q_b")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      jump                L18
+
+L14:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0Z_v")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_1I_I_:StatData/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_8G_"), 0
+      iftrue              L17
+
+      pushstring          "["
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_11x")
+      add
+      pushstring          ": "
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_Q_b")
+      add
+      pushstring          "]"
+      add
+      returnvalue
+
+L17:
+      pushstring          "["
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_11x")
+      add
+      pushstring          ": \""
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0Z_v")
+      add
+      pushstring          "\"]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1I_I_:StatData/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_0M_K_")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "_0M_K_")
+
+    findproperty        QName(PackageNamespace(""), "_d0")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "_d0")
+
+    findproperty        QName(PackageNamespace(""), "_0uZ_")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_0uZ_")
+
+    findproperty        QName(PackageNamespace(""), "_1J_x")
+    pushbyte            3
+    initproperty        QName(PackageNamespace(""), "_1J_x")
+
+    findproperty        QName(PackageNamespace(""), "_12c")
+    pushbyte            4
+    initproperty        QName(PackageNamespace(""), "_12c")
+
+    findproperty        QName(PackageNamespace(""), "_19G_")
+    pushbyte            5
+    initproperty        QName(PackageNamespace(""), "_19G_")
+
+    findproperty        QName(PackageNamespace(""), "_1B_l")
+    pushbyte            6
+    initproperty        QName(PackageNamespace(""), "_1B_l")
+
+    findproperty        QName(PackageNamespace(""), "_0eJ_")
+    pushbyte            7
+    initproperty        QName(PackageNamespace(""), "_0eJ_")
+
+    findproperty        QName(PackageNamespace(""), "_pk")
+    pushbyte            20
+    initproperty        QName(PackageNamespace(""), "_pk")
+
+    findproperty        QName(PackageNamespace(""), "_0G_J_")
+    pushbyte            21
+    initproperty        QName(PackageNamespace(""), "_0G_J_")
+
+    findproperty        QName(PackageNamespace(""), "_0B_p")
+    pushbyte            22
+    initproperty        QName(PackageNamespace(""), "_0B_p")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_0_STAT")
+    pushbyte            8
+    initproperty        QName(PackageNamespace(""), "INVENTORY_0_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_1_STAT")
+    pushbyte            9
+    initproperty        QName(PackageNamespace(""), "INVENTORY_1_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_2_STAT")
+    pushbyte            10
+    initproperty        QName(PackageNamespace(""), "INVENTORY_2_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_3_STAT")
+    pushbyte            11
+    initproperty        QName(PackageNamespace(""), "INVENTORY_3_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_4_STAT")
+    pushbyte            12
+    initproperty        QName(PackageNamespace(""), "INVENTORY_4_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_5_STAT")
+    pushbyte            13
+    initproperty        QName(PackageNamespace(""), "INVENTORY_5_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_6_STAT")
+    pushbyte            14
+    initproperty        QName(PackageNamespace(""), "INVENTORY_6_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_7_STAT")
+    pushbyte            15
+    initproperty        QName(PackageNamespace(""), "INVENTORY_7_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_8_STAT")
+    pushbyte            16
+    initproperty        QName(PackageNamespace(""), "INVENTORY_8_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_9_STAT")
+    pushbyte            17
+    initproperty        QName(PackageNamespace(""), "INVENTORY_9_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_10_STAT")
+    pushbyte            18
+    initproperty        QName(PackageNamespace(""), "INVENTORY_10_STAT")
+
+    findproperty        QName(PackageNamespace(""), "INVENTORY_11_STAT")
+    pushbyte            19
+    initproperty        QName(PackageNamespace(""), "INVENTORY_11_STAT")
+
+    findproperty        QName(PackageNamespace(""), "_T_p")
+    pushbyte            26
+    initproperty        QName(PackageNamespace(""), "_T_p")
+
+    findproperty        QName(PackageNamespace(""), "_3s")
+    pushbyte            27
+    initproperty        QName(PackageNamespace(""), "_3s")
+
+    findproperty        QName(PackageNamespace(""), "_B_7")
+    pushbyte            28
+    initproperty        QName(PackageNamespace(""), "_B_7")
+
+    findproperty        QName(PackageNamespace(""), "_11K_")
+    pushbyte            29
+    initproperty        QName(PackageNamespace(""), "_11K_")
+
+    findproperty        QName(PackageNamespace(""), "_1I_c")
+    pushbyte            30
+    initproperty        QName(PackageNamespace(""), "_1I_c")
+
+    findproperty        QName(PackageNamespace(""), "_sD_")
+    pushbyte            31
+    initproperty        QName(PackageNamespace(""), "_sD_")
+
+    findproperty        QName(PackageNamespace(""), "TEX1_STAT")
+    pushbyte            32
+    initproperty        QName(PackageNamespace(""), "TEX1_STAT")
+
+    findproperty        QName(PackageNamespace(""), "TEX2_STAT")
+    pushbyte            33
+    initproperty        QName(PackageNamespace(""), "TEX2_STAT")
+
+    findproperty        QName(PackageNamespace(""), "_1K_I_")
+    pushbyte            34
+    initproperty        QName(PackageNamespace(""), "_1K_I_")
+
+    findproperty        QName(PackageNamespace(""), "_xq")
+    pushbyte            35
+    initproperty        QName(PackageNamespace(""), "_xq")
+
+    findproperty        QName(PackageNamespace(""), "_P_g")
+    pushbyte            36
+    initproperty        QName(PackageNamespace(""), "_P_g")
+
+    findproperty        QName(PackageNamespace(""), "_02n")
+    pushbyte            37
+    initproperty        QName(PackageNamespace(""), "_02n")
+
+    findproperty        QName(PackageNamespace(""), "_0M_x")
+    pushbyte            38
+    initproperty        QName(PackageNamespace(""), "_0M_x")
+
+    findproperty        QName(PackageNamespace(""), "_B_O_")
+    pushbyte            39
+    initproperty        QName(PackageNamespace(""), "_B_O_")
+
+    findproperty        QName(PackageNamespace(""), "_1S_I_")
+    pushbyte            40
+    initproperty        QName(PackageNamespace(""), "_1S_I_")
+
+    findproperty        QName(PackageNamespace(""), "_xx")
+    pushbyte            41
+    initproperty        QName(PackageNamespace(""), "_xx")
+
+    findproperty        QName(PackageNamespace(""), "_G_I_")
+    pushbyte            42
+    initproperty        QName(PackageNamespace(""), "_G_I_")
+
+    findproperty        QName(PackageNamespace(""), "_01d")
+    pushbyte            43
+    initproperty        QName(PackageNamespace(""), "_01d")
+
+    findproperty        QName(PackageNamespace(""), "_J_C_")
+    pushbyte            44
+    initproperty        QName(PackageNamespace(""), "_J_C_")
+
+    findproperty        QName(PackageNamespace(""), "_tc")
+    pushbyte            45
+    initproperty        QName(PackageNamespace(""), "_tc")
+
+    findproperty        QName(PackageNamespace(""), "_0T_")
+    pushbyte            46
+    initproperty        QName(PackageNamespace(""), "_0T_")
+
+    findproperty        QName(PackageNamespace(""), "_1E_M_")
+    pushbyte            47
+    initproperty        QName(PackageNamespace(""), "_1E_M_")
+
+    findproperty        QName(PackageNamespace(""), "_5W_")
+    pushbyte            48
+    initproperty        QName(PackageNamespace(""), "_5W_")
+
+    findproperty        QName(PackageNamespace(""), "_00S_")
+    pushbyte            49
+    initproperty        QName(PackageNamespace(""), "_00S_")
+
+    findproperty        QName(PackageNamespace(""), "_es")
+    pushbyte            50
+    initproperty        QName(PackageNamespace(""), "_es")
+
+    findproperty        QName(PackageNamespace(""), "_0W_3")
+    pushbyte            51
+    initproperty        QName(PackageNamespace(""), "_0W_3")
+
+    findproperty        QName(PackageNamespace(""), "_0tJ_")
+    pushbyte            52
+    initproperty        QName(PackageNamespace(""), "_0tJ_")
+
+    findproperty        QName(PackageNamespace(""), "_0W_J_")
+    pushbyte            53
+    initproperty        QName(PackageNamespace(""), "_0W_J_")
+
+    findproperty        QName(PackageNamespace(""), "_1O_e")
+    pushbyte            54
+    initproperty        QName(PackageNamespace(""), "_1O_e")
+
+    findproperty        QName(PackageNamespace(""), "_H_T_")
+    pushbyte            55
+    initproperty        QName(PackageNamespace(""), "_H_T_")
+
+    findproperty        QName(PackageNamespace(""), "_N_k")
+    pushbyte            56
+    initproperty        QName(PackageNamespace(""), "_N_k")
+
+    findproperty        QName(PackageNamespace(""), "_0S_B_")
+    pushbyte            57
+    initproperty        QName(PackageNamespace(""), "_0S_B_")
+
+    findproperty        QName(PackageNamespace(""), "_qD_")
+    pushbyte            58
+    initproperty        QName(PackageNamespace(""), "_qD_")
+
+    findproperty        QName(PackageNamespace(""), "_1W_H_")
+    pushbyte            59
+    initproperty        QName(PackageNamespace(""), "_1W_H_")
+
+    findproperty        QName(PackageNamespace(""), "_kN_")
+    pushbyte            60
+    initproperty        QName(PackageNamespace(""), "_kN_")
+
+    findproperty        QName(PackageNamespace(""), "_0O_G_")
+    pushbyte            61
+    initproperty        QName(PackageNamespace(""), "_0O_G_")
+
+    findproperty        QName(PackageNamespace(""), "_0Z_K_")
+    pushbyte            62
+    initproperty        QName(PackageNamespace(""), "_0Z_K_")
+
+    findproperty        QName(PackageNamespace(""), "_1I_o")
+    pushbyte            63
+    initproperty        QName(PackageNamespace(""), "_1I_o")
+
+    findproperty        QName(PackageNamespace(""), "_1W_l")
+    pushbyte            64
+    initproperty        QName(PackageNamespace(""), "_1W_l")
+
+    findproperty        QName(PackageNamespace(""), "_0ho")
+    pushbyte            65
+    initproperty        QName(PackageNamespace(""), "_0ho")
+
+    findproperty        QName(PackageNamespace(""), "_11P_")
+    pushbyte            66
+    initproperty        QName(PackageNamespace(""), "_11P_")
+
+    findproperty        QName(PackageNamespace(""), "_00f")
+    pushbyte            67
+    initproperty        QName(PackageNamespace(""), "_00f")
+
+    findproperty        QName(PackageNamespace(""), "_1Q_G_")
+    pushbyte            68
+    initproperty        QName(PackageNamespace(""), "_1Q_G_")
+
+    findproperty        QName(PackageNamespace(""), "_I_K_")
+    pushbyte            69
+    initproperty        QName(PackageNamespace(""), "_I_K_")
+
+    findproperty        QName(PackageNamespace(""), "_081")
+    pushbyte            70
+    initproperty        QName(PackageNamespace(""), "_081")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_0_STAT")
+    pushbyte            71
+    initproperty        QName(PackageNamespace(""), "BACKPACK_0_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_1_STAT")
+    pushbyte            72
+    initproperty        QName(PackageNamespace(""), "BACKPACK_1_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_2_STAT")
+    pushbyte            73
+    initproperty        QName(PackageNamespace(""), "BACKPACK_2_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_3_STAT")
+    pushbyte            74
+    initproperty        QName(PackageNamespace(""), "BACKPACK_3_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_4_STAT")
+    pushbyte            75
+    initproperty        QName(PackageNamespace(""), "BACKPACK_4_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_5_STAT")
+    pushbyte            76
+    initproperty        QName(PackageNamespace(""), "BACKPACK_5_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_6_STAT")
+    pushbyte            77
+    initproperty        QName(PackageNamespace(""), "BACKPACK_6_STAT")
+
+    findproperty        QName(PackageNamespace(""), "BACKPACK_7_STAT")
+    pushbyte            78
+    initproperty        QName(PackageNamespace(""), "BACKPACK_7_STAT")
+
+    findproperty        QName(PackageNamespace(""), "_z_")
+    pushbyte            79
+    initproperty        QName(PackageNamespace(""), "_z_")
+
+    findproperty        QName(PackageNamespace(""), "_jP_")
+    pushbyte            80
+    initproperty        QName(PackageNamespace(""), "_jP_")
+
+    findproperty        QName(PackageNamespace(""), "_1D_n")
+    pushbyte            81
+    initproperty        QName(PackageNamespace(""), "_1D_n")
+
+    findproperty        QName(PackageNamespace(""), "_1J_N_")
+    pushbyte            82
+    initproperty        QName(PackageNamespace(""), "_1J_N_")
+
+    findproperty        QName(PackageNamespace(""), "_0H_s")
+    pushbyte            83
+    initproperty        QName(PackageNamespace(""), "_0H_s")
+
+    findproperty        QName(PackageNamespace(""), "_1X_Z_")
+    pushbyte            84
+    initproperty        QName(PackageNamespace(""), "_1X_Z_")
+
+    findproperty        QName(PackageNamespace(""), "_0A_R_")
+    pushbyte            85
+    initproperty        QName(PackageNamespace(""), "_0A_R_")
+
+    findproperty        QName(PackageNamespace(""), "_0J_y")
+    pushbyte            86
+    initproperty        QName(PackageNamespace(""), "_0J_y")
+
+    findproperty        QName(PackageNamespace(""), "_1I_7")
+    pushbyte            87
+    initproperty        QName(PackageNamespace(""), "_1I_7")
+
+    findproperty        QName(PackageNamespace(""), "_1U_Q_")
+    pushbyte            88
+    initproperty        QName(PackageNamespace(""), "_1U_Q_")
+
+    findproperty        QName(PackageNamespace(""), "_0H_6")
+    pushbyte            89
+    initproperty        QName(PackageNamespace(""), "_0H_6")
+
+    findproperty        QName(PackageNamespace(""), "_1B_Z_")
+    pushbyte            90
+    initproperty        QName(PackageNamespace(""), "_1B_Z_")
+
+    findproperty        QName(PackageNamespace(""), "_0yU_")
+    pushbyte            91
+    initproperty        QName(PackageNamespace(""), "_0yU_")
+
+    findproperty        QName(PackageNamespace(""), "_0M_8")
+    pushbyte            92
+    initproperty        QName(PackageNamespace(""), "_0M_8")
+
+    findproperty        QName(PackageNamespace(""), "_0kc")
+    pushbyte            93
+    initproperty        QName(PackageNamespace(""), "_0kc")
+
+    findproperty        QName(PackageNamespace(""), "_0A_o")
+    pushbyte            94
+    initproperty        QName(PackageNamespace(""), "_0A_o")
+
+    findproperty        QName(PackageNamespace(""), "_0vG_")
+    pushbyte            95
+    initproperty        QName(PackageNamespace(""), "_0vG_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_0M_K_") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "_d0") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_0uZ_") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "_1J_x") slotid 4 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "_12c") slotid 5 type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait const QName(PackageNamespace(""), "_19G_") slotid 6 type QName(PackageNamespace(""), "int") value Integer(5) end
+ trait const QName(PackageNamespace(""), "_1B_l") slotid 7 type QName(PackageNamespace(""), "int") value Integer(6) end
+ trait const QName(PackageNamespace(""), "_0eJ_") slotid 8 type QName(PackageNamespace(""), "int") value Integer(7) end
+ trait const QName(PackageNamespace(""), "_pk") slotid 9 type QName(PackageNamespace(""), "int") value Integer(20) end
+ trait const QName(PackageNamespace(""), "_0G_J_") slotid 10 type QName(PackageNamespace(""), "int") value Integer(21) end
+ trait const QName(PackageNamespace(""), "_0B_p") slotid 11 type QName(PackageNamespace(""), "int") value Integer(22) end
+ trait const QName(PackageNamespace(""), "INVENTORY_0_STAT") slotid 12 type QName(PackageNamespace(""), "int") value Integer(8) end
+ trait const QName(PackageNamespace(""), "INVENTORY_1_STAT") slotid 13 type QName(PackageNamespace(""), "int") value Integer(9) end
+ trait const QName(PackageNamespace(""), "INVENTORY_2_STAT") slotid 14 type QName(PackageNamespace(""), "int") value Integer(10) end
+ trait const QName(PackageNamespace(""), "INVENTORY_3_STAT") slotid 15 type QName(PackageNamespace(""), "int") value Integer(11) end
+ trait const QName(PackageNamespace(""), "INVENTORY_4_STAT") slotid 16 type QName(PackageNamespace(""), "int") value Integer(12) end
+ trait const QName(PackageNamespace(""), "INVENTORY_5_STAT") slotid 17 type QName(PackageNamespace(""), "int") value Integer(13) end
+ trait const QName(PackageNamespace(""), "INVENTORY_6_STAT") slotid 18 type QName(PackageNamespace(""), "int") value Integer(14) end
+ trait const QName(PackageNamespace(""), "INVENTORY_7_STAT") slotid 19 type QName(PackageNamespace(""), "int") value Integer(15) end
+ trait const QName(PackageNamespace(""), "INVENTORY_8_STAT") slotid 20 type QName(PackageNamespace(""), "int") value Integer(16) end
+ trait const QName(PackageNamespace(""), "INVENTORY_9_STAT") slotid 21 type QName(PackageNamespace(""), "int") value Integer(17) end
+ trait const QName(PackageNamespace(""), "INVENTORY_10_STAT") slotid 22 type QName(PackageNamespace(""), "int") value Integer(18) end
+ trait const QName(PackageNamespace(""), "INVENTORY_11_STAT") slotid 23 type QName(PackageNamespace(""), "int") value Integer(19) end
+ trait const QName(PackageNamespace(""), "_T_p") slotid 24 type QName(PackageNamespace(""), "int") value Integer(26) end
+ trait const QName(PackageNamespace(""), "_3s") slotid 25 type QName(PackageNamespace(""), "int") value Integer(27) end
+ trait const QName(PackageNamespace(""), "_B_7") slotid 26 type QName(PackageNamespace(""), "int") value Integer(28) end
+ trait const QName(PackageNamespace(""), "_11K_") slotid 27 type QName(PackageNamespace(""), "int") value Integer(29) end
+ trait const QName(PackageNamespace(""), "_1I_c") slotid 28 type QName(PackageNamespace(""), "int") value Integer(30) end
+ trait const QName(PackageNamespace(""), "_sD_") slotid 29 type QName(PackageNamespace(""), "int") value Integer(31) end
+ trait const QName(PackageNamespace(""), "TEX1_STAT") slotid 30 type QName(PackageNamespace(""), "int") value Integer(32) end
+ trait const QName(PackageNamespace(""), "TEX2_STAT") slotid 31 type QName(PackageNamespace(""), "int") value Integer(33) end
+ trait const QName(PackageNamespace(""), "_1K_I_") slotid 32 type QName(PackageNamespace(""), "int") value Integer(34) end
+ trait const QName(PackageNamespace(""), "_xq") slotid 33 type QName(PackageNamespace(""), "int") value Integer(35) end
+ trait const QName(PackageNamespace(""), "_P_g") slotid 34 type QName(PackageNamespace(""), "int") value Integer(36) end
+ trait const QName(PackageNamespace(""), "_02n") slotid 35 type QName(PackageNamespace(""), "int") value Integer(37) end
+ trait const QName(PackageNamespace(""), "_0M_x") slotid 36 type QName(PackageNamespace(""), "int") value Integer(38) end
+ trait const QName(PackageNamespace(""), "_B_O_") slotid 37 type QName(PackageNamespace(""), "int") value Integer(39) end
+ trait const QName(PackageNamespace(""), "_1S_I_") slotid 38 type QName(PackageNamespace(""), "int") value Integer(40) end
+ trait const QName(PackageNamespace(""), "_xx") slotid 39 type QName(PackageNamespace(""), "int") value Integer(41) end
+ trait const QName(PackageNamespace(""), "_G_I_") slotid 40 type QName(PackageNamespace(""), "int") value Integer(42) end
+ trait const QName(PackageNamespace(""), "_01d") slotid 41 type QName(PackageNamespace(""), "int") value Integer(43) end
+ trait const QName(PackageNamespace(""), "_J_C_") slotid 42 type QName(PackageNamespace(""), "int") value Integer(44) end
+ trait const QName(PackageNamespace(""), "_tc") slotid 43 type QName(PackageNamespace(""), "int") value Integer(45) end
+ trait const QName(PackageNamespace(""), "_0T_") slotid 44 type QName(PackageNamespace(""), "int") value Integer(46) end
+ trait const QName(PackageNamespace(""), "_1E_M_") slotid 45 type QName(PackageNamespace(""), "int") value Integer(47) end
+ trait const QName(PackageNamespace(""), "_5W_") slotid 46 type QName(PackageNamespace(""), "int") value Integer(48) end
+ trait const QName(PackageNamespace(""), "_00S_") slotid 47 type QName(PackageNamespace(""), "int") value Integer(49) end
+ trait const QName(PackageNamespace(""), "_es") slotid 48 type QName(PackageNamespace(""), "int") value Integer(50) end
+ trait const QName(PackageNamespace(""), "_0W_3") slotid 49 type QName(PackageNamespace(""), "int") value Integer(51) end
+ trait const QName(PackageNamespace(""), "_0tJ_") slotid 50 type QName(PackageNamespace(""), "int") value Integer(52) end
+ trait const QName(PackageNamespace(""), "_0W_J_") slotid 51 type QName(PackageNamespace(""), "int") value Integer(53) end
+ trait const QName(PackageNamespace(""), "_1O_e") slotid 52 type QName(PackageNamespace(""), "int") value Integer(54) end
+ trait const QName(PackageNamespace(""), "_H_T_") slotid 53 type QName(PackageNamespace(""), "int") value Integer(55) end
+ trait const QName(PackageNamespace(""), "_N_k") slotid 54 type QName(PackageNamespace(""), "int") value Integer(56) end
+ trait const QName(PackageNamespace(""), "_0S_B_") slotid 55 type QName(PackageNamespace(""), "int") value Integer(57) end
+ trait const QName(PackageNamespace(""), "_qD_") slotid 56 type QName(PackageNamespace(""), "int") value Integer(58) end
+ trait const QName(PackageNamespace(""), "_1W_H_") slotid 57 type QName(PackageNamespace(""), "int") value Integer(59) end
+ trait const QName(PackageNamespace(""), "_kN_") slotid 58 type QName(PackageNamespace(""), "int") value Integer(60) end
+ trait const QName(PackageNamespace(""), "_0O_G_") slotid 59 type QName(PackageNamespace(""), "int") value Integer(61) end
+ trait const QName(PackageNamespace(""), "_0Z_K_") slotid 60 type QName(PackageNamespace(""), "int") value Integer(62) end
+ trait const QName(PackageNamespace(""), "_1I_o") slotid 61 type QName(PackageNamespace(""), "int") value Integer(63) end
+ trait const QName(PackageNamespace(""), "_1W_l") slotid 62 type QName(PackageNamespace(""), "int") value Integer(64) end
+ trait const QName(PackageNamespace(""), "_0ho") slotid 63 type QName(PackageNamespace(""), "int") value Integer(65) end
+ trait const QName(PackageNamespace(""), "_11P_") slotid 64 type QName(PackageNamespace(""), "int") value Integer(66) end
+ trait const QName(PackageNamespace(""), "_00f") slotid 65 type QName(PackageNamespace(""), "int") value Integer(67) end
+ trait const QName(PackageNamespace(""), "_1Q_G_") slotid 66 type QName(PackageNamespace(""), "int") value Integer(68) end
+ trait const QName(PackageNamespace(""), "_I_K_") slotid 67 type QName(PackageNamespace(""), "int") value Integer(69) end
+ trait const QName(PackageNamespace(""), "_081") slotid 68 type QName(PackageNamespace(""), "int") value Integer(70) end
+ trait const QName(PackageNamespace(""), "BACKPACK_0_STAT") slotid 69 type QName(PackageNamespace(""), "int") value Integer(71) end
+ trait const QName(PackageNamespace(""), "BACKPACK_1_STAT") slotid 70 type QName(PackageNamespace(""), "int") value Integer(72) end
+ trait const QName(PackageNamespace(""), "BACKPACK_2_STAT") slotid 71 type QName(PackageNamespace(""), "int") value Integer(73) end
+ trait const QName(PackageNamespace(""), "BACKPACK_3_STAT") slotid 72 type QName(PackageNamespace(""), "int") value Integer(74) end
+ trait const QName(PackageNamespace(""), "BACKPACK_4_STAT") slotid 73 type QName(PackageNamespace(""), "int") value Integer(75) end
+ trait const QName(PackageNamespace(""), "BACKPACK_5_STAT") slotid 74 type QName(PackageNamespace(""), "int") value Integer(76) end
+ trait const QName(PackageNamespace(""), "BACKPACK_6_STAT") slotid 75 type QName(PackageNamespace(""), "int") value Integer(77) end
+ trait const QName(PackageNamespace(""), "BACKPACK_7_STAT") slotid 76 type QName(PackageNamespace(""), "int") value Integer(78) end
+ trait const QName(PackageNamespace(""), "_z_") slotid 77 type QName(PackageNamespace(""), "int") value Integer(79) end
+ trait const QName(PackageNamespace(""), "_jP_") slotid 78 type QName(PackageNamespace(""), "int") value Integer(80) end
+ trait const QName(PackageNamespace(""), "_1D_n") slotid 79 type QName(PackageNamespace(""), "int") value Integer(81) end
+ trait const QName(PackageNamespace(""), "_1J_N_") slotid 80 type QName(PackageNamespace(""), "int") value Integer(82) end
+ trait const QName(PackageNamespace(""), "_0H_s") slotid 81 type QName(PackageNamespace(""), "int") value Integer(83) end
+ trait const QName(PackageNamespace(""), "_1X_Z_") slotid 82 type QName(PackageNamespace(""), "int") value Integer(84) end
+ trait const QName(PackageNamespace(""), "_0A_R_") slotid 83 type QName(PackageNamespace(""), "int") value Integer(85) end
+ trait const QName(PackageNamespace(""), "_0J_y") slotid 84 type QName(PackageNamespace(""), "int") value Integer(86) end
+ trait const QName(PackageNamespace(""), "_1I_7") slotid 85 type QName(PackageNamespace(""), "int") value Integer(87) end
+ trait const QName(PackageNamespace(""), "_1U_Q_") slotid 86 type QName(PackageNamespace(""), "int") value Integer(88) end
+ trait const QName(PackageNamespace(""), "_0H_6") slotid 87 type QName(PackageNamespace(""), "int") value Integer(89) end
+ trait const QName(PackageNamespace(""), "_1B_Z_") slotid 88 type QName(PackageNamespace(""), "int") value Integer(90) end
+ trait const QName(PackageNamespace(""), "_0yU_") slotid 89 type QName(PackageNamespace(""), "int") value Integer(91) end
+ trait const QName(PackageNamespace(""), "_0M_8") slotid 90 type QName(PackageNamespace(""), "int") value Integer(92) end
+ trait const QName(PackageNamespace(""), "_0kc") slotid 91 type QName(PackageNamespace(""), "int") value Integer(93) end
+ trait const QName(PackageNamespace(""), "_0A_o") slotid 92 type QName(PackageNamespace(""), "int") value Integer(94) end
+ trait const QName(PackageNamespace(""), "_0vG_") slotid 93 type QName(PackageNamespace(""), "int") value Integer(95) end
+ trait method QName(PackageNamespace(""), "_uL_") flag FINAL dispid 3
+  method
+   refid "_1I_I_:StatData/class/_uL_"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     jump                L57
+
+L3:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_0ib")
+     returnvalue
+
+L7:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_0sa")
+     returnvalue
+
+L11:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_05Z_")
+     returnvalue
+
+L15:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_N_G_")
+     returnvalue
+
+L19:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_1i3")
+     returnvalue
+
+L23:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_0cY_")
+     returnvalue
+
+L27:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_D_C_")
+     returnvalue
+
+L31:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_0F_O_")
+     returnvalue
+
+L35:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_1bh")
+     returnvalue
+
+L39:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_vF_")
+     returnvalue
+
+L43:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_0u0")
+     returnvalue
+
+L47:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_kn")
+     returnvalue
+
+L51:
+     label
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_18F_")
+     returnvalue
+
+L55:
+     label
+     jump                L130
+
+L57:
+     getlocal1
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "_0M_K_")
+     getlocal2
+     ifstrictne          L64
+
+     pushbyte            0
+     jump                L128
+
+L64:
+     getlex              QName(PackageNamespace(""), "_d0")
+     getlocal2
+     ifstrictne          L69
+
+     pushbyte            1
+     jump                L128
+
+L69:
+     getlex              QName(PackageNamespace(""), "_0uZ_")
+     getlocal2
+     ifstrictne          L74
+
+     pushbyte            2
+     jump                L128
+
+L74:
+     getlex              QName(PackageNamespace(""), "_1J_x")
+     getlocal2
+     ifstrictne          L79
+
+     pushbyte            3
+     jump                L128
+
+L79:
+     getlex              QName(PackageNamespace(""), "_12c")
+     getlocal2
+     ifstrictne          L84
+
+     pushbyte            4
+     jump                L128
+
+L84:
+     getlex              QName(PackageNamespace(""), "_1B_l")
+     getlocal2
+     ifstrictne          L89
+
+     pushbyte            5
+     jump                L128
+
+L89:
+     getlex              QName(PackageNamespace(""), "_0eJ_")
+     getlocal2
+     ifstrictne          L94
+
+     pushbyte            6
+     jump                L128
+
+L94:
+     getlex              QName(PackageNamespace(""), "_pk")
+     getlocal2
+     ifstrictne          L99
+
+     pushbyte            7
+     jump                L128
+
+L99:
+     getlex              QName(PackageNamespace(""), "_0G_J_")
+     getlocal2
+     ifstrictne          L104
+
+     pushbyte            8
+     jump                L128
+
+L104:
+     getlex              QName(PackageNamespace(""), "_0B_p")
+     getlocal2
+     ifstrictne          L109
+
+     pushbyte            9
+     jump                L128
+
+L109:
+     getlex              QName(PackageNamespace(""), "_T_p")
+     getlocal2
+     ifstrictne          L114
+
+     pushbyte            10
+     jump                L128
+
+L114:
+     getlex              QName(PackageNamespace(""), "_3s")
+     getlocal2
+     ifstrictne          L119
+
+     pushbyte            11
+     jump                L128
+
+L119:
+     getlex              QName(PackageNamespace(""), "_B_7")
+     getlocal2
+     ifstrictne          L124
+
+     pushbyte            12
+     jump                L128
+
+L124:
+     jump                L127
+
+     pushbyte            13
+     jump                L128
+
+L127:
+     pushbyte            13
+L128:
+     kill                2
+     lookupswitch        L55, [L3, L7, L11, L15, L19, L23, L27, L31, L35, L39, L43, L47, L51, L55]
+
+L130:
+     getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+     getproperty         QName(PackageNamespace(""), "_08P_")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,190 @@
+class
+ refid "_-4k:_-1LB"
+ instance QName(PackageNamespace("_-4k"), "_-1LB")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-FK", [PackageNamespace("_-6M")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0DI")
+  iinit
+   refid "_-4k:_-1LB/instance/init"
+   param QName(PackageNamespace("_-z8"), "_-1YM")
+   body
+    maxstack 24
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     declocal            2
+     setlocal2
+
+     inclocal_i          2
+     inclocal            2
+     declocal            3
+     inclocal_i          3
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iffalse             L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-4k:_-1LB/instance"), PrivateNamespace("*", "_-4k:_-1LB/instance/init"), PackageNamespace("", "#0"), PackageNamespace("_-4k"), PackageInternalNs("_-4k"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0DI"), StaticProtectedNs("_-0DI"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     applytype           1
+     getglobalscope
+     pushdouble          -0.5
+     pushdouble          0.5
+     pushbyte            0
+     dup
+     dup
+     pushdouble          0.5
+     jump                L39
+
+     getlocal3
+     lessthan
+     setlocal3
+
+     convert_u
+     convert_u
+     istypelate
+L39:
+     pushdouble          0.5
+     pushbyte            0
+     pushbyte            1
+     pushbyte            0
+     pushdouble          -0.5
+     pushdouble          -0.5
+     pushbyte            0
+     dup
+     pushbyte            1
+     pushdouble          0.5
+     pushdouble          -0.5
+     pushbyte            0
+     pushbyte            1
+     dup
+     newarray            20
+     call                1
+     jump                L62
+
+     getlocal3
+     inclocal_i          2
+     lshift
+     hasnext
+     lessthan
+     convert_d
+L62:
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+     setlocal2
+
+     getlocal            4
+     dup
+     iffalse             L70
+
+     pop
+     getlocal3
+     convert_b
+L70:
+     iftrue              L79
+
+     getlocal0
+     getlocal1
+     pushbyte            4
+     pushbyte            5
+     callproperty        QName(PackageNamespace("", "#0"), "createVertexBuffer"), 2
+     initproperty        QName(PrivateNamespace("*", "_-4k:_-1LB/instance"), "_-0GC")
+
+     getlocal3
+     iffalse             L85
+
+L79:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-4k:_-1LB/instance"), "_-0GC")
+     getlocal2
+     pushbyte            0
+     pushbyte            4
+     callpropvoid        QName(PackageNamespace("", "#0"), "uploadFromVector"), 3
+
+L85:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-4k:_-1LB/instance"), "_-0GC") type QName(PackageNamespace("_-z8"), "_-0On") end
+  trait method QName(PackageNamespace("", "#0"), "apply")
+   method
+    refid "_-4k:_-1LB/instance/apply"
+    param QName(PackageNamespace("", "#0"), "Class")
+    param QName(PackageNamespace("_-0jn"), "_-1VW")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-4k:_-1LB/instance"), "_-0GC")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "destroy")
+   method
+    refid "_-4k:_-1LB/instance/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-4k:_-1LB/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

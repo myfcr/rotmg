@@ -1,0 +1,29 @@
+script ; 431
+ sinit
+  refid "_-pr:_-dU/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-dU", [PackageNamespace("_-pr")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-pr:_-dU"
+    popscope
+    initproperty        QName(PackageNamespace("_-pr"), "_-dU")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-pr"), "_-dU")
+  #include "_-dU.class.asasm"
+ end ; trait
+end ; script

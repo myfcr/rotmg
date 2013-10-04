@@ -1,0 +1,121 @@
+class
+ refid "_0V_N_:_5C_"
+ instance QName(PackageNamespace("_0V_N_"), "_5C_")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1S_Y_")
+  iinit
+   refid "_0V_N_:_5C_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait method QName(PackageNamespace(""), "show")
+   method
+    refid "_0V_N_:_5C_/instance/show"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip")
+
+      getlocal1
+      iffalse             L12
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hide")
+   method
+    refid "_0V_N_:_5C_/instance/hide"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip")
+      convert_b
+      dup
+      iffalse             L12
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip")
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L12:
+      iffalse             L19
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L19:
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_0V_N_:_5C_/instance"), "toolTip")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0V_N_:_5C_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

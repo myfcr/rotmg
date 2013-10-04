@@ -1,0 +1,365 @@
+class
+ refid "com.company.assembleegameclient.objects:Pet"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Pet")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-1jt", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-fT")
+  iinit
+   refid "com.company.assembleegameclient.objects:Pet/instance/init"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     increment_i
+     strictequals
+     inclocal            2
+     popscope
+     modulo
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iftrue              L49
+
+     getlocal0
+     jump                L28
+
+     subtract_i
+     strictequals
+     divide
+     coerce_a
+     pushundefined
+     inclocal            2
+L28:
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     iffalse             L49
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-1Yv")
+     jump                L40
+
+     pushnan
+     inclocal_i          2
+     getlocal2
+     declocal_i          2
+     declocal            2
+     inclocal            2
+L40:
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-1Yv")
+
+     getlocal3
+     dup
+     iffalse             L48
+
+     pop
+     getlocal2
+     convert_b
+L48:
+     iftrue              L57
+
+L49:
+     getlocal0
+     getlex              QName(PackageNamespace("_-5l"), "_-0pB")
+     callproperty        QName(PackageNamespace("", "#0"), "_-o6"), 0
+     getlex              QName(PackageNamespace("_-0lB"), "_-0LD")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), "_-0xP")
+
+     getlocal2
+     iffalse             L63
+
+L57:
+     getlocal0
+     getlex              QName(PackageNamespace("_-5l"), "_-0pB")
+     callproperty        QName(PackageNamespace("", "#0"), "_-o6"), 0
+     getlex              QName(PackageNamespace("_-Su"), "_-0L4")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), "_-HT")
+
+L63:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), "_-0xP") type QName(PackageNamespace("_-0lB"), "_-0LD") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0QQ") type QName(PackageNamespace("_-Su"), "_-1Px") end
+  trait slot QName(PackageNamespace("", "#0"), "skin") type QName(PackageNamespace("com.company.assembleegameclient.util"), "_-17f") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), "_-xY") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), "_-HT") type QName(PackageNamespace("_-Su"), "_-0L4") end
+  trait method QName(PackageNamespace("", "#0"), "getTooltip")
+   method
+    refid "com.company.assembleegameclient.objects:Pet/instance/getTooltip"
+    returns QName(PackageNamespace("_-1Qt"), "_-1Sf")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1Qt"), "_-gB")
+      jump                L10
+
+      lessthan
+      dup
+      decrement
+      pushnan
+      multiply_i
+      bitor
+L10:
+      pushint             3552822
+      pushint             10197915
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-14D")
+      getlex              QName(PackageNamespace("_-ZB"), "_-sm")
+      getproperty         QName(PackageNamespace("", "#0"), "_-149")
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-1Qt"), "_-gB"), 5
+      coerce              QName(PackageNamespace("_-1Qt"), "_-1Sf")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:Pet/instance/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-dE"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-nB"), "PetPanel")
+      jump                L10
+
+      newactivation
+      typeof
+      pushundefined
+      convert_o
+      getglobalscope
+      convert_b
+L10:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0QQ")
+      constructprop       QName(PackageNamespace("_-nB"), "PetPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-rh")
+   method
+    refid "com.company.assembleegameclient.objects:Pet/instance/_-rh"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal            5
+
+      convert_s
+      declocal_i          2
+      declocal_i          2
+      kill                2
+      add_i
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-SP")
+      setlocal            5
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0zR"), 1
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Mv"), 1
+      coerce              QName(PackageNamespace("", "#0"), "XML")
+      setlocal2
+
+      getlocal2
+      getproperty         Multiname("AnimatedTexture", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance/_-rh"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-fT"), StaticProtectedNs("_-fT"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      getproperty         Multiname("File", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance/_-rh"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-fT"), StaticProtectedNs("_-fT"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      coerce_s
+      setlocal3
+
+      getlocal2
+      getproperty         Multiname("AnimatedTexture", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance/_-rh"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-fT"), StaticProtectedNs("_-fT"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      getproperty         Multiname("Index", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), PackageNamespace("", "#0"), PackageNamespace("com.company.assembleegameclient.objects"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance/_-rh"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-fT"), StaticProtectedNs("_-fT"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      convert_i
+      setlocal            4
+
+      getlocal            6
+      iftrue              L42
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-07f")
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace("", "#0"), "_-1-g"), 2
+      initproperty        QName(PackageNamespace("", "#0"), "skin")
+
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "skin")
+      jump                L51
+
+      declocal_i          4
+      greaterthan
+      convert_b
+      declocal            4
+      decrement
+      convert_d
+L51:
+      pushbyte            0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-17f")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0CP")
+      pushbyte            0
+      callproperty        QName(PackageNamespace("", "#0"), "imageFromAngle"), 3
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-SP")
+      setlocal            5
+
+      getlocal            6
+      dup
+      iffalse             L64
+
+      pop
+      getlocal2
+      convert_b
+L64:
+      iftrue              L105
+
+      findproperty        QName(PackageNamespace("", "#0"), "_-15O")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "skin")
+      initproperty        QName(PackageNamespace("", "#0"), "_-15O")
+
+      getlocal            7
+      dup
+      iftrue              L75
+
+      pop
+      getlocal0
+      convert_b
+L75:
+      iffalse             L108
+
+      findproperty        QName(PackageNamespace("", "#0"), "texture_")
+      getlocal            5
+      jump                L85
+
+      greaterequals
+      declocal            2
+      inclocal_i          6
+      setlocal2
+
+      increment
+      setlocal            4
+
+L85:
+      getproperty         QName(PackageNamespace("", "#0"), "image_")
+      initproperty        QName(PackageNamespace("", "#0"), "texture_")
+
+      getlocal            6
+      dup
+      iffalse             L93
+
+      pop
+      getlocal1
+      convert_b
+L93:
+      iftrue              L108
+
+      findproperty        QName(PackageNamespace("", "#0"), "mask_")
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "mask_")
+      initproperty        QName(PackageNamespace("", "#0"), "mask_")
+
+      getlocal            7
+      dup
+      iftrue              L104
+
+      pop
+      getlocal2
+      convert_b
+L104:
+      iffalse             L108
+
+L105:
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Pet/instance"), "_-xY")
+
+L108:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Pet/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

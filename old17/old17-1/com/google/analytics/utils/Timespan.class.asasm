@@ -1,0 +1,57 @@
+class
+ refid "com.google.analytics.utils:Timespan"
+ instance QName(PackageNamespace("com.google.analytics.utils"), "Timespan")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.utils:Timespan")
+  iinit
+   refid "com.google.analytics.utils:Timespan/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.google.analytics.utils:Timespan/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "twoyears")
+    pushint             63072000
+    setproperty         QName(PackageNamespace(""), "twoyears")
+
+    findproperty        QName(PackageNamespace(""), "sixmonths")
+    pushint             15768000
+    setproperty         QName(PackageNamespace(""), "sixmonths")
+
+    findproperty        QName(PackageNamespace(""), "thirtyminutes")
+    pushshort           1800
+    setproperty         QName(PackageNamespace(""), "thirtyminutes")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "sixmonths") slotid 2 type QName(PackageNamespace(""), "Number") value Integer(15768000) end
+ trait slot QName(PackageNamespace(""), "twoyears") slotid 1 type QName(PackageNamespace(""), "Number") value Integer(63072000) end
+ trait slot QName(PackageNamespace(""), "thirtyminutes") slotid 3 type QName(PackageNamespace(""), "Number") value Integer(1800) end
+end ; class

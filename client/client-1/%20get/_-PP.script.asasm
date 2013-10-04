@@ -1,0 +1,29 @@
+script ; 217
+ sinit
+  refid " get:_-PP/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-PP", [PackageNamespace(" get")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            " get:_-PP"
+    popscope
+    initproperty        QName(PackageNamespace(" get"), "_-PP")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(" get"), "_-PP")
+  #include "_-PP.class.asasm"
+ end ; trait
+end ; script

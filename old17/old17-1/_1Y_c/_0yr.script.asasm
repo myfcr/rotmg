@@ -1,0 +1,29 @@
+script ; 25
+ sinit
+  refid "_1Y_c:_0yr/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_0yr", [PackageNamespace("_1Y_c")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_1Y_c:_0yr"
+    popscope
+    initproperty        QName(PackageNamespace("_1Y_c"), "_0yr")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_1Y_c"), "_0yr")
+  #include "_0yr.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,112 @@
+class
+ refid "com.google.analytics.debug:AlertAction"
+ instance QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.debug:AlertAction")
+  iinit
+   refid "com.google.analytics.debug:AlertAction/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param null
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "name")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "activator")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "container") type QName(PackageNamespace("com.google.analytics.debug"), "Alert") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback") end
+  trait slot QName(PackageNamespace(""), "activator") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "name") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "com.google.analytics.debug:AlertAction/instance/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+      iffalse             L28
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+      iffalse             L15
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+      getlex              QName(PackageNamespace(""), "Function")
+      astypelate
+      getglobalscope
+      call                0
+      pop
+      jump                L28
+
+L15:
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+      getlex              QName(PackageNamespace(""), "String")
+      istypelate
+      iffalse             L28
+
+      getlex              QName(PackageNamespace(""), "container")
+      dup
+      setlocal1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), "_callback")
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:AlertAction/instance/execute"), PackageNamespace("com.google.analytics.debug"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:AlertAction"), StaticProtectedNs("com.google.analytics.debug:AlertAction"), StaticProtectedNs("Object")])
+      getlocal1
+      call                0
+      pop
+      kill                1
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.debug:AlertAction/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

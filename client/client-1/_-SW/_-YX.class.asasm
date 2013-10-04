@@ -1,0 +1,276 @@
+class
+ refid "_-SW:_-YX"
+ instance QName(PackageNamespace("_-SW"), "_-YX")
+  extends QName(PackageNamespace("_-yU"), "_-0GA")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-rF")
+  iinit
+   refid "_-SW:_-YX/instance/init"
+   param QName(PackageNamespace("", "#0"), "Array")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushtrue
+     inclocal_i          2
+     not
+     lessthan
+     kill                2
+     setlocal2
+
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L32
+
+     getlocal0
+     jump                L24
+
+     kill                2
+     setlocal2
+
+     getlocal2
+     increment
+     nextname
+     getlocal2
+L24:
+     constructsuper      0
+
+     getlocal3
+     dup
+     iftrue              L31
+
+     pop
+     getlocal0
+     convert_b
+L31:
+     iffalse             L48
+
+L32:
+     findproperty        QName(PrivateNamespace("*", "_-SW:_-YX/instance"), "_-3x")
+     getlocal2
+     dup
+     iffalse             L39
+
+     pop
+     getlocal0
+     convert_b
+L39:
+     iftrue              L45
+
+     getlocal1
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     dup
+     iftrue              L47
+
+     pop
+L45:
+     newarray            0
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+L47:
+     initproperty        QName(PrivateNamespace("*", "_-SW:_-YX/instance"), "_-3x")
+
+L48:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-SW:_-YX/instance"), "_-3x") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(ProtectedNamespace("_-rF"), "matchesOrDescribesMismatch") flag OVERRIDE
+   method
+    refid "_-SW:_-YX/instance/_-rF:matchesOrDescribesMismatch"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("_-yU"), "Description")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            6
+
+      jump                L10
+
+      convert_u
+      add_i
+      kill                6
+      declocal            4
+      pop
+      rshift
+L10:
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-yU"), "_-1hD")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(PrivateNamespace("*", "_-SW:_-YX/instance"), "_-3x")
+      coerce_a
+      setlocal            5
+
+      jump                L69
+
+L22:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("_-yU"), "_-1hD")
+      jump                L34
+
+      inclocal_i          6
+      hasnext
+      declocal_i          5
+      increment
+      nextvalue
+      getlocal3
+L34:
+      setlocal3
+
+      getlocal            7
+      iftrue              L67
+
+      getlocal3
+      getlocal1
+      callproperty        QName(Namespace("_-vD"), "matches"), 1
+      getlocal            6
+      iffalse             L68
+
+      iftrue              L69
+
+      getlocal            6
+      jump                L51
+
+      setlocal            5
+
+      declocal_i          6
+      strictequals
+      pushnull
+      dxnslate
+      setlocal2
+
+L51:
+      iffalse             L67
+
+      getlocal2
+      getlocal3
+      callproperty        QName(Namespace("_-Ou"), "_-0zl"), 1
+      pushstring          " "
+      callproperty        QName(Namespace("_-Ou"), "appendText"), 1
+      getlocal3
+      getlocal1
+      callpropvoid        QName(Namespace("_-Ou"), "_-0VB"), 2
+
+      getlocal            6
+      dup
+      iftrue              L66
+
+      pop
+      getlocal2
+      convert_b
+L66:
+      iffalse             L69
+
+L67:
+      pushfalse
+L68:
+      returnvalue
+
+L69:
+      hasnext2            5, 4
+      iftrue              L22
+
+      kill                5
+      kill                4
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "describeTo") flag OVERRIDE
+   method
+    refid "_-SW:_-YX/instance/describeTo"
+    param QName(PackageNamespace("_-yU"), "Description")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      setlocal2
+
+      pushwith
+      inclocal_i          2
+      checkfilter
+      inclocal            2
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L21
+
+      getlocal1
+      pushstring          "("
+      pushstring          " and "
+      pushstring          ")"
+      getlex              QName(PrivateNamespace("*", "_-SW:_-YX/instance"), "_-3x")
+      callpropvoid        QName(Namespace("_-Ou"), "_-ab"), 4
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-SW:_-YX/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,198 @@
+class
+ refid "_-0IO:_-03e"
+ instance QName(PackageNamespace("_-0IO"), "_-03e")
+  extends QName(PackageNamespace("_-0Ji"), "Command")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0SR")
+  iinit
+   refid "_-0IO:_-03e/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitand
+     bitor
+     convert_s
+     multiply
+     coerce_s
+     pushscope
+
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0j-") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-10L")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1e9") flag METADATA type QName(PackageNamespace("_-05m"), "_-1O3")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "packageId") flag METADATA type QName(PackageNamespace("", "#0"), "int")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "case") flag METADATA type QName(PackageNamespace("_-0IO"), "_-0kv")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute") flag OVERRIDE
+   method
+    refid "_-0IO:_-03e/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal2
+      divide
+      not
+      pushundefined
+      multiply
+      declocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-0Vz"), "_-1YB")
+      setlocal1
+
+      getlocal3
+      iffalse             L55
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1e9")
+      getlocal2
+      dup
+      iffalse             L34
+
+      pop
+      getlocal1
+      convert_b
+      jump                L34
+
+      declocal            2
+      declocal            2
+      inclocal_i          2
+      pushnull
+      istypelate
+      typeof
+L34:
+      iftrue              L57
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "packageId")
+      getlocal3
+      iffalse             L59
+
+      callproperty        QName(PackageNamespace("", "#0"), "_-0r4"), 1
+      iffalse             L72
+
+      getlocal2
+      dup
+      iffalse             L54
+
+      pop
+      jump                L52
+
+      lessequals
+      pushnull
+      kill                2
+      inclocal_i          2
+      modulo
+      declocal_i          2
+L52:
+      getlocal0
+      convert_b
+L54:
+      iftrue              L75
+
+L55:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1e9")
+L57:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "packageId")
+L59:
+      callproperty        QName(PackageNamespace("", "#0"), "_-0tZ"), 1
+      coerce              QName(PackageNamespace("_-0Vz"), "_-1YB")
+      setlocal1
+
+      getlocal3
+      iffalse             L71
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0j-")
+      findpropstrict      QName(PackageNamespace("_-qf"), "PackageOfferDialog")
+      constructprop       QName(PackageNamespace("_-qf"), "PackageOfferDialog"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "setPackage"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L71:
+      jump                L75
+
+L72:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "case")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L75:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0IO:_-03e/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

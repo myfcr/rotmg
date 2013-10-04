@@ -1,0 +1,754 @@
+class
+ refid "_-GR:ArenaQueryPanel"
+ instance QName(PackageNamespace("_-GR"), "ArenaQueryPanel")
+  extends QName(PackageNamespace("_-dE"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-SC")
+  iinit
+   refid "_-GR:ArenaQueryPanel/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   param QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 7
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     inclocal_i          2
+     kill                2
+     hasnext
+     inclocal_i          2
+     getlocal3
+     setlocal2
+
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-04m"), "_-167")
+     pushint             16777215
+     pushbyte            16
+     pushtrue
+     callproperty        QName(PackageNamespace("", "#0"), "_-11u"), 3
+     initproperty        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1n9")
+
+     getlocal3
+     dup
+     iftrue              L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iffalse             L78
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0XJ"), "_-Wu")
+     jump                L36
+
+     inclocal_i          2
+     kill                3
+     divide
+     inclocal            2
+     declocal_i          2
+     declocal_i          2
+L36:
+     constructprop       QName(PackageNamespace("_-0XJ"), "_-Wu"), 0
+     initproperty        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0he")
+
+     getlocal3
+     iffalse             L76
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageInternalNs("_-GR"), "type")
+
+     getlocal            4
+     iftrue              L76
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     jump                L55
+
+     nextvalue
+     lessthan
+     checkfilter
+     pushfalse
+     increment
+     declocal_i          2
+L55:
+     getlocal3
+     iffalse             L65
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0he")
+     getproperty         QName(PackageNamespace("", "#0"), "complete")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0F8")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0D5"), 0
+
+L65:
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0oP"), 0
+
+     getlocal3
+     dup
+     iftrue              L73
+
+     pop
+     getlocal1
+     convert_b
+L73:
+     iffalse             L78
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1M5"), 0
+
+L76:
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-ns"), 0
+
+L78:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1n9") type QName(PackageNamespace("_-1X1"), "_-Fw") end
+  trait slot QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "icon") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PackageInternalNs("_-GR"), "_-1VH") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc") end
+  trait slot QName(PackageInternalNs("_-GR"), "_-0hA") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc") end
+  trait slot QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "title") type QName(PackageNamespace("", "#0"), "String") value Utf8("ArenaQueryPanel.title") end
+  trait slot QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1Dg") type QName(PackageNamespace("", "#0"), "String") value Utf8("Pets.caretakerPanelButtonInfo") end
+  trait slot QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1lY") type QName(PackageNamespace("", "#0"), "String") value Utf8("ArenaQueryPanel.leaderboard") end
+  trait slot QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0he") type QName(PackageNamespace("_-0XJ"), "_-Wu") end
+  trait slot QName(PackageInternalNs("_-GR"), "type") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1M5")
+   method
+    refid "_-GR:ArenaQueryPanel/instance/_-GR:ArenaQueryPanel/instance/_-1M5"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      subtract
+      modulo
+      getlocal2
+      add_i
+      convert_o
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L27
+
+      pop
+      getlocal1
+      convert_b
+      jump                L27
+
+      getlocal3
+      getlocal3
+      dup
+      bitxor
+      getlocal3
+      convert_s
+L27:
+      iftrue              L61
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc")
+      pushbyte            16
+      jump                L38
+
+      greaterequals
+      coerce_a
+      modulo
+      convert_o
+      instanceof
+      getglobalscope
+L38:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1Dg")
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc"), 2
+      initproperty        QName(PackageInternalNs("_-GR"), "_-1VH")
+
+      getlocal1
+      iftrue              L57
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0he")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+      callpropvoid        QName(PackageNamespace("", "#0"), "push"), 1
+
+      getlocal1
+      dup
+      iffalse             L56
+
+      pop
+      getlocal1
+      convert_b
+L56:
+      iftrue              L61
+
+L57:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0oP")
+   method
+    refid "_-GR:ArenaQueryPanel/instance/_-GR:ArenaQueryPanel/instance/_-0oP"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitxor
+      dup
+      divide
+      pushtrue
+      typeof
+      checkfilter
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L87
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1n9")
+      getlocal2
+      iffalse             L49
+
+      findpropstrict      QName(PackageNamespace("_-th"), "_-ox")
+      constructprop       QName(PackageNamespace("_-th"), "_-ox"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "title")
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      getlocal1
+      dup
+      jump                L40
+
+      decrement
+      lessthan
+      greaterequals
+      modulo
+      equals
+      add
+L40:
+      iffalse             L44
+
+      pop
+      getlocal2
+      convert_b
+L44:
+      iftrue              L83
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1n9")
+      getlocal1
+      iftrue              L74
+
+L49:
+      pushbyte            65
+      getlocal2
+      dup
+      iftrue              L56
+
+      pop
+      getlocal2
+      convert_b
+L56:
+      iffalse             L75
+
+      jump                L64
+
+      pushnan
+      multiply_i
+      pushnan
+      istypelate
+      decrement
+      convert_o
+L64:
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      dup
+      iftrue              L71
+
+      pop
+      getlocal0
+      convert_b
+L71:
+      iffalse             L83
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1n9")
+L74:
+      pushbyte            28
+L75:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal1
+      dup
+      iffalse             L82
+
+      pop
+      getlocal0
+      convert_b
+L82:
+      iftrue              L87
+
+L83:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1n9")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L87:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-ns")
+   method
+    refid "_-GR:ArenaQueryPanel/instance/_-GR:ArenaQueryPanel/instance/_-ns"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      newactivation
+      coerce_a
+      bitxor
+      negate
+      decrement_i
+      popscope
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L27
+
+      pop
+      jump                L25
+
+      increment_i
+      bitxor
+      coerce_a
+      bitnot
+      pushtrue
+      popscope
+L25:
+      getlocal0
+      convert_b
+L27:
+      iftrue              L45
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc")
+      pushbyte            16
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-1lY")
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Nc"), 2
+      initproperty        QName(PackageInternalNs("_-GR"), "_-0hA")
+
+      getlocal1
+      iftrue              L45
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0he")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-0hA")
+      getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+      callpropvoid        QName(PackageNamespace("", "#0"), "push"), 1
+
+      getlocal2
+      iffalse             L49
+
+L45:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-0hA")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0D5")
+   method
+    refid "_-GR:ArenaQueryPanel/instance/_-GR:ArenaQueryPanel/instance/_-0D5"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      multiply
+      decrement_i
+      increment
+      urshift
+      convert_s
+      negate
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iffalse             L62
+
+      getlocal0
+      jump                L28
+
+      add_i
+      astypelate
+      decrement_i
+      nextvalue
+      pushundefined
+      convert_u
+L28:
+      getlex              QName(PackageNamespace("_-04m"), "_-167")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "type")
+      callproperty        QName(PackageNamespace("", "#0"), "_-13u"), 1
+      jump                L39
+
+      negate
+      not
+      pushtrue
+      lshift
+      setlocal2
+
+      pushnull
+L39:
+      initproperty        QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "icon")
+
+      getlocal1
+      dup
+      iftrue              L46
+
+      pop
+      getlocal0
+      convert_b
+L46:
+      iffalse             L58
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "icon")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      getlocal2
+      dup
+      iffalse             L57
+
+      pop
+      getlocal2
+      convert_b
+L57:
+      iftrue              L62
+
+L58:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "icon")
+      pushbyte            5
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-GR:ArenaQueryPanel/instance"), "_-0F8")
+   method
+    refid "_-GR:ArenaQueryPanel/instance/_-GR:ArenaQueryPanel/instance/_-0F8"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushnull
+      setlocal2
+
+      popscope
+      decrement
+      pushundefined
+      bitand
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushbyte            15
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      getlocal1
+      add
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-0hA")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      add
+      convert_i
+      setlocal2
+
+      getlocal3
+      iftrue              L113
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      getlocal3
+      iftrue              L115
+
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal3
+      iftrue              L124
+
+      getlocal2
+      getlocal            4
+      iffalse             L123
+
+      pushbyte            2
+      divide
+      subtract
+      getlocal3
+      dup
+      iffalse             L50
+
+      pop
+      getlocal3
+      convert_b
+L50:
+      iftrue              L124
+
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      jump                L59
+
+      getlocal3
+      convert_d
+      increment
+      pop
+      not
+      not
+L59:
+      getlocal3
+      dup
+      iffalse             L65
+
+      pop
+      getlocal1
+      convert_b
+L65:
+      iftrue              L113
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-0hA")
+      getlocal            4
+      iffalse             L89
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      add
+      getlocal1
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal3
+      dup
+      iffalse             L86
+
+      pop
+      getlocal2
+      convert_b
+L86:
+      iftrue              L113
+
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-0hA")
+L89:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-0hA")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      getlocal            4
+      jump                L102
+
+      convert_u
+      greaterthan
+      greaterequals
+      pushwith
+      declocal_i          3
+      kill                2
+L102:
+      iffalse             L105
+
+      pushbyte            4
+      subtract
+L105:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal3
+      dup
+      iffalse             L112
+
+      pop
+      getlocal1
+      convert_b
+L112:
+      iftrue              L125
+
+L113:
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+L115:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      getlocal0
+      getproperty         QName(PackageInternalNs("_-GR"), "_-1VH")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      getlocal            4
+      iffalse             L124
+
+      pushbyte            4
+L123:
+      subtract
+L124:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L125:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GR:ArenaQueryPanel/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,135 @@
+class
+ refid "_-1AV:_-H5"
+ instance QName(PackageNamespace("_-1AV"), "_-H5")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-04h")
+  iinit
+   refid "_-1AV:_-H5/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     hasnext
+     increment
+     setlocal3
+
+     bitor
+     pushwith
+     subtract_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-1AV:_-H5/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    pushundefined
+    bitand
+    getlocal0
+    setlocal3
+
+    not
+    subtract
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L26
+
+    pop
+    getlocal2
+    jump                L25
+
+    nextname
+    dxnslate
+    bitor
+    negate_i
+    istypelate
+    pushnan
+L25:
+    convert_b
+L26:
+    iftrue              L37
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-Oc")
+    pushbyte            1
+    initproperty        QName(PackageNamespace("", "#0"), "_-Oc")
+
+    getlocal1
+    dup
+    iftrue              L36
+
+    pop
+    getlocal2
+    convert_b
+L36:
+    iffalse             L50
+
+L37:
+    findproperty        QName(PackageNamespace("", "#0"), "_-0al")
+    pushbyte            4
+    initproperty        QName(PackageNamespace("", "#0"), "_-0al")
+
+    getlocal2
+    dup
+    iffalse             L46
+
+    pop
+    getlocal0
+    convert_b
+L46:
+    iftrue              L50
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0kH")
+    pushbyte            8
+    initproperty        QName(PackageNamespace("", "#0"), "_-0kH")
+
+L50:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-Oc") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(1) end
+ trait const QName(PackageNamespace("", "#0"), "_-0al") slotid 2 type QName(PackageNamespace("", "#0"), "int") value Integer(4) end
+ trait const QName(PackageNamespace("", "#0"), "_-0kH") slotid 3 type QName(PackageNamespace("", "#0"), "int") value Integer(8) end
+end ; class

@@ -1,0 +1,191 @@
+class
+ refid "_-Yf:ParticleField/Square"
+ instance QName(PrivateNamespace("*", "_-Yf:ParticleField"), "Square")
+  extends QName(PackageNamespace("flash.display"), "Shape")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ParticleField.as$2068:Square")
+  iinit
+   refid "_-Yf:ParticleField/Square/instance/init"
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-a"), "_-uD")
+     constructprop       QName(PackageNamespace("_-a"), "_-uD"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "complete")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "start")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "end")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "lifespan")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     subtract
+     getlocal3
+     divide
+     initproperty        QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "moveX")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     subtract
+     getlocal3
+     divide
+     initproperty        QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "moveY")
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushint             16777215
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 1
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            254
+     pushbyte            254
+     pushbyte            4
+     dup
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "position"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "start") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "end") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "lifespan") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "moveX") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "moveY") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "angle") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "complete") type QName(PackageNamespace("_-a"), "_-uD") end
+  trait method QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "position")
+   method
+    refid "_-Yf:ParticleField/Square/instance/_-Yf:ParticleField/Square/instance/position"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "move")
+   method
+    refid "_-Yf:ParticleField/Square/instance/move"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "moveX")
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "moveY")
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal0
+      dup
+      setlocal1
+
+      getproperty         QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "lifespan")
+      decrement
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "lifespan")
+
+      kill                2
+      kill                1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Yf:ParticleField/Square/instance"), "lifespan")
+      iftrue              L34
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "complete")
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L34:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Yf:ParticleField/Square/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

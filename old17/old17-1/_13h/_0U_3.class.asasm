@@ -1,0 +1,179 @@
+class
+ refid "_13h:_0U_3"
+ instance QName(PackageNamespace("_13h"), "_0U_3")
+  extends QName(PackageNamespace("_N__"), "_1X_a")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1cG_")
+  iinit
+   refid "_13h:_0U_3/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("_197"), "_0di")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "addSpeechBalloon") flag METADATA type QName(PackageNamespace("_L_8"), "_1V_D_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0N_0") flag METADATA type QName(PackageNamespace("_1gJ_"), "_0P_W_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_13h:_0U_3/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "addSpeechBalloon")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:_0U_3/instance"), "_14E_")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "_13h:_0U_3/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "addSpeechBalloon")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_13h:_0U_3/instance"), "_14E_")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_13h:_0U_3/instance"), "_14E_")
+   method
+    refid "_13h:_0U_3/instance/_13h:_0U_3/instance/_14E_"
+    param QName(PackageNamespace("_1gJ_"), "_1Q_M_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 14
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      callproperty        QName(Namespace("_D_3"), "_J_v"), 0
+      convert_b
+      dup
+      iftrue              L16
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0N_0")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "go")
+      getproperty         QName(PackageNamespace(""), "name_")
+      callproperty        QName(PackageNamespace(""), "_0eF_"), 1
+      convert_b
+L16:
+      iffalse             L21
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text")
+      coerce_s
+      jump                L22
+
+L21:
+      pushstring          ". . ."
+L22:
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      findpropstrict      QName(PackageNamespace("_197"), "_1S_U_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "go")
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "background")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_0nq")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_0xM_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_0V_E_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "textColor")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_0K_3")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bold")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_sW_")
+      constructprop       QName(PackageNamespace("_197"), "_1S_U_"), 10
+      callpropvoid        QName(PackageNamespace(""), "addSpeechBalloon"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_13h:_0U_3/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

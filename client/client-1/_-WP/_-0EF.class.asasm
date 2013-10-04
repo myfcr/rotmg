@@ -1,0 +1,205 @@
+class
+ refid "_-WP:_-0EF"
+ instance QName(PackageNamespace("_-WP"), "_-0EF")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-64")
+  iinit
+   refid "_-WP:_-0EF/instance/init"
+   param QName(PackageNamespace("_-1AB"), "Console")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     increment
+     pushfalse
+     getlocal2
+     convert_b
+     lshift
+     negate
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L27
+
+     pop
+     getlocal1
+     jump                L26
+
+     inclocal_i          2
+     inclocal            2
+     setlocal2
+
+     declocal            2
+     pop
+     divide
+L26:
+     convert_b
+L27:
+     iffalse             L52
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iffalse             L36
+
+     pop
+     getlocal2
+     convert_b
+L36:
+     iftrue              L47
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("_-64"), "console")
+
+     getlocal2
+     dup
+     iffalse             L46
+
+     pop
+     getlocal3
+     convert_b
+L46:
+     iftrue              L52
+
+L47:
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_-64"), "console")
+     getproperty         QName(PackageNamespace("", "#0"), "config")
+     initproperty        QName(ProtectedNamespace("_-64"), "config")
+
+L52:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_-64"), "console") type QName(PackageNamespace("_-1AB"), "Console") end
+  trait slot QName(ProtectedNamespace("_-64"), "config") type QName(PackageNamespace("_-1AB"), "_-17a") end
+  trait getter QName(ProtectedNamespace("_-64"), "remoter")
+   method
+    refid "_-WP:_-0EF/instance/_-64:remoter/getter"
+    returns QName(PackageNamespace("_-WP"), "_-1F3")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      divide
+      coerce_a
+      istypelate
+      swap
+      decrement_i
+      lshift
+L10:
+      getproperty         QName(ProtectedNamespace("_-64"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "remoter")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-64"), "report")
+   method
+    refid "_-WP:_-0EF/instance/_-64:report"
+    param null
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    optional Integer(0)
+    optional True()
+    optional Null()
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal3
+      getlocal1
+      pushfalse
+      popscope
+      bitnot
+      newactivation
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iffalse             L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iftrue              L28
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-64"), "console")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "report"), 4
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-WP:_-0EF/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

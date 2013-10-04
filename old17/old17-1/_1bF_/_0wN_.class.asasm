@@ -1,0 +1,247 @@
+class
+ refid "_1bF_:_0wN_"
+ instance QName(PackageNamespace("_1bF_"), "_0wN_")
+  extends QName(PackageNamespace("_1bF_"), "_1S_h")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1F_P_")
+  iinit
+   refid "_1bF_:_0wN_/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 10
+    localcount 9
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getTextureFromType"), 1
+     initproperty        QName(PrivateNamespace("*", "_1bF_:_0wN_/instance/init"), "bitmapData")
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1bF_:_0wN_/instance/init"), "bitmapData")
+     pushbyte            80
+     pushtrue
+     pushbyte            0
+     dup
+     pushfalse
+     callproperty        QName(PackageNamespace(""), "redraw"), 6
+     initproperty        QName(PrivateNamespace("*", "_1bF_:_0wN_/instance/init"), "bitmapData")
+
+     findproperty        QName(ProtectedNamespace("_0A_P_"), "_06Z_")
+     pushdouble          0.2
+     initproperty        QName(ProtectedNamespace("_0A_P_"), "_06Z_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_1bF_:_0wN_/instance/init"), "bitmapData")
+     pushbyte            0
+     constructsuper      2
+
+     getlocal0
+     getlocal0
+     getlocal2
+     dup
+     setlocal            6
+
+     initproperty        QName(PackageNamespace(""), "timeLeft_")
+
+     getlocal            6
+     kill                6
+     initproperty        QName(PackageNamespace(""), "lifetime_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "start_")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "end_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "end_")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "start_")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "timeLeft_")
+     divide
+     initproperty        QName(PackageNamespace(""), "dx_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "end_")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "start_")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "timeLeft_")
+     divide
+     initproperty        QName(PackageNamespace(""), "dy_")
+
+     getlex              QName(PackageNamespace("flash.geom"), "Point")
+     getlocal3
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "distance"), 2
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "timeLeft_")
+     divide
+     convert_d
+     setlocal            5
+
+     getlocal0
+     findproperty        QName(PackageNamespace(""), "x_")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "start_")
+     getproperty         QName(PackageNamespace(""), "x")
+     dup
+     setlocal            6
+
+     initproperty        QName(PackageNamespace(""), "x_")
+
+     getlocal            6
+     kill                6
+     initproperty        QName(PackageNamespace(""), "pathX_")
+
+     getlocal0
+     findproperty        QName(PackageNamespace(""), "y_")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "start_")
+     getproperty         QName(PackageNamespace(""), "y")
+     dup
+     setlocal            6
+
+     initproperty        QName(PackageNamespace(""), "y_")
+
+     getlocal            6
+     kill                6
+     initproperty        QName(PackageNamespace(""), "pathY_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "lifetime_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "timeLeft_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace(""), "end_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace(""), "dx_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "dy_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "pathX_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "pathY_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "_1bF_:_0wN_/instance/init"), "bitmapData") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_1bF_:_0wN_/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace(""), "timeLeft_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timeLeft_")
+      pushbyte            0
+      ifnle               L14
+
+      pushfalse
+      returnvalue
+
+L14:
+      findproperty        QName(PackageNamespace(""), "z_")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timeLeft_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lifetime_")
+      divide
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      pushbyte            2
+      multiply
+      initproperty        QName(PackageNamespace(""), "z_")
+
+      findpropstrict      QName(PackageNamespace(""), "setSize")
+      getlex              QName(PackageNamespace(""), "z_")
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 1
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "pathX_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dx_")
+      getlocal2
+      multiply
+      add
+      initproperty        QName(PackageNamespace(""), "pathX_")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "pathY_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dy_")
+      getlocal2
+      multiply
+      add
+      initproperty        QName(PackageNamespace(""), "pathY_")
+
+      findpropstrict      QName(PackageNamespace(""), "moveTo")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "pathX_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "pathY_")
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1bF_:_0wN_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,610 @@
+class
+ refid "_V_C_:Slot"
+ instance QName(PackageNamespace("_V_C_"), "Slot")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_06z", [PackageNamespace("_V_C_")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1X__")
+  iinit
+   refid "_V_C_:Slot/instance/init"
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace("_V_C_"), "_Z_l")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional False()
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("_1X__"), "_14d")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(ProtectedNamespace("_1X__"), "_once")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(ProtectedNamespace("_1X__"), "_signal")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(ProtectedNamespace("_1X__"), "_0N_A_")
+
+     getlocal0
+     getlocal1
+     callpropvoid        QName(ProtectedNamespace("_1X__"), "_uN_"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_1X__"), "_signal") type QName(PackageNamespace("_V_C_"), "_Z_l") end
+  trait slot QName(ProtectedNamespace("_1X__"), "_bi") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("_1X__"), "_14d") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(ProtectedNamespace("_1X__"), "_once") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("_1X__"), "_0N_A_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(ProtectedNamespace("_1X__"), "_yh") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "execute0")
+   method
+    refid "_V_C_:Slot/instance/execute0"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_bi")
+      iftrue              L6
+
+      returnvoid
+
+L6:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_once")
+      iffalse             L11
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "remove"), 0
+
+L11:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      convert_b
+      dup
+      iffalse             L21
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_b
+L21:
+      iffalse             L29
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_14d")
+      pushnull
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      returnvoid
+
+L29:
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_14d"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute1")
+   method
+    refid "_V_C_:Slot/instance/execute1"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_bi")
+      iftrue              L6
+
+      returnvoid
+
+L6:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_once")
+      iffalse             L11
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "remove"), 0
+
+L11:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      convert_b
+      dup
+      iffalse             L21
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_b
+L21:
+      iffalse             L32
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_14d")
+      pushnull
+      getlocal1
+      newarray            1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      returnvoid
+
+L32:
+      getlocal0
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_14d"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_V_C_:Slot/instance/execute"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_bi")
+      iftrue              L6
+
+      returnvoid
+
+L6:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_once")
+      iffalse             L11
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "remove"), 0
+
+L11:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      convert_b
+      dup
+      iffalse             L21
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_b
+L21:
+      iffalse             L28
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+L28:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      ifne                L38
+
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_14d"), 0
+
+      jump                L79
+
+L38:
+      getlocal2
+      pushbyte            1
+      ifne                L47
+
+      getlocal0
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_V_C_:Slot/instance/execute#0"), ProtectedNamespace("_1X__"), PackageNamespace(""), PackageNamespace("_V_C_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_V_C_:Slot/instance/execute#1"), PackageInternalNs("_V_C_"), StaticProtectedNs("_1X__")])
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_14d"), 1
+
+      jump                L79
+
+L47:
+      getlocal2
+      pushbyte            2
+      ifne                L59
+
+      getlocal0
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_V_C_:Slot/instance/execute#0"), ProtectedNamespace("_1X__"), PackageNamespace(""), PackageNamespace("_V_C_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_V_C_:Slot/instance/execute#1"), PackageInternalNs("_V_C_"), StaticProtectedNs("_1X__")])
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_V_C_:Slot/instance/execute#0"), ProtectedNamespace("_1X__"), PackageNamespace(""), PackageNamespace("_V_C_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_V_C_:Slot/instance/execute#1"), PackageInternalNs("_V_C_"), StaticProtectedNs("_1X__")])
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_14d"), 2
+
+      jump                L79
+
+L59:
+      getlocal2
+      pushbyte            3
+      ifne                L74
+
+      getlocal0
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_V_C_:Slot/instance/execute#0"), ProtectedNamespace("_1X__"), PackageNamespace(""), PackageNamespace("_V_C_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_V_C_:Slot/instance/execute#1"), PackageInternalNs("_V_C_"), StaticProtectedNs("_1X__")])
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "_V_C_:Slot/instance/execute#0"), ProtectedNamespace("_1X__"), PackageNamespace(""), PackageNamespace("_V_C_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_V_C_:Slot/instance/execute#1"), PackageInternalNs("_V_C_"), StaticProtectedNs("_1X__")])
+      getlocal1
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "_V_C_:Slot/instance/execute#0"), ProtectedNamespace("_1X__"), PackageNamespace(""), PackageNamespace("_V_C_"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_V_C_:Slot/instance/execute#1"), PackageInternalNs("_V_C_"), StaticProtectedNs("_1X__")])
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_14d"), 3
+
+      jump                L79
+
+L74:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_14d")
+      pushnull
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+L79:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "listener")
+   method
+    refid "_V_C_:Slot/instance/listener/getter"
+    returns QName(PackageNamespace(""), "Function")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_14d")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "listener")
+   method
+    refid "_V_C_:Slot/instance/listener/setter"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      getlocal1
+      ifne                L9
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Given listener is null.\nDid you want to set enabled to false instead?"
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L9:
+      getlocal0
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("_1X__"), "_uN_"), 1
+
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_1X__"), "_14d")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "once")
+   method
+    refid "_V_C_:Slot/instance/once/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_once")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "priority")
+   method
+    refid "_V_C_:Slot/instance/priority/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_0N_A_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_V_C_:Slot/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "[Slot listener: "
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_14d")
+      add
+      pushstring          ", once: "
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_once")
+      add
+      pushstring          ", priority: "
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_0N_A_")
+      add
+      pushstring          ", enabled: "
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_bi")
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "enabled")
+   method
+    refid "_V_C_:Slot/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_bi")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled")
+   method
+    refid "_V_C_:Slot/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_1X__"), "_bi")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "params")
+   method
+    refid "_V_C_:Slot/instance/params/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_yh")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "params")
+   method
+    refid "_V_C_:Slot/instance/params/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_1X__"), "_yh")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "remove")
+   method
+    refid "_V_C_:Slot/instance/remove"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_signal")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_14d")
+      callpropvoid        QName(Namespace("_19d"), "remove"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_1X__"), "_uN_")
+   method
+    refid "_V_C_:Slot/instance/_1X__:_uN_"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      getlocal1
+      ifne                L9
+
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "Given listener is null."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+L9:
+      pushnull
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_1X__"), "_signal")
+      ifne                L17
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Internal signal reference has not been set yet."
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_V_C_:Slot/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

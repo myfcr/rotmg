@@ -1,0 +1,29 @@
+script ; 1376
+ sinit
+  refid "_ie:_bz/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_bz", [PackageNamespace("_ie")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_ie:_bz"
+    popscope
+    initproperty        QName(PackageNamespace("_ie"), "_bz")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_ie"), "_bz")
+  #include "_bz.class.asasm"
+ end ; trait
+end ; script

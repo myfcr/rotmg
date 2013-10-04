@@ -1,0 +1,69 @@
+class
+ refid "_0E_u:_U_i"
+ instance QName(PackageNamespace("_0E_u"), "_U_i")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0p3")
+  iinit
+   refid "_0E_u:_U_i/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional Integer(-1)
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     pushtrue
+     constructsuper      2
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "name_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "_0af")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "name_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_0af") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "_0E_u:_U_i/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "SET_RANK")
+    pushstring          "SET_RANK"
+    initproperty        QName(PackageNamespace(""), "SET_RANK")
+
+    findproperty        QName(PackageNamespace(""), "REMOVE_MEMBER")
+    pushstring          "REMOVE_MEMBER"
+    initproperty        QName(PackageNamespace(""), "REMOVE_MEMBER")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "SET_RANK") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("SET_RANK") end
+ trait const QName(PackageNamespace(""), "REMOVE_MEMBER") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("REMOVE_MEMBER") end
+end ; class

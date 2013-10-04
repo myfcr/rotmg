@@ -1,0 +1,258 @@
+class
+ refid "_-05e:_-1oD"
+ instance QName(PackageNamespace("_-05e"), "_-1oD")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-2r")
+  iinit
+   refid "_-05e:_-1oD/instance/init"
+   param QName(PackageNamespace("_-116"), "Server")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   body
+    maxstack 4
+    localcount 10
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          3
+     kill                7
+     getlocal3
+     declocal            8
+     lessequals
+     declocal            6
+L10:
+     setlocal            8
+
+     setlocal            9
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "RECONNECT")
+     constructsuper      1
+
+     getlocal            8
+     iftrue              L52
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "server_")
+
+     getlocal            8
+     dup
+     jump                L31
+
+     pushscope
+
+     pushwith
+     inclocal_i          4
+     subtract
+     inclocal            3
+     inclocal_i          7
+L31:
+     iffalse             L35
+
+     pop
+     getlocal3
+     convert_b
+L35:
+     iftrue              L46
+
+     getlocal0
+     getlocal2
+     jump                L45
+
+     convert_u
+     nextname
+     add
+     pushfalse
+     getlocal2
+     declocal            8
+L45:
+     initproperty        QName(PackageNamespace("", "#0"), "gameId_")
+
+L46:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-1l0")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "charId_")
+
+L52:
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace("", "#0"), "keyTime_")
+
+     getlocal            9
+     dup
+     iftrue              L61
+
+     pop
+     getlocal0
+     convert_b
+L61:
+     iffalse             L68
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace("", "#0"), "key_")
+
+     getlocal0
+     getlocal            7
+     initproperty        QName(PackageNamespace("", "#0"), "isFromArena_")
+
+L68:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "server_") type QName(PackageNamespace("_-116"), "Server") end
+  trait slot QName(PackageNamespace("", "#0"), "gameId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1l0") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "charId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "keyTime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "key_") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PackageNamespace("", "#0"), "isFromArena_") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "_-05e:_-1oD/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 10
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-05e"), "_-1oD")
+      jump                L10
+
+      greaterthan
+      subtract_i
+      negate_i
+      setlocal2
+
+      greaterequals
+      pushnull
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "server_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "gameId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1l0")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "charId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "keyTime_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "key_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "isFromArena_")
+      constructprop       QName(PackageNamespace("_-05e"), "_-1oD"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-05e:_-1oD/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 10
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "formatToString")
+      jump                L10
+
+      increment_i
+      convert_s
+      getglobalscope
+      strictequals
+      newactivation
+      getlocal0
+L10:
+      getlex              QName(PackageNamespace("", "#0"), "RECONNECT")
+      pushstring          "server_"
+      pushstring          "gameId_"
+      pushstring          "charId_"
+      pushstring          "keyTime_"
+      pushstring          "key_"
+      pushstring          "isFromArena_"
+      callproperty        QName(PackageNamespace("", "#0"), "formatToString"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-05e:_-1oD/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    bitxor
+    setlocal2
+
+    coerce_a
+    increment
+    not
+    getglobalscope
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal1
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PackageNamespace("", "#0"), "RECONNECT")
+    pushstring          "RECONNECT_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "RECONNECT")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "RECONNECT") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("RECONNECT_EVENT") end
+end ; class

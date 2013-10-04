@@ -1,0 +1,124 @@
+class
+ refid "_yF_:_0T_d"
+ instance QName(PackageNamespace("_yF_"), "_0T_d")
+  extends QName(PackageNamespace("_0F_p"), "_0x5")
+  implements Multiname("_1V_m", [PackageNamespace("_0lk")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_1V_k")
+  iinit
+   refid "_yF_:_0T_d/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "payment") flag METADATA type QName(PackageNamespace("_yU_"), "_rt")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_12F_") flag METADATA type QName(PackageNamespace("_0O_c"), "_0O_a")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("_1V_k"), "startTask") flag OVERRIDE
+   method
+    refid "_yF_:_0T_d/instance/_1V_k:startTask"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "payment")
+      getproperty         QName(PackageNamespace(""), "offer")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
+      setlocal1
+
+      pushstring          "identifier"
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id_")
+      pushstring          "data"
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "data_")
+      newobject           2
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      getproperty         QName(Namespace("_Z_B_"), "_0S_q")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_yF_:_0T_d/instance/_1V_k:startTask"), "_10u")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      getlocal2
+      callpropvoid        QName(Namespace("_Z_B_"), "purchaseItems"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_yF_:_0T_d/instance/_1V_k:startTask"), "_10u")
+   method
+    refid "_yF_:_0T_d/instance/_yF_:_0T_d/instance/_1V_k:startTask/_10u"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_4w"), "_1A_L_")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("_4w"), "_1A_L_"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_yF_:_0T_d/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

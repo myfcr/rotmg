@@ -1,0 +1,126 @@
+class
+ refid "_1J_L_:ObjectProcessor"
+ instance QName(PackageNamespace("_1J_L_"), "ObjectProcessor")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_09w")
+  iinit
+   refid "_1J_L_:ObjectProcessor/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/instance"), "_handlers")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/instance"), "_handlers") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "_1U_q")
+   method
+    refid "_1J_L_:ObjectProcessor/instance/_1U_q"
+    param QName(PackageNamespace("_J_p"), "_0w0")
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/instance"), "_handlers")
+      findpropstrict      QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor"), "ObjectHandler")
+      getlocal1
+      getlocal2
+      constructprop       QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor"), "ObjectHandler"), 2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0cd")
+   method
+    refid "_1J_L_:ObjectProcessor/instance/_0cd"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor"), "ObjectHandler")
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor/instance"), "_handlers")
+      coerce_a
+      setlocal            4
+
+      jump                L21
+
+L12:
+      label
+      getlocal            4
+      getlocal3
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_1J_L_:ObjectProcessor"), "ObjectHandler")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "handle"), 1
+
+L21:
+      hasnext2            4, 3
+      iftrue              L12
+
+      kill                4
+      kill                3
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_1J_L_:ObjectProcessor/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

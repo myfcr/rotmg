@@ -1,0 +1,176 @@
+class
+ refid "_05B_:Animations/RunningAnimation"
+ instance QName(PrivateNamespace("*", "_05B_:Animations"), "RunningAnimation")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Animations.as$822:RunningAnimation")
+  iinit
+   refid "_05B_:Animations/RunningAnimation/instance/init"
+   param QName(PackageNamespace("_05B_"), "_082")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "animationData_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "start_")
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "frameId_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "frameStart_")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "texture_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "animationData_") type QName(PackageNamespace("_05B_"), "_082") end
+  trait slot QName(PackageNamespace(""), "start_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "frameId_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "frameStart_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "texture_") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait method QName(PackageNamespace(""), "getTexture")
+   method
+    refid "_05B_:Animations/RunningAnimation/instance/getTexture"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "animationData_")
+      getproperty         QName(PackageNamespace(""), "_G_g")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "frameId_")
+      getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_05B_:Animations"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_05B_:Animations/RunningAnimation/instance/getTexture"), ProtectedNamespace("Animations.as$822:RunningAnimation"), StaticProtectedNs("Animations.as$822:RunningAnimation")])
+      coerce              QName(PackageNamespace("_05B_"), "_0E_s")
+      setlocal2
+
+      jump                L51
+
+L11:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "frameId_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "animationData_")
+      getproperty         QName(PackageNamespace(""), "_G_g")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      ifnge               L22
+
+      pushnull
+      returnvalue
+
+L22:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "frameStart_")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "time_")
+      add
+      initproperty        QName(PackageNamespace(""), "frameStart_")
+
+      getlocal0
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "frameId_")
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "frameId_")
+
+      kill                4
+      kill                3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "animationData_")
+      getproperty         QName(PackageNamespace(""), "_G_g")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "frameId_")
+      getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_05B_:Animations"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_05B_:Animations/RunningAnimation/instance/getTexture"), ProtectedNamespace("Animations.as$822:RunningAnimation"), StaticProtectedNs("Animations.as$822:RunningAnimation")])
+      coerce              QName(PackageNamespace("_05B_"), "_0E_s")
+      setlocal2
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "texture_")
+
+L51:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "frameStart_")
+      subtract
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "time_")
+      ifgt                L11
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      pushnull
+      ifne                L71
+
+      getlocal0
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_1E_N_")
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      pushbyte            100
+      multiply
+      callproperty        QName(PackageNamespace(""), "getTexture"), 1
+      initproperty        QName(PackageNamespace(""), "texture_")
+
+L71:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_05B_:Animations/RunningAnimation/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,913 @@
+class
+ refid "_-Yf:LevelUpEffect"
+ instance QName(PackageNamespace("_-Yf"), "LevelUpEffect")
+  extends QName(PackageNamespace("_-Yf"), "_-00p")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-182")
+  iinit
+   refid "_-Yf:LevelUpEffect/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            4
+     nextvalue
+     setlocal            4
+
+     setlocal3
+
+     multiply_i
+     declocal_i          5
+L10:
+     setlocal            6
+
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     setlocal            4
+
+     getlocal            7
+     dup
+     iftrue              L23
+
+     pop
+     getlocal2
+     convert_b
+L23:
+     iffalse             L45
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), PackageNamespace("", "#0"), PackageNamespace("_-Yf"), PackageInternalNs("_-Yf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-182"), StaticProtectedNs("_-182"), StaticProtectedNs("_-1eu"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "parts1_")
+
+     getlocal            7
+     iffalse             L45
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), PackageNamespace("", "#0"), PackageNamespace("_-Yf"), PackageInternalNs("_-Yf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-182"), StaticProtectedNs("_-182"), StaticProtectedNs("_-1eu"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "parts2_")
+
+     getlocal            6
+     dup
+     iffalse             L44
+
+     pop
+     getlocal3
+     convert_b
+L44:
+     iftrue              L56
+
+L45:
+     getlocal0
+     constructsuper      0
+
+     jump                L54
+
+     add
+     lshift
+     inclocal_i          3
+     kill                3
+     getlocal            5
+     kill                2
+L54:
+     getlocal            6
+     iftrue              L59
+
+L56:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "go_")
+
+L59:
+     pushbyte            0
+     setlocal            5
+
+     jump                L112
+
+L62:
+     label
+     findpropstrict      QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     getlocal2
+     pushbyte            100
+     constructprop       QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle"), 2
+     coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     setlocal            4
+
+     getlocal            7
+     dup
+     iftrue              L75
+
+     pop
+     getlocal3
+     convert_b
+L75:
+     iffalse             L80
+
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "parts1_")
+     getlocal            4
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L80:
+     findpropstrict      QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     getlocal2
+     pushbyte            100
+     constructprop       QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle"), 2
+     coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+     jump                L92
+
+     setlocal2
+
+     bitor
+     declocal            6
+     getlocal            6
+     decrement
+     setlocal            5
+
+L92:
+     setlocal            4
+
+     getlocal            6
+     dup
+     iffalse             L99
+
+     pop
+     getlocal1
+     convert_b
+L99:
+     iftrue              L112
+
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "parts2_")
+     getlocal            4
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal            6
+     dup
+     iffalse             L110
+
+     pop
+     getlocal3
+     convert_b
+L110:
+     iftrue              L112
+
+     inclocal_i          5
+L112:
+     getlocal            5
+     getlocal3
+     iflt                L62
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace("", "#0"), "parts1_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")>) end
+  trait slot QName(PackageNamespace("", "#0"), "parts2_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")>) end
+  trait slot QName(PackageNamespace("", "#0"), "startTime_") type QName(PackageNamespace("", "#0"), "int") value Integer(-1) end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-Yf:LevelUpEffect/instance/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 7
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          4
+      increment
+      getlocal            4
+      bitxor
+      kill                2
+      kill                2
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iftrue              L32
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "map_")
+      pushnull
+      ifne                L36
+
+      getlocal            5
+      iffalse             L41
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "try "), 0
+
+      getlocal            4
+      dup
+      iffalse             L31
+
+      pop
+      getlocal1
+      convert_b
+L31:
+      iftrue              L36
+
+L32:
+      pushfalse
+      returnvalue
+
+      getlocal            5
+      iffalse             L78
+
+L36:
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+L41:
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+      getlocal            5
+      dup
+      iftrue              L52
+
+      pop
+      getlocal3
+      convert_b
+L52:
+      iffalse             L78
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      getlocal            4
+      dup
+      iffalse             L61
+
+      pop
+      getlocal0
+      convert_b
+L61:
+      iftrue              L79
+
+      pushbyte            0
+      jump                L70
+
+      pushundefined
+      negate
+      pushnull
+      getlocal3
+      typeof
+      setlocal3
+
+L70:
+      getlocal            4
+      iftrue              L81
+
+      ifnlt               L78
+
+      getlocal            4
+      iftrue              L78
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "startTime_")
+
+L78:
+      getlocal1
+L79:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+L81:
+      subtract
+      getlocal            5
+      iffalse             L88
+
+      getlex              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "_-pS")
+      divide
+      getlocal            5
+      iffalse             L89
+
+L88:
+      convert_d
+L89:
+      setlocal3
+
+      getlocal            5
+      dup
+      iftrue              L96
+
+      pop
+      getlocal2
+      convert_b
+L96:
+      iffalse             L146
+
+      getlocal3
+      pushbyte            1
+      ifnge               L124
+
+      getlocal            5
+      iffalse             L106
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "try "), 0
+
+      getlocal            4
+      iftrue              L138
+
+L106:
+      pushfalse
+      getlocal            5
+      dup
+      iftrue              L113
+
+      pop
+      getlocal3
+      convert_b
+L113:
+      iffalse             L147
+
+      returnvalue
+
+      getlocal            5
+      iffalse             L146
+
+      jump                L124
+
+      coerce_a
+      inclocal            3
+      getlocal3
+      inclocal_i          3
+      multiply_i
+      subtract_i
+L124:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "parts1_")
+      pushbyte            1
+      pushbyte            0
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-pM"), 4
+
+      getlocal            4
+      dup
+      iffalse             L137
+
+      pop
+      getlocal3
+      convert_b
+L137:
+      iftrue              L146
+
+L138:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "parts2_")
+      pushbyte            1
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-pM"), 4
+
+L146:
+      pushtrue
+L147:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "try ")
+   method
+    refid "_-Yf:LevelUpEffect/instance/_-Yf:LevelUpEffect/try "
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      getlocal2
+      inclocal            4
+      hasnext
+      subtract_i
+      inclocal            2
+      getlocal3
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "parts1_")
+      coerce_a
+      setlocal3
+
+      jump                L34
+
+L23:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal1
+
+      getlocal            5
+      iftrue              L34
+
+      getlocal1
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "alive_")
+
+L34:
+      hasnext2            3, 2
+      getlocal            4
+      dup
+      jump                L44
+
+      rshift
+      kill                2
+      declocal            3
+      setlocal            4
+
+      bitxor
+      coerce_a
+L44:
+      iftrue              L48
+
+      pop
+      getlocal1
+      convert_b
+L48:
+      iffalse             L91
+
+      iftrue              L23
+
+      getlocal            4
+      iffalse             L92
+
+      kill                3
+      getlocal            4
+      dup
+      iftrue              L59
+
+      pop
+      getlocal1
+      convert_b
+L59:
+      iffalse             L93
+
+      kill                2
+      getlocal            5
+      iftrue              L94
+
+      pushbyte            0
+      jump                L71
+
+      inclocal_i          4
+      negate
+      nextname
+      getlocal            4
+      setlocal            4
+
+      lessthan
+L71:
+      setlocal2
+
+      getlocal            5
+      iftrue              L93
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "parts2_")
+      coerce_a
+      setlocal3
+
+      jump                L90
+
+L79:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal1
+
+      getlocal            5
+      iftrue              L90
+
+      getlocal1
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "alive_")
+
+L90:
+      hasnext2            3, 2
+L91:
+      iftrue              L79
+
+L92:
+      kill                3
+L93:
+      kill                2
+L94:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-pM")
+   method
+    refid "_-Yf:LevelUpEffect/instance/_-pM"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")>)
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 12
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      add
+      inclocal            2
+      getlocal            10
+      lessequals
+      setlocal            9
+
+      setlocal            9
+
+L10:
+      setlocal            10
+
+      setlocal            11
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      getlocal            10
+      iftrue              L29
+
+      pushbyte            0
+      setlocal            5
+
+L29:
+      jump                L196
+
+L30:
+      label
+      getlocal1
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), PackageNamespace("", "#0"), PackageNamespace("_-Yf"), PackageInternalNs("_-Yf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-182"), StaticProtectedNs("_-182"), StaticProtectedNs("_-1eu"), StaticProtectedNs("_-1Wd"), StaticProtectedNs("_-1hK")])
+      coerce              QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#0"), "LevelUpParticle")
+      dup
+      setlocal            6
+
+      getlocal            4
+      getlocal            10
+      iftrue              L51
+
+      pushbyte            2
+      getlocal            11
+      iffalse             L55
+
+      multiply
+      getlocal            10
+      dup
+      iffalse             L50
+
+      pop
+      getlocal3
+      convert_b
+L50:
+      iftrue              L59
+
+L51:
+      decrement
+      getlocal            10
+      iftrue              L59
+
+      getlocal            5
+L55:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      divide
+      add
+L59:
+      setproperty         QName(PackageNamespace("", "#0"), "z_")
+
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "z_")
+      pushbyte            0
+      ifnlt               L65
+
+      jump                L195
+
+L65:
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "z_")
+      pushbyte            1
+      ifngt               L73
+
+      getlocal            6
+      pushfalse
+      setproperty         QName(PackageNamespace("", "#0"), "alive_")
+
+      jump                L195
+
+L73:
+      getlocal2
+      getlocal            10
+      iftrue              L153
+
+      pushbyte            2
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      getlocal            11
+      dup
+      iftrue              L86
+
+      pop
+      getlocal0
+      convert_b
+L86:
+      iffalse             L105
+
+      getlocal            5
+      getlocal            11
+      iffalse             L106
+
+      jump                L97
+
+      setlocal2
+
+      kill                7
+      declocal            3
+      inclocal_i          10
+      not
+      increment
+L97:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      divide
+      getlocal            11
+      iffalse             L116
+
+      multiply
+      getlocal            11
+      iffalse             L128
+
+L105:
+      pushbyte            2
+L106:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      getlocal            11
+      dup
+      iftrue              L115
+
+      pop
+      getlocal3
+      convert_b
+L115:
+      iffalse             L129
+
+L116:
+      getlocal            4
+      multiply
+      getlocal            11
+      iffalse             L129
+
+      add
+      getlocal            10
+      dup
+      iffalse             L127
+
+      pop
+      getlocal1
+      convert_b
+L127:
+      iftrue              L130
+
+L128:
+      getlocal3
+L129:
+      add
+L130:
+      multiply
+      getlocal            10
+      iftrue              L166
+
+      convert_d
+      getlocal            11
+      iffalse             L166
+
+      setlocal            7
+
+      getlocal            11
+      iffalse             L196
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getlocal            11
+      iffalse             L158
+
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            7
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      convert_d
+      getlocal            10
+      iftrue              L166
+
+L153:
+      setlocal            8
+
+      getlocal            10
+      iftrue              L185
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+L158:
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            7
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      convert_d
+L166:
+      setlocal            9
+
+      getlocal            6
+      getproperty         QName(PackageNamespace("", "#0"), "map_")
+      pushnull
+      jump                L177
+
+      declocal            7
+      convert_o
+      inclocal            9
+      decrement_i
+      checkfilter
+      inclocal            5
+L177:
+      ifne                L191
+
+      getlocal            11
+      dup
+      iftrue              L184
+
+      pop
+      getlocal3
+      convert_b
+L184:
+      iffalse             L196
+
+L185:
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal            6
+      getlocal            8
+      getlocal            9
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      jump                L195
+
+L191:
+      getlocal            6
+      getlocal            8
+      getlocal            9
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveTo"), 2
+
+L195:
+      inclocal_i          5
+L196:
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L30
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Yf:LevelUpEffect/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    convert_i
+    coerce_a
+    dxnslate
+    rshift
+    coerce_a
+    increment
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L19
+
+    findproperty        QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "_-pS")
+    pushshort           2000
+    initproperty        QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "_-pS")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-Yf:LevelUpEffect#1"), "_-pS") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(2000) end
+end ; class

@@ -1,0 +1,1017 @@
+class
+ refid "com.company.util:BitmapUtil"
+ instance QName(PackageNamespace("com.company.util"), "BitmapUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_43")
+  iinit
+   refid "com.company.util:BitmapUtil/instance/init"
+   param QName(PrivateNamespace("*", "com.company.util:BitmapUtil"), "StaticEnforcer")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.util:BitmapUtil/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "mirror") flag FINAL dispid 3
+  method
+   refid "com.company.util:BitmapUtil/class/mirror"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("flash.display"), "BitmapData")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 8
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            5
+
+     getlocal2
+     pushbyte            0
+     ifne                L11
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     convert_i
+     setlocal2
+
+L11:
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     pushtrue
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L46
+
+L24:
+     label
+     pushbyte            0
+     setlocal            5
+
+     jump                L41
+
+L28:
+     label
+     getlocal3
+     getlocal2
+     getlocal            4
+     subtract
+     decrement
+     getlocal            5
+     getlocal1
+     getlocal            4
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "getPixel32"), 2
+     callpropvoid        QName(PackageNamespace(""), "setPixel32"), 3
+
+     inclocal_i          5
+L41:
+     getlocal            5
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     iflt                L28
+
+     inclocal_i          4
+L46:
+     getlocal            4
+     getlocal2
+     iflt                L24
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_T_3") flag FINAL dispid 4
+  method
+   refid "com.company.util:BitmapUtil/class/_T_3"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("flash.display"), "BitmapData")
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+     setlocal3
+
+     getlocal3
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     negate
+     pushbyte            2
+     divide
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     negate
+     pushbyte            2
+     divide
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     getlocal3
+     getlocal2
+     getlex              QName(PackageNamespace(""), "Math")
+     getproperty         QName(PackageNamespace(""), "PI")
+     multiply
+     pushbyte            2
+     divide
+     callpropvoid        QName(PackageNamespace(""), "rotate"), 1
+
+     getlocal3
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            2
+     divide
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     pushtrue
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     dup
+     setlocal            4
+
+     getlocal1
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_1fP_") flag FINAL dispid 5
+  method
+   refid "com.company.util:BitmapUtil/class/_1fP_"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("flash.display"), "BitmapData")
+   body
+    maxstack 9
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+     getlocal            4
+     getlocal            5
+     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 2
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     dup
+     setlocal            6
+
+     getlocal1
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     pushbyte            0
+     dup
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     callpropvoid        QName(PackageNamespace(""), "copyPixels"), 3
+
+     getlocal            6
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_0R_H_") flag FINAL dispid 6
+  method
+   refid "com.company.util:BitmapUtil/class/_0R_H_"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal2
+
+     pushbyte            0
+     setlocal3
+
+     jump                L33
+
+L11:
+     label
+     pushbyte            0
+     setlocal            4
+
+     jump                L28
+
+L15:
+     label
+     getlocal1
+     getlocal3
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "getPixel32"), 2
+     pushdouble          4278190080
+     bitand
+     dup
+     setlocal            5
+
+     pushbyte            0
+     ifne                L27
+
+     inclocal_i          2
+L27:
+     inclocal_i          4
+L28:
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     iflt                L15
+
+     inclocal_i          3
+L33:
+     getlocal3
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     iflt                L11
+
+     getlocal2
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     multiply
+     divide
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_fv") flag FINAL dispid 7
+  method
+   refid "com.company.util:BitmapUtil/class/_fv"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 8
+    localcount 15
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal3
+
+     pushnull
+     coerce_s
+     setlocal            7
+
+     pushbyte            0
+     setlocal            8
+
+     pushbyte            0
+     setlocal            9
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal2
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L67
+
+L19:
+     label
+     pushbyte            0
+     setlocal            8
+
+     jump                L62
+
+L23:
+     label
+     getlocal1
+     getlocal            4
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "getPixel32"), 2
+     convert_u
+     setlocal3
+
+     getlocal3
+     pushdouble          4278190080
+     bitand
+     pushbyte            0
+     ifne                L36
+
+     jump                L61
+
+L36:
+     getlocal2
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+     iftrue              L45
+
+     getlocal2
+     getlocal3
+     pushbyte            1
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.util:BitmapUtil/class/_fv"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.util:BitmapUtil"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), ProtectedNamespace("_43"), StaticProtectedNs("_43")])
+
+     jump                L61
+
+L45:
+     getlocal2
+     dup
+     setlocal            10
+
+     getlocal3
+     dup
+     setlocal            11
+
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:BitmapUtil/class/_fv"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.util:BitmapUtil"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), ProtectedNamespace("_43"), StaticProtectedNs("_43")])
+     increment
+     setlocal            12
+
+     getlocal            10
+     getlocal            11
+     getlocal            12
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.util:BitmapUtil/class/_fv"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.util:BitmapUtil"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), ProtectedNamespace("_43"), StaticProtectedNs("_43")])
+
+     kill                12
+     kill                10
+     kill                11
+L61:
+     inclocal_i          8
+L62:
+     getlocal            8
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     iflt                L23
+
+     inclocal_i          4
+L67:
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     iflt                L19
+
+     pushbyte            0
+     convert_u
+     setlocal            5
+
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+     pushbyte            0
+     setlocal            10
+
+     getlocal2
+     coerce_a
+     setlocal            11
+
+     jump                L121
+
+L83:
+     label
+     getlocal            11
+     getlocal            10
+     nextname
+     coerce_s
+     setlocal            7
+
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     getlocal            7
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     convert_u
+     setlocal3
+
+     getlocal2
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:BitmapUtil/class/_fv"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.util:BitmapUtil"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), ProtectedNamespace("_43"), StaticProtectedNs("_43")])
+     convert_i
+     dup
+     setlocal            9
+
+     getlocal            6
+     greaterthan
+     dup
+     iftrue              L114
+
+     pop
+     getlocal            9
+     getlocal            6
+     equals
+     dup
+     iffalse             L114
+
+     pop
+     getlocal3
+     getlocal            5
+     greaterthan
+L114:
+     iffalse             L121
+
+     getlocal3
+     convert_u
+     setlocal            5
+
+     getlocal            9
+     convert_u
+     setlocal            6
+
+L121:
+     hasnext2            11, 10
+     iftrue              L83
+
+     kill                11
+     kill                10
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_06E_") flag FINAL dispid 8
+  method
+   refid "com.company.util:BitmapUtil/class/_06E_"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   param QName(PackageNamespace("com.company.util"), "IntPoint")
+   param QName(PackageNamespace("com.company.util"), "IntPoint")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 5
+    localcount 24
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            11
+
+     pushbyte            0
+     setlocal            19
+
+     pushbyte            0
+     setlocal            20
+
+     pushbyte            0
+     setlocal            21
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     convert_i
+     setlocal            4
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     convert_i
+     setlocal            5
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "x"), 0
+     convert_i
+     setlocal            6
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "y"), 0
+     convert_i
+     setlocal            7
+
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "x"), 0
+     convert_i
+     setlocal            8
+
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "y"), 0
+     convert_i
+     setlocal            9
+
+     getlocal            7
+     getlocal            9
+     greaterthan
+     iffalse             L43
+
+     getlocal            7
+     getlocal            9
+     subtract
+     coerce_a
+     jump                L47
+
+L43:
+     getlocal            9
+     getlocal            7
+     subtract
+     coerce_a
+L47:
+     getlocal            6
+     getlocal            8
+     greaterthan
+     iffalse             L56
+
+     getlocal            6
+     getlocal            8
+     subtract
+     coerce_a
+     jump                L60
+
+L56:
+     getlocal            8
+     getlocal            6
+     subtract
+     coerce_a
+L60:
+     greaterthan
+     dup
+     setlocal            10
+
+     iffalse             L91
+
+     getlocal            6
+     convert_i
+     setlocal            11
+
+     getlocal            7
+     convert_i
+     setlocal            6
+
+     getlocal            11
+     convert_i
+     setlocal            7
+
+     getlocal            8
+     convert_i
+     setlocal            11
+
+     getlocal            9
+     convert_i
+     setlocal            8
+
+     getlocal            11
+     convert_i
+     setlocal            9
+
+     getlocal            4
+     convert_i
+     setlocal            11
+
+     getlocal            5
+     convert_i
+     setlocal            4
+
+     getlocal            11
+     convert_i
+     setlocal            5
+
+L91:
+     getlocal            6
+     getlocal            8
+     ifngt               L112
+
+     getlocal            6
+     convert_i
+     setlocal            11
+
+     getlocal            8
+     convert_i
+     setlocal            6
+
+     getlocal            11
+     convert_i
+     setlocal            8
+
+     getlocal            7
+     convert_i
+     setlocal            11
+
+     getlocal            9
+     convert_i
+     setlocal            7
+
+     getlocal            11
+     convert_i
+     setlocal            9
+
+L112:
+     getlocal            8
+     getlocal            6
+     subtract
+     convert_i
+     setlocal            12
+
+     getlocal            7
+     getlocal            9
+     greaterthan
+     iffalse             L126
+
+     getlocal            7
+     getlocal            9
+     subtract
+     convert_i
+     jump                L130
+
+L126:
+     getlocal            9
+     getlocal            7
+     subtract
+     convert_i
+L130:
+     convert_i
+     setlocal            13
+
+     getlocal            12
+     pushbyte            1
+     add
+     negate
+     pushbyte            2
+     divide
+     convert_i
+     setlocal            14
+
+     getlocal            7
+     getlocal            9
+     ifngt               L145
+
+     pushbyte            255
+     jump                L146
+
+L145:
+     pushbyte            1
+L146:
+     convert_i
+     setlocal            15
+
+     getlocal            8
+     getlocal            4
+     decrement
+     greaterthan
+     iffalse             L157
+
+     getlocal            4
+     decrement
+     convert_i
+     jump                L159
+
+L157:
+     getlocal            8
+     convert_i
+L159:
+     convert_i
+     setlocal            16
+
+     getlocal            7
+     convert_i
+     setlocal            17
+
+     getlocal            6
+     convert_i
+     dup
+     setlocal            18
+
+     pushbyte            0
+     ifnlt               L204
+
+     getlocal            14
+     getlocal            13
+     getlocal            18
+     negate
+     multiply
+     add
+     convert_i
+     dup
+     setlocal            14
+
+     pushbyte            0
+     ifnge               L202
+
+     getlocal            14
+     getlocal            12
+     divide
+     pushbyte            1
+     add
+     convert_i
+     setlocal            19
+
+     getlocal            17
+     getlocal            15
+     getlocal            19
+     multiply
+     add
+     convert_i
+     setlocal            17
+
+     getlocal            14
+     getlocal            19
+     getlocal            12
+     multiply
+     subtract
+     convert_i
+     setlocal            14
+
+L202:
+     pushbyte            0
+     setlocal            18
+
+L204:
+     getlocal            15
+     pushbyte            0
+     greaterthan
+     dup
+     iffalse             L213
+
+     pop
+     getlocal            17
+     pushbyte            0
+     lessthan
+L213:
+     dup
+     iftrue              L225
+
+     pop
+     getlocal            15
+     pushbyte            0
+     lessthan
+     dup
+     iffalse             L225
+
+     pop
+     getlocal            17
+     getlocal            5
+     greaterequals
+L225:
+     iffalse             L273
+
+     getlocal            15
+     pushbyte            0
+     greaterthan
+     iffalse             L235
+
+     getlocal            17
+     negate
+     decrement
+     convert_i
+     jump                L239
+
+L235:
+     getlocal            17
+     getlocal            5
+     subtract
+     convert_i
+L239:
+     convert_i
+     setlocal            20
+
+     getlocal            14
+     getlocal            12
+     getlocal            20
+     multiply
+     subtract
+     convert_i
+     dup
+     setlocal            14
+
+     negate
+     getlocal            13
+     divide
+     convert_i
+     setlocal            21
+
+     getlocal            18
+     getlocal            21
+     add
+     convert_i
+     setlocal            18
+
+     getlocal            14
+     getlocal            21
+     getlocal            13
+     multiply
+     add
+     convert_i
+     setlocal            14
+
+     getlocal            17
+     getlocal            20
+     getlocal            15
+     multiply
+     add
+     convert_i
+     setlocal            17
+
+L273:
+     jump                L362
+
+L274:
+     label
+     getlocal            15
+     pushbyte            0
+     greaterthan
+     dup
+     iffalse             L284
+
+     pop
+     getlocal            17
+     getlocal            5
+     greaterequals
+L284:
+     dup
+     iftrue              L296
+
+     pop
+     getlocal            15
+     pushbyte            0
+     lessthan
+     dup
+     iffalse             L296
+
+     pop
+     getlocal            17
+     pushbyte            0
+     lessthan
+L296:
+     iffalse             L298
+
+     jump                L365
+
+L298:
+     getlocal            10
+     iffalse             L322
+
+     getlocal            17
+     pushbyte            0
+     greaterequals
+     dup
+     iffalse             L309
+
+     pop
+     getlocal            17
+     getlocal            5
+     lessthan
+L309:
+     dup
+     iffalse             L318
+
+     pop
+     getlocal1
+     getlocal            17
+     getlocal            18
+     callproperty        QName(PackageNamespace(""), "getPixel"), 2
+     pushbyte            0
+     equals
+L318:
+     iffalse             L321
+
+     pushfalse
+     returnvalue
+
+L321:
+     jump                L343
+
+L322:
+     getlocal            17
+     pushbyte            0
+     greaterequals
+     dup
+     iffalse             L331
+
+     pop
+     getlocal            17
+     getlocal            5
+     lessthan
+L331:
+     dup
+     iffalse             L340
+
+     pop
+     getlocal1
+     getlocal            18
+     getlocal            17
+     callproperty        QName(PackageNamespace(""), "getPixel"), 2
+     pushbyte            0
+     equals
+L340:
+     iffalse             L343
+
+     pushfalse
+     returnvalue
+
+L343:
+     getlocal            14
+     getlocal            13
+     add
+     convert_i
+     dup
+     setlocal            14
+
+     pushbyte            0
+     ifnge               L361
+
+     getlocal            17
+     getlocal            15
+     add
+     convert_i
+     setlocal            17
+
+     getlocal            14
+     getlocal            12
+     subtract
+     convert_i
+     setlocal            14
+
+L361:
+     inclocal_i          18
+L362:
+     getlocal            18
+     getlocal            16
+     ifle                L274
+
+L365:
+     pushtrue
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

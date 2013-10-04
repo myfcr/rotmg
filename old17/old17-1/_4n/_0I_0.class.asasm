@@ -1,0 +1,185 @@
+class
+ refid "_4n:_0I_0"
+ instance QName(PackageInternalNs("_4n"), "_0I_0")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_a_")
+  iinit
+   refid "_4n:_0I_0/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "id_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "price_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "currency_")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "converted_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "id_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "price_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "currency_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "converted_") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "record")
+   method
+    refid "_4n:_0I_0/instance/record"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      jump                L43
+
+L3:
+      label
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace(""), "global"), 0
+      pushstring          "credits"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "converted_")
+      iffalse             L12
+
+      pushstring          "buyConverted"
+      jump                L13
+
+L12:
+      pushstring          "buy"
+L13:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "id_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "price_")
+      callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
+
+      jump                L70
+
+L19:
+      label
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace(""), "global"), 0
+      pushstring          "credits"
+      pushstring          "buyFame"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "id_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "price_")
+      callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
+
+      jump                L70
+
+L30:
+      label
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace(""), "global"), 0
+      pushstring          "credits"
+      pushstring          "buyGuildFame"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "id_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "price_")
+      callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
+
+      jump                L70
+
+L41:
+      label
+      jump                L70
+
+L43:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_4n:_0I_0/instance"), "currency_")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "_U_s")
+      getlocal1
+      ifstrictne          L52
+
+      pushbyte            0
+      jump                L68
+
+L52:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "FAME")
+      getlocal1
+      ifstrictne          L58
+
+      pushbyte            1
+      jump                L68
+
+L58:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace(""), "_0M_U_")
+      getlocal1
+      ifstrictne          L64
+
+      pushbyte            2
+      jump                L68
+
+L64:
+      jump                L67
+
+      pushbyte            3
+      jump                L68
+
+L67:
+      pushbyte            3
+L68:
+      kill                1
+      lookupswitch        L41, [L3, L19, L30, L41]
+
+L70:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_4n:_0I_0/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

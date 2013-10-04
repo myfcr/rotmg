@@ -1,0 +1,61 @@
+script ; 1918
+ sinit
+  refid "_-WP:CommandLine/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("CommandLine", [PackageNamespace("_-WP")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-WP"), "_-0EF")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-WP"), "_-0EF")
+    newclass            "_-WP:CommandLine"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-WP"), "CommandLine")
+
+    findpropstrict      Multiname("FakeFunction", [PrivateNamespace("*", "_-WP:CommandLine#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-WP:CommandLine/FakeFunction"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-WP:CommandLine#1"), "FakeFunction")
+
+    findpropstrict      Multiname("SlashCommand", [PrivateNamespace("*", "_-WP:CommandLine#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-WP:CommandLine/SlashCommand"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-WP:CommandLine#1"), "SlashCommand")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-WP"), "CommandLine")
+  #include "CommandLine.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-WP:CommandLine#1"), "FakeFunction")
+  #include "CommandLine/FakeFunction.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-WP:CommandLine#1"), "SlashCommand")
+  #include "CommandLine/SlashCommand.class.asasm"
+ end ; trait
+end ; script

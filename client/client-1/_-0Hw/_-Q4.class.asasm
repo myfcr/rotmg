@@ -1,0 +1,144 @@
+class
+ refid "_-0Hw:_-Q4"
+ instance QName(PackageNamespace("_-0Hw"), "_-Q4")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1SU")
+  iinit
+   refid "_-0Hw:_-Q4/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     pushundefined
+     add_i
+     coerce_s
+     coerce_s
+     greaterequals
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0S7") flag METADATA type QName(PackageNamespace("_-0jn"), "_-1VW")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "mediatorMap") flag METADATA type QName(PackageNamespace("_-0xc"), "_-0p")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setup") flag METADATA
+   method
+    refid "_-0Hw:_-Q4/instance/setup"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      not
+      greaterthan
+      pushfalse
+      rshift
+      multiply_i
+      pushnan
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      jump                L21
+
+      lessequals
+      coerce_a
+      increment
+      pushscope
+
+      rshift
+      pushnull
+L21:
+      getlocal2
+      iffalse             L35
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0S7")
+      getlex              QName(PackageNamespace("_-99"), "_-1P1")
+      callproperty        QName(PackageNamespace("", "#0"), "map"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-1HN"), 0
+
+      getlocal2
+      dup
+      iftrue              L34
+
+      pop
+      getlocal1
+      convert_b
+L34:
+      iffalse             L41
+
+L35:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "mediatorMap")
+      getlex              QName(PackageNamespace("_-1Co"), "_-0VF")
+      callproperty        QName(Namespace("_-iA"), "map"), 1
+      getlex              QName(PackageNamespace("_-1Co"), "_-zi")
+      callpropvoid        QName(Namespace("_-1KA"), "_-07Z"), 1
+
+L41:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+   metadata "PostConstruct"
+   end ; metadata
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Hw:_-Q4/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

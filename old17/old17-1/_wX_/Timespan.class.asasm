@@ -1,0 +1,146 @@
+class
+ refid "_wX_:Timespan"
+ instance QName(PackageNamespace("_wX_"), "Timespan")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_3k")
+  iinit
+   refid "_wX_:Timespan/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_wX_:Timespan"), "name")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_wX_:Timespan"), "id")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_wX_:Timespan"), "name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_wX_:Timespan"), "id") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "getName")
+   method
+    refid "_wX_:Timespan/instance/getName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_wX_:Timespan"), "name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_wi")
+   method
+    refid "_wX_:Timespan/instance/_wi"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_wX_:Timespan"), "id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_wX_:Timespan/class/init"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_P__")
+    getlocal0
+    getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+    getproperty         QName(PackageNamespace(""), "_sY_")
+    pushstring          "week"
+    construct           2
+    initproperty        QName(PackageNamespace(""), "_P__")
+
+    findproperty        QName(PackageNamespace(""), "_6m")
+    getlocal0
+    getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+    getproperty         QName(PackageNamespace(""), "_1C_b")
+    pushstring          "month"
+    construct           2
+    initproperty        QName(PackageNamespace(""), "_6m")
+
+    findproperty        QName(PackageNamespace(""), "_1bH_")
+    getlocal0
+    getlex              QName(PackageNamespace("_16y"), "_1H_V_")
+    getproperty         QName(PackageNamespace(""), "_1R_Y_")
+    pushstring          "all"
+    construct           2
+    initproperty        QName(PackageNamespace(""), "_1bH_")
+
+    findproperty        QName(PackageNamespace(""), "_yG_")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "_wX_:Timespan"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_wX_:Timespan/class/init"), PackageNamespace("_wX_"), PackageInternalNs("_wX_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_3k"), StaticProtectedNs("_3k")])
+    getlocal0
+    applytype           1
+    pushbyte            3
+    construct           1
+    dup
+    pushbyte            0
+    getlex              QName(PackageNamespace(""), "_P__")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            1
+    getlex              QName(PackageNamespace(""), "_6m")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            2
+    getlex              QName(PackageNamespace(""), "_1bH_")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    initproperty        QName(PackageNamespace(""), "_yG_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_P__") slotid 1 type QName(PackageNamespace("_wX_"), "Timespan") end
+ trait const QName(PackageNamespace(""), "_6m") slotid 2 type QName(PackageNamespace("_wX_"), "Timespan") end
+ trait const QName(PackageNamespace(""), "_1bH_") slotid 3 type QName(PackageNamespace("_wX_"), "Timespan") end
+ trait const QName(PackageNamespace(""), "_yG_") slotid 4 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_wX_"), "Timespan")>) end
+end ; class

@@ -1,0 +1,162 @@
+class
+ refid "_0E_w:_0S_n"
+ instance QName(PackageNamespace("_0E_w"), "_0S_n")
+  extends QName(PackageNamespace("_0E_w"), "_0m0")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_Q_U_")
+  iinit
+   refid "_0E_w:_0S_n/instance/init"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
+     constructprop       QName(PackageNamespace("flash.display"), "Loader"), 0
+     callproperty        QName(PackageNamespace(""), "addChild"), 1
+     getlex              QName(PackageNamespace("flash.display"), "Loader")
+     astypelate
+     initproperty        QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "loader")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "loader") type QName(PackageNamespace("flash.display"), "Loader") end
+  trait slot QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "_2n") type QName(PackageNamespace("_0U_C_"), "_0R__") end
+  trait getter QName(PackageNamespace(""), "content") flag OVERRIDE
+   method
+    refid "_0E_w:_0S_n/instance/content/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "loader")
+      getproperty         QName(PackageNamespace(""), "content")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "contentLoaderInfo") flag OVERRIDE
+   method
+    refid "_0E_w:_0S_n/instance/contentLoaderInfo/getter"
+    returns QName(PackageNamespace("_0U_C_"), "_0R__")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "_2n")
+      pushnull
+      ifne                L16
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_0U_C_"), "_17i")
+      constructprop       QName(PackageNamespace("_0U_C_"), "_17i"), 0
+      initproperty        QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "_2n")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "_2n")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      setproperty         QName(Namespace("_0z6"), "loaderInfo")
+
+L16:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "_2n")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "load") flag OVERRIDE
+   method
+    refid "_0E_w:_0S_n/instance/load"
+    param QName(PackageNamespace("flash.net"), "URLRequest")
+    param QName(PackageNamespace("flash.system"), "LoaderContext")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "loader")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "load"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "unload") flag OVERRIDE
+   method
+    refid "_0E_w:_0S_n/instance/unload"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_0E_w:_0S_n/instance"), "loader")
+      callpropvoid        QName(PackageNamespace(""), "unload"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_0E_w:_0S_n/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

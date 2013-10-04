@@ -1,0 +1,33 @@
+script ; 1451
+ sinit
+  refid "_0L_X_:Particle/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Particle", [PackageNamespace("_0L_X_")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    newclass            "_0L_X_:Particle"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_0L_X_"), "Particle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_0L_X_"), "Particle")
+  #include "Particle.class.asasm"
+ end ; trait
+end ; script

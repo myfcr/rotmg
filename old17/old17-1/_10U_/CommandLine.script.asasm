@@ -1,0 +1,61 @@
+script ; 1884
+ sinit
+  refid "_10U_:CommandLine/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("CommandLine", [PackageNamespace("_10U_")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("_10U_"), "_1O_E_")
+    pushscope
+
+    getlex              QName(PackageNamespace("_10U_"), "_1O_E_")
+    newclass            "_10U_:CommandLine"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_10U_"), "CommandLine")
+
+    findpropstrict      Multiname("FakeFunction", [PrivateNamespace("*", "_10U_:CommandLine#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_10U_:CommandLine/FakeFunction"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_10U_:CommandLine#1"), "FakeFunction")
+
+    findpropstrict      Multiname("SlashCommand", [PrivateNamespace("*", "_10U_:CommandLine#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_10U_:CommandLine/SlashCommand"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_10U_:CommandLine#1"), "SlashCommand")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_10U_"), "CommandLine")
+  #include "CommandLine.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_10U_:CommandLine#1"), "FakeFunction")
+  #include "CommandLine/FakeFunction.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_10U_:CommandLine#1"), "SlashCommand")
+  #include "CommandLine/SlashCommand.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script ; 438
+ sinit
+  refid "_-np:_-FC/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-FC", [PackageNamespace("_-np")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-np:_-FC"
+    popscope
+    initproperty        QName(PackageNamespace("_-np"), "_-FC")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-np"), "_-FC")
+  #include "_-FC.class.asasm"
+ end ; trait
+end ; script

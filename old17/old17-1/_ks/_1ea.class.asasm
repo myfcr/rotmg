@@ -1,0 +1,484 @@
+class
+ refid "_ks:_1ea"
+ instance QName(PackageNamespace("_ks"), "_1ea")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0sU_")
+  iinit
+   refid "_ks:_1ea/instance/init"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_ks"), "_0F_t")
+     getlocal1
+     constructprop       QName(PackageNamespace("_ks"), "_0F_t"), 1
+     initproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+     getlocal0
+     getlocal0
+     callproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_0N_M_"), 0
+     initproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "value")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_ks:_1ea/instance"), "value") end
+  trait slot QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q") type QName(PackageNamespace("_ks"), "_0F_t") end
+  trait slot QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token") type QName(PackageNamespace("_ks"), "_1G_o") end
+  trait method QName(PackageNamespace(""), "getValue")
+   method
+    refid "_ks:_1ea/instance/getValue"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_")
+   method
+    refid "_ks:_1ea/instance/_ks:_1ea/instance/_N_I_"
+    returns QName(PackageNamespace("_ks"), "_1G_o")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      callproperty        QName(PackageNamespace(""), "_17s"), 0
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_0y6")
+   method
+    refid "_ks:_1ea/instance/_ks:_1ea/instance/_0y6"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_P_8")
+      ifne                L16
+
+      getlocal1
+      returnvalue
+
+L16:
+      jump                L49
+
+L17:
+      label
+      getlocal1
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_0N_M_"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_P_8")
+      ifne                L32
+
+      getlocal1
+      returnvalue
+
+L32:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0vt")
+      ifne                L41
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      jump                L49
+
+L41:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      pushstring          "Expecting ] or , but found "
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      add
+      callpropvoid        QName(PackageNamespace(""), "_zx"), 1
+
+L49:
+      jump                L17
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_K_")
+   method
+    refid "_ks:_1ea/instance/_ks:_1ea/instance/_N_K_"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0mn")
+      ifne                L19
+
+      getlocal1
+      returnvalue
+
+L19:
+      jump                L94
+
+L20:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0jA_")
+      ifne                L86
+
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      coerce_s
+      setlocal2
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0N__")
+      ifne                L77
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      getlocal1
+      getlocal2
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_0N_M_"), 0
+      setproperty         MultinameL([PrivateNamespace("*", "_ks:_1ea/instance"), PackageNamespace("_ks"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_ks:_1ea/instance/_ks:_1ea/instance/_N_K_"), PackageInternalNs("_ks"), ProtectedNamespace("_0sU_"), StaticProtectedNs("_0sU_")])
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0mn")
+      ifne                L59
+
+      getlocal1
+      returnvalue
+
+L59:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0vt")
+      ifne                L68
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_I_"), 0
+
+      jump                L76
+
+L68:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      pushstring          "Expecting } or , but found "
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      add
+      callpropvoid        QName(PackageNamespace(""), "_zx"), 1
+
+L76:
+      jump                L85
+
+L77:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      pushstring          "Expecting : but found "
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      add
+      callpropvoid        QName(PackageNamespace(""), "_zx"), 1
+
+L85:
+      jump                L94
+
+L86:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      pushstring          "Expecting string but found "
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      add
+      callpropvoid        QName(PackageNamespace(""), "_zx"), 1
+
+L94:
+      jump                L20
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_0N_M_")
+   method
+    refid "_ks:_1ea/instance/_ks:_1ea/instance/_0N_M_"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      pushnull
+      ifne                L10
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      pushstring          "Unexpected end of input"
+      callpropvoid        QName(PackageNamespace(""), "_zx"), 1
+
+L10:
+      jump                L34
+
+L11:
+      label
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_N_K_"), 0
+      returnvalue
+
+L15:
+      label
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_0y6"), 0
+      returnvalue
+
+L19:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      returnvalue
+
+L24:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "_19q")
+      pushstring          "Unexpected "
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "value")
+      add
+      callpropvoid        QName(PackageNamespace(""), "_zx"), 1
+
+      jump                L86
+
+L34:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_ks:_1ea/instance"), "token")
+      getproperty         QName(PackageNamespace(""), "type")
+      setlocal1
+
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_1fd")
+      getlocal1
+      ifstrictne          L44
+
+      pushbyte            0
+      jump                L84
+
+L44:
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0X_r")
+      getlocal1
+      ifstrictne          L50
+
+      pushbyte            1
+      jump                L84
+
+L50:
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_0jA_")
+      getlocal1
+      ifstrictne          L56
+
+      pushbyte            2
+      jump                L84
+
+L56:
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_5J_")
+      getlocal1
+      ifstrictne          L62
+
+      pushbyte            3
+      jump                L84
+
+L62:
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_07q")
+      getlocal1
+      ifstrictne          L68
+
+      pushbyte            4
+      jump                L84
+
+L68:
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "_J_g")
+      getlocal1
+      ifstrictne          L74
+
+      pushbyte            5
+      jump                L84
+
+L74:
+      getlex              QName(PackageNamespace("_ks"), "_R_J_")
+      getproperty         QName(PackageNamespace(""), "NULL")
+      getlocal1
+      ifstrictne          L80
+
+      pushbyte            6
+      jump                L84
+
+L80:
+      jump                L83
+
+      pushbyte            7
+      jump                L84
+
+L83:
+      pushbyte            7
+L84:
+      kill                1
+      lookupswitch        L24, [L11, L15, L19, L19, L19, L19, L19, L24]
+
+L86:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_ks:_1ea/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

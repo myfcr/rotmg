@@ -1,0 +1,149 @@
+class
+ refid "_02S_:_0n5"
+ instance QName(PackageNamespace("_02S_"), "_0n5")
+  extends QName(PackageNamespace("_02S_"), "_40")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_17a")
+  iinit
+   refid "_02S_:_0n5/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_1I_I_"), "_R_M_")
+     constructprop       QName(PackageNamespace("_1I_I_"), "_R_M_"), 0
+     initproperty        QName(PackageNamespace(""), "newPosition_")
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_02S_:_0n5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_02S_:_0n5/instance#1"), PackageNamespace("_02S_"), PackageInternalNs("_02S_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_17a"), StaticProtectedNs("_17a"), StaticProtectedNs("_02y"), StaticProtectedNs("_61"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_1I_I_"), "_1X_G_")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "records_")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "tickId_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "time_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "newPosition_") type QName(PackageNamespace("_1I_I_"), "_R_M_") end
+  trait slot QName(PackageNamespace(""), "records_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_1I_I_"), "_1X_G_")>) end
+  trait method QName(PackageNamespace(""), "writeToOutput") flag OVERRIDE
+   method
+    refid "_02S_:_0n5/instance/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tickId_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "time_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "newPosition_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeToOutput"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeShort"), 1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L30
+
+L22:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_02S_:_0n5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_02S_:_0n5/instance#1"), PackageNamespace("_02S_"), PackageInternalNs("_02S_"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_17a"), StaticProtectedNs("_17a"), StaticProtectedNs("_02y"), StaticProtectedNs("_61")])
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeToOutput"), 1
+
+      inclocal_i          2
+L30:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "records_")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L22
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_02S_:_0n5/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_61"), "formatToString")
+      pushstring          "MOVE"
+      pushstring          "tickId_"
+      pushstring          "time_"
+      pushstring          "newPosition_"
+      pushstring          "records_"
+      callproperty        QName(ProtectedNamespace("_61"), "formatToString"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_02S_:_0n5/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

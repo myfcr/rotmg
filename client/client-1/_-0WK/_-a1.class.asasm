@@ -1,0 +1,273 @@
+class
+ refid "_-0WK:_-a1"
+ instance QName(PackageNamespace("_-0WK"), "_-a1")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1cQ")
+  iinit
+   refid "_-0WK:_-a1/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_d
+     pushnan
+     add_i
+     decrement_i
+     rshift
+     rshift
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0C2") flag METADATA type QName(PackageNamespace("_-PH"), "_-kq")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "domain") flag METADATA type QName(PackageNamespace("_-1ns"), "_-0re")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0RD") flag METADATA type QName(PackageNamespace("_-7m"), "_-Tj")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-0WK:_-a1/instance/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      coerce_s
+      getglobalscope
+      pushwith
+      lessequals
+      pushscope
+
+      astypelate
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L26
+
+      jump                L23
+
+      setlocal3
+
+      pushundefined
+      nextname
+      convert_u
+      strictequals
+      urshift
+L23:
+      pop
+      getlocal2
+      convert_b
+L26:
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "domain")
+      callproperty        QName(PackageNamespace("", "#0"), "_-HD"), 0
+      iffalse             L43
+
+      getlocal1
+      dup
+      iftrue              L37
+
+      pop
+      getlocal1
+      convert_b
+L37:
+      iffalse             L42
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0WK:_-a1/instance/execute"), "_-Fy"), 0
+
+      getlocal2
+      iftrue              L45
+
+L42:
+      jump                L45
+
+L43:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0WK:_-a1/instance/execute"), "_-1o6"), 0
+
+L45:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0WK:_-a1/instance/execute"), "_-Fy")
+   method
+    refid "_-0WK:_-a1/instance/_-0WK:_-a1/instance/execute/_-Fy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      lessequals
+      add_i
+      negate
+      bitxor
+      decrement_i
+      getlocal1
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iffalse             L25
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0C2")
+      findpropstrict      QName(PackageNamespace("_-1UK"), "_-AR")
+      constructprop       QName(PackageNamespace("_-1UK"), "_-AR"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0WK:_-a1/instance/execute"), "_-1o6")
+   method
+    refid "_-0WK:_-a1/instance/_-0WK:_-a1/instance/execute/_-1o6"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      greaterthan
+      pushfalse
+      pushnan
+      divide
+      getlocal3
+      instanceof
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0RD")
+      pushstring          "bad domain, deny"
+      callpropvoid        QName(Namespace("_-yR"), "debug"), 1
+
+      getlocal1
+      iffalse             L31
+
+L26:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0C2")
+      findpropstrict      QName(PackageNamespace("_-1hJ"), "_-1Td")
+      constructprop       QName(PackageNamespace("_-1hJ"), "_-1Td"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0WK:_-a1/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

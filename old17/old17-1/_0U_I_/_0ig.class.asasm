@@ -1,0 +1,159 @@
+class
+ refid "_0U_I_:_0ig"
+ instance QName(PackageNamespace("_0U_I_"), "_0ig")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_xA_")
+  iinit
+   refid "_0U_I_:_0ig/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_0U_I_:_0ig/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "_m7") flag FINAL dispid 3
+  method
+   refid "_0U_I_:_0ig/class/_m7"
+   param QName(PackageNamespace("_1U_H_"), "DateField")
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     findpropstrict      QName(PackageNamespace(""), "_184")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "_184"), 1
+     constructprop       QName(PackageNamespace(""), "Date"), 1
+     coerce              QName(PackageNamespace(""), "Date")
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     coerce              QName(PackageNamespace(""), "Date")
+     setlocal3
+
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "fullYear")
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "fullYear")
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     subtract
+     convert_u
+     setlocal            4
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "month")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "month")
+     greaterthan
+     dup
+     iftrue              L45
+
+     pop
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "month")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "month")
+     equals
+     dup
+     iffalse             L45
+
+     pop
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "date")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "date")
+     greaterthan
+L45:
+     iffalse             L50
+
+     getlocal            4
+     decrement
+     convert_u
+     setlocal            4
+
+L50:
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_184") flag FINAL dispid 4
+  method
+   refid "_0U_I_:_0ig/class/_184"
+   param QName(PackageNamespace("_1U_H_"), "DateField")
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "_0p0")
+     getproperty         QName(PackageNamespace(""), "text")
+     pushstring          "/"
+     add
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "days")
+     getproperty         QName(PackageNamespace(""), "text")
+     add
+     pushstring          "/"
+     add
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "_U_3")
+     getproperty         QName(PackageNamespace(""), "text")
+     add
+     coerce_s
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "Date")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "parse"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

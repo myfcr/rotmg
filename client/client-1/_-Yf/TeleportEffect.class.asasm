@@ -1,0 +1,301 @@
+class
+ refid "_-Yf:TeleportEffect"
+ instance QName(PackageNamespace("_-Yf"), "TeleportEffect")
+  extends QName(PackageNamespace("_-Yf"), "_-00p")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1ZK")
+  iinit
+   refid "_-Yf:TeleportEffect/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     bitand
+     increment
+     nextvalue
+     equals
+     subtract
+     pushtrue
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-Yf:TeleportEffect/instance/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 9
+     localcount 11
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal0
+      pushnull
+      subtract_i
+      getlocal3
+      declocal            5
+      declocal            2
+L10:
+      setlocal            9
+
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-Yf:TeleportEffect"), "TeleportParticle")
+      setlocal            8
+
+      pushbyte            20
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L153
+
+L28:
+      label
+      pushbyte            2
+      getlocal            9
+      iftrue              L103
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      convert_d
+      getlocal            9
+      iftrue              L47
+
+      setlocal            5
+
+      getlocal            10
+      iffalse             L75
+
+      pushdouble          0.7
+      getlocal            9
+      iftrue              L57
+
+L47:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      getlocal            10
+      dup
+      iftrue              L56
+
+      pop
+      getlocal0
+      convert_b
+L56:
+      iffalse             L95
+
+L57:
+      convert_d
+      getlocal            9
+      iftrue              L95
+
+      setlocal            6
+
+      getlocal            10
+      dup
+      iftrue              L67
+
+      pop
+      getlocal0
+      convert_b
+L67:
+      iffalse             L156
+
+      jump                L75
+
+      inclocal_i          8
+      inclocal_i          9
+      decrement_i
+      inclocal_i          3
+      newactivation
+      convert_o
+L75:
+      pushshort           500
+      getlocal            10
+      dup
+      iftrue              L82
+
+      pop
+      getlocal2
+      convert_b
+L82:
+      iffalse             L154
+
+      pushshort           1000
+      getlocal            9
+      dup
+      iffalse             L90
+
+      pop
+      getlocal2
+      convert_b
+L90:
+      iftrue              L155
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      add
+L95:
+      convert_i
+      getlocal            9
+      dup
+      iffalse             L102
+
+      pop
+      getlocal3
+      convert_b
+L102:
+      iftrue              L154
+
+L103:
+      setlocal            7
+
+      getlocal            9
+      dup
+      iffalse             L110
+
+      pop
+      getlocal2
+      convert_b
+L110:
+      iftrue              L156
+
+      findpropstrict      QName(PrivateNamespace("*", "_-Yf:TeleportEffect"), "TeleportParticle")
+      pushshort           255
+      pushbyte            50
+      pushdouble          0.1
+      getlocal            7
+      constructprop       QName(PrivateNamespace("*", "_-Yf:TeleportEffect"), "TeleportParticle"), 4
+      coerce              QName(PrivateNamespace("*", "_-Yf:TeleportEffect"), "TeleportParticle")
+      setlocal            8
+
+      getlocal            9
+      dup
+      iffalse             L125
+
+      pop
+      getlocal2
+      convert_b
+L125:
+      iftrue              L152
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      jump                L134
+
+      inclocal_i          8
+      modulo
+      nextvalue
+      negate
+      getlocal3
+      dxnslate
+L134:
+      getlocal            8
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            9
+      iftrue              L153
+
+L152:
+      inclocal_i          4
+L153:
+      getlocal            4
+L154:
+      getlocal3
+L155:
+      iflt                L28
+
+L156:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Yf:TeleportEffect/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

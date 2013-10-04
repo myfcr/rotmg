@@ -1,0 +1,147 @@
+class
+ refid "_-Y2:_-07U"
+ instance QName(PackageNamespace("_-Y2"), "_-07U")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0S6")
+  iinit
+   refid "_-Y2:_-07U/instance/init"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("_-Y2"), "_-0cu")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     declocal_i          2
+     coerce_a
+     pushnull
+     declocal            3
+     pop
+     inclocal_i          2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iftrue              L26
+
+     getlocal0
+     getlocal1
+     pushtrue
+     constructsuper      2
+
+     getlocal3
+     iffalse             L29
+
+L26:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "tile")
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "tile") type QName(PackageNamespace("_-Y2"), "_-0cu") end
+ end ; instance
+ cinit
+  refid "_-Y2:_-07U/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    getlocal0
+    not
+    pushwith
+    convert_u
+    setlocal2
+
+    checkfilter
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_MOVE")
+    pushstring          "ITEM_MOVE"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_MOVE")
+
+    jump                L23
+
+    modulo
+    bitxor
+    nextvalue
+    istypelate
+    urshift
+    pop
+L23:
+    getlocal2
+    dup
+    iffalse             L29
+
+    pop
+    getlocal0
+    convert_b
+L29:
+    iftrue              L33
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_DOUBLE_CLICK")
+    pushstring          "ITEM_DOUBLE_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_DOUBLE_CLICK")
+
+L33:
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_SHIFT_CLICK")
+    pushstring          "ITEM_SHIFT_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_SHIFT_CLICK")
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_CLICK")
+    pushstring          "ITEM_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_CLICK")
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_HOTKEY_PRESS")
+    pushstring          "ITEM_HOTKEY_PRESS"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_HOTKEY_PRESS")
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_CTRL_CLICK")
+    pushstring          "ITEM_CTRL_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_CTRL_CLICK")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "ITEM_MOVE") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_MOVE") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_DOUBLE_CLICK") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_DOUBLE_CLICK") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_SHIFT_CLICK") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_SHIFT_CLICK") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_CLICK") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_CLICK") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_HOTKEY_PRESS") slotid 5 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_HOTKEY_PRESS") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_CTRL_CLICK") slotid 6 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_CTRL_CLICK") end
+end ; class

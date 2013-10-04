@@ -1,0 +1,29 @@
+script ; 169
+ sinit
+  refid "_V_C_:Slot/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Slot", [PackageNamespace("_V_C_")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_V_C_:Slot"
+    popscope
+    initproperty        QName(PackageNamespace("_V_C_"), "Slot")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_V_C_"), "Slot")
+  #include "Slot.class.asasm"
+ end ; trait
+end ; script

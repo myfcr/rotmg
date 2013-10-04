@@ -1,0 +1,554 @@
+class
+ refid "_fk:_x8"
+ instance QName(PackageNamespace("_fk"), "_x8")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("Account", [PackageNamespace("_yU_")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_zD_")
+  iinit
+   refid "_fk:_x8/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_12F_") flag METADATA type QName(PackageNamespace("_fk"), "_0L_y")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_fk:_x8/instance"), "userId") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "_fk:_x8/instance"), "password") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_fk:_x8/instance"), "_V_H_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_fk:_x8/instance"), "_0M_z") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "_0oZ_")
+   method
+    refid "_fk:_x8/instance/_0oZ_"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "userId")
+
+      getlocal0
+      getlocal2
+      setproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "password")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_X_F_")
+   method
+    refid "_fk:_x8/instance/_X_F_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      callproperty        QName(Namespace("_1M_F_"), "getPersonaName"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUserId")
+   method
+    refid "_fk:_x8/instance/getUserId"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "userId")
+      coerce_s
+      dup
+      iftrue              L10
+
+      pop
+      pushstring          ""
+L10:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_fk:_x8/instance"), "userId")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0tQ_")
+   method
+    refid "_fk:_x8/instance/_0tQ_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0xa")
+   method
+    refid "_fk:_x8/instance/_0xa"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "password")
+      coerce_s
+      dup
+      iftrue              L10
+
+      pop
+      pushstring          ""
+L10:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_fk:_x8/instance"), "password")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1E_p")
+   method
+    refid "_fk:_x8/instance/_1E_p"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getUserId"), 0
+      setproperty         Multiname("guid", [PrivateNamespace("*", "_fk:_x8/instance"), PackageNamespace(""), PrivateNamespace("*", "_fk:_x8/instance/_1E_p"), PackageNamespace("_fk"), PackageInternalNs("_fk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_zD_"), StaticProtectedNs("_zD_")])
+
+      getlocal1
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_0xa"), 0
+      setproperty         Multiname("secret", [PrivateNamespace("*", "_fk:_x8/instance"), PackageNamespace(""), PrivateNamespace("*", "_fk:_x8/instance/_1E_p"), PackageNamespace("_fk"), PackageInternalNs("_fk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_zD_"), StaticProtectedNs("_zD_")])
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      callproperty        QName(Namespace("_1M_F_"), "_V_A_"), 0
+      setproperty         Multiname("steamid", [PrivateNamespace("*", "_fk:_x8/instance"), PackageNamespace(""), PrivateNamespace("*", "_fk:_x8/instance/_1E_p"), PackageNamespace("_fk"), PackageInternalNs("_fk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_zD_"), StaticProtectedNs("_zD_")])
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_J_v")
+   method
+    refid "_fk:_x8/instance/_J_v"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_0xa"), 0
+      pushstring          ""
+      equals
+      not
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_Y_Q_")
+   method
+    refid "_fk:_x8/instance/_Y_Q_"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.util"), "_dB_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "userId")
+      callproperty        QName(PackageNamespace(""), "_f"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0O_d")
+   method
+    refid "_fk:_x8/instance/_0O_d"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      callproperty        QName(Namespace("_1M_F_"), "_V_A_"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0gm")
+   method
+    refid "_fk:_x8/instance/_0gm"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_I_W_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_G_h")
+   method
+    refid "_fk:_x8/instance/_G_h"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "steam"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_75")
+   method
+    refid "_fk:_x8/instance/_75"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_12F_")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("_1M_F_"), "_0w8"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1X_A_")
+   method
+    refid "_fk:_x8/instance/_1X_A_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "/steamworks"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_1I_L_")
+   method
+    refid "_fk:_x8/instance/_1I_L_"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "steamworks"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear")
+   method
+    refid "_fk:_x8/instance/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "verify")
+   method
+    refid "_fk:_x8/instance/verify"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_fk:_x8/instance"), "_V_H_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_0J_g")
+   method
+    refid "_fk:_x8/instance/_0J_g"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "_V_H_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_05v")
+   method
+    refid "_fk:_x8/instance/_05v"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_fk:_x8/instance"), "_0M_z")
+      coerce_s
+      dup
+      iftrue              L9
+
+      pop
+      pushstring          ""
+L9:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_03n")
+   method
+    refid "_fk:_x8/instance/_03n"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_fk:_x8/instance"), "_0M_z")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_P_m")
+   method
+    refid "_fk:_x8/instance/_P_m"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "No current support for new Kabam offer wall on Steam."
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_ey")
+   method
+    refid "_fk:_x8/instance/_ey"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "No current support for new Kabam offer wall on Steam."
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_fk:_x8/class/init"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_I_W_")
+    pushstring          "steam"
+    initproperty        QName(PackageNamespace(""), "_I_W_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_I_W_") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("steam") end
+end ; class

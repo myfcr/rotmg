@@ -1,0 +1,214 @@
+class
+ refid "_-0oy:_-49"
+ instance QName(PackageNamespace("_-0oy"), "_-49")
+  extends QName(PackageNamespace("_-0oy"), "_-SE")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1cw")
+  iinit
+   refid "_-0oy:_-49/instance/init"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     coerce_s
+     negate_i
+     convert_s
+     greaterthan
+     swap
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     jump                L20
+
+     setlocal2
+
+     getlocal2
+     divide
+     checkfilter
+     pushscope
+
+     newactivation
+L20:
+     pushscope
+
+     getlocal            4
+     dup
+     iftrue              L27
+
+     pop
+     getlocal3
+     convert_b
+L27:
+     iffalse             L36
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-0oy:_-49/instance/init#1"), PrivateNamespace("*", "_-0oy:_-49/instance/init#0"), PackageNamespace("", "#0"), PackageNamespace("_-0oy"), PackageInternalNs("_-0oy"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1cw"), StaticProtectedNs("_-1cw"), StaticProtectedNs("_-Ko"), StaticProtectedNs("_-0vK"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "Boolean")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "offer_")
+
+     getlocal3
+     iftrue              L40
+
+L36:
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "offer_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Boolean")>) end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-0oy:_-49/instance/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitxor
+      pushnull
+      inclocal            4
+      getlocal            4
+      typeof
+      declocal_i          2
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      iffalse             L27
+
+      getlocal0
+      jump                L24
+
+      setlocal3
+
+      getlocal3
+      pushundefined
+      kill                4
+      setlocal2
+
+      istypelate
+L24:
+      getproperty         QName(PackageNamespace("", "#0"), "offer_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+L27:
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      convert_i
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      jump                L45
+
+L34:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "offer_")
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      iftrue              L45
+
+      inclocal_i          3
+      getlocal            4
+      iftrue              L48
+
+L45:
+      getlocal3
+      getlocal2
+      iflt                L34
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-0oy:_-49/instance/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0vK"), "formatToString")
+      jump                L10
+
+      modulo
+      lshift
+      pushtrue
+      modulo
+      getlocal2
+      not
+L10:
+      pushstring          "TRADECHANGED"
+      pushstring          "offer_"
+      callproperty        QName(ProtectedNamespace("_-0vK"), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oy:_-49/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

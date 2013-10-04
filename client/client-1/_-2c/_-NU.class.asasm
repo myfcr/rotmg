@@ -1,0 +1,155 @@
+class
+ refid "_-2c:_-NU"
+ instance QName(PackageNamespace("_-2c"), "_-NU")
+  extends QName(PackageNamespace("_-1Kt"), "_-1Rc")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-11U")
+  iinit
+   refid "_-2c:_-NU/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lessthan
+     increment_i
+     convert_s
+     greaterthan
+     not
+     getlocal2
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0aR") flag METADATA type QName(PackageNamespace("_-0Yc"), "_-10L")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-22") type QName(PackageNamespace("_-2c"), "PurchaseCharacterClassTask") end
+  trait method QName(ProtectedNamespace("_-11U"), "startTask") flag OVERRIDE
+   method
+    refid "_-2c:_-NU/instance/_-11U:startTask"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      getlocal2
+      getlocal1
+      add_i
+      negate
+      convert_i
+      convert_o
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L43
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-22")
+      getproperty         QName(PackageNamespace("", "#0"), "error")
+      pushstring          "Not enough Gold."
+      jump                L26
+
+      popscope
+      greaterthan
+      subtract_i
+      multiply
+      modulo
+      pushnan
+L26:
+      ifne                L44
+
+      getlocal1
+      dup
+      iftrue              L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iffalse             L52
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0aR")
+      getlocal1
+      iffalse             L46
+
+      findpropstrict      QName(PackageNamespace("_-0XJ"), "_-1PY")
+      constructprop       QName(PackageNamespace("_-0XJ"), "_-1PY"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlocal2
+      iftrue              L52
+
+L43:
+      jump                L52
+
+L44:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0aR")
+L46:
+      findpropstrict      QName(PackageNamespace("_-1Jt"), "ErrorDialog")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-22")
+      getproperty         QName(PackageNamespace("", "#0"), "error")
+      constructprop       QName(PackageNamespace("_-1Jt"), "ErrorDialog"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-2c:_-NU/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

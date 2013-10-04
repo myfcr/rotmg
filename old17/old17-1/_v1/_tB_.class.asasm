@@ -1,0 +1,270 @@
+class
+ refid "_v1:_tB_"
+ instance QName(PackageNamespace("_v1"), "_tB_")
+  extends QName(PackageNamespace("_N__"), "_1X_a")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_0R_Z_")
+  iinit
+   refid "_v1:_tB_/instance/init"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("_v1"), "LinkWebAccountDialog")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1Z_P_") flag METADATA type QName(PackageNamespace("_D_r"), "_1Z_E_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_sI_") flag METADATA type QName(PackageNamespace("_0vO_"), "_eF_")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_0ji") flag METADATA type QName(PackageNamespace("_0H_D_"), "_H_v")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "account") flag METADATA type QName(PackageNamespace("_yU_"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_1E_G_") flag METADATA type QName(PackageNamespace("_0H_D_"), "_0a8")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_v1:_tB_/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "cancel")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_v1:_tB_/instance"), "onCancel")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "link")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_v1:_tB_/instance"), "onLink")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ji")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_v1:_tB_/instance"), "_11b")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_v1:_tB_/instance"), "_av"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_v1:_tB_/instance"), "_av")
+   method
+    refid "_v1:_tB_/instance/_v1:_tB_/instance/_av"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      getlex              QName(PackageNamespace("_fk"), "_x8")
+      istypelate
+      iffalse             L12
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1E_G_")
+      pushstring          "/linkSteamAccount"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      jump                L21
+
+L12:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "account")
+      getlex              QName(PackageNamespace("_08"), "_0G_T_")
+      istypelate
+      iffalse             L21
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1E_G_")
+      pushstring          "/linkKongregateAccount"
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "_v1:_tB_/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "cancel")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_v1:_tB_/instance"), "onCancel")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "link")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_v1:_tB_/instance"), "onLink")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_0ji")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_v1:_tB_/instance"), "_11b")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_v1:_tB_/instance"), "onCancel")
+   method
+    refid "_v1:_tB_/instance/_v1:_tB_/instance/onCancel"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_1Z_P_")
+      findpropstrict      QName(PackageNamespace("_0O_c"), "KongregateAccountDetailDialog")
+      constructprop       QName(PackageNamespace("_0O_c"), "KongregateAccountDetailDialog"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_v1:_tB_/instance"), "onLink")
+   method
+    refid "_v1:_tB_/instance/_v1:_tB_/instance/onLink"
+    param QName(PackageNamespace("_04t"), "_1A_k")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "disable"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_sI_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_v1:_tB_/instance"), "_11b")
+   method
+    refid "_v1:_tB_/instance/_v1:_tB_/instance/_11b"
+    param QName(PackageNamespace("_0F_p"), "_t_")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlocal1
+      getproperty         QName(Namespace("_S_q"), "error")
+      callpropvoid        QName(PackageNamespace(""), "_0qI_"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "_Z_d"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_v1:_tB_/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
